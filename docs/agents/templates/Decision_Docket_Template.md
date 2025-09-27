@@ -6,6 +6,7 @@
 ## Recent Decisions
 
 ### YYYY-MM-DD
+
 - **Decision**: [Brief description of decision]
 - **Context**: [Why this decision was needed]
 - **Options Considered**: [What alternatives were evaluated]
@@ -15,6 +16,7 @@
 - **Owner**: [Who made the decision]
 
 ### YYYY-MM-DD
+
 - **Decision**: [Another decision]
 - **Context**: [Context for this decision]
 - **Options Considered**: [Alternatives]
@@ -24,9 +26,11 @@
 - **Owner**: [Decision maker]
 
 ## Open Decisions
+
 - [ ] [Decision that needs to be made]
 - [ ] [Another pending decision]
 
 ## Decision Patterns
+
 - [Common decision types or approaches used]
 - [Decision-making criteria or frameworks]

@@ -7,6 +7,7 @@
 - **Duration**: ~2 hours
 
 ## Inputs
+
 - withco-general/linear/docs/How to use Linear.md
 - .cursor/rules/planning-mode.mdc
 - .cursor/rules/todo-cursor.mdc
@@ -14,6 +15,7 @@
 - User requirements for PRD templates and offboarding process
 
 ## Steps Taken
+
 - Analyzed Linear workflow structure and vocabulary
 - Collaboratively defined V3 front matter schema with team-based naming
 - Created two distinct PRD templates (Linear-aligned vs Repo-only)
@@ -22,6 +24,7 @@
 - Generated planning documents for agent artifacts and Pydantic schema review
 
 ## Outputs
+
 - withco-general/docs/global/GBL-PRD_Best_Practices.md (comprehensive PRD best practices)
 - withco-general/docs/global/TODO_Log.md (persistent TODO tracking)
 - withco-general/docs/global/Decision_Docket.md (decision history)
@@ -32,23 +35,27 @@
 - Directory structure: /docs/global/, /docs/prds/, /docs/agents/
 
 ## Citations
+
 - withco-general/linear/docs/How to use Linear.md:1-160
 - .cursor/rules/planning-mode.mdc:1-143
 - .cursor/rules/todo-cursor.mdc:1-34
 - .cursor/rules/datetime-format.mdc:1-33
 
 ## Risks Identified
+
 - None significant identified
 - TODO list continuity between sessions requires discipline
 - Manual mirroring to Linear requires process adherence
 
 ## Next Actions
+
 - Create remaining PRDs from finalized templates
 - Implement agent artifacts framework (Role Cards, Context Packs, Playbooks)
 - Define ADR and Research Request templates
 - Test offboarding process in next session
 
 ## Signoff
+
 - **Reviewer**: slittle
 - **Status**: approved
 - **Date**: 2025-09-27
