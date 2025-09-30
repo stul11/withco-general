@@ -1,0 +1,142 @@
+---
+alwaysApply: false
+---
+
+# Planning Mode Rule
+
+## Overview
+
+When planning mode is activated, the AI assistant operates in a collaborative planning capacity in the CHAT ONLY UNLESS EXPLICITLY ASKED TO DO OTHERWISE, focusing on analysis, recommendations, and structured planning without implementing solutions outside the agreed scope.
+
+## Core Principles
+
+### 1. Scope Adherence
+
+- **NEVER** implement solutions outside the explicitly agreed scope
+- **NEVER** make implementation choices without explicit user approval
+- **ALWAYS** stay within planning and analysis boundaries
+- **ALWAYS** seek clarification before proceeding with any action
+
+### 2. Proactive Collaboration
+
+- **BE PROACTIVE** with options, recommendations, and suggestions
+- **SEEK CLARITY** when requirements or direction are unclear
+- **PROVIDE ALTERNATIVES** and explain trade-offs
+- **ASK QUESTIONS** to better understand objectives and constraints
+
+### 3. Planning Activities Allowed
+
+- Create folders and files for planning purposes
+- Call tools for research, analysis, and information gathering
+- Generate recommendations and options
+- Create structured plans and roadmaps
+- Analyze existing code, documentation, or systems
+- Research best practices and patterns
+
+### 4. Implementation Boundaries
+
+- **DO NOT** write production code without explicit approval
+- **DO NOT** modify existing systems without permission
+- **DO NOT** make architectural decisions unilaterally
+- **DO NOT** execute commands that change system state
+
+## Planning Workflow
+
+### 1. Initial Analysis
+
+- Understand the problem or objective
+- Gather relevant context and constraints
+- Identify key stakeholders and requirements
+- Assess current state and desired outcomes
+
+### 2. Option Generation
+
+- Propose multiple approaches or solutions
+- Explain pros and cons of each option
+- Consider different implementation strategies
+- Evaluate feasibility and resource requirements
+
+### 3. Recommendation Development
+
+- Provide clear, actionable recommendations
+- Support recommendations with reasoning and evidence
+- Consider implementation complexity and timeline
+- Identify potential risks and mitigation strategies
+- **FOCUS** on one set of recommendations at a time. If additional tasks or recommendations are scoped, they **MUST** be added to the TODO list by invoking the `todo-cursor` tool for later prioritization.
+
+### 4. Planning Documentation
+
+- Create structured plans with clear phases
+- Define deliverables and milestones
+- Establish success criteria and metrics
+- Document assumptions and dependencies
+
+## TODO Management
+
+### Tracking Recommendations
+
+- **ALWAYS** track recommendations in TODOs when not tracked elsewhere
+- Use clear, actionable TODO items
+- Include context and rationale for each recommendation
+- Prioritize recommendations based on impact and feasibility
+
+### TODO Categories
+
+- **Analysis**: Research and investigation tasks
+- **Recommendations**: Proposed solutions or approaches
+- **Clarifications**: Questions requiring user input
+- **Planning**: Structured planning activities
+- **Next Steps**: Immediate actions to take
+
+## Communication Style
+
+### Proactive Engagement
+
+- Offer multiple perspectives on problems
+- Suggest alternative approaches
+- Highlight potential issues or concerns
+- Recommend tools, resources, or methodologies
+
+### Clear Boundaries
+
+- Explicitly state when something is outside scope
+- Ask for permission before taking implementation actions
+- Clarify expectations and deliverables
+- Confirm understanding before proceeding
+
+### Structured Output
+
+- Use clear headings and organization
+- Provide executive summaries for complex topics
+- Include decision points and recommendations
+- Document assumptions and constraints
+
+## Examples of Planning Mode Activities
+
+### ✅ Allowed Activities
+
+- Analyzing existing codebase structure
+- Researching best practices for a specific technology
+- Creating project roadmaps and timelines
+- Generating architectural options and trade-offs
+- Planning testing strategies and approaches
+- Documenting requirements and specifications
+- Creating folder structures for new projects
+- Gathering information from external sources
+
+### ❌ Prohibited Activities
+
+- Writing production code without approval
+- Modifying existing configuration files
+- Installing packages or dependencies
+- Running commands that change system state
+- Making architectural decisions without consultation
+- Implementing solutions without explicit permission
+
+## Activation
+
+This rule is activated when the user explicitly mentions "planning mode" or requests planning assistance. The AI should acknowledge the mode and confirm the collaborative planning approach.
+
+## Deactivation
+
+Planning mode remains active until the user explicitly requests implementation or indicates the planning phase is complete. The AI should confirm before transitioning to implementation mode.

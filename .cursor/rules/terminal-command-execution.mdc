@@ -1,0 +1,58 @@
+---
+description: Always follow when creating or executing terminal commands
+globs: 
+alwaysApply: false
+---
+# Cursor Rule: Terminal Command Execution (Validated for bash in WSL2)
+
+## I. CRITICAL REQUIREMENTS (Validated by Testing)
+
+- **NO CHAINING:** Never use `&&` or `;` to chain multiple commands in a single tool call.
+- **NO NEWLINES:** Never include newline characters (`\n`) within the command string. Commands must be a single, continuous line.
+- **NO LOGICAL PIPES:** Never use pipes (`|`) for command-to-command logical flow (e.g., `cmd1 | cmd2` to pass output for further processing by `cmd2`'s arguments).
+    - **Exception for Output Redirection:** Pipes ARE PERMITTED for simple output redirection to tools like `cat` (e.g., `man ls | cat` for pagers) or for redirecting to a file (e.g., `echo 'hello' | tee output.txt`). The key is that the pipe is not creating a complex multi-command sequence that the agent's terminal struggles with.
+- **ONE LOGICAL COMMAND:** Each tool call must execute only one primary logical command.
+- **SCRIPT WORKAROUND (MANDATORY for Multi-line/Complex Logic):** For any operations involving multiple steps, loops, conditional logic, or anything beyond a simple single command, **ALWAYS** use the script workaround:
+  1. Write the script to a file: `echo 'your_script_content_here' > /tmp/myscript.sh`
+  2. Make it executable: `chmod +x /tmp/myscript.sh`
+  3. Run the script: `/tmp/myscript.sh`
+- **SINGLE-LINE INPUT:** Ensure the entire command provided to the tool is on one single line without any embedded or trailing newline characters.
+- **BACKGROUND TASKS (`is_background: true`):** For commands that are expected to run for a long time and should not block the agent, **ALWAYS** use the `is_background: true` parameter in the tool call. (Tested and confirmed necessary).
+- **PAGERS (`| cat`):** For commands that would normally open an interactive pager (e.g., `man`, `less`, `git log`), **ALWAYS** pipe their output to `cat` to ensure the output is streamed directly (e.g., `man ls | cat`). (Tested and confirmed necessary).
+
+## II. BEST PRACTICES & RECOMMENDATIONS (General Guidance)
+
+- **SCRIPTING ADVICE:**
+    - **Readability for Long Commands:** Even if a command is technically a single logical unit and fits on one line, if it becomes excessively long and hard to read/debug, consider using the script workaround for clarity.
+    - **Shebang:** For scripts created via `echo`, especially if they might be used or examined outside the immediate agent execution, it's good practice to include a shebang (e.g., `#!/bin/bash`) as the first line: `echo '#!/bin/bash\necho "Hello from script"' > /tmp/myscript.sh`. While simple scripts might run in the agent's `bash` context without it, a shebang ensures correct interpreter selection if the script is run directly in other ways.
+- **QUOTING IN SCRIPTS:** Pay careful attention to shell quoting when generating script content with `echo`.
+    - **Single Quotes (`'`):** Prefer single quotes for the `echo` command's main argument if you want the script content to be treated literally, preventing variable expansion and special character interpretation by the *outer* shell creating the script. Example: `echo 'VAR="value"\necho "$VAR"' > script.sh`.
+    - **Double Quotes (`"`):** Use with caution if you *need* the outer shell to expand variables *before* writing to the script. This is less common for agent-generated scripts.
+- **COMMAND VERIFICATION:** Before asking the agent to run a complex command, especially one constructed with multiple variables or paths, mentally (or by testing in a local terminal) verify its correctness to minimize iterations.
+
+## III. PROBLEM STATEMENT (The "Why" Behind This Rule)
+
+Executing terminal commands through an agentic interface in specific environments like Cursor/VS Code/WSL2 (with bash) can lead to failures if commands are not structured precisely. Prohibited chaining operators (`&&`, `;`), embedded newlines, or incorrect use of pipes for logical flow cause parsing errors or stalls, as the tool's command interpretation differs from a direct interactive terminal.
+
+## IV. SOLUTION OVERVIEW (How to Succeed)
+
+- **Strict Adherence:** Rigorously follow all "I. Critical Requirements."
+- **Script for Complexity:** Default to the script workaround (echo to file, chmod, execute) for anything more than a single, straightforward command.
+- **Utilize Tool Features:** Correctly use `is_background: true` for background tasks and `| cat` for paginated output.
+- **Consult Best Practices:** Refer to "II. Best Practices & Recommendations" for robust and maintainable commands.
+
+## V. ERROR RECOVERY & TROUBLESHOOTING
+
+- **Stalled Commands:** If a command seems to hang, the tool may eventually report it as "popped out into background by the user." This is a safeguard. The process might still be running on the system.
+- **Parsing/Execution Failures:**
+    - Re-check for any forbidden characters or structures (`&&`, `;`, newlines, logical pipes).
+    - Ensure truly only one logical command was passed.
+    - Verify all parts of the command, especially paths and filenames.
+    - Scrutinize quoting, especially in `echo` commands used for script generation.
+- **Simplify and Test:** If a command fails, try breaking it down into simpler parts or testing the exact command string in a local WSL2 bash terminal to isolate the issue.
+- **Default to Scripts:** When in doubt, or for any command that isn't trivial, using the script creation method is often the most reliable path.
+
+## VI. APPLICATION SCOPE & CONTEXT
+
+- **Environment:** This rule is specifically validated and intended for use with **bash in a WSL2 environment**, as accessed through the Cursor agent's terminal tool. Behavior in other shells or direct terminal emulators might differ.
+- **Mandatory vs. Advised:** Adherence to "I. Critical Requirements" is mandatory based on thorough testing to prevent command failures. "II. Best Practices & Recommendations" are strongly advised for creating more robust, readable, and maintainable automated terminal operations.

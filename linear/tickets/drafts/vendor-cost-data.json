@@ -1,0 +1,529 @@
+{
+  "metadata": {
+    "created": "2025-01-27T17:30:00Z",
+    "version": "0.1",
+    "purpose": "Standardized vendor and cost data for LEG-63 cost model",
+    "status": "draft"
+  },
+  "cost_unit_scopes": {
+    "primary": [
+      {
+        "enum": "PER_INVESTOR",
+        "definition": "Cost scales with number of investors",
+        "use_case": "KYC/AML, tax forms, investor communications",
+        "example": "$5 per investor for KYC/AML"
+      },
+      {
+        "enum": "PER_ASSET",
+        "definition": "Cost scales with number of properties/assets",
+        "use_case": "Property management, appraisals, insurance",
+        "example": "$2,500 per property for appraisal"
+      },
+      {
+        "enum": "PER_OFFERING",
+        "definition": "Fixed cost per offering regardless of scale",
+        "use_case": "Reg A+ filing, legal structuring, audit setup",
+        "example": "$50,000 for Reg A+ filing"
+      },
+      {
+        "enum": "PER_PRIMARY_OFFERING",
+        "definition": "Cost per primary (initial) offering",
+        "use_case": "Initial Reg A+ program setup, TA onboarding",
+        "example": "$75,000 primary setup"
+      },
+      {
+        "enum": "PER_SECONDARY_OFFERING",
+        "definition": "Cost per secondary/follow-on offering",
+        "use_case": "Supplementary offering statement, incremental marketing",
+        "example": "$25,000 per secondary raise"
+      },
+      {
+        "enum": "PER_TRANSACTION",
+        "definition": "Cost per individual transaction",
+        "use_case": "ACH transfers, DocuSign envelopes, escrow",
+        "example": "$0.25 per ACH transfer"
+      },
+      {
+        "enum": "PER_SMB",
+        "definition": "Cost per Small/Medium Business partner",
+        "use_case": "SMB onboarding, program management",
+        "example": "$10,000 per SMB onboarding"
+      },
+      {
+        "enum": "PER_PLATFORM",
+        "definition": "Platform-wide fixed cost",
+        "use_case": "Platform infrastructure, compliance systems",
+        "example": "$100,000 annual platform license"
+      }
+    ],
+    "secondary": [
+      {
+        "enum": "PER_API",
+        "definition": "Cost per API call to external service",
+        "use_case": "Data services, credit checks",
+        "example": "$0.10 per API call"
+      },
+      {
+        "enum": "PER_YEAR",
+        "definition": "Annual recurring cost",
+        "use_case": "Annual audits, compliance reporting",
+        "example": "$25,000 annual audit fee"
+      },
+      {
+        "enum": "PER_FILING",
+        "definition": "Cost per regulatory filing",
+        "use_case": "SEC filings, state registrations",
+        "example": "$2,500 per SEC filing"
+      }
+    ],
+    "composite": [
+      {
+        "enum": "PER_INVESTOR_PER_YEAR",
+        "definition": "Annual cost per investor",
+        "use_case": "Ongoing investor management",
+        "example": "$50 per investor per year"
+      },
+      {
+        "enum": "PER_ASSET_PER_YEAR",
+        "definition": "Annual cost per asset",
+        "use_case": "Property management, insurance",
+        "example": "$1,000 per asset per year"
+      },
+      {
+        "enum": "PER_OFFERING_PER_YEAR",
+        "definition": "Annual cost per offering",
+        "use_case": "Ongoing compliance, reporting",
+        "example": "$15,000 per offering per year"
+      },
+      {
+        "enum": "PER_PRIMARY_OFFERING_PER_YEAR",
+        "definition": "Annual cost per primary raise",
+        "use_case": "Ongoing Reg A+ compliance for primary program",
+        "example": "$20,000 per year"
+      },
+      {
+        "enum": "PER_SECONDARY_OFFERING_PER_YEAR",
+        "definition": "Annual cost per secondary raise",
+        "use_case": "Ongoing compliance for secondary offerings",
+        "example": "$10,000 per year"
+      },
+      {
+        "enum": "PER_PLATFORM_PER_YEAR",
+        "definition": "Annual cost per platform",
+        "use_case": "Core platform licensing and infrastructure",
+        "example": "$120,000 per year"
+      }
+    ],
+    "composite_one_time": [
+      {
+        "enum": "PER_INVESTOR_ONE_TIME",
+        "definition": "One-time cost per investor",
+        "use_case": "Initial KYC bundle",
+        "example": "$7 per investor one-time"
+      },
+      {
+        "enum": "PER_ASSET_ONE_TIME",
+        "definition": "One-time cost per asset",
+        "use_case": "Initial appraisal/survey",
+        "example": "$3,000 per asset one-time"
+      },
+      {
+        "enum": "PER_OFFERING_ONE_TIME",
+        "definition": "One-time cost per offering",
+        "use_case": "Offering docs, EDGAR setup",
+        "example": "$50,000 one-time"
+      },
+      {
+        "enum": "PER_PRIMARY_OFFERING_ONE_TIME",
+        "definition": "One-time cost per primary raise",
+        "use_case": "Primary setup (TA onboarding)",
+        "example": "$75,000 one-time"
+      },
+      {
+        "enum": "PER_SECONDARY_OFFERING_ONE_TIME",
+        "definition": "One-time cost per secondary raise",
+        "use_case": "Follow-on offering statement",
+        "example": "$25,000 one-time"
+      },
+      {
+        "enum": "PER_PLATFORM_ONE_TIME",
+        "definition": "One-time cost per platform",
+        "use_case": "Initial platform implementation",
+        "example": "$250,000 one-time"
+      }
+    ]
+  },
+  "vendors": [
+    {
+      "id": "north-capital",
+      "name": "North Capital",
+      "category": "Platform Infrastructure",
+      "services": [
+        {
+          "name": "White-label platform",
+          "cost_unit_scope": "PER_OFFERING",
+          "unit_price": 50000,
+          "minimum_commitment": 1,
+          "payer": "COMPANY",
+          "timing": "AT_ONBOARDING",
+          "timing_scope": "ONE_TIME",
+          "accounting": "CAPITALIZED",
+          "amortization_period": 5,
+          "stage_activation": [
+            "IOI",
+            "COMMITTED_OFFERING",
+            "SPECIFIC_OFFERING",
+            "CLOSED_OFFERING"
+          ],
+          "upreit_specific": false,
+          "llc_specific": false,
+          "reg_a_required": true
+        },
+        {
+          "name": "Investor portal",
+          "cost_unit_scope": "PER_INVESTOR",
+          "unit_price": 5,
+          "minimum_commitment": 100,
+          "payer": "COMPANY",
+          "timing": "POST_CLOSE",
+          "timing_scope": "ANNUAL",
+          "accounting": "EXPENSED",
+          "stage_activation": [
+            "COMMITTED_OFFERING",
+            "SPECIFIC_OFFERING",
+            "CLOSED_OFFERING"
+          ],
+          "upreit_specific": false,
+          "llc_specific": false,
+          "reg_a_required": true
+        }
+      ]
+    },
+    {
+      "id": "oscilar",
+      "name": "Oscilar",
+      "category": "Compliance",
+      "services": [
+        {
+          "name": "KYC/AML verification",
+          "cost_unit_scope": "PER_INVESTOR",
+          "unit_price": 3,
+          "minimum_commitment": 50,
+          "payer": "INVESTOR",
+          "timing": "AT_OFFERING",
+          "timing_scope": "ONE_TIME",
+          "accounting": "EXPENSED",
+          "stage_activation": ["COMMITTED_OFFERING", "SPECIFIC_OFFERING"],
+          "upreit_specific": false,
+          "llc_specific": false,
+          "reg_a_required": true
+        }
+      ]
+    },
+    {
+      "id": "transfer-agent",
+      "name": "Transfer Agent",
+      "category": "Investor Services",
+      "services": [
+        {
+          "name": "Share registry",
+          "cost_unit_scope": "PER_INVESTOR",
+          "unit_price": 2,
+          "minimum_commitment": 100,
+          "payer": "REIT",
+          "timing": "POST_CLOSE",
+          "timing_scope": "ANNUAL",
+          "accounting": "EXPENSED",
+          "stage_activation": [
+            "COMMITTED_OFFERING",
+            "SPECIFIC_OFFERING",
+            "CLOSED_OFFERING"
+          ],
+          "upreit_specific": true,
+          "llc_specific": false,
+          "reg_a_required": true
+        },
+        {
+          "name": "Distribution processing",
+          "cost_unit_scope": "PER_TRANSACTION",
+          "unit_price": 0.5,
+          "minimum_commitment": 1000,
+          "payer": "REIT",
+          "timing": "POST_CLOSE",
+          "timing_scope": "ONE_TIME",
+          "accounting": "EXPENSED",
+          "stage_activation": ["CLOSED_OFFERING"],
+          "upreit_specific": true,
+          "llc_specific": false,
+          "reg_a_required": true
+        }
+      ]
+    },
+    {
+      "id": "edgar-service",
+      "name": "EDGAR Service",
+      "category": "SEC Compliance",
+      "services": [
+        {
+          "name": "Reg A+ filing",
+          "cost_unit_scope": "PER_FILING",
+          "unit_price": 2500,
+          "minimum_commitment": 1,
+          "payer": "COMPANY",
+          "timing": "AT_ONBOARDING",
+          "timing_scope": "ONE_TIME",
+          "accounting": "CAPITALIZED",
+          "amortization_period": 3,
+          "stage_activation": ["IOI", "COMMITTED_OFFERING"],
+          "upreit_specific": false,
+          "llc_specific": false,
+          "reg_a_required": true
+        }
+      ]
+    },
+    {
+      "id": "auditor",
+      "name": "Auditor",
+      "category": "Financial Compliance",
+      "services": [
+        {
+          "name": "Annual audit",
+          "cost_unit_scope": "PER_OFFERING_PER_YEAR",
+          "unit_price": 25000,
+          "minimum_commitment": 1,
+          "payer": "COMPANY",
+          "timing": "POST_CLOSE",
+          "timing_scope": "ANNUAL",
+          "accounting": "EXPENSED",
+          "stage_activation": ["CLOSED_OFFERING"],
+          "upreit_specific": false,
+          "llc_specific": false,
+          "reg_a_required": true
+        }
+      ]
+    },
+    {
+      "id": "appraisal-vendors",
+      "name": "Appraisal Vendors",
+      "category": "Property Valuation",
+      "services": [
+        {
+          "name": "Property appraisal",
+          "cost_unit_scope": "PER_ASSET",
+          "unit_price": 2500,
+          "minimum_commitment": 1,
+          "payer": "COMPANY",
+          "timing": "AT_OFFERING",
+          "timing_scope": "ONE_TIME",
+          "accounting": "CAPITALIZED",
+          "amortization_period": 2,
+          "stage_activation": ["SPECIFIC_OFFERING"],
+          "upreit_specific": false,
+          "llc_specific": false,
+          "reg_a_required": true
+        }
+      ]
+    },
+    {
+      "id": "property-management",
+      "name": "Property Management",
+      "category": "Asset Management",
+      "services": [
+        {
+          "name": "Property management",
+          "cost_unit_scope": "PER_ASSET_PER_YEAR",
+          "unit_price": 1000,
+          "minimum_commitment": 1,
+          "payer": "COMPANY",
+          "timing": "POST_CLOSE",
+          "timing_scope": "ANNUAL",
+          "accounting": "EXPENSED",
+          "stage_activation": ["SPECIFIC_OFFERING", "CLOSED_OFFERING"],
+          "upreit_specific": false,
+          "llc_specific": false,
+          "reg_a_required": false
+        }
+      ]
+    },
+    {
+      "id": "docusign",
+      "name": "DocuSign",
+      "category": "Document Management",
+      "services": [
+        {
+          "name": "Electronic signatures",
+          "cost_unit_scope": "PER_TRANSACTION",
+          "unit_price": 0.25,
+          "minimum_commitment": 1000,
+          "payer": "COMPANY",
+          "timing": "AT_OFFERING",
+          "timing_scope": "ONE_TIME",
+          "accounting": "EXPENSED",
+          "stage_activation": ["COMMITTED_OFFERING", "SPECIFIC_OFFERING"],
+          "upreit_specific": false,
+          "llc_specific": false,
+          "reg_a_required": false
+        }
+      ]
+    },
+    {
+      "id": "ach-providers",
+      "name": "ACH Providers",
+      "category": "Payment Processing",
+      "services": [
+        {
+          "name": "ACH transfers",
+          "cost_unit_scope": "PER_TRANSACTION",
+          "unit_price": 0.25,
+          "minimum_commitment": 1000,
+          "payer": "INVESTOR",
+          "timing": "AT_OFFERING",
+          "timing_scope": "ONE_TIME",
+          "accounting": "EXPENSED",
+          "stage_activation": ["SPECIFIC_OFFERING", "CLOSED_OFFERING"],
+          "upreit_specific": false,
+          "llc_specific": false,
+          "reg_a_required": false
+        }
+      ]
+    },
+    {
+      "id": "reit-compliance-accountant",
+      "name": "REIT Compliance Accountant",
+      "category": "Tax Compliance",
+      "services": [
+        {
+          "name": "REIT testing",
+          "cost_unit_scope": "PER_OFFERING_PER_YEAR",
+          "unit_price": 15000,
+          "minimum_commitment": 1,
+          "payer": "REIT",
+          "timing": "POST_CLOSE",
+          "timing_scope": "ANNUAL",
+          "accounting": "EXPENSED",
+          "stage_activation": ["CLOSED_OFFERING"],
+          "upreit_specific": true,
+          "llc_specific": false,
+          "reg_a_required": true
+        }
+      ]
+    }
+  ],
+  "stage_activations": {
+    "IOI": {
+      "description": "Initial investor interest",
+      "key_costs": [
+        "Platform setup (North Capital)",
+        "Legal structuring (CRE Counsel)",
+        "Initial compliance (EDGAR Service)"
+      ]
+    },
+    "COMMITTED_OFFERING": {
+      "description": "Investor commitments",
+      "key_costs": [
+        "Investor verification (Oscilar)",
+        "Transfer agent setup (Transfer Agent)",
+        "Reg A+ filing (EDGAR Service)"
+      ]
+    },
+    "SPECIFIC_OFFERING": {
+      "description": "Specific property offering",
+      "key_costs": [
+        "Property appraisal (Appraisal Vendors)",
+        "Due diligence (Cherre, Enigma)",
+        "Property management setup (Property Management)"
+      ]
+    },
+    "CLOSED_OFFERING": {
+      "description": "Offering closed, ongoing management",
+      "key_costs": [
+        "Ongoing property management (Property Management)",
+        "Annual audit (Auditor)",
+        "Investor reporting (Transfer Agent)"
+      ]
+    }
+  },
+  "cost_calculation_framework": {
+    "upreit_costs": {
+      "setup": [
+        "REIT formation (CRE Counsel)",
+        "Operating Partnership setup (CRE Counsel)",
+        "Reg A+ filing (EDGAR Service)",
+        "Transfer agent setup (Transfer Agent)"
+      ],
+      "ongoing": [
+        "REIT testing (REIT Compliance Accountant)",
+        "1099-DIV preparation (Transfer Agent)",
+        "Share registry (Transfer Agent)",
+        "Distribution processing (Transfer Agent)"
+      ]
+    },
+    "llc_costs": {
+      "setup": [
+        "LLC formation (CRE Counsel)",
+        "Operating Agreement (CRE Counsel)",
+        "Reg A+ filing (EDGAR Service)"
+      ],
+      "ongoing": [
+        "K-1 preparation (Tax Accountant)",
+        "Member management (Internal)",
+        "Distribution processing (Internal)"
+      ]
+    }
+  },
+  "schemas": {
+    "timing_options": ["AT_ONBOARDING", "AT_IOI", "AT_OFFERING", "POST_CLOSE"],
+    "timing_scope": ["ONE_TIME", "ANNUAL"],
+    "cost_card_model": {
+      "scales": {
+        "property_counts": [1, 10, 100, 1000],
+        "investor_counts": [100, 1000, 10000]
+      },
+      "base": {
+        "unit_scope": "enum",
+        "timing_scope": "enum",
+        "unit_price": 0,
+        "minimum_commitment": 0
+      },
+      "outputs": {
+        "per_investor": {
+          "per_year": {
+            "by_properties": { "1": 0, "10": 0, "100": 0, "1000": 0 },
+            "by_investors": { "100": 0, "1000": 0, "10000": 0 }
+          },
+          "one_time": {
+            "by_properties": { "1": 0, "10": 0, "100": 0, "1000": 0 },
+            "by_investors": { "100": 0, "1000": 0, "10000": 0 }
+          }
+        },
+        "per_property": {
+          "per_year": {
+            "by_properties": { "1": 0, "10": 0, "100": 0, "1000": 0 }
+          },
+          "one_time": {
+            "by_properties": { "1": 0, "10": 0, "100": 0, "1000": 0 }
+          }
+        },
+        "per_offering": {
+          "per_year": {
+            "by_properties": { "1": 0, "10": 0, "100": 0, "1000": 0 }
+          },
+          "one_time": {
+            "by_properties": { "1": 0, "10": 0, "100": 0, "1000": 0 }
+          }
+        },
+        "per_platform": {
+          "per_year": { "total": 0 },
+          "one_time": { "total": 0 }
+        }
+      },
+      "formulas": {
+        "PER_OFFERING_PER_YEAR_to_PER_INVESTOR_PER_YEAR": "unit_price / n_investors",
+        "PER_ASSET_PER_YEAR_to_PER_INVESTOR_PER_YEAR": "(unit_price * n_properties) / n_investors",
+        "PER_PLATFORM_PER_YEAR_to_PER_INVESTOR_PER_YEAR": "unit_price / n_investors",
+        "PER_OFFERING_ONE_TIME_to_PER_INVESTOR_ONE_TIME": "unit_price / n_investors",
+        "PER_ASSET_ONE_TIME_to_PER_INVESTOR_ONE_TIME": "(unit_price * n_properties) / n_investors"
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+# Ticket Wizard Rule (Conversation Script)
+
+## Overview
+
+Guided conversation to create/update a ticket per best practices, optimized for a quick context dump and a structured tightening pass before copying to Linear.
+
+## References
+
+- Template: `withco-general/linear/docs/templates/ticket-template.md`
+- Best practices: `withco-general/docs/global/GLB-TKT_Best_Practices.md`
+
+## Activation
+
+Trigger when user requests “ticket wizard”, “create/update ticket”, or references template/best-practices.
+
+## Mode & Boundaries (Planning Mode compatible)
+
+- Operate in chat; do not push to Linear automatically.
+- Ask before writing files; offer to save drafts under `withco-general/linear/tickets/drafts/`.
+- Do not invent reviewers/owners — ask or mark TBD.
+
+## Conversation Script
+
+### Phase 0 — Boot
+
+- Locate `@TKT_Best_Practices.md`. If absent, offer to create it from the scaffold and continue.
+
+### Phase 1 — Triage (one pass)
+
+- Ask for: (a) working title/type/due date, (b) the primary deliverable format, (c) which DoD tier to target first (Fast vs Standard vs Gold).
+- Offer domain‑aware suggestions (Finance / Legal / Pricing / Data).
+
+### Phase 2 — Context collection
+
+- Prompt: “Share any relevant links, docs, prior tickets or models, and why they matter.”
+- Parse normal language and file items into Links & Resources / Precedents / Prior Work.
+- If needed, propose up to 3 quick lookups to try (user confirms which to run manually).
+
+### Phase 3 — DoD + plan
+
+- Propose a 3‑tier DoD with 5–8 binary checks per tier, each with explicit evidence (file/link + named reviewer).
+- Draft a 20–60 minute task plan front‑loading validation and adding an early review checkpoint.
+
+### Phase 4 — Risks, OOS, reviewers
+
+- Ask for must‑not‑break guardrails, out‑of‑scope, reviewers, and review dates; add to the ticket.
+
+### Phase 5 — Output
+
+- Return a “Beautiful Ticket” block that exactly matches `TKT_Best_Practices.md` structure, fully populated.
+- Also produce a Reviewer Pack: TL;DR (3 bullets), what to check, and direct links.
+
+## Front Matter Map (must-have fields)
+
+```
+id, title, status, stage, owner, people[], reviewers[], approver, priority,
+tags[], team, super_initiative, initiative, project, milestone, requirement,
+linear_issue_link, created (ISO 8601), updated (ISO 8601), version,
+related_docs[], risk_level, repo_only
+```
+
+Use sane defaults (TBD) when unknown; prompt only for essentials unless the user asks to be thorough.
+
+## Natural phrases you can use any time
+
+- “Here are some links: …”
+- “Precedents worth reusing: …”
+- “Prior work I’ve done: …”
+- “People to loop in: …”
+- “Please finalize; I’ll polish later.”
+
+## Finish conditions
+
+- The ticket includes Goal/Purpose, Assumptions, Inputs/Dependencies, Deliverable, DoD (3 tiers), Feedback & Reviews, OOS, Open Questions, Plan, and an Appendix with Links/Precedents/Prior Work/Data/People/Decision Log/Context Digest.
+
+## Quality Checks
+
+- Keep DoD checks binary and evidence-backed.
+- Ensure every Open Question has a suggested path to answer.
+- Trim repeated bullets; normalize section headings to the template.

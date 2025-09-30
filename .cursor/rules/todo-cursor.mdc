@@ -1,0 +1,33 @@
+---
+description: Ensure todo_write tool is called when user requests TODO list updates
+alwaysApply: false
+---
+
+# TODO Management Rule
+
+When the user asks to add items to the TODO list, add to TODOs, or mentions updating TODOs, you MUST use the `todo_write` tool to manage the TODO list.
+
+## Required Actions
+
+- **ALWAYS** call `todo_write` tool when user requests TODO updates
+- **NEVER** just mention TODOs without actually creating/updating them
+- **ALWAYS** provide clear, actionable TODO items with proper status tracking
+- **ALWAYS** use the merge parameter appropriately (false for new lists, true for updates)
+
+## Examples
+
+✅ **Correct**: User says "add this to TODOs" → Call `todo_write` tool
+✅ **Correct**: User says "update my todo list" → Call `todo_write` tool  
+✅ **Correct**: User mentions "for later" items → Call `todo_write` tool
+
+❌ **Incorrect**: Just mentioning "I'll add this to TODOs" without calling the tool
+❌ **Incorrect**: Creating TODO lists in text without using the tool
+
+## Tool Usage
+
+Use `todo_write` with:
+
+- `merge: false` for creating new TODO lists
+- `merge: true` for updating existing TODO lists
+- Clear, actionable content for each TODO item
+- Appropriate status (pending, in_progress, completed, cancelled)

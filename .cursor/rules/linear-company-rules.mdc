@@ -1,0 +1,83 @@
+---
+description: Use when writing changes to withco linear Initiatives, Projects, Milestones or Project Requirements
+alwaysApply: false
+---
+
+# Linear Workflow Compliance for withco-team
+
+When working on withco-team projects, ALWAYS ensure compliance with the latest Linear workflow documentation located at `/withco-general/linear/docs/How to use Linear.md`. This is especially critical when:
+
+## High Priority (Must Follow)
+
+- **Initiative PRDs**: Follow the initiative anatomy structure
+- **Project PRDs**: Include Problem/Solution sections with proper scoping
+- **Milestone Definition**: Ensure 1-3 week scope with clear requirements
+- **Requirements/Issues**: Must have clear definition of done, <1 week scope per IC
+
+## Medium Priority (Should Follow)
+
+- **Linear MCP Operations**: When using Linear MCP tools, follow team structure (Product, Legal, Analytics, Data)
+- **Project Status Management**: Use Backlog → Planned → In Progress progression
+- **Cycle Management**: Ensure active work is in current cycle (To do/In Progress status)
+- **Documentation**: Use Linear documents over Notion links when possible
+
+## Key Compliance Points
+
+### Vocabulary & Hierarchy
+
+- **Super Initiative**: Global timeline-based work streams
+- **Initiative**: Indefinite company value work (versioned as v1, v2, etc.)
+- **Project**: 4-10 week scoped outcomes
+- **Milestone**: 1-3 week requirement collections
+- **Requirement**: <1 week individual work units
+
+### Project Structure Requirements
+
+```plain text
+Problem
+- User:
+- Core pain point:
+- Key risks:
+- Why now?:
+
+Solution
+- Goal: (high-level capability description)
+- Assumptions & inputs:
+- Explicitly out of scope:
+```
+
+### Milestone Standards
+
+- Tightly scoped to 1-3 weeks
+- Clear definitions of done for each requirement
+- Target end-dates for accountability
+- Requirements must be agreed upon before project begins
+
+### Issue/Requirement Standards
+
+- Very clear definition of done
+- Scoped for single IC completion in <1 week
+- Larger work should be broken into milestones
+- Use "Convert list to issues" for milestone requirements
+
+### Communication Standards
+
+- Use project updates for progress (not comments)
+- Weekly Friday updates minimum
+- Post updates for milestone changes/completions
+- Use discussion threads for fine-grained work details
+
+### Team Structure
+
+- 4 teams: Product, Legal, Analytics, Data
+- All projects have 2 initiatives: team-specific + global super initiative
+- Use workspace-level labels, not team-level
+- Avoid sub-issues for company-wide visibility
+
+## Enforcement
+
+- **Critical**: Initiative/Project PRDs and milestone scoping
+- **Important**: All Linear MCP operations and document scoping
+- **Recommended**: General ticket work and cycle management
+
+Always reference the full documentation at `/withco-general/linear/docs/How to use Linear.md` for complete details and latest updates.

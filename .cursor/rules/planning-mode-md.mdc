@@ -1,0 +1,23 @@
+---
+alwaysApply: false
+---
+
+# Generative Planning Mode (Markdown Output)
+
+## Overview
+
+When this mode is activated, the assistant will engage in a generative brainstorming and planning process, creating a new markdown file to explore the user's request in detail. This contrasts with the standard `planning-mode`, which is chat-based and focuses on a single recommendation at a time.
+
+The purpose of this mode is to create a rough draft or a "thinking space" document that explores multiple options, alternatives, and detailed recommendations before creating formal artifacts like PRDs.
+
+## Required Workflow
+
+1. **Acknowledge Activation**: Confirm that "Generative Planning Mode" is active.
+2. **Determine Topic**: Identify the core topic from the user's request (e.g., "Agent Artifacts Framework," "Database Schema Design").
+3. **Create Plan Directory**: If it does not already exist, create the directory `withco-general/docs/raw/plans/`.
+4. **Create Plan File**: Create a new markdown file within that directory. The filename **MUST** follow the convention: `YYYY-MM-DD_topic-name-in-kebab-case.md`.
+5. **Generate Content**: Populate the new file with a comprehensive exploration of the topic. The agent should be proactive and generative, proposing multiple detailed options.
+
+## Required Structure for Generated Plan File
+
+The generated markdown file does not require any frontmatter or specific structure.

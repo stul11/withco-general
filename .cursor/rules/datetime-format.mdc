@@ -1,0 +1,31 @@
+---
+description: "Enforce ISO 8601 date-time format for created/updated fields in front matter."
+alwaysApply: false
+---
+
+# Date-Time Format Rule
+
+When adding or updating front matter in documentation files (PRDs, ADRs, Research Requests), you **MUST** ensure that any `created` and `updated` fields include both the date and the time.
+
+## Required Format
+
+The required format is `YYYY-MM-DDTHH:MM:SSZ` (ISO 8601).
+
+- **ALWAYS** include the time.
+- **ALWAYS** use UTC (indicated by `Z`).
+
+## Examples
+
+✅ **Correct**:
+
+```yaml
+created: 2025-09-27T14:30:00Z
+updated: 2025-09-27T15:00:00Z
+```
+
+❌ **Incorrect**:
+
+```yaml
+created: 2025-09-27
+updated: 2025-09-27
+```
