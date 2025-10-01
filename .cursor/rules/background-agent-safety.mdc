@@ -1,0 +1,240 @@
+---
+description: "Safety rules for background agent operations with Linear integration"
+alwaysApply: true
+---
+
+# Background Agent Safety Rules
+
+## CRITICAL SAFETY REQUIREMENTS
+
+### 1. Linear Project Access Control
+
+**ALLOWED Linear Operations:**
+- ✅ **READ-ONLY** access to company Linear projects (Legal, Product, Analytics, Data)
+- ✅ **READ/WRITE** access to Global To-Do project (`to-do-and-planning-e2ce95344374`)
+- ✅ **READ-ONLY** access to Linear workspace for context gathering
+
+**PROHIBITED Linear Operations:**
+- ❌ **NO WRITES** to company Linear projects
+- ❌ **NO ISSUE CREATION** in company Linear projects
+- ❌ **NO PROJECT UPDATES** in company Linear projects
+- ❌ **NO MILESTONE CREATION** in company Linear projects
+- ❌ **NO RESOURCE ATTACHMENTS** to company Linear projects
+
+### 2. File System Access Control
+
+**ALLOWED File Operations:**
+- ✅ **READ/WRITE** access to `linear/tickets/drafts/` directory
+- ✅ **READ/WRITE** access to `docs/agents/session-notes/`
+- ✅ **READ/WRITE** access to `docs/global/Decision_Docket.md`
+- ✅ **READ/WRITE** access to `docs/global/TODO_Log.md`
+
+**PROHIBITED File Operations:**
+- ❌ **NO WRITES** to company Linear project files
+- ❌ **NO MODIFICATION** of company Linear templates
+- ❌ **NO CREATION** of files in company Linear directories
+
+### 3. Operational Boundaries
+
+**Background Agent Scope:**
+- ✅ Personal work management through Global To-Do project
+- ✅ Ticket wizard draft creation and management
+- ✅ Context gathering from company Linear (read-only)
+- ✅ Personal documentation and decision tracking
+
+**Explicitly Out of Scope:**
+- ❌ Company Linear project management
+- ❌ Team Linear integration
+- ❌ Company Linear workflow enforcement
+- ❌ Company Linear project updates
+
+## SAFETY ENFORCEMENT MECHANISMS
+
+### 1. Pre-Operation Checks
+
+Before any Linear operation, the agent MUST:
+
+1. **Verify Target Project**: Confirm operation targets Global To-Do project only
+2. **Check Operation Type**: Ensure operation is allowed per safety rules
+3. **Validate Scope**: Confirm operation is within personal work scope
+4. **Log Operation**: Record all Linear operations for audit
+
+### 2. Error Handling
+
+If safety rules are violated:
+
+1. **Immediate Stop**: Halt all Linear operations
+2. **Error Logging**: Record violation details
+3. **User Notification**: Alert user of safety violation
+4. **Rollback**: Undo any unauthorized changes if possible
+
+### 3. Audit Trail
+
+All operations must be logged with:
+- **Timestamp**: When operation occurred
+- **Operation Type**: What was attempted
+- **Target Project**: Which Linear project was targeted
+- **Safety Check**: Whether safety rules were followed
+- **User Approval**: Whether explicit approval was given
+
+## IMPLEMENTATION GUIDELINES
+
+### 1. Linear MCP Tool Usage
+
+When using Linear MCP tools:
+
+```yaml
+# SAFE: Reading company Linear for context
+linear_get_issue:
+  project_id: "company-project-id"  # READ-ONLY OK
+  
+# SAFE: Writing to Global To-Do project
+linear_create_issue:
+  project_id: "to-do-and-planning-e2ce95344374"  # WRITE OK
+  
+# UNSAFE: Writing to company Linear
+linear_create_issue:
+  project_id: "company-project-id"  # ❌ PROHIBITED
+```
+
+### 2. File Operation Patterns
+
+```yaml
+# SAFE: Personal work files
+write:
+  file_path: "linear/tickets/drafts/personal-work.md"
+  
+# SAFE: Personal documentation
+write:
+  file_path: "docs/agents/session-notes/SN_20250127_personal-work.md"
+  
+# UNSAFE: Company Linear files
+write:
+  file_path: "linear/projects/company-project/company-file.md"  # ❌ PROHIBITED
+```
+
+### 3. Context Gathering
+
+```yaml
+# SAFE: Read company Linear for context
+codebase_search:
+  query: "How does company Linear project structure work?"
+  target_directories: ["linear/docs/"]
+  
+# SAFE: Read company Linear templates
+read_file:
+  target_file: "linear/docs/templates/ticket-template.md"
+  
+# UNSAFE: Modify company Linear templates
+write:
+  file_path: "linear/docs/templates/ticket-template.md"  # ❌ PROHIBITED
+```
+
+## EMERGENCY PROCEDURES
+
+### 1. Safety Violation Response
+
+If safety rules are violated:
+
+1. **Immediate Stop**: Halt all operations
+2. **Error Logging**: Record violation details
+3. **User Alert**: Notify user immediately
+4. **Damage Assessment**: Evaluate any unauthorized changes
+5. **Recovery Plan**: Develop plan to undo unauthorized changes
+
+### 2. Recovery Procedures
+
+If unauthorized changes occur:
+
+1. **Identify Changes**: Determine what was modified
+2. **Assess Impact**: Evaluate scope of unauthorized changes
+3. **Rollback Plan**: Develop plan to undo changes
+4. **User Approval**: Get explicit approval for recovery actions
+5. **Execute Recovery**: Undo unauthorized changes safely
+
+## COMPLIANCE VERIFICATION
+
+### 1. Pre-Operation Checklist
+
+Before any Linear operation, verify:
+- [ ] Target project is Global To-Do project only
+- [ ] Operation type is allowed per safety rules
+- [ ] Scope is within personal work management
+- [ ] User approval obtained if required
+
+### 2. Post-Operation Audit
+
+After any Linear operation, verify:
+- [ ] Operation completed successfully
+- [ ] No unauthorized changes made
+- [ ] Audit trail updated
+- [ ] Safety rules maintained
+
+## USER OVERRIDE PROCEDURES
+
+### 1. Emergency Override
+
+If user needs to override safety rules:
+
+1. **Explicit Request**: User must explicitly request override
+2. **Justification**: User must provide justification
+3. **Confirmation**: User must confirm understanding of risks
+4. **Limited Scope**: Override limited to specific operation
+5. **Audit Trail**: Override must be logged with justification
+
+### 2. Permanent Rule Changes
+
+To modify safety rules:
+
+1. **User Request**: User must explicitly request rule change
+2. **Rule Update**: Update this cursor rule file
+3. **Verification**: Verify new rules are safe
+4. **Testing**: Test new rules in safe environment
+5. **Deployment**: Deploy new rules with user approval
+
+## MONITORING AND ALERTS
+
+### 1. Operation Monitoring
+
+Monitor all operations for:
+- **Unauthorized Linear Writes**: Any writes to company Linear
+- **Scope Violations**: Operations outside personal work scope
+- **Safety Rule Violations**: Any violation of safety rules
+- **User Approval Bypass**: Operations without required approval
+
+### 2. Alert Conditions
+
+Alert user when:
+- **Safety Violation**: Any violation of safety rules
+- **Unauthorized Access**: Attempted access to prohibited areas
+- **Scope Violation**: Operations outside allowed scope
+- **Emergency Override**: User requests emergency override
+
+## BEST PRACTICES
+
+### 1. Defensive Programming
+
+- **Always Verify**: Check safety rules before every operation
+- **Fail Safe**: Default to safe operations when in doubt
+- **Log Everything**: Maintain complete audit trail
+- **User Confirmation**: Get explicit approval for risky operations
+
+### 2. Error Prevention
+
+- **Pre-Operation Checks**: Verify safety before operations
+- **Post-Operation Verification**: Confirm safety after operations
+- **Continuous Monitoring**: Monitor all operations continuously
+- **Immediate Response**: Respond to violations immediately
+
+### 3. User Communication
+
+- **Clear Boundaries**: Communicate safety boundaries clearly
+- **Transparent Operations**: Explain what operations will do
+- **Risk Assessment**: Assess and communicate risks
+- **Recovery Options**: Provide clear recovery procedures
+
+## CONCLUSION
+
+These safety rules ensure that the background agent operates safely within the defined boundaries, protecting company Linear projects while enabling effective personal work management through the Global To-Do project.
+
+**Remember**: When in doubt, ask for user approval. Safety first, functionality second.

@@ -1,0 +1,290 @@
+---
+description: "Practical implementation guide for background agent safety testing"
+alwaysApply: false
+---
+
+# Background Agent Safety Implementation Guide
+
+## QUICK START SAFETY CHECKLIST
+
+### Pre-Implementation Checklist
+
+- [ ] **Safety Rules Loaded**: Both safety rule files are active
+- [ ] **Global To-Do Project ID**: Confirmed `to-do-and-planning-e2ce95344374`
+- [ ] **Company Linear Projects**: Identified and marked as read-only
+- [ ] **Personal Work Scope**: Defined and documented
+- [ ] **User Approval Process**: Established for write operations
+
+### Implementation Safety Gates
+
+- [ ] **Gate 1**: All Linear operations target Global To-Do project only
+- [ ] **Gate 2**: All file operations use allowed paths only
+- [ ] **Gate 3**: All write operations require explicit user approval
+- [ ] **Gate 4**: All operations logged for audit trail
+- [ ] **Gate 5**: Violation detection active and tested
+
+## PRACTICAL SAFETY IMPLEMENTATION
+
+### 1. Linear MCP Tool Safety Wrapper
+
+```python
+# Example safety wrapper for Linear MCP tools
+def safe_linear_mcp_call(tool_name, **kwargs):
+    # Extract project ID from kwargs
+    project_id = kwargs.get('project_id', kwargs.get('project', None))
+    
+    # Safety check: Only Global To-Do project allowed for writes
+    if tool_name in ['linear_create_issue', 'linear_update_issue', 'linear_create_project']:
+        if project_id != 'to-do-and-planning-e2ce95344374':
+            raise SafetyViolationError(f"Write operation not allowed for project: {project_id}")
+    
+    # Log operation
+    log_linear_operation(tool_name, project_id, kwargs)
+    
+    # Execute operation
+    return execute_linear_mcp_tool(tool_name, **kwargs)
+```
+
+### 2. File System Safety Wrapper
+
+```python
+# Example safety wrapper for file operations
+def safe_file_operation(operation, file_path, **kwargs):
+    # Define allowed paths
+    allowed_paths = [
+        'linear/tickets/drafts/',
+        'docs/agents/session-notes/',
+        'docs/global/Decision_Docket.md',
+        'docs/global/TODO_Log.md'
+    ]
+    
+    # Check if path is allowed
+    if not any(file_path.startswith(path) for path in allowed_paths):
+        raise SafetyViolationError(f"File path not allowed: {file_path}")
+    
+    # Check operation type
+    if operation == 'write' and 'linear/docs/templates/' in file_path:
+        raise SafetyViolationError("Template modification not allowed")
+    
+    # Log operation
+    log_file_operation(operation, file_path, kwargs)
+    
+    # Execute operation
+    return execute_file_operation(operation, file_path, **kwargs)
+```
+
+### 3. Context Gathering Safety
+
+```python
+# Example safe context gathering
+def safe_context_gathering():
+    # Read-only operations for company Linear
+    company_context = {
+        'linear_workflow': read_file('linear/docs/How to use Linear.md'),
+        'templates': read_file('linear/docs/templates/ticket-template.md'),
+        'best_practices': read_file('docs/global/GLB-TKT_Best_Practices.md')
+    }
+    
+    # Personal work operations
+    personal_work = {
+        'draft_tickets': list_dir('linear/tickets/drafts/'),
+        'session_notes': list_dir('docs/agents/session-notes/'),
+        'todo_log': read_file('docs/global/TODO_Log.md'),
+        'decision_docket': read_file('docs/global/Decision_Docket.md')
+    }
+    
+    return combine_context(company_context, personal_work)
+```
+
+## TESTING FRAMEWORK
+
+### 1. Safety Rule Validation Tests
+
+```yaml
+# Test cases for safety rule validation
+safety_tests:
+  positive_cases:
+    - test: "Read company Linear context"
+      operation: "read_file"
+      path: "linear/docs/How to use Linear.md"
+      expected: "SUCCESS"
+    
+    - test: "Write to Global To-Do project"
+      operation: "linear_create_issue"
+      project_id: "to-do-and-planning-e2ce95344374"
+      expected: "SUCCESS"
+    
+    - test: "Create personal work draft"
+      operation: "write"
+      path: "linear/tickets/drafts/personal-work.md"
+      expected: "SUCCESS"
+  
+  negative_cases:
+    - test: "Write to company Linear project"
+      operation: "linear_create_issue"
+      project_id: "company-project-id"
+      expected: "SAFETY_VIOLATION"
+    
+    - test: "Modify company Linear template"
+      operation: "write"
+      path: "linear/docs/templates/ticket-template.md"
+      expected: "SAFETY_VIOLATION"
+    
+    - test: "Create file in company Linear directory"
+      operation: "write"
+      path: "linear/projects/company-project/file.md"
+      expected: "SAFETY_VIOLATION"
+```
+
+### 2. Violation Detection Tests
+
+```yaml
+# Test cases for violation detection
+violation_tests:
+  unauthorized_write:
+    - test: "Attempt Linear write to company project"
+      operation: "linear_create_issue"
+      project_id: "company-project-id"
+      expected_violation: "unauthorized_linear_write"
+      expected_response: "immediate_stop"
+  
+  template_modification:
+    - test: "Attempt template modification"
+      operation: "write"
+      path: "linear/docs/templates/ticket-template.md"
+      expected_violation: "template_modification"
+      expected_response: "immediate_stop_and_alert"
+  
+  scope_violation:
+    - test: "Operation outside personal work scope"
+      operation: "linear_update_project"
+      project_id: "company-project-id"
+      expected_violation: "scope_violation"
+      expected_response: "halt_and_request_approval"
+```
+
+### 3. Recovery Testing
+
+```yaml
+# Test cases for recovery procedures
+recovery_tests:
+  rollback_simulation:
+    - test: "Simulate unauthorized change"
+      operation: "linear_create_issue"
+      project_id: "company-project-id"
+      expected: "violation_detected"
+      recovery: "rollback_unauthorized_change"
+  
+  integrity_verification:
+    - test: "Verify company Linear integrity"
+      operation: "read_file"
+      path: "linear/docs/templates/ticket-template.md"
+      expected: "no_unauthorized_changes"
+  
+  safety_rule_restoration:
+    - test: "Restore safety rules after violation"
+      operation: "safety_check"
+      expected: "rules_active_and_functioning"
+```
+
+## MONITORING IMPLEMENTATION
+
+### 1. Operation Logging
+
+```python
+# Example operation logging implementation
+def log_operation(operation, target, details):
+    log_entry = {
+        'timestamp': datetime.now().isoformat(),
+        'operation': operation,
+        'target': target,
+        'details': details,
+        'safety_check_passed': True,
+        'user_approval': 'explicit'
+    }
+    
+    # Write to audit log
+    write_to_audit_log(log_entry)
+    
+    # Check for violations
+    if detect_violation(log_entry):
+        handle_violation(log_entry)
+```
+
+### 2. Real-time Monitoring
+
+```python
+# Example real-time monitoring
+def monitor_operations():
+    while True:
+        # Check for new operations
+        new_operations = get_new_operations()
+        
+        for operation in new_operations:
+            # Validate safety
+            if not validate_safety(operation):
+                handle_violation(operation)
+            
+            # Log operation
+            log_operation(operation)
+            
+            # Check for patterns
+            if detect_violation_pattern(operation):
+                alert_user(operation)
+```
+
+### 3. Alert System
+
+```python
+# Example alert system
+def alert_user(violation):
+    alert = {
+        'severity': violation['severity'],
+        'message': violation['message'],
+        'timestamp': datetime.now().isoformat(),
+        'recommended_action': violation['recommended_action']
+    }
+    
+    # Send alert to user
+    send_alert(alert)
+    
+    # Log alert
+    log_alert(alert)
+```
+
+## BEST PRACTICES CHECKLIST
+
+### 1. Implementation Best Practices
+
+- [ ] **Defensive Programming**: Always check safety before operations
+- [ ] **Fail-Safe Defaults**: Default to safe operations when in doubt
+- [ ] **Comprehensive Logging**: Log all operations for audit trail
+- [ ] **User Communication**: Explain operations and risks clearly
+- [ ] **Error Handling**: Handle errors gracefully with recovery
+
+### 2. Testing Best Practices
+
+- [ ] **Positive Testing**: Test allowed operations work correctly
+- [ ] **Negative Testing**: Test prohibited operations are blocked
+- [ ] **Edge Case Testing**: Test boundary conditions and edge cases
+- [ ] **Recovery Testing**: Test violation detection and recovery
+- [ ] **Performance Testing**: Test safety checks don't impact performance
+
+### 3. Monitoring Best Practices
+
+- [ ] **Real-time Monitoring**: Monitor operations in real-time
+- [ ] **Violation Detection**: Detect violations immediately
+- [ ] **Alert System**: Alert user to violations quickly
+- [ ] **Audit Trail**: Maintain complete audit trail
+- [ ] **Performance Metrics**: Track safety check performance
+
+## CONCLUSION
+
+This implementation guide provides:
+
+1. **Practical Safety Wrappers**: Ready-to-use safety wrappers for common operations
+2. **Comprehensive Testing**: Test cases for validation and recovery
+3. **Monitoring Implementation**: Real-time monitoring and alerting
+4. **Best Practices**: Guidelines for safe implementation
+
+**Remember**: Safety is not optional. Every operation must pass safety checks before execution.
