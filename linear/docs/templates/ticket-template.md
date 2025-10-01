@@ -26,7 +26,7 @@ version: 0.1.0
 
 # Context & Relationships
 related_docs:
-  - withco-general/docs/global/GLB-TKT_Best_Practices.md
+  - withco-general/docs/global/GBL-TKT_Best_Practices.md
 risk_level: High | Medium | Low
 repo_only: true | false
 ---
