@@ -12,7 +12,7 @@
 - .cursor/commands/end-session.md
 - .cursor/rules/agent-chat-commands.mdc
 - docs/agents/workflows/Background_Agent_Draft_Review_Workflow.md
-- docs/global/GLB-TKT_Best_Practices.md
+- docs/global/GBL-TKT_Best_Practices.md
 - docs/global/GBL-PRD_Best_Practices.md
 
 - [List of key documents, files, or context provided]

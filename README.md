@@ -51,7 +51,7 @@ withco-general/
 ### Templates & Standards
 
 - [PRD Best Practices](docs/global/GBL-PRD_Best_Practices.md)
-- [Ticket Best Practices](docs/global/GLB-TKT_Best_Practices.md)
+- [Ticket Best Practices](docs/global/GBL-TKT_Best_Practices.md)
 - [Agent Templates](docs/agents/templates/)
 
 ### Workflows
@@ -74,7 +74,7 @@ withco-general/
 ### Important Scope Separation
 
 - The file `linear/docs/How_to_use_Linear.md` is a company document (READ-ONLY). Do not modify it in this repo.
-- Your personal preferences and drafting workflows live in this repo under `docs/global/GLB-TKT_Best_Practices.md` (tickets) and `docs/global/GBL-PRD_Best_Practices.md` (PRDs).
+- Your personal preferences and drafting workflows live in this repo under `docs/global/GBL-TKT_Best_Practices.md` (tickets) and `docs/global/GBL-PRD_Best_Practices.md` (PRDs).
 - Agents must never mix the company Linear workflow with personal drafting best practices; use company docs as reference only.
 
 ## Safety & Compliance

@@ -72,15 +72,15 @@
 
 ### **Fast Tier (Today)**
 
-- [ ] Core cost calculation draft for both UPREIT/LLC structures
-- [ ] Key assumptions documented with pending inputs noted
-- [ ] Draft ready for Brian/Kevin review tomorrow
-- [ ] Authoritative vendor/service list with enum mappings
-- [ ] Provisional Cost Card schema v0.1
-- [ ] Excel model standardization with new organization
-- [ ] Stage activation mapping completed
-- [ ] Research prompts for unverified assumptions
-- [ ] Two-tiered minimum structure analysis integrated
+- [x] Core cost calculation draft for both UPREIT/LLC structures
+- [x] Key assumptions documented with pending inputs noted
+- [x] Draft ready for Brian/Kevin review tomorrow
+- [x] Authoritative vendor/service list with enum mappings
+- [x] Provisional Cost Card schema v0.1
+- [x] Excel model standardization with new organization
+- [x] Stage activation mapping completed
+- [x] Research prompts for unverified assumptions
+- [x] Two-tiered minimum structure analysis integrated
 
 ---
 

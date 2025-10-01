@@ -501,7 +501,7 @@ Draft archived to: linear/tickets/archive/SLF-75-cost-model-improvements.md
 
 - [Ticket Wizard Rule](/workspace/.cursor/rules/ticket-wizard.mdc) - **MUST FOLLOW** for draft creation
 - [Ticket Template](/workspace/linear/docs/templates/ticket-template.md) - Structure for all tickets
-- [Ticket Best Practices](/workspace/docs/global/GLB-TKT_Best_Practices.md) - Quality standards
+- [Ticket Best Practices](/workspace/docs/global/GBL-TKT_Best_Practices.md) - Quality standards
 
 ### Safety & Process
 

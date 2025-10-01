@@ -5,7 +5,17 @@
 
 ## Recent Decisions
 
-### 2025-01-27
+### 2025-01-27 (B)
+
+- **Decision**: Resolve ADR template structure and Research Request template format
+- **Context**: Duplicate templates existed in multiple locations with different formats; needed to establish canonical versions
+- **Options Considered**: Keep both versions, Choose one format, Merge formats
+- **Rationale**: Single canonical template per type ensures consistency; comprehensive format in docs/agents/templates/ provides better structure
+- **Impact**: ADR and Research Request templates now have single canonical versions; duplicate templates removed; template location confusion resolved
+- **Links**: docs/agents/templates/ADR_Template.md, docs/agents/templates/Research_Request_Template.md
+- **Owner**: slittle
+
+### 2025-01-27 (A)
 
 - **Decision**: Convert draft ticket to PRD format for cost of manufacturing research
 - **Context**: Existing draft ticket had comprehensive content suitable for PRD structure
@@ -138,8 +148,6 @@
 ## Open Decisions
 
 - [ ] Which Cursor rules to implement for agent workflows
-- [ ] ADR template structure and requirements
-- [ ] Research Request template format
 
 ## Decision Patterns
 

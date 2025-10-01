@@ -1,3 +1,14 @@
+---
+id: DD_Template
+title: Decision Docket Template
+version: 1.0.0
+created: 2025-01-27T19:00:00Z
+updated: 2025-01-27T19:00:00Z
+owner: slittle
+status: Active
+tags: [template, decision-docket, tracking]
+---
+
 # Decision Docket
 
 - **Last Updated**: YYYY-MM-DDTHH:MM:SSZ
