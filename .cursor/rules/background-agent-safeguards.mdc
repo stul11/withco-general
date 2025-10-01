@@ -1,0 +1,324 @@
+---
+description: "Operational safeguards and monitoring for background agent safety"
+alwaysApply: true
+---
+
+# Background Agent Operational Safeguards
+
+## SAFETY MONITORING SYSTEM
+
+### 1. Pre-Operation Safety Checks
+
+Before executing any Linear operation, the agent MUST perform these checks:
+
+```yaml
+safety_check:
+  target_project: "to-do-and-planning-e2ce95344374"  # ONLY Global To-Do
+  operation_type: "read" | "write" | "create" | "update"
+  scope_validation: "personal_work_only"
+  user_approval: "required_for_write_operations"
+```
+
+### 2. Operation Logging
+
+All operations must be logged with this structure:
+
+```yaml
+operation_log:
+  timestamp: "2025-01-27T17:30:00Z"
+  operation: "linear_create_issue"
+  target_project: "to-do-and-planning-e2ce95344374"
+  safety_check_passed: true
+  user_approval: "explicit"
+  scope: "personal_work"
+  details: "Created issue for personal work item"
+```
+
+### 3. Safety Violation Detection
+
+Monitor for these violation patterns:
+
+```yaml
+violation_patterns:
+  unauthorized_linear_write:
+    pattern: "linear_create_issue with company project ID"
+    severity: "CRITICAL"
+    response: "immediate_stop_and_rollback"
+
+  scope_violation:
+    pattern: "operation outside personal work scope"
+    severity: "HIGH"
+    response: "halt_and_request_approval"
+
+  template_modification:
+    pattern: "write to linear/docs/templates/"
+    severity: "CRITICAL"
+    response: "immediate_stop_and_alert"
+```
+
+## IMPLEMENTATION SAFEGUARDS
+
+### 1. Linear MCP Tool Wrapper
+
+Create a safety wrapper for Linear MCP tools:
+
+```python
+def safe_linear_operation(operation, target_project, **kwargs):
+    # Pre-operation safety check
+    if not is_safe_operation(operation, target_project):
+        raise SafetyViolationError("Operation not allowed")
+
+    # Log operation
+    log_operation(operation, target_project, kwargs)
+
+    # Execute operation
+    try:
+        result = execute_linear_operation(operation, **kwargs)
+        log_success(operation, target_project)
+        return result
+    except Exception as e:
+        log_error(operation, target_project, e)
+        raise
+```
+
+### 2. File System Safety
+
+Implement file system safety checks:
+
+```python
+def safe_file_operation(operation, file_path):
+    # Check if path is allowed
+    if not is_allowed_path(file_path):
+        raise SafetyViolationError(f"Path not allowed: {file_path}")
+
+    # Check operation type
+    if not is_allowed_operation(operation, file_path):
+        raise SafetyViolationError(f"Operation not allowed: {operation}")
+
+    # Execute operation
+    return execute_file_operation(operation, file_path)
+```
+
+### 3. Context Gathering Safety
+
+Safe context gathering patterns:
+
+```python
+def safe_context_gathering():
+    # Read-only operations for company Linear
+    company_context = read_company_linear_context()
+
+    # Personal work operations
+    personal_work = manage_personal_work()
+
+    # No writes to company Linear
+    return combine_context(company_context, personal_work)
+```
+
+## EMERGENCY RESPONSE PROCEDURES
+
+### 1. Safety Violation Response
+
+```yaml
+violation_response:
+  immediate_actions:
+    - "Stop all Linear operations"
+    - "Log violation details"
+    - "Alert user immediately"
+    - "Assess damage scope"
+
+  recovery_actions:
+    - "Identify unauthorized changes"
+    - "Develop rollback plan"
+    - "Get user approval for recovery"
+    - "Execute recovery safely"
+
+  prevention_actions:
+    - "Update safety rules if needed"
+    - "Test new rules in safe environment"
+    - "Deploy updated rules"
+    - "Monitor for similar violations"
+```
+
+### 2. Rollback Procedures
+
+```yaml
+rollback_procedures:
+  assessment:
+    - "Identify what was changed"
+    - "Determine scope of changes"
+    - "Assess impact on company Linear"
+    - "Create rollback plan"
+
+  execution:
+    - "Get user approval for rollback"
+    - "Execute rollback operations"
+    - "Verify rollback success"
+    - "Update audit trail"
+
+  verification:
+    - "Confirm no unauthorized changes remain"
+    - "Verify company Linear integrity"
+    - "Test safety rules still work"
+    - "Document lessons learned"
+```
+
+## MONITORING AND ALERTING
+
+### 1. Real-time Monitoring
+
+```yaml
+monitoring:
+  operation_tracking:
+    - "All Linear operations"
+    - "All file system operations"
+    - "All safety check results"
+    - "All user approvals"
+
+  violation_detection:
+    - "Unauthorized Linear writes"
+    - "Scope violations"
+    - "Template modifications"
+    - "Safety rule bypasses"
+
+  performance_metrics:
+    - "Operations per minute"
+    - "Safety check success rate"
+    - "Violation frequency"
+    - "Recovery time"
+```
+
+### 2. Alert Conditions
+
+```yaml
+alerts:
+  critical:
+    - "Unauthorized Linear write detected"
+    - "Company Linear template modified"
+    - "Safety rules bypassed"
+    - "Rollback required"
+
+  warning:
+    - "High operation frequency"
+    - "Multiple safety check failures"
+    - "User approval required"
+    - "Scope boundary approached"
+
+  info:
+    - "Safety check passed"
+    - "Operation completed successfully"
+    - "User approval obtained"
+    - "Rollback completed"
+```
+
+## BEST PRACTICES IMPLEMENTATION
+
+### 1. Defensive Programming
+
+```python
+def defensive_operation(operation, **kwargs):
+    # Always verify safety first
+    if not verify_safety(operation, kwargs):
+        raise SafetyViolationError("Safety check failed")
+
+    # Log operation attempt
+    log_operation_attempt(operation, kwargs)
+
+    # Execute with error handling
+    try:
+        result = execute_operation(operation, **kwargs)
+        log_success(operation, kwargs)
+        return result
+    except Exception as e:
+        log_error(operation, kwargs, e)
+        handle_error(e)
+        raise
+```
+
+### 2. Fail-Safe Defaults
+
+```python
+def fail_safe_defaults():
+    # Default to read-only operations
+    default_operation = "read"
+
+    # Default to Global To-Do project
+    default_project = "to-do-and-planning-e2ce95344374"
+
+    # Default to personal work scope
+    default_scope = "personal_work"
+
+    return default_operation, default_project, default_scope
+```
+
+### 3. User Communication
+
+```python
+def communicate_safety(user_message, operation_details):
+    # Explain what will happen
+    explanation = explain_operation(operation_details)
+
+    # Assess risks
+    risk_assessment = assess_risks(operation_details)
+
+    # Request approval if needed
+    if requires_approval(operation_details):
+        approval = request_user_approval(explanation, risk_assessment)
+        return approval
+
+    return True
+```
+
+## TESTING AND VALIDATION
+
+### 1. Safety Rule Testing
+
+```yaml
+safety_tests:
+  positive_tests:
+    - "Read company Linear context"
+    - "Write to Global To-Do project"
+    - "Create personal work drafts"
+    - "Update personal documentation"
+
+  negative_tests:
+    - "Write to company Linear projects"
+    - "Modify company Linear templates"
+    - "Create issues in company projects"
+    - "Update company project milestones"
+
+  edge_cases:
+    - "Empty project ID"
+    - "Invalid project ID"
+    - "Malformed operation"
+    - "Concurrent operations"
+```
+
+### 2. Recovery Testing
+
+```yaml
+recovery_tests:
+  violation_simulation:
+    - "Simulate unauthorized Linear write"
+    - "Test violation detection"
+    - "Verify immediate stop"
+    - "Test rollback procedures"
+
+  rollback_validation:
+    - "Test rollback success"
+    - "Verify no data loss"
+    - "Confirm company Linear integrity"
+    - "Test safety rule restoration"
+```
+
+## CONCLUSION
+
+These operational safeguards provide multiple layers of protection:
+
+1. **Prevention**: Safety checks before operations
+2. **Detection**: Real-time monitoring for violations
+3. **Response**: Immediate action on violations
+4. **Recovery**: Safe rollback procedures
+5. **Learning**: Continuous improvement from incidents
+
+**Remember**: Safety is not optional. Every operation must pass safety checks before execution.

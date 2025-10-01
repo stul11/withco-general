@@ -67,23 +67,6 @@
 - **Minta/Goodwin** - REIT compliance accountant (pending)
 - **RSM** - Pending inputs (Sep 29)
 
----
-
-## 🚀 **IMMEDIATE NEXT STEPS**
-
-### **Today (5 min remaining)**
-
-1. **Run Research Prompts** - Copy prompts into ChatGPT Deep Research
-2. **Access Excel Model** - Review existing ~50 vendor/service rows
-3. **Document Assumptions** - Mark gaps clearly for tomorrow's review
-
-### **Tomorrow (Brian/Kevin Review)**
-
-1. **Draft Calculations** - Core cost calculations for UPREIT/LLC structures
-2. **Cost Card Schema v0.1** - Provisional schema based on research
-3. **Two-Tiered Analysis** - Integrate with LEG-9 minimum check work
-
----
 
 ## 📊 **DELIVERABLES TRACKING**
 

@@ -235,25 +235,39 @@ linear/tickets/archive/
 
 When creating Linear issue from draft:
 
-1. **Add context reference** to SLF-73 in Linear issue description
-2. **Update SLF-73** with link to new Linear issue
+1. **Add context reference** to SLF-73 in Linear issue description using proper Linear formatting (e.g., `SLF-73`)
+2. **Update SLF-73** with link to new Linear issue using proper Linear formatting
 3. **Archive draft** with Linear issue link in front matter
-4. **Cross-link** related work items
+4. **Cross-link** related work items using proper Linear formatting
+
+### Document Management Process
+
+For detailed meeting notes and context:
+
+1. **Create documents in To-Do & Planning project** for detailed content
+2. **Reference documents in SLF-73** with summary and purpose
+3. **Use proper Linear formatting** for all issue references (e.g., `SLF-74` not markdown links)
+4. **Use markdown links for document references** (e.g., `[📞 RSM CALL NOTES - SEPTEMBER 30, 2025](https://linear.app/withco/document/...)`)
+5. **Update project descriptions** to include document references with summaries
 
 **Example**:
 
 ```markdown
 # In Linear Issue SLF-75
 
-**Context**: See [SLF-73 Global Work Log](https://linear.app/withco/issue/SLF-73) for background
+**Context**: See SLF-73 for background
 
 # In SLF-73
 
-**Related Work**: [SLF-75 Cost Model Improvements](https://linear.app/withco/issue/SLF-75)
+**Related Work**: SLF-75
 
 # In Archived Draft
 
-linear_issue_link: "https://linear.app/withco/issue/SLF-75"
+linear_issue_link: "SLF-75"
+
+# For Documents
+
+linear_issue_link: "[📞 RSM CALL NOTES - SEPTEMBER 30, 2025](https://linear.app/withco/document/...)"
 ```
 
 ---
