@@ -55,7 +55,7 @@ withco-general/
 
 ### Workflows
 - [Background Agent Draft Review Workflow](docs/agents/workflows/Background_Agent_Draft_Review_Workflow.md)
-- [Agent Offboarding Checklist](docs/agents/workflows/Agent_Offboarding_Implementation_Checklist.md)
+- [Agent Offboarding Checklist](docs/agents/workflows/Background_Agent_Draft_Review_Workflow.md)
 
 ### Tracking
 - [Decision Docket](docs/global/Decision_Docket.md)

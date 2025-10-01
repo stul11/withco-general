@@ -9,10 +9,8 @@
 ## Required Reading (in order)
 
 1. docs/agents/session-notes/SN_20251001_agent-offboarding.md
-2. .cursor/commands/offboard.md
-3. .cursor/commands/onboard-next-agent.md
-4. docs/agents/workflows/Background_Agent_Draft_Review_Workflow.md
-5. .cursor/rules/agent-chat-commands.mdc
+2. docs/agents/workflows/Background_Agent_Draft_Review_Workflow.md
+3. docs/global/GLB-TKT_Best_Practices.md
 
 ## Current State
 
@@ -35,8 +33,5 @@ We implemented clear separation between company Linear documentation and persona
 ## Related Files
 
 - docs/agents/session-notes/SN_20251001_agent-offboarding.md
-- .cursor/commands/offboard.md
-- .cursor/commands/end-session.md
-- .cursor/commands/onboard-next-agent.md
-- .cursor/rules/agent-chat-commands.mdc
+- docs/agents/workflows/Background_Agent_Draft_Review_Workflow.md
 - docs/global/README.md

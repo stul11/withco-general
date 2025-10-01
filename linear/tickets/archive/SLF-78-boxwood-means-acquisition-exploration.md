@@ -26,7 +26,7 @@ version: 0.1.0
 
 # Context & Relationships
 related_docs:
-  - withco-general/linear/tickets/drafts/research-prompts/try-shorcut-prompt-style-guide.md
+  - withco-general/linear/tickets/drafts/research-prompts/try-shortcut-prompt-style-guide.md
   - withco-general/docs/global/GLB-TKT_Best_Practices.md
 risk_level: Medium
 repo_only: true

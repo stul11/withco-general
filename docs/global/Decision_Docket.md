@@ -42,7 +42,7 @@
 - **Options Considered**: Manual instructions, Single command, Two-tier commands (minimal vs full)
 - **Rationale**: Two commands map to common usage: quick end vs full offboarding with compliance. Keeps safety and documentation enforcement clear and lightweight
 - **Impact**: New commands `/end-session` and `/offboard` available; agents must follow rules for session notes, link/timestamp validations, and staging before commit
-- **Links**: .cursor/commands/end-session.md, .cursor/commands/offboard.md, .cursor/rules/agent-chat-commands.mdc
+- **Links**: docs/agents/workflows/Background_Agent_Draft_Review_Workflow.md
 - **Owner**: slittle
 
 ### 2025-10-01

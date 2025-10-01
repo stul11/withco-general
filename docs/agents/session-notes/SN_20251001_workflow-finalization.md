@@ -40,9 +40,9 @@
 - ✅ Comprehensive documentation with examples
 - ✅ Cross-reference pattern for related work
 
-### 2. Agent Offboarding Implementation Checklist
+### 2. Agent Offboarding Process Integration
 
-**File Created**: `docs/agents/workflows/Agent_Offboarding_Implementation_Checklist.md`
+**Integration**: Agent offboarding process integrated into Background Agent Draft Review Workflow
 
 **Content**:
 
@@ -153,7 +153,7 @@
 
 2. **Agent Offboarding Implementation Checklist**
 
-   - Location: `docs/agents/workflows/Agent_Offboarding_Implementation_Checklist.md`
+   - Location: `docs/agents/workflows/Background_Agent_Draft_Review_Workflow.md`
    - Status: Complete, ready for execution
    - Purpose: Ensure smooth agent transitions
 
@@ -205,8 +205,7 @@
 **New Files**:
 
 1. `docs/agents/workflows/Background_Agent_Draft_Review_Workflow.md` (445 lines)
-2. `docs/agents/workflows/Agent_Offboarding_Implementation_Checklist.md` (340 lines)
-3. `docs/agents/session-notes/SN_20251001_workflow-finalization.md` (this file)
+2. `docs/agents/session-notes/SN_20251001_workflow-finalization.md` (this file)
 
 **Modified Files**:
 
@@ -366,7 +365,6 @@ feat: Define background agent draft review workflow - Session: workflow-finaliza
 ### Related Documentation
 
 - [Background Agent Draft Review Workflow](../workflows/Background_Agent_Draft_Review_Workflow.md)
-- [Agent Offboarding Implementation Checklist](../workflows/Agent_Offboarding_Implementation_Checklist.md)
 - [Global Work Log Process Definition](../../linear/tickets/drafts/global-work-log-to-do-process-definition.md)
 - [Background Agent Safety Rules](../../.cursor/rules/background-agent-safety.mdc)
 - [Background Agent Safeguards](../../.cursor/rules/background-agent-safeguards.mdc)
