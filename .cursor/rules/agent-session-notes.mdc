@@ -1,0 +1,137 @@
+---
+alwaysApply: false
+description: "Require Session Note for agent sessions that edit PRDs/agents/global docs"
+globs: ["**/docs/prds/**", "**/docs/agents/**", "**/docs/global/**"]
+---
+
+# Agent Session Notes Rule
+
+## Overview
+
+When an agent session edits files in PRDs, agents, or global documentation directories, a Session Note MUST be created to document the work performed, decisions made, and outcomes achieved.
+
+## Trigger Conditions
+
+This rule applies when any files are modified in:
+- `docs/prds/` - Product Requirements Documents
+- `docs/agents/` - Agent workflows, templates, session notes
+- `docs/global/` - Global standards, best practices, tracking docs
+
+## Required Actions
+
+### Session Note Creation
+
+- [ ] Create Session Note using template from `docs/agents/templates/Session_Note_Template.md`
+- [ ] Follow naming convention: `SN_YYYYMMDD_<TaskId>.md`
+- [ ] Document all objectives, steps taken, outputs, and decisions
+- [ ] Include citations to relevant files and line ranges
+- [ ] Identify risks and next actions
+
+### Human Signoff
+
+- [ ] Obtain human review and approval before session completion
+- [ ] Update Decision Docket with key decisions made
+- [ ] Update TODO Log with completed and carryover items
+- [ ] Commit all changes with descriptive commit message
+
+## Session Note Requirements
+
+### Required Sections
+
+- **Task ID**: Brief description of main task
+- **Agent**: Agent type/name
+- **Owner**: Human owner
+- **Date**: ISO 8601 timestamp
+- **Inputs**: Key documents, files, context provided
+- **Steps Taken**: Major actions and decisions
+- **Outputs**: Files created/modified with paths
+- **Citations**: Links to specific files and line ranges
+- **Risks Identified**: Potential issues or concerns
+- **Next Actions**: Follow-up items and carryover
+- **Signoff**: Human reviewer approval
+
+### Quality Standards
+
+- Complete documentation of all work performed
+- Clear rationale for decisions made
+- Proper citations to source materials
+- Actionable next steps identified
+- Human approval obtained
+
+## Enforcement
+
+### Pre-Completion Checks
+
+Before ending an agent session:
+- [ ] Session Note created and complete
+- [ ] All required sections populated
+- [ ] Human review obtained
+- [ ] Decision Docket updated
+- [ ] TODO Log updated
+- [ ] Git commit prepared
+
+### Failure Response
+
+If Session Note requirements not met:
+1. **Halt session completion** until requirements satisfied
+2. **Remind agent** of Session Note requirements
+3. **Provide guidance** on missing elements
+4. **Require completion** before proceeding
+
+## Related Documentation
+
+- [Session Note Template](../docs/agents/templates/Session_Note_Template.md)
+- [Agent Offboarding Rule](./agent-offboarding.mdc)
+- [Decision Docket](../docs/global/Decision_Docket.md)
+- [TODO Log](../docs/global/TODO_Log.md)
+
+## Examples
+
+### Valid Session Note
+
+```markdown
+# Session Note
+
+- **Task ID**: PRD-Best-Practices-Definition
+- **Agent**: GPT-5-Pro
+- **Owner**: slittle
+- **Date**: 2025-09-27T14:30:00Z
+- **Duration**: ~2 hours
+
+## Inputs
+- withco-general/linear/docs/How to use Linear.md
+- .cursor/rules/planning-mode.mdc
+- User requirements for PRD templates
+
+## Steps Taken
+- Analyzed Linear workflow structure
+- Collaboratively defined V3 front matter schema
+- Created two distinct PRD templates
+
+## Outputs
+- withco-general/docs/global/GBL-PRD_Best_Practices.md
+- withco-general/docs/global/TODO_Log.md
+- .cursor/rules/agent-offboarding.mdc
+
+## Citations
+- withco-general/linear/docs/How to use Linear.md:1-160
+- .cursor/rules/planning-mode.mdc:1-143
+
+## Risks Identified
+- None significant identified
+- TODO list continuity requires discipline
+
+## Next Actions
+- Create remaining PRDs from finalized templates
+- Implement agent artifacts framework
+- Test offboarding process
+
+## Signoff
+- **Reviewer**: slittle
+- **Status**: approved
+- **Date**: 2025-09-27T14:30:00Z
+```
+
+## Version History
+
+- **v1.0** (2025-01-27): Initial rule creation
