@@ -1,10 +1,18 @@
 # TODO Log
 
-- **Last Updated**: 2025-01-27T17:30:00Z
-- **Session**: workflow-finalization
+- **Last Updated**: 2025-10-01T00:00:00Z
+- **Session**: agent-offboarding
 - **Owner**: slittle
 
 ## Completed
+### Session: agent-offboarding (2025-10-01)
+
+- [x] Create chat commands and rules for session closure and offboarding
+- [x] Add read-only banner and separation notes for company docs
+- [x] Normalize filenames; move non-draft data out of drafts
+- [x] Add link checker, ISO timestamp validator, and pre-commit hooks
+- [x] Create/Update session note and stage changes for review
+
 
 ### Session: repo-cleanup (2025-01-27)
 

@@ -312,7 +312,7 @@ feat: Define background agent draft review workflow - Session: workflow-finaliza
 
 1. `bg-agent-test-ticket.md` - Documentation and testing framework
 2. `global-work-log-to-do-overlap-process.md` - Process definition ticket
-3. `LEG-63-WORK-LOG.md` - Work log for LEG-63 (read-only context)
+3. `linear/tickets/work-log/LEG-63-WORK-LOG.md` - Work log for LEG-63 (read-only context)
 
 **Workflow Status**: Awaiting user approval and testing
 

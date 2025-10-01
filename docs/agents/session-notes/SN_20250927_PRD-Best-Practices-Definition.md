@@ -8,7 +8,7 @@
 
 ## Inputs
 
-- withco-general/linear/docs/How to use Linear.md
+- withco-general/linear/docs/How_to_use_Linear.md
 - .cursor/rules/planning-mode.mdc
 - .cursor/rules/todo-cursor.mdc
 - .cursor/rules/datetime-format.mdc
@@ -36,7 +36,7 @@
 
 ## Citations
 
-- withco-general/linear/docs/How to use Linear.md:1-160
+- withco-general/linear/docs/How_to_use_Linear.md:1-160
 - .cursor/rules/planning-mode.mdc:1-143
 - .cursor/rules/todo-cursor.mdc:1-34
 - .cursor/rules/datetime-format.mdc:1-33

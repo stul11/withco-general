@@ -37,6 +37,16 @@
 
 ### 2025-10-01
 
+- **Decision**: Introduce chat commands for session closure and offboarding
+- **Context**: Need fast, reliable, and repeatable way to end chat sessions and perform full offboarding with documentation and safety checks
+- **Options Considered**: Manual instructions, Single command, Two-tier commands (minimal vs full)
+- **Rationale**: Two commands map to common usage: quick end vs full offboarding with compliance. Keeps safety and documentation enforcement clear and lightweight
+- **Impact**: New commands `/end-session` and `/offboard` available; agents must follow rules for session notes, link/timestamp validations, and staging before commit
+- **Links**: .cursor/commands/end-session.md, .cursor/commands/offboard.md, .cursor/rules/agent-chat-commands.mdc
+- **Owner**: slittle
+
+### 2025-10-01
+
 - **Decision**: Define clear distinction between Global Work Log (SLF-73) and To-Do & Planning project
 - **Context**: Overlap between systems causing confusion and duplication; need clear process for work item placement
 - **Options Considered**: Single system, Separate systems, Merged systems

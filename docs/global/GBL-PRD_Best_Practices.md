@@ -8,6 +8,8 @@
 
 This document defines best practices for Product Requirements Documents (PRDs) at WithCo, including two distinct templates based on whether the PRD will be migrated to Linear or kept repo-only.
 
+> Scope: Personal drafting best practices for PRDs in this repo. Do not modify company Linear documentation; use `linear/docs/How_to_use_Linear.md` as read-only reference for company workflow.
+
 ## PRD Types
 
 ### Linear-Aligned PRDs

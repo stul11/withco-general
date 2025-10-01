@@ -33,6 +33,8 @@ repo_only: true
 
 # <Ticket Title>
 
+> Scope: Personal drafting best practices for tickets in this repo. Do not modify company Linear documentation; use `linear/docs/How_to_use_Linear.md` as read-only reference.
+
 Type: <Finance Model | Contract Review | Pricing Change | Data Pull | Compliance | Vendor | Board | Other>
 Owner: @me Due: YYYY‑MM‑DD Status: Draft
 
