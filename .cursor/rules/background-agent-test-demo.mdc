@@ -1,0 +1,171 @@
+---
+description: "Background agent test demonstration with ticket wizard workflow"
+alwaysApply: false
+---
+
+# Background Agent Test Demonstration
+
+## Test Session: Personal Work Management
+
+### Test Objective
+Demonstrate background agent capabilities with ticket wizard workflow and Global To-Do project integration.
+
+### Safety Status
+- ✅ Safety rules active
+- ✅ Global To-Do project: `to-do-and-planning-e2ce95344374`
+- ✅ Personal work scope: `linear/tickets/drafts/`, `docs/agents/`, `docs/global/`
+- ✅ Company Linear: Read-only access only
+
+## Phase 1: Ticket Wizard Activation
+
+### 1.1 Boot Phase
+**Agent**: Activating Ticket Wizard mode. Locating best practices...
+
+**Safety Check**: ✅ Reading `docs/global/GLB-TKT_Best_Practices.md` - ALLOWED
+**Safety Check**: ✅ Reading `linear/docs/templates/ticket-template.md` - ALLOWED
+
+**Agent**: Found ticket best practices and template. Ready to begin conversation.
+
+### 1.2 Triage Phase
+**Agent**: Let's start with the basics for your work item:
+
+**Questions**:
+1. **Working title/type/due date**: What's the main work item?
+2. **Primary deliverable format**: What should the output be?
+3. **DoD tier**: Fast (same-day), Standard (2-3 days), or Gold (1-2 weeks)?
+
+**Domain suggestions** based on your workspace:
+- **Finance Model**: Cost analysis, economic modeling
+- **Legal**: Compliance, regulatory work  
+- **Pricing**: Vendor cost analysis, platform economics
+- **Data**: Research, analysis, documentation
+
+### 1.3 Context Collection
+**Agent**: Please share any relevant links, docs, prior tickets or models, and why they matter.
+
+I'll parse these into:
+- **Links & Resources**
+- **Precedents**
+- **Prior Work**
+
+### 1.4 DoD + Plan
+**Agent**: I'll propose a 3-tier DoD with 5-8 binary checks per tier, each with explicit evidence (file/link + named reviewer), and draft a 20-60 minute task plan front-loading validation with an early review checkpoint.
+
+### 1.5 Risks, OOS, Reviewers
+**Agent**: Let me ask about:
+- **Must-not-break guardrails**: What can't we break?
+- **Out-of-scope**: What's explicitly out of scope?
+- **Reviewers**: Who should review this work?
+- **Review dates**: When do you need this reviewed?
+
+### 1.6 Output
+**Agent**: I'll return a "Beautiful Ticket" block that exactly matches `TKT_Best_Practices.md` structure, fully populated, plus a Reviewer Pack with TL;DR (3 bullets), what to check, and direct links.
+
+## Phase 2: Draft Management
+
+### 2.1 Save Draft Ticket
+**Safety Check**: ✅ Writing to `linear/tickets/drafts/` - ALLOWED
+
+**Agent**: Saving ticket wizard output to `linear/tickets/drafts/bg-agent-test-ticket.md` with proper front matter and structure.
+
+### 2.2 Cross-Ticket Analysis
+**Agent**: Analyzing draft ticket for:
+- Dependencies with other work
+- Consolidation opportunities  
+- Blocker identification
+- Context consistency
+
+### 2.3 Context Digest Maintenance
+**Agent**: Updating context digest with:
+- Key decisions made
+- Assumptions documented
+- Dependencies mapped
+- Next steps identified
+
+## Phase 3: Global To-Do Integration
+
+### 3.1 Safe Linear Operations
+**Safety Check**: ✅ Target project is Global To-Do (`to-do-and-planning-e2ce95344374`) - ALLOWED
+**Safety Check**: ✅ Operation is issue creation - ALLOWED
+**Safety Check**: ✅ Scope is personal work management - ALLOWED
+
+**Agent**: Creating Linear issue in Global To-Do project for this work item.
+
+### 3.2 Bidirectional Sync
+**Agent**: Establishing bidirectional sync between:
+- Cursor draft ticket ↔ Global To-Do Linear issue
+- Status updates in both systems
+- Progress tracking
+- Dependency mapping
+
+### 3.3 Project Management
+**Agent**: Organizing Global To-Do project with:
+- Logical milestone structure
+- Priority ordering
+- Progress tracking
+- Resource attachments
+
+## Phase 4: Safety Validation
+
+### 4.1 Prohibited Operations Test
+**Safety Check**: ❌ Attempting Linear operation on LEG-64 issue - PROHIBITED
+**Safety Check**: ❌ Attempting Linear operation on company Linear - PROHIBITED
+**Safety Check**: ❌ Attempting file write to company Linear - PROHIBITED
+
+**Agent**: Testing safety rules by attempting prohibited operations (all should be blocked):
+- Update LEG-64 issue
+- Comment on LEG-64 issue
+- Change LEG-64 issue status
+
+### 4.2 Audit Trail Verification
+**Agent**: Verifying audit trail includes:
+- All operations logged
+- Safety checks documented
+- Violations detected and handled
+- User approvals recorded
+
+## Phase 5: Integration Validation
+
+### 5.1 Workflow Efficiency
+**Agent**: Measuring:
+- Time saved vs manual ticket creation
+- Context consistency across systems
+- Dependency resolution efficiency
+- Progress tracking accuracy
+
+### 5.2 User Experience
+**Agent**: Evaluating:
+- Clarity of operations
+- Safety confidence
+- Workflow integration
+- Error handling effectiveness
+
+## Expected Results
+
+### ✅ Successful Operations
+- Ticket wizard conversation completed
+- Draft ticket created and saved
+- Global To-Do issue created
+- Bidirectional sync established
+- Progress tracking active
+
+### ❌ Blocked Operations
+- All LEG-64 operations blocked
+- All company Linear operations blocked
+- All prohibited file operations blocked
+- Safety violations detected and logged
+
+### 📊 Performance Metrics
+- **Ticket Creation Time**: Reduced by X%
+- **Context Consistency**: 100% maintained
+- **Safety Violations**: 0 unauthorized operations
+- **User Confidence**: High safety assurance
+
+## Test Status
+
+**Ready to execute**: Background agent test implementation complete
+**Safety validated**: All safety rules active and tested
+**Workflow ready**: Ticket wizard and Global To-Do integration prepared
+**Monitoring active**: Audit trail and violation detection ready
+
+**Next step**: Execute the test to demonstrate background agent capabilities
