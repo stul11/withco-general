@@ -92,3 +92,4 @@ Research how retail investment platforms structure and allocate costs, particula
 - **Compliance cost** scaling and optimization
 
 
+

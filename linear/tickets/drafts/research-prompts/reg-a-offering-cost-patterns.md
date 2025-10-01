@@ -83,3 +83,4 @@ Research cost structures and patterns specific to Reg A+ offerings, particularly
 - **Investor protection** requirements affecting costs
 
 
+
