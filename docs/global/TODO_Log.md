@@ -6,6 +6,14 @@
 
 ## Completed
 
+### Session: ticket-workflows-v1 (2025-10-01)
+
+- [x] Create Ticket Workflow README with mermaid diagrams and rules
+- [x] Document minimal `/ticket-*` commands with per-command docs
+- [x] Add Promote & Validate gate to wizard/workflow docs
+- [x] Create Ticket Validator Spec and resolve markdown lints
+- [x] Link workflow README from tickets README
+
 ### Session: agent-offboarding (2025-10-01)
 
 - [x] Create chat commands and rules for session closure and offboarding

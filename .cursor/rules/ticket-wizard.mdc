@@ -49,10 +49,11 @@ Trigger when user requests “ticket wizard”, “create/update ticket”, or r
 
 - Return a "Beautiful Ticket" block that exactly matches `GLB-TKT_Best_Practices.md` structure, fully populated.
 - Also produce a Reviewer Pack: TL;DR (3 bullets), what to check, and direct links.
+- Promote & Validate Gate: Offer `/ticket-promote` (collapse DoD to one tier; default Standard) and `/ticket-validate` (template headings, front matter, ISO timestamps) before saving a draft.
 
 ## Front Matter Map (must-have fields)
 
-```
+```text
 id, title, status, stage, owner, people[], reviewers[], approver, priority,
 tags[], team, super_initiative, initiative, project, milestone, requirement,
 linear_issue_link, created (ISO 8601), updated (ISO 8601), version,

@@ -4,7 +4,7 @@ This directory contains draft tickets and archived tickets for the withco-genera
 
 ## Directory Structure
 
-```
+```text
 linear/
 ├── docs/                    # Linear workflow documentation
 ├── tickets/
@@ -51,6 +51,7 @@ Completed tickets are archived with their Linear issue links for reference.
 ## Related Documentation
 
 - [Background Agent Draft Review Workflow](../../docs/agents/workflows/Background_Agent_Draft_Review_Workflow.md)
+- [Ticket Workflow README](../../docs/agents/workflows/Ticket_Workflow_README.md)
 - [Ticket Wizard Rule](../../.cursor/rules/ticket-wizard.mdc)
 - [Background Agent Safety Rules](../../.cursor/rules/background-agent-safety.mdc)
 - [Ticket Best Practices](../../docs/global/GLB-TKT_Best_Practices.md)

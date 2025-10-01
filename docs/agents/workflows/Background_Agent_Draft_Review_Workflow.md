@@ -18,7 +18,7 @@ This workflow establishes a clear process for background agents to create draft 
 
 **Location**: `/home/slittle/dev/withco-general/linear/tickets/drafts/`
 
-**Process** (follows `.cursor/rules/ticket-wizard.mdc`):
+**Process** (follows `.cursor/rules/ticket-wizard.mdc` + `docs/agents/workflows/Ticket_Workflow_README.md`):
 
 1. **Agent runs Ticket Wizard conversation** with user (5 phases):
 
@@ -28,8 +28,9 @@ This workflow establishes a clear process for background agents to create draft 
    - **Phase 3 - DoD + Plan**: 3-tier DoD with binary checks, 20-60 min task plan
    - **Phase 4 - Risks/OOS**: Guardrails, out-of-scope, reviewers, dates
    - **Phase 5 - Output**: "Beautiful Ticket" + Reviewer Pack (TL;DR, review checklist)
+   - **Promote & Validate Gate**: Run `/ticket-promote` (collapse DoD to one tier, default Standard) then `/ticket-validate` (template headings, front matter, ISO timestamps)
 
-2. **Agent produces complete ticket** with all required sections:
+2. **Agent produces complete ticket** with all required sections (best‑practices draft), then promotes to minimal template:
 
    - Goal/Purpose, Assumptions, Inputs/Dependencies, Deliverable
    - DoD (3 tiers: Fast/Standard/Gold with 5-8 binary checks each)
@@ -37,7 +38,7 @@ This workflow establishes a clear process for background agents to create draft 
    - Appendix (Links/Precedents/Prior Work/Data/People/Decision Log/Context Digest)
 
 3. **Agent asks before writing** and offers to save draft in `linear/tickets/drafts/`
-4. **Agent saves draft** with naming convention: `{ticket-id}-draft.md`
+4. **Agent saves draft** with naming convention: `{TEAM}-{title-slug}-draft.md`
 5. **Agent notifies user** that draft is ready for review
 
 **Critical Rule**: Agent operates in chat; **does NOT push to Linear automatically** per ticket-wizard rule.
@@ -50,10 +51,10 @@ Ticket Wizard Complete ✅
 Created: linear/tickets/drafts/SLF-75-cost-model-improvements-draft.md
 
 Includes:
-- 3-tier DoD (Fast: 4 checks, Standard: 6 checks, Gold: 8 checks)
-- Complete appendix with links and precedents
+- Promoted minimal template (single DoD list: Standard tier)
+- Template validation passed (headings order + ISO timestamps)
 - Reviewer Pack: 3-bullet TL;DR + review checklist
-- Task plan: 20-60 minute chunks with early review checkpoint
+- Appendix with links and precedents
 
 Ready for your review. Please review and approve before Linear creation.
 ```
@@ -114,13 +115,13 @@ Ready for your review. Please review and approve before Linear creation.
 
 #### Option A: Direct Approval
 
-```
+```text
 "Approved. Create ticket in Linear for draft: SLF-75-cost-model-improvements-draft.md"
 ```
 
 #### Option B: Approval with Changes
 
-```
+```text
 "Approved with changes:
 - Change priority to High
 - Add tag 'urgent'
@@ -130,7 +131,7 @@ Then create in Linear."
 
 #### Option C: Rejection
 
-```
+```text
 "Not approved. Issues:
 - Scope too broad, split into multiple tickets
 - Missing key dependencies
@@ -159,7 +160,7 @@ Please revise and resubmit."
 
 **Example**:
 
-```
+```text
 ✅ Safety checks passed
 ✅ Created Linear issue: SLF-75
 ✅ Updated draft with Linear link
@@ -174,7 +175,7 @@ Linear issue: https://linear.app/withco/issue/SLF-75
 
 ### Draft Directory Structure
 
-```
+```text
 linear/tickets/drafts/
 ├── {ticket-id}-draft.md           # Active drafts pending review
 ├── {ticket-id}-wip.md             # Work-in-progress drafts
@@ -328,7 +329,7 @@ All Linear operations logged with:
 - ✅ Re-submit for review if needed
 - ✅ Do not proceed without approval
 
-### During Implementation
+### During Implementation (Agent)
 
 - ✅ Perform safety checks
 - ✅ Create Linear issue only in Global To-Do
@@ -382,7 +383,7 @@ All Linear operations logged with:
 
 ### Step 1: Agent Creates Draft
 
-```
+```text
 Agent: "I've created a draft ticket for cost model improvements:
 
 File: linear/tickets/drafts/cost-model-improvements-wip.md
@@ -398,14 +399,14 @@ Please review and let me know if you'd like any changes before I create it in Li
 
 ### Step 2: User Reviews
 
-```
+```text
 User: "Let me review..."
 [Opens file, makes some edits]
 ```
 
 ### Step 3: User Authorizes
 
-```
+```text
 User: "Approved. Please create in Linear Global To-Do project with:
 - Priority: High
 - Tag: cost-modeling
@@ -414,7 +415,7 @@ User: "Approved. Please create in Linear Global To-Do project with:
 
 ### Step 4: Agent Implements
 
-```
+```text
 Agent: "Creating Linear issue...
 
 ✅ Safety checks passed (target: Global To-Do)

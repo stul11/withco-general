@@ -15,7 +15,17 @@
 - **Links**: docs/prds/LEG-PRD_Collect_Cost_of_Manufacturing_an_Offering_Inputs.md
 - **Owner**: slittle
 
-### 2025-10-01
+### 2025-10-01 (A)
+
+- **Decision**: Establish minimal-argument ticket command suite and visual README
+- **Context**: Need a simpler, consistent path from best-practices drafts to minimal `ticket-template.md`
+- **Options Considered**: Keep wizard only, Add promote/validate gates, Full automation
+- **Rationale**: Promote & Validate gate ensures simplicity and consistency; per-command docs reduce cognitive load
+- **Impact**: New `/ticket-*` command docs; diagrams and state model unify the flow; validator spec enforces headings/timestamps
+- **Links**: docs/agents/workflows/Ticket_Workflow_README.md, docs/agents/workflows/Ticket_Validator_Spec.md, .cursor/commands/ticket.md
+- **Owner**: slittle
+
+### 2025-10-01 (B)
 
 - **Decision**: Implement 4-phase Background Agent Draft Review Workflow (Draft → Review → Authorization → Implementation)
 - **Context**: Need practical workflow for background agents to create draft tickets, get user approval, and implement in Linear safely
@@ -25,7 +35,7 @@
 - **Links**: docs/agents/workflows/Background_Agent_Draft_Review_Workflow.md, docs/agents/session-notes/SN_20251001_workflow-finalization.md
 - **Owner**: slittle
 
-### 2025-10-01
+### 2025-10-01 (C)
 
 - **Decision**: Integrate Ticket Wizard rule into Background Agent workflow
 - **Context**: Need to ensure draft tickets follow ticket wizard's 5-phase conversation script and quality standards
@@ -35,7 +45,7 @@
 - **Links**: .cursor/rules/ticket-wizard.mdc, docs/agents/workflows/Ticket_Wizard_Alignment_Review.md
 - **Owner**: slittle
 
-### 2025-10-01
+### 2025-10-01 (D)
 
 - **Decision**: Introduce chat commands for session closure and offboarding
 - **Context**: Need fast, reliable, and repeatable way to end chat sessions and perform full offboarding with documentation and safety checks
@@ -45,7 +55,7 @@
 - **Links**: .cursor/commands/end-session.md, .cursor/commands/offboard.md, .cursor/rules/agent-chat-commands.mdc
 - **Owner**: slittle
 
-### 2025-10-01
+### 2025-10-01 (E)
 
 - **Decision**: Resolve repository-wide broken markdown links and enforce validations
 - **Context**: Link checker flagged multiple broken links across README, templates, workflows, and archived tickets
@@ -55,7 +65,7 @@
 - **Links**: docs/agents/session-notes/SN_20251001_agent-offboarding.md, scripts/check_markdown_links.py, scripts/validate_iso_timestamps.py
 - **Owner**: slittle
 
-### 2025-10-01
+### 2025-10-01 (F)
 
 - **Decision**: Define clear distinction between Global Work Log (SLF-73) and To-Do & Planning project
 - **Context**: Overlap between systems causing confusion and duplication; need clear process for work item placement
@@ -65,7 +75,7 @@
 - **Links**: docs/global/Global_Work_Log_vs_To_Do_Process.md
 - **Owner**: slittle
 
-### 2025-10-01
+### 2025-10-01 (G)
 
 - **Decision**: Establish file organization structure for draft tickets (drafts/, archive/)
 - **Context**: Need clear organization for draft tickets at different stages
@@ -85,7 +95,7 @@
 - **Links**: .cursor/rules/background-agent-safety.mdc, docs/agents/workflows/Background_Agent_Draft_Review_Workflow.md
 - **Owner**: slittle
 
-### 2025-09-27
+### 2025-09-27 (A)
 
 - **Decision**: Adopt V3 front matter schema with team-based PRD naming
 - **Context**: Need standardized front matter for PRDs that aligns with Linear workflow
@@ -95,7 +105,7 @@
 - **Links**: withco-general/docs/global/GBL-PRD_Best_Practices.md
 - **Owner**: slittle
 
-### 2025-09-27
+### 2025-09-27 (B)
 
 - **Decision**: Create two distinct PRD templates (Linear-aligned vs Repo-only)
 - **Context**: Need to distinguish between PRDs that migrate to Linear vs those that stay repo-only
@@ -105,7 +115,7 @@
 - **Links**: withco-general/docs/global/GBL-PRD_Best_Practices.md
 - **Owner**: slittle
 
-### 2025-09-27
+### 2025-09-27 (C)
 
 - **Decision**: Implement lightweight offboarding process with Session Notes and Decision Docket
 - **Context**: Need to properly close agent sessions and maintain continuity between conversations
