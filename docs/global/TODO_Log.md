@@ -13,6 +13,7 @@
 - [x] Normalize filenames; move non-draft data out of drafts
 - [x] Add link checker, ISO timestamp validator, and pre-commit hooks
 - [x] Create/Update session note and stage changes for review
+ - [x] Fix broken markdown links across repo; add example ADR; commit changes
 
 ### Session: repo-cleanup (2025-01-27)
 

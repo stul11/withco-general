@@ -47,6 +47,16 @@
 
 ### 2025-10-01
 
+- **Decision**: Resolve repository-wide broken markdown links and enforce validations
+- **Context**: Link checker flagged multiple broken links across README, templates, workflows, and archived tickets
+- **Options Considered**: Selective fixes, Remove references, Comprehensive fix with validation
+- **Rationale**: Comprehensive fix ensures documentation integrity and future maintainability; validations prevent regressions
+- **Impact**: All links now resolve; added example ADR to satisfy template references; enabled reliable offboarding workflow
+- **Links**: docs/agents/session-notes/SN_20251001_agent-offboarding.md, scripts/check_markdown_links.py, scripts/validate_iso_timestamps.py
+- **Owner**: slittle
+
+### 2025-10-01
+
 - **Decision**: Define clear distinction between Global Work Log (SLF-73) and To-Do & Planning project
 - **Context**: Overlap between systems causing confusion and duplication; need clear process for work item placement
 - **Options Considered**: Single system, Separate systems, Merged systems
