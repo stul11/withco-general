@@ -54,3 +54,4 @@ Completed tickets are archived with their Linear issue links for reference.
 - [Ticket Wizard Rule](../../.cursor/rules/ticket-wizard.mdc)
 - [Background Agent Safety Rules](../../.cursor/rules/background-agent-safety.mdc)
 - [Ticket Best Practices](../../docs/global/GLB-TKT_Best_Practices.md)
+- [How to use Linear](../docs/How_to_use_Linear.md) — Company documentation (READ-ONLY). Do not modify; use personal best practices in `docs/global/` instead.

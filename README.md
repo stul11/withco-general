@@ -49,15 +49,18 @@ withco-general/
 ## Key Documents
 
 ### Templates & Standards
+
 - [PRD Best Practices](docs/global/GBL-PRD_Best_Practices.md)
 - [Ticket Best Practices](docs/global/GLB-TKT_Best_Practices.md)
 - [Agent Templates](docs/agents/templates/)
 
 ### Workflows
+
 - [Background Agent Draft Review Workflow](docs/agents/workflows/Background_Agent_Draft_Review_Workflow.md)
 - [Agent Offboarding Checklist](docs/agents/workflows/Agent_Offboarding_Implementation_Checklist.md)
 
 ### Tracking
+
 - [Decision Docket](docs/global/Decision_Docket.md)
 - [TODO Log](docs/global/TODO_Log.md)
 
@@ -67,6 +70,12 @@ withco-general/
 2. **Familiarize with Templates**: Use appropriate templates for your work
 3. **Follow Workflows**: Use the established processes for consistency
 4. **Maintain Documentation**: Update tracking documents and session notes
+
+### Important Scope Separation
+
+- The file `linear/docs/How_to_use_Linear.md` is a company document (READ-ONLY). Do not modify it in this repo.
+- Your personal preferences and drafting workflows live in this repo under `docs/global/GLB-TKT_Best_Practices.md` (tickets) and `docs/global/GBL-PRD_Best_Practices.md` (PRDs).
+- Agents must never mix the company Linear workflow with personal drafting best practices; use company docs as reference only.
 
 ## Safety & Compliance
 
@@ -81,6 +90,7 @@ This repository implements multiple layers of safety:
 ## Support
 
 For questions or issues:
+
 - Review the [Informal Glossary](docs/global/glossary/INFORMAL-GLOSSARY.md)
 - Check the [Decision Docket](docs/global/Decision_Docket.md) for context
 - Follow the [Background Agent Workflow](docs/agents/workflows/Background_Agent_Draft_Review_Workflow.md)

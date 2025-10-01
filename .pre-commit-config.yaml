@@ -1,0 +1,13 @@
+repos:
+  - repo: local
+    hooks:
+      - id: markdown-link-check
+        name: markdown-link-check
+        entry: python3 scripts/check_markdown_links.py
+        language: system
+        types: [markdown]
+      - id: validate-iso-timestamps
+        name: validate-iso-timestamps
+        entry: python3 scripts/validate_iso_timestamps.py docs
+        language: system
+        types: [markdown]

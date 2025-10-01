@@ -27,7 +27,7 @@ version: 0.1.0
 # Context & Relationships
 related_docs:
   - docs/global/GBL-PRD_Best_Practices.md
-  - linear/docs/How to use Linear.md
+  - linear/docs/How_to_use_Linear.md
   - docs/agents/templates/
 risk_level: Medium
 repo_only: true
@@ -123,7 +123,7 @@ repo_only: true
 ### Links & Resources
 
 - [PRD Best Practices](docs/global/GBL-PRD_Best_Practices.md)
-- [Linear Workflow](linear/docs/How to use Linear.md)
+- [Linear Workflow](linear/docs/How_to_use_Linear.md)
 - [Agent Templates](docs/agents/templates/)
 
 ### Precedents

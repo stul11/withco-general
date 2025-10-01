@@ -5,7 +5,11 @@ alwaysApply: false
 
 # Linear Workflow Compliance for withco-team
 
-When working on withco-team projects, ALWAYS ensure compliance with the latest Linear workflow documentation located at `/withco-general/linear/docs/How to use Linear.md`. This is especially critical when:
+When working on withco-team projects, ALWAYS ensure compliance with the latest Linear workflow documentation located at `/withco-general/linear/docs/How to use Linear.md`.
+
+> READ-ONLY: `How to use Linear.md` is a company document. Do not modify it from this repo. Personal drafting preferences must live under `docs/global/` (e.g., `GLB-TKT_Best_Practices.md`, `GBL-PRD_Best_Practices.md`). Agents must not mix company workflow documentation with personal best practices.
+
+This is especially critical when:
 
 ## High Priority (Must Follow)
 

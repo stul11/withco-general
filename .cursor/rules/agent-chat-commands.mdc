@@ -1,0 +1,82 @@
+---
+alwaysApply: false
+description: "Slash commands to end a chat and offboard per documentation"
+---
+
+# Agent Chat Commands
+
+These commands are available during chat to end a session and run the documented offboarding flow. They align with:
+
+- Agent Offboarding Rule: `.cursor/rules/agent-offboarding.mdc`
+- Session Notes Rule: `.cursor/rules/agent-session-notes.mdc`
+- Background Agent Draft Review Workflow: `docs/agents/workflows/Background_Agent_Draft_Review_Workflow.md`
+
+## Commands
+
+### /end-session [task-id]
+
+Ends the current chat session and triggers a minimal closure sequence. Use when no repository changes were made or when you only need a simple wrap-up.
+
+Behavior:
+
+- Prompt to confirm session end
+- If any docs were edited in `docs/prds/`, `docs/agents/`, or `docs/global/`, require a Session Note per `agent-session-notes.mdc`
+- Offer to create a Session Note from the template with prefilled metadata
+- Offer to update Decision Docket and TODO Log
+- Prepare a git commit message stub
+
+Example:
+
+```
+/end-session PRD-Best-Practices-Definition
+```
+
+### /offboard [task-id]
+
+Runs the full offboarding checklist defined in `agent-offboarding.mdc`. Use at the end of any substantive working session.
+
+Behavior:
+
+- Create/complete Session Note in `docs/agents/session-notes/` using `Session_Note_Template.md`
+- Update `docs/global/Decision_Docket.md` with decisions made
+- Update `docs/global/TODO_Log.md` with completed and carryover items
+- Validate ISO timestamps in front matter (scripts/validate_iso_timestamps.py)
+- Check markdown links (scripts/check_markdown_links.py)
+
+- Stage changes and propose a commit message
+
+Example:
+
+```
+/offboard workflow-finalization
+```
+
+## Safety & Boundaries
+
+- Do NOT write to company Linear projects during offboarding
+- All Linear references must follow safety rules and Global To-Do constraints
+- If requirements are incomplete, the agent must pause and ask for guidance
+
+## Notes
+
+- If both commands are applicable, prefer `/offboard` for full documentation compliance
+- Use `/end-session` for quick sessions with no repo edits
+
+- v1.0 (2025-10-01): Initial command definitions
+
+### /onboard-next-agent [task-id]
+
+Prepares a copy-paste onboarding brief for the next agent and writes it to a handoff note.
+
+Behavior:
+
+- Collect latest context from Session Notes, Decision Docket, and TODO Log
+- Generate structured brief (TL;DR, Required Reading, Current State, Next Tasks, Risks, Related Files)
+- Save to `docs/agents/session-notes/SN_<YYYYMMDD>_<task-id>_handoff.md` and echo in chat
+- Offer to copy “Next Agent First Tasks” into TODO Log (Pending)
+
+Example:
+
+```
+/onboard-next-agent agent-offboarding
+```

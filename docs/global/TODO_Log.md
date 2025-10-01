@@ -5,6 +5,7 @@
 - **Owner**: slittle
 
 ## Completed
+
 ### Session: agent-offboarding (2025-10-01)
 
 - [x] Create chat commands and rules for session closure and offboarding
@@ -12,7 +13,6 @@
 - [x] Normalize filenames; move non-draft data out of drafts
 - [x] Add link checker, ISO timestamp validator, and pre-commit hooks
 - [x] Create/Update session note and stage changes for review
-
 
 ### Session: repo-cleanup (2025-01-27)
 
