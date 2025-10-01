@@ -1,0 +1,129 @@
+---
+description: "Process for collecting Linear comments and mentions for background agent testing"
+alwaysApply: false
+---
+
+# Linear Activity Collection for Background Agent Testing
+
+## Objective
+Collect your Linear comments, mentions, and activity from today to use as realistic test cases for the background agent.
+
+## Collection Process
+
+### Step 1: Gather Linear Activity
+Since I can't directly access your Linear workspace, please provide:
+
+1. **Comments received today**:
+   - Issue comments mentioning you
+   - Project updates with your involvement
+   - Discussion threads you're part of
+
+2. **Mentions from today**:
+   - @slittle mentions in issues
+   - @slittle mentions in project updates
+   - @slittle mentions in comments
+
+3. **Activity from today**:
+   - Issues assigned to you
+   - Issues you commented on
+   - Project updates you posted
+   - Milestone changes affecting you
+
+### Step 2: Format for Testing
+For each item, provide:
+- **Linear URL**: Link to the issue/project/comment
+- **Context**: What the comment/mention is about
+- **Action Required**: What you need to do
+- **Priority**: High/Medium/Low
+- **Due Date**: When it needs to be done
+
+### Step 3: Test Case Creation
+I'll convert each item into a background agent test case that demonstrates:
+- Ticket wizard workflow
+- Global To-Do project integration
+- Safety rule compliance
+- Work prioritization and management
+
+## Sample Collection Format
+
+### Comment/Mention 1
+```
+**Linear URL**: https://linear.app/withco/issue/LEG-XX/issue-title
+**Context**: Comment about [topic] requiring [action]
+**Action Required**: [Specific task]
+**Priority**: High
+**Due Date**: 2025-01-28
+**Notes**: [Additional context]
+```
+
+### Comment/Mention 2
+```
+**Linear URL**: https://linear.app/withco/project/project-name
+**Context**: Project update mentioning [topic]
+**Action Required**: [Specific task]
+**Priority**: Medium
+**Due Date**: 2025-01-30
+**Notes**: [Additional context]
+```
+
+## Background Agent Test Cases
+
+Once you provide the Linear activity, I'll create test cases that demonstrate:
+
+### 1. **Ticket Wizard Sessions**
+- Convert each Linear item into a ticket wizard conversation
+- Generate "Beautiful Ticket" outputs
+- Create 3-tier DoD with binary checks
+- Establish review and approval processes
+
+### 2. **Global To-Do Integration**
+- Create Linear issues in Global To-Do project
+- Establish bidirectional sync
+- Track progress and dependencies
+- Maintain priority ordering
+
+### 3. **Safety Validation**
+- Ensure all operations target Global To-Do only
+- Block any attempts to modify company Linear
+- Maintain complete audit trail
+- Validate safety rules work correctly
+
+### 4. **Workflow Efficiency**
+- Demonstrate time savings vs manual process
+- Show context consistency across systems
+- Validate dependency tracking
+- Measure progress accuracy
+
+## Expected Test Results
+
+### ✅ **Successful Operations**
+- All Linear activity converted to ticket wizard sessions
+- All work items added to Global To-Do project
+- All safety rules enforced correctly
+- All progress tracked accurately
+
+### ❌ **Blocked Operations**
+- No modifications to company Linear issues
+- No unauthorized Linear operations
+- No safety rule violations
+- No context leakage between systems
+
+### 📊 **Performance Metrics**
+- **Collection Time**: Reduced by X%
+- **Context Consistency**: 100% maintained
+- **Safety Violations**: 0 unauthorized operations
+- **Work Management**: Improved efficiency
+
+## Next Steps
+
+1. **Provide Linear Activity**: Share your comments, mentions, and activity from today
+2. **Review Collection**: I'll organize and prioritize the items
+3. **Create Test Cases**: Convert each item into a background agent test
+4. **Execute Tests**: Run the tests to demonstrate capabilities
+5. **Validate Results**: Confirm safety and efficiency gains
+
+## Ready to Collect
+
+Please share your Linear activity from today, and I'll create comprehensive background agent test cases that demonstrate safe, efficient personal work management while protecting your company Linear projects.
+
+**Format**: Use the sample collection format above, or provide the information in any format that's convenient for you.
