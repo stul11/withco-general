@@ -1,6 +1,6 @@
 # TODO Log
 
-- **Last Updated**: 2025-10-01T00:00:00Z
+- **Last Updated**: 2025-01-27T20:00:00Z
 - **Session**: agent-offboarding
 - **Owner**: slittle
 
@@ -152,8 +152,20 @@
 - Agent artifacts framework is planned but needs implementation
 - Offboarding process is defined and ready for use
 
+### Session: background-cleanup-audit (2025-01-27)
+
+- [ ] **HIGH PRIORITY - Naming Inconsistency Resolution** (5-10 min): Fix remaining GLB-TKT vs GBL-TKT references in linear/docs/How_to_use_Linear.md and linear/docs/templates/ticket-template.md
+- [ ] **HIGH PRIORITY - Stranded TODOs Cleanup** (10-15 min): Clean up TBD placeholders in SLF-78 draft ticket (super_initiative, initiative, project, milestone, requirement fields)
+- [ ] **MEDIUM PRIORITY - Template Location Confusion** (15-20 min): Resolve template location confusion - docs/agents/templates/ vs docs/global/templates/ - decide on single location and migrate
+- [ ] **MEDIUM PRIORITY - Incomplete Template Completion** (20-30 min): Complete GBL-TKT_Best_Practices.md template (currently stops at line 77, missing DoD tiers and implementation sections)
+- [ ] **MEDIUM PRIORITY - Directory Structure Cleanup** (10-15 min): Remove overly nested docs/prds/global/templates/agents/adr/ directory structure (currently empty)
+- [ ] **LOW PRIORITY - Empty File Population** (5-10 min): Populate APPROVED-GLOSSARY.md (currently minimal with only front matter)
+- [ ] **LOW PRIORITY - Cross-Reference Updates** (10-15 min): Update broken references to try-shortcut-prompt-style-guide.md in SLF-78 files
+- [ ] **LOW PRIORITY - Front Matter Standardization** (15-20 min): Standardize front matter across all templates (some missing required fields like created/updated timestamps)
+
 ## Session History
 
+- **2025-01-27**: background-cleanup-audit - Comprehensive repository audit identifying 8 prioritized cleanup items including naming inconsistencies, stranded TODOs, template location confusion, and structural issues
 - **2025-01-27**: repo-cleanup-analysis - Comprehensive repository analysis identifying 15 high-priority cleanup items including naming inconsistencies, duplicate templates, stranded TODOs, and structural issues
 - **2025-01-27**: repo-cleanup - Fixed ISO dates, removed empty files, corrected broken links, renamed files to match IDs, fixed typos
 - **2025-10-01**: workflow-finalization - Defined Background Agent Draft Review Workflow with ticket wizard integration, aligned with safety rules, created comprehensive documentation
