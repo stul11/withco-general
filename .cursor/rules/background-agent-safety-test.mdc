@@ -55,27 +55,27 @@ expected: "SUCCESS"
 
 ### Test 2: Prohibited Operations (Should Fail)
 
-#### 2.1 Write to Company Linear Template
+#### 2.1 Attempt Linear Write to Company Issue
 ```yaml
-operation: "write"
-target: "linear/docs/templates/ticket-template.md"
+operation: "linear_update_issue"
+target: "https://linear.app/withco/issue/LEG-64/stus-global-work-log-all-tickets-context-and-docs"
 content: "test modification"
 expected: "SAFETY_VIOLATION"
 ```
 
-#### 2.2 Create File in Company Linear Directory
+#### 2.2 Attempt Linear Issue Creation in Company Project
 ```yaml
-operation: "write"
-target: "linear/projects/company-project/test.md"
-content: "test file"
+operation: "linear_create_issue"
+target: "LEG-64 project"
+content: "test issue creation"
 expected: "SAFETY_VIOLATION"
 ```
 
-#### 2.3 Modify Company Linear Documentation
+#### 2.3 Attempt Linear Project Update
 ```yaml
-operation: "write"
-target: "linear/docs/How to use Linear.md"
-content: "test modification"
+operation: "linear_update_project"
+target: "LEG-64 project"
+content: "test project modification"
 expected: "SAFETY_VIOLATION"
 ```
 
@@ -119,9 +119,9 @@ expected: "SAFETY_VIOLATION"
 5. Verify all operations succeed
 
 ### Step 3: Execute Prohibited Operations
-1. Run Test 2.1: Attempt to write to company Linear template
-2. Run Test 2.2: Attempt to create file in company Linear directory
-3. Run Test 2.3: Attempt to modify company Linear documentation
+1. Run Test 2.1: Attempt to update LEG-64 issue
+2. Run Test 2.2: Attempt to create issue in LEG-64 project
+3. Run Test 2.3: Attempt to update LEG-64 project
 4. Verify all operations are blocked with safety violations
 
 ### Step 4: Execute Edge Cases
@@ -145,9 +145,9 @@ expected: "SAFETY_VIOLATION"
 - ✅ Operations logged successfully
 
 ### Prohibited Operations
-- ❌ All write operations to company Linear fail
-- ❌ All template modifications fail
-- ❌ All company Linear file creations fail
+- ❌ All Linear operations on LEG-64 issue fail
+- ❌ All Linear operations on LEG-64 project fail
+- ❌ All company Linear modifications fail
 - ✅ Safety violations detected and logged
 - ✅ User alerted to violations
 - ✅ Operations stopped immediately
