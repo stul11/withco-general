@@ -22,7 +22,7 @@ Prepare a copy-paste onboarding brief for the next agent to start exactly where 
    - Next Agent First Tasks (checklist of 3–7 items)
    - Open Decisions and Risks (bullets)
    - Related Files (paths)
-3. Write the brief to `docs/agents/session-notes/SN_<YYYYMMDD>_<task-id>_handoff.md` and print it to chat for copy/paste.
+3. Write the brief to `docs/agents/session-notes/SN_<YYYYMMDDHHMM>_<task-id>_handoff.md` (24-hour UTC) and print it to chat for copy/paste.
 4. Offer to append the brief’s “Next Agent First Tasks” into `docs/global/TODO_Log.md` (Pending or In Progress) without committing.
 
 ## Output format (example)

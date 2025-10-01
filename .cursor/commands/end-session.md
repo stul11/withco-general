@@ -41,7 +41,7 @@ End the current chat session with minimal closure while enforcing session note r
 
 1. Detect changed docs to decide whether a Session Note is required:
    - `git status --porcelain docs/agents docs/global docs/prds`
-2. If docs changed, ensure a session note exists and is populated (use `Session_Note_Template.md`).
+2. If docs changed, ensure a session note exists and is populated (use `Session_Note_Template.md`). Name it `SN_YYYYMMDDHHMM_<task-id>.md` (24-hour UTC).
 3. Optional validations (recommended):
    - If pre-commit is available: `pre-commit run --all-files`
    - Otherwise:

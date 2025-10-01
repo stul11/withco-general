@@ -26,7 +26,7 @@ Run the full offboarding checklist and close out the session according to reposi
 
 1. Confirm intent to offboard.
 2. Create or update a Session Note in `docs/agents/session-notes/` using `docs/agents/templates/Session_Note_Template.md`.
-   - File name: `SN_YYYYMMDD_<task-id>.md`
+   - File name: `SN_YYYYMMDDHHMM_<task-id>.md` (24-hour UTC)
    - Prefill metadata and enumerate inputs, steps, outputs, citations, next actions.
 3. Update `docs/global/Decision_Docket.md` with any decisions made.
 4. Update `docs/global/TODO_Log.md` with completed, in-progress, and pending items (carryover clearly marked).
@@ -44,7 +44,7 @@ Run the full offboarding checklist and close out the session according to reposi
 1. Detect changed docs (for note inputs/outputs):
    - `git status --porcelain docs/agents docs/global docs/prds`
 2. Ensure session note exists and is populated:
-   - Create `docs/agents/session-notes/SN_YYYYMMDD_<task-id>.md` if missing using `docs/agents/templates/Session_Note_Template.md`
+   - Create `docs/agents/session-notes/SN_YYYYMMDDHHMM_<task-id>.md` if missing using `docs/agents/templates/Session_Note_Template.md`
    - Add sections: Objectives, Steps Taken, Outputs (with file paths), Citations (file:lines), Next Actions
 3. Update global trackers:
    - Append decisions to `docs/global/Decision_Docket.md`

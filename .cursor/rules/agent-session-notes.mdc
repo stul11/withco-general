@@ -13,6 +13,7 @@ When an agent session edits files in PRDs, agents, or global documentation direc
 ## Trigger Conditions
 
 This rule applies when any files are modified in:
+
 - `docs/prds/` - Product Requirements Documents
 - `docs/agents/` - Agent workflows, templates, session notes
 - `docs/global/` - Global standards, best practices, tracking docs
@@ -22,7 +23,7 @@ This rule applies when any files are modified in:
 ### Session Note Creation
 
 - [ ] Create Session Note using template from `docs/agents/templates/Session_Note_Template.md`
-- [ ] Follow naming convention: `SN_YYYYMMDD_<TaskId>.md`
+- [ ] Follow naming convention: `SN_YYYYMMDDHHMM_<TaskId>.md` (24-hour UTC)
 - [ ] Document all objectives, steps taken, outputs, and decisions
 - [ ] Include citations to relevant files and line ranges
 - [ ] Identify risks and next actions
@@ -63,6 +64,7 @@ This rule applies when any files are modified in:
 ### Pre-Completion Checks
 
 Before ending an agent session:
+
 - [ ] Session Note created and complete
 - [ ] All required sections populated
 - [ ] Human review obtained
@@ -73,6 +75,7 @@ Before ending an agent session:
 ### Failure Response
 
 If Session Note requirements not met:
+
 1. **Halt session completion** until requirements satisfied
 2. **Remind agent** of Session Note requirements
 3. **Provide guidance** on missing elements
@@ -99,34 +102,41 @@ If Session Note requirements not met:
 - **Duration**: ~2 hours
 
 ## Inputs
+
 - withco-general/linear/docs/How to use Linear.md
 - .cursor/rules/planning-mode.mdc
 - User requirements for PRD templates
 
 ## Steps Taken
+
 - Analyzed Linear workflow structure
 - Collaboratively defined V3 front matter schema
 - Created two distinct PRD templates
 
 ## Outputs
+
 - withco-general/docs/global/GBL-PRD_Best_Practices.md
 - withco-general/docs/global/TODO_Log.md
 - .cursor/rules/agent-offboarding.mdc
 
 ## Citations
+
 - withco-general/linear/docs/How to use Linear.md:1-160
 - .cursor/rules/planning-mode.mdc:1-143
 
 ## Risks Identified
+
 - None significant identified
 - TODO list continuity requires discipline
 
 ## Next Actions
+
 - Create remaining PRDs from finalized templates
 - Implement agent artifacts framework
 - Test offboarding process
 
 ## Signoff
+
 - **Reviewer**: slittle
 - **Status**: approved
 - **Date**: 2025-09-27T14:30:00Z
