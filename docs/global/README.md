@@ -7,7 +7,7 @@ This directory contains global standards, best practices, and shared documentati
 ```
 docs/global/
 ├── GBL-PRD_Best_Practices.md    # PRD standards and templates
-├── GLB-TKT_Best_Practices.md    # Ticket standards and templates
+├── GBL-TKT_Best_Practices.md    # Ticket standards and templates
 ├── Decision_Docket.md           # Key decisions and rationale
 ├── TODO_Log.md                  # Task tracking and carryover
 └── glossary/                    # Terminology and definitions
@@ -24,7 +24,7 @@ docs/global/
   - Standardized front matter schema
   - Team-based naming conventions (PROD-PRD*, AM-PRD*, etc.)
 
-- **GLB-TKT_Best_Practices.md**: Standards for ticket creation and management
+- **GBL-TKT_Best_Practices.md**: Standards for ticket creation and management
   - Required sections and structure
   - 3-tier DoD (Fast/Standard/Gold)
   - Quick commands for efficient drafting

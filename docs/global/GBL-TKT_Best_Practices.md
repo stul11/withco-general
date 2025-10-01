@@ -1,5 +1,5 @@
 ---
-id: GLB-TKT_Best_Practices
+id: GBL-TKT_Best_Practices
 title: Ticket Best Practices
 status: Draft
 stage: Planning

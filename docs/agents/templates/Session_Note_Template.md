@@ -1,3 +1,14 @@
+---
+id: SN_Template
+title: Session Note Template
+version: 1.0.0
+created: 2025-01-27T19:00:00Z
+updated: 2025-01-27T19:00:00Z
+owner: slittle
+status: Active
+tags: [template, session-note, agent]
+---
+
 # Session Note
 
 - **Task ID**: [Brief description of the main task]

@@ -31,6 +31,24 @@
 - [x] Add Research Request template at `docs/global/templates/Research_Request_Template.md`
 - [x] Update `docs/global/TODO_Log.md` to mark completed items
 
+### Session: repo-cleanup-implementation (2025-01-27)
+
+- [x] Fix naming inconsistency: GLB-TKT vs GBL-PRD prefixes (should be GBL-TKT for consistency)
+- [x] Resolve duplicate ADR templates: docs/agents/templates/ADR_Template.md vs docs/prds/global/templates/agents/adr/ADR_Template.md
+- [x] Resolve duplicate Research Request templates: docs/agents/templates/Research_Request_Template.md vs docs/global/templates/Research_Request_Template.md
+- [x] Complete empty files: docs/raw/cost-of-manufacturing-offering-context.md (currently empty)
+- [x] Populate APPROVED-GLOSSARY.md (currently minimal with only front matter)
+- [x] Complete GLB-TKT_Best_Practices.md template (stops at line 77, incomplete sections)
+- [x] Clean up stranded TODOs in RSM call notes files (rsm-call-notes-documentation.md, rsm-call-notes-organized.md)
+- [x] Clean up stranded TODOs in LEG-63 work log (8 unchecked items in work-log/LEG-63-WORK-LOG.md)
+- [x] Clean up stranded TODOs in SLF-78 draft ticket (multiple unchecked items in SLF-78-boxwood-means-acquisition-exploration-draft.md)
+- [x] Resolve template location confusion: decide whether templates belong in docs/agents/templates/ or docs/global/templates/
+- [x] Update Decision Docket open decisions: ADR template structure and Research Request template format are now resolved
+- [x] Standardize front matter across all templates (some missing required fields like created/updated timestamps)
+- [x] Fix inconsistent directory structure: docs/prds/global/templates/agents/adr/ is overly nested
+- [x] Complete missing template files referenced in docs/agents/templates/README.md but not found
+- [x] Remove obsolete files: linear/tickets/archive/obsolete/ directory contains outdated drafts
+
 ### Session: repo-cleanup-analysis (2025-01-27)
 
 - [x] Conduct comprehensive repository analysis for uncertainties, conflicts, and stranded TODOs
@@ -114,7 +132,7 @@
 - [ ] Resolve duplicate Research Request templates: docs/agents/templates/Research_Request_Template.md vs docs/global/templates/Research_Request_Template.md
 - [ ] Complete empty files: docs/raw/cost-of-manufacturing-offering-context.md (currently empty)
 - [ ] Populate APPROVED-GLOSSARY.md (currently minimal with only front matter)
-- [ ] Complete GLB-TKT_Best_Practices.md template (stops at line 77, incomplete sections)
+- [ ] Complete GBL-TKT_Best_Practices.md template (stops at line 77, incomplete sections)
 - [ ] Clean up stranded TODOs in RSM call notes files (rsm-call-notes-documentation.md, rsm-call-notes-organized.md)
 - [ ] Clean up stranded TODOs in LEG-63 work log (8 unchecked items in work-log/LEG-63-WORK-LOG.md)
 - [ ] Clean up stranded TODOs in SLF-78 draft ticket (multiple unchecked items in SLF-78-boxwood-means-acquisition-exploration-draft.md)

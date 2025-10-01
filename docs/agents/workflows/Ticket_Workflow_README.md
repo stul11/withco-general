@@ -8,7 +8,7 @@
 - Default DoD tier: Standard (override during triage if needed)
 - Draft naming: `linear/tickets/drafts/{TEAM}-{slug}-draft.md`
 - Commands: `/ticket-new`, `/ticket-wizard`, `/ticket-validate`, `/ticket-simplify`, `/ticket-promote`, `/ticket-draft`, `/planning-mode`, `/plan-md`
-- `GLB-TKT_Best_Practices.md` is drafting-only; never the final ticket
+- `GBL-TKT_Best_Practices.md` is drafting-only; never the final ticket
 - Enforce ISO 8601 UTC for `created`/`updated` automatically at promote time
 
 ## State model (reusing front matter)
@@ -105,7 +105,7 @@ Zero/one‑arg philosophy: operate on the “current draft” by default; prompt
 
 - `.cursor/rules/ticket-wizard.mdc`
 - `docs/agents/workflows/Background_Agent_Draft_Review_Workflow.md`
-- `docs/global/GLB-TKT_Best_Practices.md`
+- `docs/global/GBL-TKT_Best_Practices.md`
 - `linear/docs/templates/ticket-template.md`
 - `.cursor/rules/planning-mode.mdc` and `.cursor/rules/planning-mode-md.mdc`
 - `.cursor/rules/agent-chat-commands.mdc`

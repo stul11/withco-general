@@ -66,15 +66,15 @@ updated: "2025-01-27T18:00:00Z"
 
 ### Rich (RSM)
 
-- [ ] Get actual 1099-DIV provider quotes and introductions from public REIT relationships
+- [x] Get actual 1099-DIV provider quotes and introductions from public REIT relationships
 
 ### Jerry (Property Accounting)
 
-- [ ] Schedule property accounting setup session next week
+- [x] Schedule property accounting setup session next week
 
 ### RSM Team
 
-- [ ] Joe Musto to discuss audit requirements and potential cost-effective audit firm referrals
+- [x] Joe Musto to discuss audit requirements and potential cost-effective audit firm referrals
   - Need annual audited financials for Reg A+ (non-PCAOB firm acceptable)
   - Exploring single overarching audit vs individual property audits
   - Current RSM minimum $50-75K not viable for single property
