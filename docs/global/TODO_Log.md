@@ -52,7 +52,7 @@
 
 - [ ] Create blank GLOSSARY.md in /docs/global/
 - [ ] Create LEG-PRD_Design_Economic_Transaction_Model.md from finalized template
-- [ ] Create LEG-PRD_Collect_Cost_of_Manufacturing_an_Offering_Inputs.md from finalized template
+- [x] Create LEG-PRD_Collect_Cost_of_Manufacturing_an_Offering_Inputs.md from finalized template
 - [ ] Create LEG-PRD_Design_Cost_of_Manufacturing_an_Offering.md from finalized template
 - [ ] Create LEG-PRD_Determine_Minimum_Check_Size.md from finalized template
 - [ ] Decide folder and document taxonomy for docs/prds/global/templates/agents/adr

@@ -5,6 +5,16 @@
 
 ## Recent Decisions
 
+### 2025-01-27
+
+- **Decision**: Convert draft ticket to PRD format for cost of manufacturing research
+- **Context**: Existing draft ticket had comprehensive content suitable for PRD structure
+- **Options Considered**: Keep as ticket, convert to PRD, create new PRD from scratch
+- **Rationale**: PRD format provides better structure for research requirements and comprehensive documentation
+- **Impact**: Established pattern for converting suitable drafts to PRDs; improved documentation structure
+- **Links**: docs/prds/LEG-PRD_Collect_Cost_of_Manufacturing_an_Offering_Inputs.md
+- **Owner**: slittle
+
 ### 2025-10-01
 
 - **Decision**: Implement 4-phase Background Agent Draft Review Workflow (Draft → Review → Authorization → Implementation)
@@ -32,7 +42,7 @@
 - **Options Considered**: Single system, Separate systems, Merged systems
 - **Rationale**: Different purposes - Work Log for context/reference, To-Do for active work management; integration maintains connections while keeping purposes distinct
 - **Impact**: Content placement rules defined; cross-reference pattern established; work items routed to appropriate system based on purpose
-- **Links**: linear/tickets/drafts/global-work-log-to-do-process-definition.md
+- **Links**: docs/global/Global_Work_Log_vs_To_Do_Process.md
 - **Owner**: slittle
 
 ### 2025-10-01

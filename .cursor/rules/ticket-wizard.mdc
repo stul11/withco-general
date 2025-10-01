@@ -23,7 +23,7 @@ Trigger when user requests “ticket wizard”, “create/update ticket”, or r
 
 ### Phase 0 — Boot
 
-- Locate `@TKT_Best_Practices.md`. If absent, offer to create it from the scaffold and continue.
+- Locate `@GLB-TKT_Best_Practices.md`. If absent, offer to create it from the scaffold and continue.
 
 ### Phase 1 — Triage (one pass)
 
@@ -47,7 +47,7 @@ Trigger when user requests “ticket wizard”, “create/update ticket”, or r
 
 ### Phase 5 — Output
 
-- Return a “Beautiful Ticket” block that exactly matches `TKT_Best_Practices.md` structure, fully populated.
+- Return a "Beautiful Ticket" block that exactly matches `GLB-TKT_Best_Practices.md` structure, fully populated.
 - Also produce a Reviewer Pack: TL;DR (3 bullets), what to check, and direct links.
 
 ## Front Matter Map (must-have fields)

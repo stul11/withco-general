@@ -1,0 +1,227 @@
+---
+alwaysApply: false
+description: "Ensure agent artifacts include all required sections"
+globs: ["**/docs/agents/**"]
+---
+
+# Agent Artifacts Standard Rule
+
+## Overview
+
+When creating Agent Role Cards, Context Packs, Playbooks, or other agent artifacts, ensure all required sections are included and properly structured according to established templates.
+
+## Trigger Conditions
+
+This rule applies when creating or modifying files in:
+- `docs/agents/role-cards/` - Agent Role Cards
+- `docs/agents/context-packs/` - Context Packs
+- `docs/agents/playbooks/` - Playbooks
+- `docs/agents/checklists/` - Onboarding/Offboarding checklists
+
+## Required Sections by Artifact Type
+
+### Agent Role Card (ARC)
+
+**Required Sections**:
+- [ ] **Purpose & Scope**: Clear purpose, in-scope, out-of-scope
+- [ ] **Inputs & Outputs**: Documents, data sources, artifacts, tools
+- [ ] **Constraints & Safety**: Data boundaries, prohibited actions, safety checks
+- [ ] **Success Criteria**: Quality gates, KPIs
+- [ ] **Ownership & Escalation**: Human owner, escalation contacts
+- [ ] **Context Packs**: Required and optional context
+- [ ] **Playbooks**: Standard and emergency procedures
+- [ ] **Version History**: Change tracking
+
+**Template**: `docs/agents/templates/Agent_Role_Card_Template.md`
+
+### Context Pack (CP)
+
+**Required Sections**:
+- [ ] **Objective**: One-line description
+- [ ] **Required Docs**: Core and supporting documents with descriptions
+- [ ] **Allowed Data**: What's included and excluded
+- [ ] **Session Boundaries**: Time-box, token scope
+- [ ] **Context Summary**: Key concepts, relationships, constraints
+- [ ] **Usage Guidelines**: When to use/not use, prerequisites
+- [ ] **Quality Checks**: Pre/post session validation
+- [ ] **Version History**: Change tracking
+
+**Template**: `docs/agents/templates/Context_Pack_Template.md`
+
+### Playbook (PB)
+
+**Required Sections**:
+- [ ] **Overview**: Brief description and usage
+- [ ] **Preconditions**: Required state, access, resources
+- [ ] **Steps**: Detailed steps with inputs, actions, outputs, validation
+- [ ] **Postconditions**: Success criteria, deliverables, cleanup
+- [ ] **Error Handling**: Common errors, rollback, abort procedures
+- [ ] **Quality Checks**: Pre/during/post execution validation
+- [ ] **Variations**: Different scenarios and approaches
+- [ ] **Version History**: Change tracking
+
+**Template**: `docs/agents/templates/Playbook_Template.md`
+
+### Onboarding/Offboarding Checklist
+
+**Required Sections**:
+- [ ] **Pre-[On/Off]boarding**: Documentation review, access setup
+- [ ] **[On/Off]boarding Tasks**: Validation, documentation, training
+- [ ] **Post-[On/Off]boarding**: Validation, sign-off, go-live prep
+- [ ] **Success Criteria**: Completion requirements
+- [ ] **Rollback Plan**: Failure recovery procedures
+- [ ] **Related Documents**: Links to related artifacts
+- [ ] **Version History**: Change tracking
+
+**Templates**: 
+- `docs/agents/templates/Onboarding_Checklist_Template.md`
+- `docs/agents/templates/Offboarding_Checklist_Template.md`
+
+## Quality Standards
+
+### Completeness
+
+- [ ] All required sections present
+- [ ] All subsections populated
+- [ ] No placeholder text remaining
+- [ ] All links and references valid
+
+### Consistency
+
+- [ ] Follows template structure exactly
+- [ ] Uses consistent terminology
+- [ ] Maintains proper formatting
+- [ ] Includes proper front matter
+
+### Accuracy
+
+- [ ] Information is current and accurate
+- [ ] Procedures are tested and validated
+- [ ] References are correct and accessible
+- [ ] Ownership and contacts are valid
+
+## Enforcement
+
+### Pre-Creation Checks
+
+Before creating agent artifacts:
+- [ ] Identify correct template to use
+- [ ] Review template requirements
+- [ ] Gather all required information
+- [ ] Plan artifact structure
+
+### During Creation
+
+While creating agent artifacts:
+- [ ] Follow template structure exactly
+- [ ] Populate all required sections
+- [ ] Use consistent terminology
+- [ ] Include proper front matter
+
+### Post-Creation Validation
+
+After creating agent artifacts:
+- [ ] Verify all required sections present
+- [ ] Check completeness of subsections
+- [ ] Validate all links and references
+- [ ] Ensure proper formatting
+- [ ] Obtain human review
+
+### Failure Response
+
+If artifact requirements not met:
+1. **Identify missing sections** and requirements
+2. **Provide specific guidance** on what's needed
+3. **Reference appropriate template** for structure
+4. **Require completion** before proceeding
+
+## Template Usage
+
+### Selecting Templates
+
+- **Role Cards**: Use `Agent_Role_Card_Template.md`
+- **Context Packs**: Use `Context_Pack_Template.md`
+- **Playbooks**: Use `Playbook_Template.md`
+- **Onboarding**: Use `Onboarding_Checklist_Template.md`
+- **Offboarding**: Use `Offboarding_Checklist_Template.md`
+
+### Template Customization
+
+- Replace placeholder text with actual content
+- Add or remove sections as needed for specific use case
+- Maintain core structure and required sections
+- Update version history with changes
+
+## Related Documentation
+
+- [Agent Role Card Template](../docs/agents/templates/Agent_Role_Card_Template.md)
+- [Context Pack Template](../docs/agents/templates/Context_Pack_Template.md)
+- [Playbook Template](../docs/agents/templates/Playbook_Template.md)
+- [Onboarding Checklist Template](../docs/agents/templates/Onboarding_Checklist_Template.md)
+- [Offboarding Checklist Template](../docs/agents/templates/Offboarding_Checklist_Template.md)
+- [Agent Artifacts Planning](../docs/raw/plans/2025-09-27_agent-artifacts-and-workflows.md)
+
+## Examples
+
+### Valid Agent Role Card
+
+```markdown
+# Agent Role Card: Background Agent
+
+**Version**: 0.1.0
+**Status**: Active
+**Owner**: slittle
+
+## Purpose & Scope
+
+### Purpose
+Assist with personal work management through draft ticket creation and Linear integration
+
+### In-Scope
+- Draft ticket creation using Ticket Wizard
+- Context gathering from company Linear (read-only)
+- Personal documentation and decision tracking
+
+### Out-of-Scope
+- Company Linear project management
+- Team Linear integration
+- Company Linear workflow enforcement
+
+## Inputs & Outputs
+
+### Inputs
+- Documents: Ticket templates, best practices
+- Data Sources: Global To-Do project, draft directory
+- User Context: Work requirements and preferences
+
+### Outputs
+- Artifacts: Draft tickets, session notes, documentation
+- Actions: Linear issue creation (with approval)
+- Reports: Status updates, progress summaries
+
+### Tools Allowed
+- Ticket Wizard: 5-phase conversation workflow
+- Linear MCP: Read company Linear, write Global To-Do
+- File operations: Draft directory, documentation
+
+## Constraints & Safety
+
+### Data Boundaries
+- Allowed Access: Global To-Do project, draft directory
+- Read-Only Areas: Company Linear projects
+- Prohibited Areas: Company Linear writes
+
+### Prohibited Actions
+- Automatic Linear pushes without approval
+- Company Linear project modifications
+- Bypassing safety checks
+
+### Safety Checks
+- Pre-operation validation
+- Target project verification
+- User authorization confirmation
+```
+
+## Version History
+
+- **v1.0** (2025-01-27): Initial rule creation
