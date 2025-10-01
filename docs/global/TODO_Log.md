@@ -13,7 +13,15 @@
 - [x] Normalize filenames; move non-draft data out of drafts
 - [x] Add link checker, ISO timestamp validator, and pre-commit hooks
 - [x] Create/Update session note and stage changes for review
- - [x] Fix broken markdown links across repo; add example ADR; commit changes
+- [x] Fix broken markdown links across repo; add example ADR; commit changes
+
+### Session: template-pt-1 (2025-10-01)
+
+- [x] Add `/onboard-next-agent` command documentation
+- [x] Create `docs/global/GLOSSARY.md`
+- [x] Add ADR template at `docs/prds/global/templates/agents/adr/ADR_Template.md`
+- [x] Add Research Request template at `docs/global/templates/Research_Request_Template.md`
+- [x] Update `docs/global/TODO_Log.md` to mark completed items
 
 ### Session: repo-cleanup (2025-01-27)
 
@@ -68,7 +76,7 @@
 
 ### General Backlog
 
-- [ ] Create blank GLOSSARY.md in /docs/global/
+- [x] Create blank GLOSSARY.md in /docs/global/
 - [ ] Create LEG-PRD_Design_Economic_Transaction_Model.md from finalized template
 - [x] Create LEG-PRD_Collect_Cost_of_Manufacturing_an_Offering_Inputs.md from finalized template
 - [ ] Create LEG-PRD_Design_Cost_of_Manufacturing_an_Offering.md from finalized template
@@ -78,7 +86,7 @@
 - [ ] Define onboarding and offboarding checklists for agents
 - [ ] Define session note format and decision docket process
 - [ ] Prepare example Agent Role Card and Session Note
-- [ ] Add ADR and Research Request markdown templates
+- [x] Add ADR and Research Request markdown templates
 - [ ] Publish agreed Best Practices into docs/global/GBL-PRD_Best_Practices.md
 
 ## Blocked
