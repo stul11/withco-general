@@ -26,7 +26,7 @@ version: 0.1.0
 
 # Context & Relationships
 related_docs:
-  - withco-general/linear/tickets/drafts/research-prompts/try-shorcut-prompt-style-guide.md
+  - withco-general/linear/tickets/drafts/research-prompts/try-shortcut-prompt-style-guide.md
   - withco-general/docs/global/GBL-TKT_Best_Practices.md
 risk_level: Medium
 repo_only: true
@@ -82,7 +82,7 @@ Owner: @slittle Due: 2025-02-03 Status: Draft
 - Input → Source/Owner/Date:
   - Boxwood Means company profile → Web research / slittle / 2025-01-27
   - Founder meeting notes → slittle / 2025-01-27
-  - Shortcut prompt style guide → linear/tickets/drafts/research-prompts/try-shorcut-prompt-style-guide.md
+  - Shortcut prompt style guide → linear/tickets/drafts/research-prompts/try-shortcut-prompt-style-guide.md
   - Acquisition modeling framework → SLF-76.0 (dependency) / slittle / TBD
 - Upstream dependency: Founder meeting completion (DONE)
 - Blockers: Need to create acquisition modeling framework first

@@ -1,4 +1,4 @@
-> IMPORTANT — Company document (READ-ONLY): Do not modify this file in the withco-general repo. It reflects company-wide Linear conventions. For personal workflow preferences, see Ticket Best Practices (`../../docs/global/GLB-TKT_Best_Practices.md`) and PRD Best Practices (`../../docs/global/GBL-PRD_Best_Practices.md`).
+> IMPORTANT — Company document (READ-ONLY): Do not modify this file in the withco-general repo. It reflects company-wide Linear conventions. For personal workflow preferences, see Ticket Best Practices (`../../docs/global/GBL-TKT_Best_Practices.md`) and PRD Best Practices (`../../docs/global/GBL-PRD_Best_Practices.md`).
 
 # 📝 How to use Linear
 
