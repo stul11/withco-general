@@ -365,11 +365,11 @@ feat: Define background agent draft review workflow - Session: workflow-finaliza
 
 ### Related Documentation
 
-- [Background Agent Draft Review Workflow](../workflows/Background_Agent_Draft_Review_Workflow.md)
-- [Agent Offboarding Implementation Checklist](../workflows/Agent_Offboarding_Implementation_Checklist.md)
-- [Global Work Log Process Definition](../../linear/tickets/drafts/global-work-log-to-do-process-definition.md)
-- [Background Agent Safety Rules](../../.cursor/rules/background-agent-safety.mdc)
-- [Background Agent Safeguards](../../.cursor/rules/background-agent-safeguards.mdc)
+- [Background Agent Draft Review Workflow](/workspace/docs/agents/workflows/Background_Agent_Draft_Review_Workflow.md)
+- [Agent Offboarding Implementation Checklist](/workspace/docs/agents/templates/Offboarding_Checklist_Template.md)
+- [Global Work Log Process Definition](/workspace/linear/tickets/archive/obsolete/global-work-log-to-do-overlap-process.md)
+- [Background Agent Safety Rules](/workspace/.cursor/rules/background-agent-safety.mdc)
+- [Background Agent Safeguards](/workspace/.cursor/rules/background-agent-safeguards.mdc)
 
 ### Stakeholders
 
