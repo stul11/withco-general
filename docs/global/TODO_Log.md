@@ -121,7 +121,6 @@
 - [ ] Resolve template location confusion: decide whether templates belong in docs/agents/templates/ or docs/global/templates/
 - [ ] Update Decision Docket open decisions: ADR template structure and Research Request template format are now resolved
 - [ ] Standardize front matter across all templates (some missing required fields like created/updated timestamps)
-- [ ] Remove obsolete files: linear/tickets/archive/obsolete/ directory contains outdated drafts
 - [ ] Fix inconsistent directory structure: docs/prds/global/templates/agents/adr/ is overly nested
 - [ ] Complete missing template files referenced in docs/agents/templates/README.md but not found
 

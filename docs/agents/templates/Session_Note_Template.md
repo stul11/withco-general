@@ -1,47 +1,96 @@
 # Session Note
 
-- **Task ID**: [Brief description of the main task]
+- **Task ID**: [Brief description of the main task or ticket ID]
 - **Agent**: [Agent type/name]
 - **Owner**: [Human owner]
 - **Date**: YYYY-MM-DDTHH:MM:SSZ
 - **Duration**: [Session length if tracked]
 
-## Inputs
+---
 
-- [List of key documents, files, or context provided]
-- [Specific requirements or constraints given]
+## Inputs & Context
+
+- **Key Documents/Files Provided**:
+  - [List each file or document, with full path, e.g., `docs/agents/templates/Session_Note_Template.md`]
+- **Context & Requirements**:
+  - [Summarize any specific requirements, constraints, or background context]
+- **Relevant Prior Work**:
+  - [Cite previous session notes, tickets, or decisions that informed this session]
+
+---
+
+## Full Findings
+
+- **Summary of Findings**:
+  - [Concise summary of what was discovered, clarified, or confirmed during the session]
+- **Detailed Findings**:
+  - [For each major finding, include:]
+    - **Description**: [What was found?]
+    - **File(s) Involved**: [List full paths, e.g., `docs/global/Decision_Docket.md`]
+    - **Line Numbers/Sections**: [If applicable, e.g., `L10-L25`]
+    - **Reasoning**: [Explain why this is important, how it was determined, and any relevant context]
+    - **Supporting Evidence**: [Quotes, code snippets, or links as needed]
+
+---
 
 ## Steps Taken
 
-- [Brief bullet points of major actions taken]
-- [Key decisions made during the session]
-- [Tools or methods used]
+- **Major Actions**:
+  - [Bullet points of all significant actions, e.g., "Reviewed TODOs in `docs/global/TODO_Log.md`"]
+- **Key Decisions**:
+  - [List any decisions made, with reasoning and file references]
+- **Tools/Methods Used**:
+  - [List tools, scripts, or methods applied, e.g., "Used ripgrep to search for TODO markers"]
+
+---
 
 ## Outputs
 
-- [Files created or modified with paths]
-- [Key deliverables produced]
-- [Decisions documented]
+- **Files Created/Modified**:
+  - [List each file, with full path, and a brief description of the change, e.g., `docs/agents/session-notes/SN_20251001_cleanup.md` (added findings summary)]
+- **Key Deliverables**:
+  - [Describe any outputs produced, e.g., "Updated TODO_Log.md with new prioritized section"]
+- **Documented Decisions**:
+  - [Reference any decisions added to the Decision Docket or other trackers]
+
+---
 
 ## Citations
 
-- [Links to specific files, line ranges, or external sources]
-- [Format: `path/to/file.md:Lx-Ly` or `https://example.com`]
+- [List all sources referenced, with precise file paths and line numbers, e.g., `docs/global/Decision_Docket.md:L12-L30`]
+- [Include external links if relevant, e.g., `https://example.com/reference`]
 
-## Risks Identified
+---
 
-- [Any potential issues or concerns discovered]
-- [Mitigation strategies if applicable]
+## Risks & Issues Identified
+
+- **Potential Issues**:
+  - [Describe any risks, blockers, or concerns discovered]
+- **Mitigation Strategies**:
+  - [Propose ways to address or monitor these risks]
+
+---
+
+## Reasoning & Rationale
+
+- [For each major action or decision, explain the reasoning behind it, referencing findings, requirements, or best practices. Be explicit about tradeoffs, uncertainties, or open questions.]
+
+---
 
 ## Next Actions
 
-- [Immediate follow-up items]
-- [Items for next session]
-- [Pending approvals or decisions]
+- **Immediate Follow-ups**:
+  - [List concrete next steps, with responsible party if known]
+- **For Next Session**:
+  - [Items to revisit or continue in future sessions]
+- **Pending Approvals/Decisions**:
+  - [List any items awaiting review, approval, or further input]
+
+---
 
 ## Signoff
 
 - **Reviewer**: [Name]
 - **Status**: pending | approved
 - **Date**: YYYY-MM-DDTHH:MM:SSZ
-- **Notes**: [Any additional comments]
+- **Notes**: [Any additional comments, clarifications, or context]

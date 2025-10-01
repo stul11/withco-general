@@ -91,11 +91,11 @@ Owner: @me Due: YYYY‑MM‑DD Status: Draft
 
 <!-- LLM: Propose a 3‑tier DoD ladder; each tier must be independently shippable. Keep checks binary and evidence‑backed. -->
 
-- **Fast (same‑day):**
+- **Fast:**
   - [ ] …
-- **Standard (2–3 days):**
+- **Standard:**
   - [ ] …
-- **Gold (1–2 weeks):**
+- **Gold:**
   - [ ] …
 
 ## Feedback & Reviews
