@@ -1,7 +1,7 @@
 ---
-id: SLF-76-boxwood-means-acquisition-exploration
+id: SLF-78-boxwood-means-acquisition-exploration
 title: Boxwood Means Acquisition Model Exploration & Research Primer
-status: Draft
+status: Completed
 stage: Planning
 owner: slittle
 people: []

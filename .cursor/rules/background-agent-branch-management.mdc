@@ -1,0 +1,323 @@
+---
+alwaysApply: true
+description: "Guidelines for handling divergent branches created by background agents"
+---
+
+# Background Agent Branch Management
+
+## Overview
+
+Background agents often create multiple divergent branches that need to be merged back into the main branch. This rule provides standardized procedures for handling these situations safely and efficiently.
+
+## Standard Workflow for Divergent Branches
+
+### 1. Assessment Phase
+
+Before taking any action, always assess the current state:
+
+```bash
+# Check current repository status
+git status
+
+# View all branches (local and remote)
+git branch -a
+
+# Visualize the divergence
+git log --oneline --graph --all -10
+
+# Check what commits are ahead/behind
+git log --oneline master..origin/master  # Remote commits not in local
+git log --oneline origin/master..master   # Local commits not in remote
+```
+
+### 2. Preserve Local Work
+
+Always stash uncommitted changes before merging:
+
+```bash
+# Stash current work with descriptive message
+git stash push -m "WIP: preserve local changes before merge"
+
+# Verify stash was created
+git stash list
+```
+
+### 3. Merge Strategy Selection
+
+#### Option A: Merge Strategy (Recommended)
+
+Use this for most cases - preserves history and is safest:
+
+```bash
+# Pull with merge strategy
+git pull --no-rebase origin master
+
+# Restore stashed changes
+git stash pop
+```
+
+#### Option B: Rebase Strategy
+
+Use only if you want linear history and are confident about conflicts:
+
+```bash
+# Pull with rebase strategy
+git pull --rebase origin master
+
+# Restore stashed changes
+git stash pop
+```
+
+#### Option C: Fast-Forward Only
+
+Use only when you're certain there are no conflicts:
+
+```bash
+# Pull with fast-forward only
+git pull --ff-only origin master
+
+# Restore stashed changes
+git stash pop
+```
+
+### 4. Post-Merge Actions
+
+#### Commit and Push Changes
+
+```bash
+# Add and commit your work
+git add .
+git commit -m "feat: [descriptive message about your changes]"
+
+# Push to remote
+git push origin master
+```
+
+#### Clean Up Background Agent Branches
+
+```bash
+# Delete local tracking branches (after confirming they're merged)
+git branch -d cursor/background-agent-operation-*
+
+# Delete remote branches (optional - GitHub cleans these up automatically)
+git push origin --delete cursor/background-agent-operation-*
+```
+
+## Background Agent Branch Patterns
+
+### Common Branch Naming Conventions
+
+Background agents typically create branches with these patterns:
+
+- `cursor/background-agent-operation-[hash]`
+- `cursor/[feature-name]-[hash]`
+- `cursor/[task-description]-[hash]`
+
+### Identifying Merged Branches
+
+```bash
+# List branches that have been merged into master
+git branch --merged master
+
+# List remote branches that have been merged
+git branch -r --merged master
+```
+
+## Conflict Resolution
+
+### When Conflicts Occur
+
+1. **Don't panic** - conflicts are normal with divergent branches
+2. **Read the conflict markers** carefully
+3. **Resolve conflicts** by editing the files
+4. **Test your changes** before committing
+5. **Use descriptive commit messages**
+
+### Conflict Resolution Commands
+
+```bash
+# After resolving conflicts manually
+git add <resolved-files>
+git commit -m "resolve: merge conflicts from background agent branches"
+
+# If you need to abort the merge
+git merge --abort
+```
+
+## Best Practices
+
+### Prevention Strategies
+
+1. **Pull frequently** to minimize divergence
+2. **Use feature branches** for significant work
+3. **Communicate** with team about ongoing work
+4. **Review background agent changes** before merging
+
+### Safety Measures
+
+1. **Always stash** uncommitted work before pulling
+2. **Create backups** of important branches before major operations
+3. **Test thoroughly** after merging
+4. **Keep commit messages descriptive**
+
+### Repository Hygiene
+
+1. **Clean up merged branches** regularly
+2. **Use meaningful branch names**
+3. **Document complex merge operations**
+4. **Monitor repository size** and clean up if needed
+
+## Emergency Procedures
+
+### If Something Goes Wrong
+
+```bash
+# Reset to previous state (use with caution)
+git reset --hard HEAD~1
+
+# Recover from stash
+git stash list
+git stash apply stash@{0}
+
+# Check reflog for lost commits
+git reflog
+```
+
+### Recovery Commands
+
+```bash
+# Find lost commits
+git fsck --lost-found
+
+# Recover specific commit
+git cherry-pick <commit-hash>
+
+# Reset to specific commit
+git reset --hard <commit-hash>
+```
+
+## File References
+
+Key files to monitor during merges:
+
+- [README.md](mdc:README.md) - Project documentation
+- [docs/global/TODO_Log.md](mdc:docs/global/TODO_Log.md) - Work tracking
+- [linear/tickets/drafts/](mdc:linear/tickets/drafts/) - Draft tickets
+- [linear/tickets/archive/](mdc:linear/tickets/archive/) - Archived tickets
+
+## Common Scenarios
+
+### Scenario 1: Simple Divergence
+
+- Local: 1-2 commits ahead
+- Remote: 2-4 commits ahead
+- **Solution**: Use merge strategy (Option A)
+
+### Scenario 2: Major Divergence
+
+- Local: 5+ commits ahead
+- Remote: 10+ commits ahead
+- **Solution**: Consider rebase strategy (Option B) or create feature branch
+
+### Scenario 3: Clean State
+
+- No local commits
+- Only remote commits
+- **Solution**: Use fast-forward (Option C)
+
+### Scenario 4: Complex Conflicts
+
+- Multiple file conflicts
+- Structural changes
+- **Solution**: Manual resolution, consider creating backup branch first
+
+## Monitoring and Maintenance
+
+### Regular Checks
+
+```bash
+# Check repository health
+git fsck
+
+# Clean up unnecessary files
+git gc --prune=now
+
+# Check for large files
+git rev-list --objects --all | git cat-file --batch-check='%(objecttype) %(objectname) %(objectsize) %(rest)' | sed -n 's/^blob //p' | sort --numeric-sort --key=2 | tail -10
+```
+
+### Branch Cleanup Schedule
+
+- **Weekly**: Remove merged background agent branches
+- **Monthly**: Clean up old backup branches
+- **Quarterly**: Review and archive old branches
+
+## Integration with Development Workflow
+
+### Pre-Development Checklist
+
+- [ ] Pull latest changes from master
+- [ ] Create feature branch if working on significant changes
+- [ ] Stash any uncommitted work
+- [ ] Verify clean working directory
+
+### Post-Development Checklist
+
+- [ ] Commit all changes with descriptive messages
+- [ ] Test changes thoroughly
+- [ ] Push to remote
+- [ ] Clean up temporary branches
+- [ ] Update documentation if needed
+
+## Troubleshooting
+
+### Common Issues and Solutions
+
+#### Issue: "Your branch and 'origin/master' have diverged"
+
+**Solution**: Follow the standard workflow (Assessment → Stash → Merge → Restore)
+
+#### Issue: Merge conflicts in multiple files
+
+**Solution**:
+
+1. Resolve conflicts file by file
+2. Test after each resolution
+3. Use `git add` to stage resolved files
+4. Commit with descriptive message
+
+#### Issue: Lost commits after merge
+
+**Solution**:
+
+1. Check `git reflog`
+2. Use `git cherry-pick` to recover specific commits
+3. Create backup branch before major operations
+
+#### Issue: Background agent branches not cleaning up
+
+**Solution**:
+
+1. Verify branches are merged: `git branch --merged master`
+2. Delete manually: `git branch -d <branch-name>`
+3. Push deletion to remote: `git push origin --delete <branch-name>`
+
+## Documentation Requirements
+
+### Commit Message Standards
+
+- **Format**: `type: description`
+- **Types**: feat, fix, docs, style, refactor, test, chore
+- **Examples**:
+  - `feat: add background agent branch management workflow`
+  - `fix: resolve merge conflicts in ticket templates`
+  - `docs: update branch management procedures`
+
+### Branch Naming Standards
+
+- **Feature branches**: `feature/description`
+- **Bug fixes**: `fix/description`
+- **Background agent**: `cursor/background-agent-operation-[hash]`
+- **Hotfixes**: `hotfix/description`
+
+This rule ensures consistent, safe handling of divergent branches created by background agents while maintaining repository integrity and development workflow efficiency.
