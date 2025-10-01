@@ -81,6 +81,6 @@ Chosen option: "[option 1], because [justification. e.g., only option, which mee
 
 ## Links
 
-- [Link type] [Link to ADR] <!-- example: Refined by [ADR-0005](0005-example.md) -->
-- [Link type] [Link to ADR] <!-- example: Depends on [ADR-0005](0005-example.md) -->
-- [Link type] [Link to ADR] <!-- example: Alternative to [ADR-0005](0005-example.md) -->
+- [Link type] [Link to ADR] <!-- example: Refined by [ADR-0005](example-adr.md) -->
+- [Link type] [Link to ADR] <!-- example: Depends on [ADR-0005](example-adr.md) -->
+- [Link type] [Link to ADR] <!-- example: Alternative to [ADR-0005](example-adr.md) -->

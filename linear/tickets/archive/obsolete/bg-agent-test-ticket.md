@@ -122,9 +122,9 @@ repo_only: true
 
 ### Links & Resources
 
-- [PRD Best Practices](docs/global/GBL-PRD_Best_Practices.md)
-- [Linear Workflow](linear/docs/How_to_use_Linear.md)
-- [Agent Templates](docs/agents/templates/)
+- [PRD Best Practices](/workspace/docs/global/GBL-PRD_Best_Practices.md)
+- [Linear Workflow](/workspace/linear/docs/How_to_use_Linear.md)
+- [Agent Templates](/workspace/docs/agents/templates/)
 
 ### Precedents
 

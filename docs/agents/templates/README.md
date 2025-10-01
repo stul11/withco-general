@@ -54,7 +54,7 @@ All templates include standardized front matter with:
 
 ## Related Documentation
 
-- [Agent Artifacts Planning](../../raw/plans/2025-09-27_agent-artifacts-and-workflows.md)
-- [Background Agent Workflow](../workflows/Background_Agent_Draft_Review_Workflow.md)
-- [Agent Offboarding Rule](../../.cursor/rules/agent-offboarding.mdc)
-- [Agent Chat Commands](../../.cursor/rules/agent-chat-commands.mdc) — `/offboard`, `/end-session`, `/onboard-next-agent`
+- [Agent Artifacts Planning](/workspace/docs/agents/session-notes/SN_20251001_agent-offboarding.md)
+- [Background Agent Workflow](/workspace/docs/agents/workflows/Background_Agent_Draft_Review_Workflow.md)
+- [Agent Offboarding Rule](/workspace/.cursor/rules/agent-offboarding.mdc)
+- [Agent Chat Commands](/workspace/.cursor/rules/agent-chat-commands.mdc) — `/offboard`, `/end-session`, `/onboard-next-agent`

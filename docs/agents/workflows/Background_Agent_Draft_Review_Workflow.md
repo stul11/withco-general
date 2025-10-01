@@ -498,20 +498,20 @@ Draft archived to: linear/tickets/archive/SLF-75-cost-model-improvements.md
 
 ### Core Rules & Templates
 
-- [Ticket Wizard Rule](../../.cursor/rules/ticket-wizard.mdc) - **MUST FOLLOW** for draft creation
-- [Ticket Template](../../linear/docs/templates/ticket-template.md) - Structure for all tickets
-- [Ticket Best Practices](../../docs/global/GLB-TKT_Best_Practices.md) - Quality standards
+- [Ticket Wizard Rule](/workspace/.cursor/rules/ticket-wizard.mdc) - **MUST FOLLOW** for draft creation
+- [Ticket Template](/workspace/linear/docs/templates/ticket-template.md) - Structure for all tickets
+- [Ticket Best Practices](/workspace/docs/global/GLB-TKT_Best_Practices.md) - Quality standards
 
 ### Safety & Process
 
-- [Background Agent Safety Rules](../../.cursor/rules/background-agent-safety.mdc) - **CRITICAL** safety boundaries
-- [Background Agent Safeguards](../../.cursor/rules/background-agent-safeguards.mdc) - Operational safeguards
-- [Agent Offboarding Checklist](../../.cursor/rules/agent-offboarding.mdc) - Session transitions
+- [Background Agent Safety Rules](/workspace/.cursor/rules/background-agent-safety.mdc) - **CRITICAL** safety boundaries
+- [Background Agent Safeguards](/workspace/.cursor/rules/background-agent-safeguards.mdc) - Operational safeguards
+- [Agent Offboarding Checklist](/workspace/.cursor/rules/agent-offboarding.mdc) - Session transitions
 
 ### Workflow Integration
 
-- [Global Work Log Process](../../global/Global_Work_Log_vs_To_Do_Process.md) - Content placement rules
-- [How to use Linear](../../linear/docs/How_to_use_Linear.md) - Company documentation (READ-ONLY). Do not modify; use personal best practices instead.
+- [Global Work Log Process](/workspace/docs/global/Global_Work_Log_vs_To_Do_Process.md) - Content placement rules
+- [How to use Linear](/workspace/linear/docs/How_to_use_Linear.md) - Company documentation (READ-ONLY). Do not modify; use personal best practices instead.
 
 ---
 
