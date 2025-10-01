@@ -46,6 +46,7 @@ This directory contains templates for agent-related artifacts and workflows.
 ### Front Matter
 
 All templates include standardized front matter with:
+
 - ID, title, status, owner, reviewers
 - Timestamps (ISO 8601 format)
 - Tags, related documents, risk level
@@ -53,6 +54,6 @@ All templates include standardized front matter with:
 
 ## Related Documentation
 
-- [Agent Artifacts Planning](../../docs/raw/plans/2025-09-27_agent-artifacts-and-workflows.md)
-- [Background Agent Workflow](../../workflows/Background_Agent_Draft_Review_Workflow.md)
+- [Agent Artifacts Planning](../../raw/plans/2025-09-27_agent-artifacts-and-workflows.md)
+- [Background Agent Workflow](../workflows/Background_Agent_Draft_Review_Workflow.md)
 - [Agent Offboarding Rule](../../.cursor/rules/agent-offboarding.mdc)

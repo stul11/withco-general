@@ -3,7 +3,7 @@
 - **Task ID**: PRD-Best-Practices-Definition
 - **Agent**: GPT-5-Pro
 - **Owner**: slittle
-- **Date**: 2025-09-27
+- **Date**: 2025-09-27T00:00:00Z
 - **Duration**: ~2 hours
 
 ## Inputs

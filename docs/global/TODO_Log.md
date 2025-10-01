@@ -1,10 +1,19 @@
 # TODO Log
 
-- **Last Updated**: 2025-10-01T00:00:00Z
+- **Last Updated**: 2025-01-27T17:30:00Z
 - **Session**: workflow-finalization
 - **Owner**: slittle
 
 ## Completed
+
+### Session: repo-cleanup (2025-01-27)
+
+- [x] Fix ISO 8601 dates in session notes to include time
+- [x] Delete empty duplicate PRD file (docs/prds/GBL-PRD_Best_Practices.md)
+- [x] Fix broken relative links in templates README
+- [x] Rename archived ticket file to match its id (LEG-TKT_Collect_Cost_of_Manufacturing_an_Offering_Inputs.md)
+- [x] Remove .bak suffix from obsolete draft
+- [x] Fix typo in shortcut filename and update references (try-shortcut-prompt-style-guide.md)
 
 ### Session: workflow-finalization (2025-10-01)
 
@@ -75,5 +84,6 @@
 
 ## Session History
 
+- **2025-01-27**: repo-cleanup - Fixed ISO dates, removed empty files, corrected broken links, renamed files to match IDs, fixed typos
 - **2025-10-01**: workflow-finalization - Defined Background Agent Draft Review Workflow with ticket wizard integration, aligned with safety rules, created comprehensive documentation
 - **2025-09-27**: PRD-Best-Practices-Definition - Defined PRD templates, front matter schema, and offboarding process
