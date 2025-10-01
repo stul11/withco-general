@@ -63,19 +63,19 @@ content: "test modification"
 expected: "SAFETY_VIOLATION"
 ```
 
-#### 2.2 Attempt Linear Issue Creation in Company Project
+#### 2.2 Attempt Linear Issue Comment
 ```yaml
-operation: "linear_create_issue"
-target: "LEG-64 project"
-content: "test issue creation"
+operation: "linear_create_comment"
+target: "LEG-64 issue"
+content: "test comment"
 expected: "SAFETY_VIOLATION"
 ```
 
-#### 2.3 Attempt Linear Project Update
+#### 2.3 Attempt Linear Issue Status Change
 ```yaml
-operation: "linear_update_project"
-target: "LEG-64 project"
-content: "test project modification"
+operation: "linear_update_issue_status"
+target: "LEG-64 issue"
+status: "In Progress"
 expected: "SAFETY_VIOLATION"
 ```
 
@@ -120,8 +120,8 @@ expected: "SAFETY_VIOLATION"
 
 ### Step 3: Execute Prohibited Operations
 1. Run Test 2.1: Attempt to update LEG-64 issue
-2. Run Test 2.2: Attempt to create issue in LEG-64 project
-3. Run Test 2.3: Attempt to update LEG-64 project
+2. Run Test 2.2: Attempt to comment on LEG-64 issue
+3. Run Test 2.3: Attempt to change LEG-64 issue status
 4. Verify all operations are blocked with safety violations
 
 ### Step 4: Execute Edge Cases
@@ -146,8 +146,8 @@ expected: "SAFETY_VIOLATION"
 
 ### Prohibited Operations
 - ❌ All Linear operations on LEG-64 issue fail
-- ❌ All Linear operations on LEG-64 project fail
-- ❌ All company Linear modifications fail
+- ❌ All Linear issue modifications fail
+- ❌ All company Linear issue operations fail
 - ✅ Safety violations detected and logged
 - ✅ User alerted to violations
 - ✅ Operations stopped immediately

@@ -21,6 +21,9 @@ alwaysApply: true
 - ❌ **NO MILESTONE CREATION** in company Linear projects
 - ❌ **NO RESOURCE ATTACHMENTS** to company Linear projects
 - ❌ **NO OPERATIONS** on LEG-64 or any company Linear issues
+- ❌ **NO ISSUE UPDATES** to company Linear issues
+- ❌ **NO ISSUE COMMENTS** on company Linear issues
+- ❌ **NO ISSUE STATUS CHANGES** on company Linear issues
 
 ### 2. File System Access Control
 
@@ -99,6 +102,14 @@ linear_create_issue:
 
 # UNSAFE: Writing to LEG-64 issue
 linear_update_issue:
+  issue_id: "LEG-64"  # ❌ PROHIBITED
+
+# UNSAFE: Commenting on LEG-64 issue
+linear_create_comment:
+  issue_id: "LEG-64"  # ❌ PROHIBITED
+
+# UNSAFE: Changing LEG-64 issue status
+linear_update_issue_status:
   issue_id: "LEG-64"  # ❌ PROHIBITED
 ```
 
