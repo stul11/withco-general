@@ -72,7 +72,7 @@ Owner: @slittle Due: 2025-02-03 Status: Draft
 - A2: Stock-heavy acquisition structure is preferred by both parties
 - A3: Public information sufficient for initial research phase
 - A4: Shortcut prompt style guide format is appropriate for acquisition modeling
-- A5: Company has existing acquisition modeling framework to integrate with
+- A5: ~~Company has existing acquisition modeling framework to integrate with~~ → No existing framework, need to create from scratch
 - A6: Actual financials will be provided after initial proposal (NEW)
 
 ## Inputs / Dependencies
@@ -83,9 +83,9 @@ Owner: @slittle Due: 2025-02-03 Status: Draft
   - Boxwood Means company profile → Web research / slittle / 2025-01-27
   - Founder meeting notes → slittle / 2025-01-27
   - Shortcut prompt style guide → linear/tickets/drafts/research-prompts/try-shorcut-prompt-style-guide.md
-  - Existing acquisition models → finance-team / TBD
+  - Acquisition modeling framework → SLF-76.0 (dependency) / slittle / TBD
 - Upstream dependency: Founder meeting completion (DONE)
-- Blockers: None identified
+- Blockers: Need to create acquisition modeling framework first
 
 ## Deliverable
 
@@ -166,15 +166,41 @@ Owner: @slittle Due: 2025-02-03 Status: Draft
 
 ## Proposed Sub-Tickets (Standard DoD)
 
+### SLF-76.0: Acquisition Modeling Framework & Inputs Definition
+**Type**: Finance Model | Framework Development  
+**Owner**: @slittle  
+**Duration**: 1 day  
+**Priority**: HIGH (dependency for other tickets)  
+**Deliverable**: Acquisition modeling framework and input requirements
+
+**Tasks**:
+- [ ] Define acquisition model structure and key components
+- [ ] Identify required financial inputs and data sources
+- [ ] Create model assumptions framework
+- [ ] Define stock-heavy acquisition mechanics
+- [ ] Establish validation criteria and quality checks
+- [ ] Document model limitations and sensitivities
+
+**Key Inputs to Define**:
+- Revenue metrics (historical, projected, growth rates)
+- Cost structure (COGS, SG&A, operating expenses)
+- Balance sheet items (assets, liabilities, equity)
+- Cash flow components (operating, investing, financing)
+- Valuation multiples and comparables
+- Synergy assumptions and integration costs
+- Stock exchange ratios and dilution impact
+- Tax implications and structure considerations
+
 ### SLF-76.1: Boxwood Means Company Research Primer
 **Type**: Research | Company Analysis  
 **Owner**: @slittle  
 **Duration**: 1 day  
+**Dependencies**: SLF-76.0 (for input requirements)  
 **Deliverable**: Comprehensive company research document
 
 **Tasks**:
 - [ ] Company overview and business model analysis
-- [ ] Financial performance research and estimates
+- [ ] Financial performance research and estimates (per framework inputs)
 - [ ] Market position and competitive landscape
 - [ ] Key personnel and organizational structure
 - [ ] Service offerings and client base analysis
@@ -183,11 +209,12 @@ Owner: @slittle Due: 2025-02-03 Status: Draft
 **Type**: Research | Prompt Creation  
 **Owner**: @slittle  
 **Duration**: 4 hours  
+**Dependencies**: SLF-76.0 (for input requirements)  
 **Deliverable**: Structured research prompt for comprehensive analysis
 
 **Tasks**:
-- [ ] Define research objectives and scope
-- [ ] Create structured question framework
+- [ ] Define research objectives and scope (aligned with framework inputs)
+- [ ] Create structured question framework for required data points
 - [ ] Identify key research sources and methods
 - [ ] Develop validation criteria for research findings
 - [ ] Test prompt completeness and usability
@@ -196,32 +223,35 @@ Owner: @slittle Due: 2025-02-03 Status: Draft
 **Type**: Finance Model | Prompt Creation  
 **Owner**: @slittle  
 **Duration**: 6 hours  
+**Dependencies**: SLF-76.0 (framework), SLF-76.1 (research data)  
 **Deliverable**: Shortcut-ready acquisition modeling prompt
 
 **Tasks**:
 - [ ] Follow Shortcut prompt style guide format
-- [ ] Define acquisition model inputs and assumptions
-- [ ] Create illustrative model framework
-- [ ] Include validation and quality checks
+- [ ] Incorporate acquisition model framework and inputs
+- [ ] Create illustrative model structure based on research
+- [ ] Include validation and quality checks per framework
 - [ ] Test prompt in Shortcut environment
 
 ### SLF-76.4: Illustrative Acquisition Model
 **Type**: Finance Model | Acquisition Analysis  
 **Owner**: @slittle  
 **Duration**: 1.5 days  
+**Dependencies**: SLF-76.0 (framework), SLF-76.1 (research), SLF-76.3 (prompt)  
 **Deliverable**: Preliminary acquisition model based on research
 
 **Tasks**:
-- [ ] Create financial model framework
+- [ ] Implement acquisition model framework in Shortcut
 - [ ] Input research-based estimates and assumptions
-- [ ] Model stock-heavy acquisition structure
+- [ ] Model stock-heavy acquisition structure and mechanics
 - [ ] Include sensitivity analysis and scenarios
-- [ ] Document assumptions and limitations
+- [ ] Document assumptions and limitations per framework
 
 ### SLF-76.5: Competitive Analysis & Market Context
 **Type**: Research | Market Analysis  
 **Owner**: @slittle  
 **Duration**: 1 day  
+**Dependencies**: SLF-76.0 (for valuation context)  
 **Deliverable**: Competitive landscape analysis
 
 **Tasks**:
@@ -229,7 +259,7 @@ Owner: @slittle Due: 2025-02-03 Status: Draft
 - [ ] Analyze market positioning and differentiation
 - [ ] Research industry trends and growth drivers
 - [ ] Assess acquisition precedents in the space
-- [ ] Document strategic implications
+- [ ] Document strategic implications and valuation context
 
 ---
 
