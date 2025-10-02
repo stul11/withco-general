@@ -27,3 +27,8 @@ repos:
         language: system
         types: [markdown]
         args: [--fix]
+      - id: sync-todo-codelens
+        name: sync-todo-codelens
+        entry: python3 scripts/todos/sync_codelens.py --check
+        language: system
+        pass_filenames: false

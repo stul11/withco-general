@@ -20,26 +20,30 @@ tags: [template, TODO-log, tracking]
 - **Session**: [Current session identifier]
 - **Owner**: [Human owner]
 
+> CodeLens integration: Each actionable checklist item should include a stable `id` so that sidecar files can
+> mirror items deterministically. Append an HTML comment with a unique identifier at the end of the line, e.g.
+> `<!-- id: todo-YYYYMMDD-### -->`. A generator will emit `*.codelens.todo` sidecars for editor CodeLens.
+
 ## Completed
 
-- [x] [Completed task description]
-- [x] [Another completed task]
+- [x] [Completed task description] <!-- id: todo-YYYYMMDD-001 -->
+- [x] [Another completed task] <!-- id: todo-YYYYMMDD-002 -->
 
 ## In Progress
 
-- [ ] [Currently active task]
-- [ ] [Another in-progress task]
+- [ ] [Currently active task] <!-- id: todo-YYYYMMDD-003 -->
+- [ ] [Another in-progress task] <!-- id: todo-YYYYMMDD-004 -->
 
 ## Pending
 
-- [ ] [Future task 1]
-- [ ] [Future task 2]
-- [ ] [Future task 3]
+- [ ] [Future task 1] <!-- id: todo-YYYYMMDD-005 -->
+- [ ] [Future task 2] <!-- id: todo-YYYYMMDD-006 -->
+- [ ] [Future task 3] <!-- id: todo-YYYYMMDD-007 -->
 
 ## Blocked
 
-- [ ] [Task blocked by dependency]
-- [ ] [Task waiting for approval]
+- [ ] [Task blocked by dependency] <!-- id: todo-YYYYMMDD-008 -->
+- [ ] [Task waiting for approval] <!-- id: todo-YYYYMMDD-009 -->
 
 ## Notes
 
