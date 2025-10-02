@@ -12,6 +12,6 @@ status: draft
 Use this index to navigate detailed, step-by-step sub-plans for each rollout phase.
 
 - Phase 01 — Approvals & Scaffolding: `docs/raw/plans/rollout/phase-01_approvals-and-scaffolding.md`
-- Phase 02 — Rules & Commands (spec + implementation): (TBD)
+- Phase 02 — Rules & Commands (spec + implementation): `docs/raw/plans/rollout/phase-02_rules-and-commands.md`
 - Phase 03 — Migration (Standard/Gold): (TBD)
 - Phase 04 — Adoption & QA: (TBD)
