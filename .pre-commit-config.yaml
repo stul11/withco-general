@@ -16,3 +16,9 @@ repos:
         entry: python3 scripts/sync_agents_rules.py --check
         language: system
         pass_filenames: false
+      - id: markdownlint
+        name: markdownlint
+        entry: markdownlint --config .markdownlint.json
+        language: system
+        types: [markdown]
+        args: [--fix]
