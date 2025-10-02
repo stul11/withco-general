@@ -11,7 +11,7 @@ Run the full offboarding checklist and close out the session according to reposi
 - task-id: Short slug for this session (e.g., `workflow-finalization`).
 - --dry-run: Show what will happen without writing files or staging.
 - --no-validate: Skip link and timestamp validation.
-- --auto: Create/update Session Note and stage changes without additional prompts (never auto-commit).
+- --auto: Create/update Session NOTE and stage changes without additional prompts (never auto-commit).
 
 ## When to use
 
@@ -43,7 +43,7 @@ Run the full offboarding checklist and close out the session according to reposi
 3. Update `docs/global/Decision_Docket.md` with any decisions made.
 4. Update `docs/global/TODO_Log.md` with completed, in-progress, and pending items (carryover clearly marked).
 5. Validations:
-   - **Session Note Completeness**: Verify all 11 required sections are populated (halt if incomplete)
+   - **Session NOTE Completeness**: Verify all 11 required sections are populated (halt if incomplete)
    - `python3 scripts/check_markdown_links.py`
    - `python3 scripts/validate_iso_timestamps.py docs`
 6. Prepare git changes:
@@ -54,11 +54,12 @@ Run the full offboarding checklist and close out the session according to reposi
 
 ### Agent runbook (non-interactive quick-run)
 
-1. Detect changed docs (for note inputs/outputs):
+1. Detect changed docs (for NOTE inputs/outputs):
    - `git status --porcelain docs/agents docs/global docs/prds`
 2. Ensure session NOTE exists and is populated:
    - Create `docs/agents/session-notes/SN_YYYYMMDD-HHMM_<task-id>.md` if missing using `docs/agents/templates/Session_Note_Template.md`
    - Use CREATED timestamp rounded to 15 minutes; never rename existing files on update
+   - Helper: `python3 scripts/hhmm_round.py 2025-10-02T10:52:00Z` → `1050`
    - Validate all 11 required sections are populated:
      - [ ] **Metadata**: Task ID, Agent, Owner, Date, Duration (lines 13-17)
      - [ ] **Inputs & Context**: Key Documents/Files Provided, Context & Requirements, Relevant Prior Work (lines 21-29)
@@ -74,7 +75,7 @@ Run the full offboarding checklist and close out the session according to reposi
    - Append decisions to `docs/global/Decision_Docket.md`
    - Update status blocks in `docs/global/TODO_Log.md` (Completed/In Progress/Pending)
 4. Validations:
-   - **Session Note Completeness**: Verify all 11 required sections are populated (halt if incomplete)
+   - **Session NOTE Completeness**: Verify all 11 required sections are populated (halt if incomplete)
    - If pre-commit is available: `pre-commit run --all-files`
    - Otherwise:
      - `python3 scripts/check_markdown_links.py`
@@ -92,13 +93,13 @@ Run the full offboarding checklist and close out the session according to reposi
 
 ### Failure handling
 
-- If session note validation fails (missing required sections), report missing sections and halt until completed
+- If session NOTE validation fails (missing required sections), report missing sections and halt until completed
 - If link or timestamp validation fails, report errors and pause before commit
-- If session note cannot be created (naming conflict), write to a temp path and ask for guidance
+- If session NOTE cannot be created (naming conflict), write to a temp path and ask for guidance
 
 ## Outputs
 
-- Path to Session Note
+- Path to Session NOTE
 - Docket and TODO updates
 - Validation results (links/timestamps)
 - Suggested commit message
