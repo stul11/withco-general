@@ -1,7 +1,7 @@
 # TODO Log
 
-- **Last Updated**: 2025-01-27T17:30:00Z
-- **Session**: markdownlint-implementation
+- **Last Updated**: 2025-10-02T21:10:00Z
+- **Session**: todo-log-normalization
 - **Owner**: slittle
 
 ## Completed
@@ -191,7 +191,10 @@
 
 ## In Progress
 
-- [ ] Propose Cursor rules and helpful commands to enhance workflows
+- TODO: (WORKFLOW) [MED] Propose Cursor rules and helpful commands to enhance workflows <!-- id: TODO-20251002-217 -->
+  source: docs/global/TODO_Log.md#in-progress
+  tags: cursor, workflows
+  notes: ICE-lite (Impact 3, Confidence 0.6, Effort 2) -> 0.9. Improves discoverability of automation helpers for agents.
 
 ### ANA Documentation Follow-Ups
 
@@ -201,13 +204,26 @@
 
 ### uv Migration (Planning → Implementation)
 
-TODO
-
-- [ ] Create `pyproject.toml` and initialize `uv.lock` with core tools
-- [ ] Replace `pip` references in `scripts/README.md` with `uv` equivalents
-- [ ] Decide policy for `requirements.txt` (generated via `uv export` vs deprecate)
-- [ ] Add CI checks to block `pip`/`poetry` usage and encourage `uv`
-- [ ] Document developer quickstart with `uv` commands
+- TODO: (DEV) [HIGH] Create `pyproject.toml` and initialize `uv.lock` with core tools <!-- id: TODO-20251002-218 -->
+  source: docs/agents/session-notes/SN_20251002-1200_uv-guidelines.md#next-actions
+  tags: uv, tooling, dependencies
+  notes: ICE-lite (Impact 3, Confidence 0.7, Effort 2) -> 1.05. Establishes reproducible dependency baseline for CI and local work.
+- TODO: (DOCS) [MED] Replace `pip` references in `scripts/README.md` with `uv` equivalents <!-- id: TODO-20251002-219 -->
+  source: docs/agents/session-notes/SN_20251002-1200_uv-guidelines.md#full-findings
+  tags: uv, documentation, tooling
+  notes: ICE-lite (Impact 2, Confidence 0.6, Effort 2) -> 0.6. Eliminates conflicting guidance for dependency management.
+- TODO: (POLICY) [HIGH] Decide policy for `requirements.txt` (generated via `uv export` vs deprecate) <!-- id: TODO-20251002-220 -->
+  source: docs/agents/session-notes/SN_20251002-1200_uv-guidelines.md#next-actions
+  tags: uv, governance, dependencies
+  notes: ICE-lite (Impact 2, Confidence 0.5, Effort 1) -> 1.0. Clarifies whether legacy requirements stay generated or are retired.
+- TODO: (CI) [MED] Add checks to block `pip`/`poetry` usage and encourage `uv` <!-- id: TODO-20251002-221 -->
+  source: docs/agents/session-notes/SN_20251002-1200_uv-guidelines.md#next-actions
+  tags: uv, ci, enforcement
+  notes: ICE-lite (Impact 3, Confidence 0.6, Effort 3) -> 0.6. Prevents regressions toward unsupported package managers.
+- TODO: (DOCS) [HIGH] Document developer quickstart with `uv` commands <!-- id: TODO-20251002-222 -->
+  source: docs/agents/session-notes/SN_20251002-1200_uv-guidelines.md#next-actions
+  tags: uv, onboarding, documentation
+  notes: ICE-lite (Impact 2, Confidence 0.7, Effort 1) -> 1.4. Speeds onboarding with uv-first setup guidance.
 
 ## Pending
 
@@ -278,124 +294,142 @@ reference for traceability._
 - TODO: (PRD) [MED] Create LEG-PRD_Design_Economic_Transaction_Model.md from finalized template <!-- id: TODO-20251002-201 -->
   source: docs/global/GBL-PRD_Best_Practices.md#project-structure-requirements
   tags: prd, LEG
-
+  notes: ICE-lite (Impact 3, Confidence 0.5, Effort 3) -> 0.5. Fills remaining PRD gap for LEG program economics.
 - TODO: (PRD) [MED] Create LEG-PRD_Design_Cost_of_Manufacturing_an_Offering.md from finalized template <!-- id: TODO-20251002-202 -->
   source: docs/global/GBL-PRD_Best_Practices.md#project-structure-requirements
   tags: prd, LEG
-
+  notes: ICE-lite (Impact 3, Confidence 0.5, Effort 3) -> 0.5. Captures core manufacturing workflows for LEG offering.
 - TODO: (PRD) [MED] Create LEG-PRD_Determine_Minimum_Check_Size.md from finalized template <!-- id: TODO-20251002-203 -->
   source: docs/global/GBL-PRD_Best_Practices.md#project-structure-requirements
   tags: prd, LEG
-
-- TODO: (AGENT) [LOW] Document folder and taxonomy expectations for docs/agents/templates/ <!-- id: TODO-20251002-204 -->
+  notes: ICE-lite (Impact 3, Confidence 0.5, Effort 3) -> 0.5. Supports pricing decisions tied to LEG investor intake.
+- TODO: (AGENT) [MED] Document folder and taxonomy expectations for `docs/agents/templates/` <!-- id: TODO-20251002-204 -->
   source: docs/raw/plans/2025-10-02_document-categorization-and-workflows.md#2-directory-taxonomy-option-a-refined
   tags: taxonomy, templates
-
+  notes: ICE-lite (Impact 2, Confidence 0.6, Effort 2) -> 0.6. Clarifies structure ahead of template migrations.
 - TODO: (AGENT) [LOW] Document agent artifacts framework (Role Card, Context Pack, Playbook, ADRs) <!-- id: TODO-20251002-205 -->
   source: docs/agents/templates/Agent_Role_Card_Template.md
   tags: agents, templates
-
-- TODO: (AGENT) [LOW] Define onboarding and offboarding checklists for agents <!-- id: TODO-20251002-206 -->
+  notes: ICE-lite (Impact 2, Confidence 0.5, Effort 3) -> 0.33. Captures guidance for artifact families after taxonomy set.
+- TODO: (AGENT) [HIGH] Define onboarding and offboarding checklists for agents <!-- id: TODO-20251002-206 -->
   source: .cursor/commands/offboard.md#behavior-what-the-agent-will-do
   tags: agents, workflows
-
-- TODO: (AGENT) [LOW] Define session NOTE format and decision docket process <!-- id: TODO-20251002-207 -->
+  notes: ICE-lite (Impact 3, Confidence 0.6, Effort 2) -> 0.9. Establishes guardrails for lifecycle transitions.
+- TODO: (AGENT) [HIGH] Define session NOTE format and Decision Docket process <!-- id: TODO-20251002-207 -->
   source: .cursor/rules/agent-session-notes.mdc#required-actions
   tags: session-notes, docket
-
+  notes: ICE-lite (Impact 3, Confidence 0.6, Effort 2) -> 0.9. Aligns recordkeeping across notes and decision tracking.
 - TODO: (AGENT) [LOW] Prepare example Agent Role Card and Session NOTE <!-- id: TODO-20251002-208 -->
   source: docs/agents/templates/Agent_Role_Card_Template.md
   tags: examples, templates
-
-- TODO: (PRD) [LOW] Publish agreed Best Practices into docs/global/GBL-PRD_Best_Practices.md <!-- id: TODO-20251002-209 -->
+  notes: ICE-lite (Impact 2, Confidence 0.6, Effort 3) -> 0.4. Provides reference material once standards finalize.
+- TODO: (PRD) [HIGH] Publish agreed best practices into `docs/global/GBL-PRD_Best_Practices.md` <!-- id: TODO-20251002-209 -->
   source: docs/global/GBL-PRD_Best_Practices.md
   tags: prd, best-practices
-
-- TODO: (AGENT) [MED] Consolidate reorganization Phase 01-02 session notes <!-- id: TODO-20251002-210 -->
-  source: docs/agents/session-notes/SN_20251002-1045_reorganization-phase-1-2.md#session-NOTE
+  notes: ICE-lite (Impact 3, Confidence 0.7, Effort 2) -> 1.05. Moves consensus guidance into canonical reference.
+- TODO: (AGENT) [HIGH] Consolidate reorganization Phase 01-02 session notes <!-- id: TODO-20251002-210 -->
+  source: docs/agents/session-notes/SN_20251002-1045_reorganization-phase-1-2.md#session-note
   tags: session-notes, cleanup
-  notes: Merge the duplicate 10:45/10:52 entries and remove the empty 10:50 stub so one canonical NOTE remains.
-
-- TODO: (AGENT) [LOW] Backfill Phase 02 sample items session notes <!-- id: TODO-20251002-211 -->
+  notes: Merge duplicate 10:45/10:52 entries and remove the empty 10:50 stub so one canonical NOTE remains. ICE-lite (Impact 3, Confidence 0.7, Effort 1) -> 2.1.
+- TODO: (AGENT) [MED] Backfill Phase 02 sample items session notes <!-- id: TODO-20251002-211 -->
   source: docs/agents/session-notes/SN_20251002-1045_phase-02-sample-items.md#phase-02--sample-items
   tags: session-notes, templates
-  notes: Populate the 10:45 and 10:56 placeholders with front matter + content or migrate them into the rollout plan hierarchy.
-
-- TODO: (AGENT) [LOW] Standardize Phase 02 command docs check NOTE <!-- id: TODO-20251002-212 -->
+  notes: Populate the 10:45 and 10:56 placeholders with template-complete content or migrate into rollout plan hierarchy. ICE-lite (Impact 2, Confidence 0.6, Effort 1) -> 1.2.
+- TODO: (AGENT) [MED] Standardize Phase 02 command docs check NOTE <!-- id: TODO-20251002-212 -->
   source: docs/agents/session-notes/SN_20251002-1045_phase-02-command-docs-check.md#phase-02--command-docs-check
   tags: session-notes, templates
-  notes: Apply the session NOTE template (front matter, sections) so the checklist output is captured consistently.
-
-- TODO: (AGENT) [LOW] Reformat Oct 02 markdownlint implementation NOTE <!-- id: TODO-20251002-213 -->
-  source: docs/agents/session-notes/SN_20251002-0745_markdownlint-implementation.md#session-NOTE-markdownlint-implementation-and-fixes
+  notes: Apply the session NOTE template so checklist output is captured consistently. ICE-lite (Impact 2, Confidence 0.6, Effort 1) -> 1.2.
+- TODO: (AGENT) [MED] Reformat Oct 02 markdownlint implementation NOTE <!-- id: TODO-20251002-213 -->
+  source: docs/agents/session-notes/SN_20251002-0745_markdownlint-implementation.md#session-note-markdownlint-implementation-and-fixes
   tags: session-notes, markdownlint
-  notes: Add required front matter and align with the 2025-01-27 canonical NOTE instead of keeping a free-form narrative.
-
+  notes: Add required front matter and align with the 2025-01-27 canonical NOTE. ICE-lite (Impact 2, Confidence 0.6, Effort 1) -> 1.2.
 - TODO: (AGENT) [MED] Convert Phase 03 validation QA output into structured NOTE <!-- id: TODO-20251002-214 -->
   source: docs/agents/session-notes/SN_20251002-1135_phase-03-validation.md#phase-03--validation
   tags: session-notes, qa
-  notes: Turn the raw link-check dump into a templated session NOTE or archive it under QA logs to avoid confusing readers.
-
-- TODO: (AGENT) [LOW] Prevent drift in deprecated Linear ticket template copy <!-- id: TODO-20251002-215 -->
+  notes: Turn the raw link-check dump into a templated session NOTE or archive under QA logs. ICE-lite (Impact 3, Confidence 0.6, Effort 2) -> 0.9.
+- TODO: (AGENT) [MED] Prevent drift in deprecated Linear ticket template copy <!-- id: TODO-20251002-215 -->
   source: linear/docs/templates/ticket-template.md#issue-title
   tags: templates, linear
-  notes: Replace the deprecated duplicate with a minimal pointer or sync job so it cannot diverge from docs/templates/linear/ticket-template.md.
-
+  notes: Replace deprecated duplicate with a pointer or sync job to avoid divergence. ICE-lite (Impact 2, Confidence 0.6, Effort 2) -> 0.6.
 - TODO: (AGENT) [MED] Migrate Session NOTE template to canonical `docs/templates/session-NOTE.md`; update rule references; deprecate old path <!-- id: TODO-20251002-216 -->
   source: docs/raw/plans/2025-10-02_document-categorization-and-workflows.md#10-migration-plan-standard-and-gold
   tags: session-notes, templates, agents
-
-- TODO: (AGENT) [MED] Replace pip install guidance with uv commands in `scripts/README.md` <!-- id: TODO-20251002-217 -->
-  source: .cursor/rules/uv-guidelines.mdc#uv-as-the-only-package-manager
-  tags: safety, dependencies, documentation
-  notes: Align contributor docs with uv-only policy and drop Python 3.6 references if unsupported.
-
-- TODO: (AGENT) [MED] Clarify `requirements.txt` as uv-generated and remove direct pip instructions <!-- id: TODO-20251002-218 -->
-  source: .cursor/rules/uv-guidelines.mdc#uv-as-the-only-package-manager
-  tags: safety, dependencies
-  notes: Indicate generation path from `uv lock` so agents do not treat it as manual install guidance.
-
-- TODO: (AGENT) [LOW] Audit repository docs for remaining `pip install` instructions <!-- id: TODO-20251002-219 -->
-  source: docs/agents/session-notes/SN_20251002-2100_safety-alignment-review.md#findings--risks
-  tags: audit, dependencies, documentation
-  notes: Catalog stragglers and prepare follow-up diffs once uv messaging is canonical.
-
-<!-- moved to Completed in session phase-04-implementation-1 -->
+  notes: ICE-lite (Impact 3, Confidence 0.5, Effort 3) -> 0.5. Confirm completion status noted in phase-04 implementation follow-ups.
 
 #### Naming Conventions Rollout (New)
 
-- [ ] (AGENT) [MED] Inventory existing NOTE files that don't match `*_YYYYMMDD-HHMM_slug.md` patterns
-      source: docs/agents/session-notes/SN_20251002-0000_filename-preferences-global.md#next-actions
-      tags: naming, session-notes
-- [ ] (AGENT) [MED] Prepare Standard migration plan steps for renames and link updates
-      source: docs/raw/plans/2025-10-02_document-categorization-and-workflows.md#10-migration-plan-standard-and-gold
-      tags: naming, migration
-- [ ] (AGENT) [MED] Run link checker and timestamp validator after renames to ensure integrity
-      source: .cursor/commands/offboard.md
-      tags: validation, links, timestamps
+- TODO: (AGENT) [MED] Inventory NOTE files that miss `*_YYYYMMDD-HHMM_slug.md` pattern <!-- id: TODO-20251002-230 -->
+  source: docs/agents/session-notes/SN_20251002-0000_filename-preferences-global.md#next-actions
+  tags: naming, session-notes
+  notes: ICE-lite (Impact 2, Confidence 0.7, Effort 2) -> 0.7. Provides baseline for rename batches.
+- TODO: (AGENT) [MED] Prepare Standard migration plan steps for renames and link updates <!-- id: TODO-20251002-231 -->
+  source: docs/raw/plans/2025-10-02_document-categorization-and-workflows.md#10-migration-plan-standard-and-gold
+  tags: naming, migration
+  notes: ICE-lite (Impact 2, Confidence 0.6, Effort 2) -> 0.6. Outlines sequencing before large-scale renames.
+- TODO: (AGENT) [MED] Run link checker and timestamp validator after renames <!-- id: TODO-20251002-232 -->
+  source: .cursor/commands/offboard.md#behavior-what-the-agent-will-do
+  tags: validation, links, timestamps
+  notes: ICE-lite (Impact 2, Confidence 0.7, Effort 2) -> 0.7. Ensures migrations do not break automation.
 
 #### File Organization Enhancement Proposals (PROPOSALS - DO NOT IMPLEMENT)
 
-- [ ] **[PROPOSAL]** Add `docs/README.md` with "Start here" navigation links to Decision Docket and TODO Log for GitHub/IDE discoverability
-- [ ] **[PROPOSAL]** Convert symlinks to physical file moves: Move Decision Docket and TODO Log to `docs/` root and update all references repo-wide
-- [ ] **[PROPOSAL]** Implement MkDocs/Docusaurus docs site with controlled navigation putting Decision Docket and TODO Log first in left-hand nav
-- [ ] **[PROPOSAL]** Create `docs/00-global/` directory structure to surface global documents above agents/ in alphabetical listing
-- [ ] **[PROPOSAL]** Add automated symlink validation in CI/CD to ensure symlinks remain functional across different environments
-- [ ] **[PROPOSAL]** Create file organization ADR documenting canonical locations and access patterns for critical documents
+- TODO: (PROPOSAL) [LOW] Add `docs/README.md` with "Start here" navigation links to Decision Docket and TODO Log <!-- id: TODO-20251002-233 -->
+  source: docs/agents/session-notes/SN_20250127-1745_00-key-docs-creation.md#inputs-context
+  tags: proposal, docs, navigation
+  notes: ICE-lite (Impact 2, Confidence 0.3, Effort 2) -> 0.3. Delivered in SN_20251002-1300_phase-04-implementation-1; confirm if further iteration needed.
+- TODO: (PROPOSAL) [LOW] Convert symlinks to physical file moves for Decision Docket and TODO Log <!-- id: TODO-20251002-234 -->
+  source: docs/agents/session-notes/SN_20250127-1745_00-key-docs-creation.md#full-findings
+  tags: proposal, docs, migration
+  notes: ICE-lite (Impact 2, Confidence 0.4, Effort 4) -> 0.2. Retained for discussion; symlink approach currently stable.
+- TODO: (PROPOSAL) [LOW] Implement MkDocs/Docusaurus docs site with controlled navigation <!-- id: TODO-20251002-235 -->
+  source: docs/agents/session-notes/SN_20250127-1745_00-key-docs-creation.md#full-findings
+  tags: proposal, docs, platform
+  notes: ICE-lite (Impact 3, Confidence 0.2, Effort 5) -> 0.12. Large scope; keep parked until lightweight needs emerge.
+- TODO: (PROPOSAL) [LOW] Create `docs/00-global/` directory structure to surface global documents <!-- id: TODO-20251002-236 -->
+  source: docs/global/TODO_Log.md#file-organization-enhancement-proposals
+  tags: proposal, docs, navigation
+  notes: ICE-lite (Impact 2, Confidence 0.3, Effort 3) -> 0.2. Alternative to symlinks; evaluate only if symlink friction appears.
+- TODO: (PROPOSAL) [LOW] Add automated symlink validation in CI/CD <!-- id: TODO-20251002-237 -->
+  source: docs/global/TODO_Log.md#file-organization-enhancement-proposals
+  tags: proposal, ci, validation
+  notes: ICE-lite (Impact 2, Confidence 0.4, Effort 3) -> 0.27. Future enhancement if symlink drift surfaces in audits.
+- TODO: (PROPOSAL) [MED] Create file organization ADR documenting canonical locations <!-- id: TODO-20251002-238 -->
+  source: docs/agents/session-notes/SN_20250127-1745_00-key-docs-creation.md#next-actions
+  tags: proposal, docs, governance
+  notes: ICE-lite (Impact 2, Confidence 0.6, Effort 2) -> 0.6. Provides governance artifact if re-org decisions escalate.
 
 #### Session Notes Workflow Enhancement Proposals (PROPOSALS - DO NOT IMPLEMENT)
 
 - [x] **[PROPOSAL]** Fix `/offboard` command to list all 11 required session NOTE sections instead of just 5 (currently missing: Full Findings, Risks & Issues Identified, Reasoning & Rationale, Signoff)
-- [ ] **[PROPOSAL]** Clarify `/granola-review` purpose: Should it create session notes or separate meeting notes? Currently conflates agent work sessions with meeting documentation
-- [ ] **[PROPOSAL]** Create session NOTE categorization system: Agent Work Sessions vs Meeting Notes vs Process Documentation vs Research Sessions
 - [x] **[PROPOSAL]** Add session NOTE validation checklist to ensure all required sections are populated before offboarding
-- [ ] **[PROPOSAL]** Standardize session NOTE naming convention: Currently inconsistent between `SN_YYYYMMDD_` and `SN_YYYYMMDDHHMM_` patterns
-- [ ] **[PROPOSAL]** Create session NOTE template variants for different use cases (agent work, meeting notes, research sessions)
-- [ ] **[PROPOSAL]** Add session NOTE completeness scoring system to track quality and consistency over time
-- [ ] **[High | ~10-15 min]** Run `pre-commit run --all-files` for the agent-offboarding staging area and capture any failing hooks before fixes.
-- [x] **[High | ~15-20 min]** Resolve broken links identified in the agent-offboarding handoff (README offboarding link, SLF-78 try-shortcut references, workflow rule/template links) so link validation passes.
-- [x] **[High | ~10-15 min]** Re-verify all `.cursor/rules/*` and `docs/agents/workflows/*` links after fixes to ensure navigation from rules to workflows succeeds.
-- [ ] **[High | ~10-15 min]** Execute `/offboard --dry-run`, `/end-session --dry-run`, and `/onboard-next-agent --dry-run` to confirm the updated commands operate end-to-end.
+- TODO: (PROPOSAL) [MED] Clarify `/granola-review` purpose vs meeting documentation <!-- id: TODO-20251002-239 -->
+  source: docs/agents/session-notes/SN_20251002-0630_session-note-template-analysis.md#full-findings
+  tags: proposal, granola, session-notes
+  notes: ICE-lite (Impact 2, Confidence 0.6, Effort 2) -> 0.6. Prevents command overlap between meeting notes and agent sessions.
+- TODO: (PROPOSAL) [MED] Create session NOTE categorization system (agent work vs meetings vs research) <!-- id: TODO-20251002-240 -->
+  source: docs/agents/session-notes/SN_20251002-0630_session-note-template-analysis.md#full-findings
+  tags: proposal, session-notes, taxonomy
+  notes: ICE-lite (Impact 2, Confidence 0.6, Effort 2) -> 0.6. Groups templates for different documentation modes.
+- TODO: (PROPOSAL) [MED] Standardize session NOTE naming convention across commands <!-- id: TODO-20251002-241 -->
+  source: docs/agents/session-notes/SN_20251002-0630_session-note-template-analysis.md#full-findings
+  tags: proposal, naming, session-notes
+  notes: ICE-lite (Impact 2, Confidence 0.6, Effort 1) -> 1.2. Coordinate with TODO-20251002-230 inventory to avoid duplicate effort.
+- TODO: (PROPOSAL) [LOW] Create session NOTE template variants for different use cases <!-- id: TODO-20251002-242 -->
+  source: docs/agents/session-notes/SN_20251002-0630_session-note-template-analysis.md#full-findings
+  tags: proposal, session-notes, templates
+  notes: ICE-lite (Impact 2, Confidence 0.5, Effort 3) -> 0.33. Defer until core template stabilized.
+- TODO: (PROPOSAL) [MED] Add session NOTE completeness scoring system <!-- id: TODO-20251002-243 -->
+  source: docs/agents/session-notes/SN_20251002-0630_session-note-template-analysis.md#full-findings
+  tags: proposal, session-notes, qa
+  notes: ICE-lite (Impact 2, Confidence 0.6, Effort 2) -> 0.6. Enables quality tracking once baseline template adoption improves.
+- TODO: (QA) [MED] Run `pre-commit run --all-files` for agent-offboarding staging area and capture failing hooks <!-- id: TODO-20251002-244 -->
+  source: docs/agents/session-notes/SN_20251001-0000_agent-offboarding_handoff.md#todo-log-update
+  tags: offboarding, qa, pre-commit
+  notes: ICE-lite (Impact 2, Confidence 0.7, Effort 1) -> 1.4. Provides failure log before applying fixes.
+- TODO: (QA) [MED] Execute `/offboard --dry-run`, `/end-session --dry-run`, and `/onboard-next-agent --dry-run` <!-- id: TODO-20251002-245 -->
+  source: docs/agents/session-notes/SN_20251001-0000_agent-offboarding_handoff.md#todo-log-update
+  tags: offboarding, qa, automation
+  notes: ICE-lite (Impact 2, Confidence 0.7, Effort 2) -> 0.7. Verifies updated commands function across lifecycle scenarios.
 
 #### Backlog History
 
@@ -418,37 +452,72 @@ reference while the active backlog now focuses on new follow-ups._
 
 ### Phase 2: Short-term (Next 2 Weeks) - Enhanced Integration
 
-TODO
-
-- [x] **Create cursor rules** for markdown best practices (COMPLETED in current session)
-- [x] **Add VS Code settings** for team consistency (COMPLETED in current session)
-- [x] **Implement staged fixing** (fix by directory)
-- [x] **Add CI integration** for pull requests
-- [ ] **Create custom rules** for project-specific needs
-- [ ] **Integrate with Linear** ticket creation workflow
-- [ ] **Add automated fixing** in CI/CD pipeline
+- TODO: (LINT) [MED] Create custom markdownlint rules for project-specific needs <!-- id: TODO-20251002-246 -->
+  source: docs/agents/session-notes/SN_20250127-2030_markdownlint-phase2-3-implementation.md#next-actions
+  tags: markdownlint, linting, customization
+  notes: ICE-lite (Impact 3, Confidence 0.5, Effort 3) -> 0.5. Extends lint coverage to workspace-specific conventions.
+- TODO: (INTEGRATION) [LOW] Integrate markdownlint workflow with Linear ticket creation <!-- id: TODO-20251002-247 -->
+  source: docs/global/TODO_Log.md#potential-future-work-staged-implementation-plan
+  tags: markdownlint, linear, automation
+  notes: ICE-lite (Impact 3, Confidence 0.4, Effort 4) -> 0.3. High effort automation; defer until workflow maturity improves.
+- TODO: (CI) [MED] Add automated markdownlint fixing in CI/CD pipeline <!-- id: TODO-20251002-248 -->
+  source: docs/agents/session-notes/SN_20250127-2030_markdownlint-phase2-3-implementation.md#next-actions
+  tags: markdownlint, ci, automation
+  notes: ICE-lite (Impact 2, Confidence 0.6, Effort 3) -> 0.4. Provides safety net once rule set stabilizes.
 
 ### Phase 3: Long-term (Next Month) - Advanced Features
 
-TODO
-
-- [ ] **Custom rules** for your specific needs
-- [ ] **Automated fixing** in CI/CD
-- [ ] **Integration with Linear** ticket creation
-- [ ] **Documentation generation** from linting results
-- [ ] **Team training** on markdown best practices
-- [ ] **Performance optimization** for large repositories
-- [ ] **Integration with other tools** (Prettier, remark-lint, textlint)
+- TODO: (LINT) [LOW] Explore additional custom markdownlint rules beyond Phase 2 scope <!-- id: TODO-20251002-249 -->
+  source: docs/global/TODO_Log.md#phase-3-long-term-next-month---advanced-features
+  tags: markdownlint, linting
+  notes: ICE-lite (Impact 2, Confidence 0.4, Effort 3) -> 0.27. Optional polish once baseline adoption is complete.
+- TODO: (CI) [LOW] Evaluate automated fixing in CI/CD for advanced workflows <!-- id: TODO-20251002-250 -->
+  source: docs/global/TODO_Log.md#phase-3-long-term-next-month---advanced-features
+  tags: markdownlint, ci, automation
+  notes: ICE-lite (Impact 2, Confidence 0.4, Effort 3) -> 0.27. Only proceed if Phase 2 automation proves stable.
+- TODO: (INTEGRATION) [LOW] Prototype Linear ticket creation integration for markdownlint outputs <!-- id: TODO-20251002-251 -->
+  source: docs/global/TODO_Log.md#phase-3-long-term-next-month---advanced-features
+  tags: markdownlint, linear, automation
+  notes: ICE-lite (Impact 2, Confidence 0.3, Effort 4) -> 0.15. Future automation concept pending user approval.
+- TODO: (DOCS) [LOW] Generate documentation from markdownlint results <!-- id: TODO-20251002-252 -->
+  source: docs/global/TODO_Log.md#phase-3-long-term-next-month---advanced-features
+  tags: markdownlint, documentation, automation
+  notes: ICE-lite (Impact 2, Confidence 0.4, Effort 3) -> 0.27. Nice-to-have reporting after adoption data exists.
+- TODO: (TRAINING) [MED] Deliver team training on markdownlint best practices <!-- id: TODO-20251002-253 -->
+  source: docs/agents/session-notes/SN_20250127-2030_markdownlint-phase2-3-implementation.md#risks-issues-identified
+  tags: markdownlint, training
+  notes: ICE-lite (Impact 2, Confidence 0.6, Effort 2) -> 0.6. Addresses adoption risk flagged in session note.
+- TODO: (PERFORMANCE) [LOW] Optimize markdownlint performance for large repositories <!-- id: TODO-20251002-254 -->
+  source: docs/agents/session-notes/SN_20250127-2030_markdownlint-phase2-3-implementation.md#risks-issues-identified
+  tags: markdownlint, performance
+  notes: ICE-lite (Impact 2, Confidence 0.5, Effort 3) -> 0.33. Monitor CI timings before investing.
+- TODO: (INTEGRATION) [LOW] Assess integration with Prettier, remark-lint, or textlint <!-- id: TODO-20251002-255 -->
+  source: docs/global/TODO_Log.md#phase-3-long-term-next-month---advanced-features
+  tags: markdownlint, tooling, integration
+  notes: ICE-lite (Impact 2, Confidence 0.4, Effort 3) -> 0.27. Evaluate only if markdownlint gaps remain.
 
 ### Alternative Implementation Options (Not Chosen)
 
-TODO
-
-- [ ] **remark-lint Integration** - Plugin-based markdown processor with 50+ linting plugins
-- [ ] **textlint Integration** - Pluggable system with 100+ plugins for text issues
-- [ ] **Mega-Linter Integration** - Runs 70+ linters simultaneously across all file types
-- [ ] **SonarQube Integration** - Enterprise-grade code quality with 1000+ rules per language
-- [ ] **Prettier + markdownlint Hybrid** - Prettier handles formatting, markdownlint handles content rules
+- TODO: (ALTERNATIVE) [LOW] Evaluate remark-lint integration as future option <!-- id: TODO-20251002-256 -->
+  source: docs/global/TODO_Log.md#alternative-implementation-options-not-chosen
+  tags: markdownlint, alternative, tooling
+  notes: ICE-lite (Impact 2, Confidence 0.3, Effort 3) -> 0.2. Keep as research spike if markdownlint limits emerge.
+- TODO: (ALTERNATIVE) [LOW] Evaluate textlint integration for prose rules <!-- id: TODO-20251002-257 -->
+  source: docs/global/TODO_Log.md#alternative-implementation-options-not-chosen
+  tags: markdownlint, alternative, tooling
+  notes: ICE-lite (Impact 2, Confidence 0.3, Effort 3) -> 0.2. Optional expansion for specialized text linting.
+- TODO: (ALTERNATIVE) [LOW] Evaluate Mega-Linter for multi-language enforcement <!-- id: TODO-20251002-258 -->
+  source: docs/global/TODO_Log.md#alternative-implementation-options-not-chosen
+  tags: linting, ci, alternative
+  notes: ICE-lite (Impact 2, Confidence 0.2, Effort 4) -> 0.1. Heavy-weight option reserved for future scale needs.
+- TODO: (ALTERNATIVE) [LOW] Evaluate SonarQube integration for enterprise reporting <!-- id: TODO-20251002-259 -->
+  source: docs/global/TODO_Log.md#alternative-implementation-options-not-chosen
+  tags: linting, reporting, alternative
+  notes: ICE-lite (Impact 2, Confidence 0.2, Effort 5) -> 0.08. Consider only with significant quality governance demand.
+- TODO: (ALTERNATIVE) [LOW] Evaluate Prettier + markdownlint hybrid workflow <!-- id: TODO-20251002-260 -->
+  source: docs/global/TODO_Log.md#alternative-implementation-options-not-chosen
+  tags: markdownlint, formatting, alternative
+  notes: ICE-lite (Impact 2, Confidence 0.3, Effort 3) -> 0.2. Future experiment if formatting pain resurfaces.
 
 ## Blocked
 
@@ -462,16 +531,34 @@ TODO
 
 ### 2025-10-02T00:00:00Z - repo-background-cleanup
 
-TODO
-
-- [x] **[High | ~10-15 min]** Reconcile the "Repository Cleanup" backlog section so the open checklist matches current status. (Resolved via "Repository Cleanup (Resolved Scope)" NOTE.)
-- [ ] **[High | ~10-15 min]** Surface the outstanding `/offboard` follow-up tasks from the 2025-10-01 handoff NOTE in the main backlog (run pre-commit, fix link checker issues, verify rules links, dry-run commands).【F:docs/agents/session-notes/SN_20251001-0000_agent-offboarding_handoff.md†L23-L28】
-- [ ] **[High | ~15-20 min]** Decide how to differentiate or merge `glossary/APPROVED-GLOSSARY.md` and `glossary/INFORMAL-GLOSSARY.md` so only one canonical definition list remains, or establish a promotion workflow between them.【F:docs/global/glossary/APPROVED-GLOSSARY.md†L1-L104】【F:docs/global/glossary/INFORMAL-GLOSSARY.md†L1-L77】
-- [ ] **[Medium | ~15 min]** Link the open deliverables in `docs/raw/cost-of-manufacturing-offering-context.md` to TODO_Log (or mark progress) so the research and draft checklist is tracked centrally.【F:docs/raw/cost-of-manufacturing-offering-context.md†L175-L188】
-- [ ] **[Medium | ~15-20 min]** Capture the DoD tasks in `linear/tickets/drafts/excel-cost-analysis-funnel-integration.md` as actionable backlog items or update their status if work is finished.【F:linear/tickets/drafts/excel-cost-analysis-funnel-integration.md†L74-L82】
-- [ ] **[Medium | ~10 min]** Add follow-up to resolve the "where does ad-hoc work go?" TODO in `linear/docs/How_to_use_Linear.md`, since the source file is read-only in this repo.【F:linear/docs/How_to_use_Linear.md†L146-L148】
-- [ ] **[Low | ~20-30 min]** Consolidate overlapping cost context between `docs/raw/economics-cost-structure-initial-context.md` and `docs/raw/cost-of-manufacturing-offering-context.md` (clarify canonical source, merge or cross-link appropriately).【F:docs/raw/economics-cost-structure-initial-context.md†L1-L85】【F:docs/raw/cost-of-manufacturing-offering-context.md†L155-L188】
-- [ ] **[Low | ~20-30 min]** Replace TBD placeholders in `docs/Deal_Structure_Model_Spec.md` fee table with current assumptions or document ownership for supplying the values.【F:docs/Deal_Structure_Model_Spec.md†L58-L66】
+- TODO: (WORKFLOW) [MED] Surface outstanding `/offboard` follow-ups from 2025-10-01 handoff NOTE <!-- id: TODO-20251002-261 -->
+  source: docs/agents/session-notes/SN_20251001-0000_agent-offboarding_handoff.md#todo-log-update
+  tags: offboarding, backlog, cleanup
+  notes: ICE-lite (Impact 3, Confidence 0.6, Effort 2) -> 0.9. Consolidates QA, link, and dry-run tasks into primary backlog.
+- TODO: (GLOSSARY) [MED] Decide merge vs promotion workflow for Approved vs Informal glossaries <!-- id: TODO-20251002-262 -->
+  source: docs/global/glossary/APPROVED-GLOSSARY.md#top
+  tags: glossary, governance, docs
+  notes: ICE-lite (Impact 2, Confidence 0.6, Effort 2) -> 0.6. Prevents duplicate definitions across glossary variants.
+- TODO: (DOCS) [MED] Link cost-of-manufacturing deliverables into TODO Log <!-- id: TODO-20251002-263 -->
+  source: docs/raw/cost-of-manufacturing-offering-context.md#open-items
+  tags: manufacturing, backlog, docs
+  notes: ICE-lite (Impact 2, Confidence 0.6, Effort 2) -> 0.6. Tracks research checklist centrally for visibility.
+- TODO: (TICKETS) [MED] Capture DoD tasks from `excel-cost-analysis-funnel-integration.md` <!-- id: TODO-20251002-264 -->
+  source: linear/tickets/drafts/excel-cost-analysis-funnel-integration.md#definition-of-done
+  tags: tickets, backlog, cleanup
+  notes: ICE-lite (Impact 2, Confidence 0.6, Effort 2) -> 0.6. Ensures draft DoD items receive owners or closures.
+- TODO: (WORKFLOW) [MED] Resolve "where does ad-hoc work go?" follow-up from Linear doc <!-- id: TODO-20251002-265 -->
+  source: linear/docs/How_to_use_Linear.md#faq-and-troubleshooting
+  tags: linear, guidance, backlog
+  notes: ICE-lite (Impact 2, Confidence 0.6, Effort 1) -> 1.2. Clarifies routing guidance for contributors using read-only doc.
+- TODO: (DOCS) [LOW] Consolidate overlapping cost context files <!-- id: TODO-20251002-266 -->
+  source: docs/raw/economics-cost-structure-initial-context.md#top
+  tags: manufacturing, docs, cleanup
+  notes: ICE-lite (Impact 2, Confidence 0.5, Effort 3) -> 0.33. Reduces duplication once canonical source determined.
+- TODO: (DOCS) [LOW] Replace TBD placeholders in `Deal_Structure_Model_Spec.md` fee table <!-- id: TODO-20251002-267 -->
+  source: docs/Deal_Structure_Model_Spec.md#fee-table
+  tags: deal-structure, docs, data
+  notes: ICE-lite (Impact 2, Confidence 0.5, Effort 3) -> 0.33. Improves readiness of modeling spec for downstream work.
 
 ### Session: background-cleanup-audit-implementation (2025-01-27)
 
@@ -497,16 +584,28 @@ TODO
 TODO
 
 - [x] **HIGH (10-15 min)**: Reconcile conflicting status entries in this log—`Repository Cleanup` items remain unchecked even though matching tasks are marked completed above. Normalize the open sections and refresh carryover notes for clarity.
-- [ ] **HIGH (15-20 min)**: Promote the open `TBD` fee defaults and hierarchy placeholders in `docs/Deal_Structure_Model_Spec.md` into actionable tasks (or fill them) so the modeling spec is ready for implementation.
-- [ ] **MEDIUM (15-20 min)**: Consolidate glossary sources—`docs/global/GLOSSARY.md` duplicates definitions from both Approved/Informal glossaries. Decide whether to merge or differentiate the files and align front matter statuses.
-- [ ] **LOW (5-10 min)**: Clean stale backlog references (e.g., `docs/prds/global/templates/agents/adr/`) that point to non-existent directories or already-resolved template issues to avoid future confusion.
+- TODO: (DOCS) [MED] Promote `Deal_Structure_Model_Spec.md` TBD fee defaults into tasks <!-- id: TODO-20251002-268 -->
+  source: docs/Deal_Structure_Model_Spec.md#fee-table
+  tags: deal-structure, docs, cleanup
+  notes: ICE-lite (Impact 2, Confidence 0.6, Effort 2) -> 0.6. Clarifies ownership for remaining fee placeholders.
+- TODO: (GLOSSARY) [MED] Consolidate `GLOSSARY.md` with Approved/Informal sources <!-- id: TODO-20251002-269 -->
+  source: docs/global/GLOSSARY.md#top
+  tags: glossary, cleanup, docs
+  notes: ICE-lite (Impact 2, Confidence 0.6, Effort 2) -> 0.6. Reduces duplication across glossary references.
+- TODO: (BACKLOG) [LOW] Clean stale references to removed template directories <!-- id: TODO-20251002-270 -->
+  source: docs/agents/session-notes/SN_20251002-0000_repo-background-cleanup.md#full-findings
+  tags: cleanup, backlog, docs
+  notes: ICE-lite (Impact 2, Confidence 0.5, Effort 1) -> 1.0. Keeps backlog pointers current after cleanup.
 
 ### 2025-10-02T05:12:00Z - background-cleanup-priority-refresh-rerun
 
 TODO
 
 - [x] **HIGH (10-15 min)**: Re-run the repository cleanup reconciliation to confirm the backlog reflects only open work and that carryover notes point to the refreshed sections.
-- [ ] **MEDIUM (10-15 min)**: Review `Notes` and cross-reference sections to ensure future agents can quickly locate `/offboard` follow-ups and glossary consolidation tasks.
+- TODO: (BACKLOG) [MED] Review `Notes`/cross-references for `/offboard` and glossary visibility <!-- id: TODO-20251002-271 -->
+  source: docs/agents/session-notes/SN_20251002-0000_repo-background-cleanup.md#next-actions
+  tags: backlog, documentation, navigation
+  notes: ICE-lite (Impact 2, Confidence 0.6, Effort 1) -> 1.2. Keeps quick-links accurate for next agent handoff.
 
 ### 2025-10-02T05:50:00Z - pr-merge-followups
 
@@ -520,16 +619,11 @@ TODO
 - [x] Create docs-first paste-based Granola review workflow and command
 - [x] Add normalization/safety rules and auto-detect one vs two paste blocks
 - [x] Author workflow runbook and paste template; update linted docs
-- [ ] Run a dry-run on sample content using `/granola-review <link> --write draft` and validate outputs
-- [ ] (AGENT) [MED] Align /offboard required sections across commands
-      source: docs/agents/session-notes/SN_20251002-0630_session-NOTE-template-analysis.md#immediate-actions
-      tags: session-notes, templates
-
-### 2025-10-02T21:00:00Z - scripts-docs-improvements
-
-TODO
-
-- [ ] **MEDIUM (20-30 min)**: Implement the proposed CLI improvements for `scripts/todos/sync_codelens.py` and `scripts/granola_review.py`, including new exit codes and missing-file messaging.
-- [ ] **LOW (10-15 min)**: Expand `scripts/README.md` with a non-technical "How to" section and error-handling callouts.
-- [ ] **LOW (10 min)**: Evaluate adding `pre-commit` plus markdownlint and CodeLens sync hooks to the contributor setup guide.
-- [ ] **LOW (5 min)**: After implementation, run `python scripts/todos/sync_codelens.py --dry-run` to confirm no drift and update session documentation.
+- TODO: (WORKFLOW) [MED] Run `/granola-review <link> --write draft` dry-run on sample content <!-- id: TODO-20251002-272 -->
+  source: docs/agents/session-notes/SN_20251002-0000_granola-review-workflow-initial-implementation.md#next-actions
+  tags: granola, workflow, qa
+  notes: ICE-lite (Impact 2, Confidence 0.6, Effort 2) -> 0.6. Validates workflow output before broader rollout.
+- TODO: (AGENT) [MED] Align `/offboard` required sections across commands <!-- id: TODO-20251002-273 -->
+  source: docs/agents/session-notes/SN_20251002-0630_session-note-template-analysis.md#immediate-actions
+  tags: session-notes, templates
+  notes: ICE-lite (Impact 2, Confidence 0.6, Effort 2) -> 0.6. Keeps command outputs consistent with template requirements.
