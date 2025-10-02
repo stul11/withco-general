@@ -27,15 +27,15 @@
 
 - [x] Add `/onboard-next-agent` command documentation
 - [x] Create `docs/global/GLOSSARY.md`
-- [x] Add ADR template at `docs/prds/global/templates/agents/adr/ADR_Template.md`
-- [x] Add Research Request template at `docs/global/templates/Research_Request_Template.md`
+- [x] Add ADR template (canonical location: `docs/agents/templates/ADR_Template.md`)
+- [x] Add Research Request template (canonical location: `docs/agents/templates/Research_Request_Template.md`)
 - [x] Update `docs/global/TODO_Log.md` to mark completed items
 
 ### Session: repo-cleanup-implementation (2025-01-27)
 
 - [x] Fix naming inconsistency: GLB-TKT vs GBL-PRD prefixes (should be GBL-TKT for consistency)
-- [x] Resolve duplicate ADR templates: docs/agents/templates/ADR_Template.md vs docs/prds/global/templates/agents/adr/ADR_Template.md
-- [x] Resolve duplicate Research Request templates: docs/agents/templates/Research_Request_Template.md vs docs/global/templates/Research_Request_Template.md
+- [x] Resolve duplicate ADR templates by consolidating on `docs/agents/templates/ADR_Template.md`
+- [x] Resolve duplicate Research Request templates by consolidating on `docs/agents/templates/Research_Request_Template.md`
 - [x] Complete empty files: docs/raw/cost-of-manufacturing-offering-context.md (currently empty)
 - [x] Populate APPROVED-GLOSSARY.md (currently minimal with only front matter)
 - [x] Complete GLB-TKT_Best_Practices.md template (stops at line 77, incomplete sections)
@@ -45,7 +45,7 @@
 - [x] Resolve template location confusion: decide whether templates belong in docs/agents/templates/ or docs/global/templates/
 - [x] Update Decision Docket open decisions: ADR template structure and Research Request template format are now resolved
 - [x] Standardize front matter across all templates (some missing required fields like created/updated timestamps)
-- [x] Fix inconsistent directory structure: docs/prds/global/templates/agents/adr/ is overly nested
+- [x] Fix inconsistent directory structure by removing obsolete ADR subdirectories
 - [x] Complete missing template files referenced in docs/agents/templates/README.md but not found
 - [x] Remove obsolete files: linear/tickets/archive/obsolete/ directory contains outdated drafts
 
@@ -117,7 +117,7 @@
 - [x] Create LEG-PRD_Collect_Cost_of_Manufacturing_an_Offering_Inputs.md from finalized template
 - [ ] Create LEG-PRD_Design_Cost_of_Manufacturing_an_Offering.md from finalized template
 - [ ] Create LEG-PRD_Determine_Minimum_Check_Size.md from finalized template
-- [ ] Decide folder and document taxonomy for docs/prds/global/templates/agents/adr
+- [ ] Document folder and taxonomy expectations for `docs/agents/templates/` (successor to the removed ADR subdirectory)
 - [ ] Document agent artifacts framework (Role Card, Context Pack, Playbook, ADRs)
 - [ ] Define onboarding and offboarding checklists for agents
 - [ ] Define session note format and decision docket process
@@ -128,8 +128,8 @@
 ### Repository Cleanup (High Priority)
 
 - [ ] Fix naming inconsistency: GLB-TKT vs GBL-PRD prefixes (should be GBL-TKT for consistency)
-- [ ] Resolve duplicate ADR templates: docs/agents/templates/ADR_Template.md vs docs/prds/global/templates/agents/adr/ADR_Template.md
-- [ ] Resolve duplicate Research Request templates: docs/agents/templates/Research_Request_Template.md vs docs/global/templates/Research_Request_Template.md
+- [x] Resolve duplicate ADR templates (canonical file lives at `docs/agents/templates/ADR_Template.md`)
+- [x] Resolve duplicate Research Request templates (canonical file lives at `docs/agents/templates/Research_Request_Template.md`)
 - [ ] Complete empty files: docs/raw/cost-of-manufacturing-offering-context.md (currently empty)
 - [x] Populate APPROVED-GLOSSARY.md (currently minimal with only front matter) (RESOLVED: glossary is comprehensive with 99 lines of definitions)
 - [x] Complete GBL-TKT_Best_Practices.md template (stops at line 77, incomplete sections) (RESOLVED: template is complete, goes to line 165)
@@ -139,7 +139,7 @@
 - [x] Resolve template location confusion: decide whether templates belong in docs/agents/templates/ or docs/global/templates/ (RESOLVED: templates are in docs/agents/templates/, docs/global/templates/ doesn't exist)
 - [ ] Update Decision Docket open decisions: ADR template structure and Research Request template format are now resolved
 - [x] Standardize front matter across all templates (some missing required fields like created/updated timestamps) (RESOLVED: all templates have required fields)
-- [x] Fix inconsistent directory structure: docs/prds/global/templates/agents/adr/ is overly nested (RESOLVED: directory doesn't exist, templates are in docs/agents/templates/)
+- [x] Fix inconsistent ADR directory structure (RESOLVED: legacy nested folders removed; templates live in `docs/agents/templates/`)
 - [ ] Complete missing template files referenced in docs/agents/templates/README.md but not found
 
 ## Blocked
@@ -169,7 +169,7 @@
 - [x] **HIGH PRIORITY - Stranded TODOs Cleanup** (10-15 min): Clean up TBD placeholders in SLF-78 draft ticket (super_initiative, initiative, project, milestone, requirement fields)
 - [x] **MEDIUM PRIORITY - Template Location Confusion** (15-20 min): Resolve template location confusion - docs/agents/templates/ vs docs/global/templates/ - decide on single location and migrate
 - [x] **MEDIUM PRIORITY - Incomplete Template Completion** (20-30 min): Complete GBL-TKT_Best_Practices.md template (currently stops at line 77, missing DoD tiers and implementation sections)
-- [x] **MEDIUM PRIORITY - Directory Structure Cleanup** (10-15 min): Remove overly nested docs/prds/global/templates/agents/adr/ directory structure (currently empty)
+- [x] **MEDIUM PRIORITY - Directory Structure Cleanup** (10-15 min): Remove obsolete ADR template directories to eliminate redundant nesting
 - [x] **LOW PRIORITY - Empty File Population** (5-10 min): Populate APPROVED-GLOSSARY.md (currently minimal with only front matter)
 - [x] **LOW PRIORITY - Cross-Reference Updates** (10-15 min): Update broken references to try-shortcut-prompt-style-guide.md in SLF-78 files
 - [x] **LOW PRIORITY - Front Matter Standardization** (15-20 min): Standardize front matter across all templates (some missing required fields like created/updated timestamps)
@@ -187,4 +187,4 @@
 - **HIGH (10-15 min)**: Reconcile conflicting status entries in this log—`Repository Cleanup` items remain unchecked even though matching tasks are marked completed above. Normalize the open sections and refresh carryover notes for clarity. 
 - **HIGH (15-20 min)**: Promote the open `TBD` fee defaults and hierarchy placeholders in `docs/Deal_Structure_Model_Spec.md` into actionable tasks (or fill them) so the modeling spec is ready for implementation.
 - **MEDIUM (15-20 min)**: Consolidate glossary sources—`docs/global/GLOSSARY.md` duplicates definitions from both Approved/Informal glossaries. Decide whether to merge or differentiate the files and align front matter statuses.
-- **LOW (5-10 min)**: Clean stale backlog references (e.g., `docs/prds/global/templates/agents/adr/`) that point to non-existent directories or already-resolved template issues to avoid future confusion.
+- **LOW (5-10 min)**: Clean stale backlog references that pointed to removed ADR template directories or already-resolved template issues to avoid future confusion. ✅ Completed by clarifying TODO Log entries.
