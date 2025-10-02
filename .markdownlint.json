@@ -33,7 +33,7 @@
   "MD040": true,
   "MD042": true,
   "MD043": true,
-  "MD044": { "names": ["TODO", "FIXME", "HACK", "NOTE"] },
+  "MD044": { "names": ["TODO", "FIXME", "HACK", "NOTE", "TBD", "XXX"] },
   "MD045": true,
   "MD046": { "style": "fenced" },
   "MD047": true,

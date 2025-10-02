@@ -27,10 +27,10 @@
 - **Which Online tier for K‑1?** — K‑1 requires Premier/Premium‑level Online. <https://ttlc.intuit.com/community/investments-and-rental-properties/discussion/what-version-of-turbotax-online-do-i-need-to-enter-a-k-1/00/2745> (Accessed 2025‑10‑01).
 - **Schedule K‑2/K‑3 support** (Online guidance). <https://ttlc.intuit.com/turbotax-support/en-us/help-article/investments-and-rental-property/schedules-k-2-k-3/L6ML8Bzqd_US_en_US> (Accessed 2025‑10‑01).
 - **Premium (formerly Premier/Self‑Employed) product page** — stocks/crypto/rentals/K‑1 use cases. <https://turbotax.intuit.com/personal-taxes/online/premium/> (Accessed 2025‑10‑01).
-- **Compare Online tiers** — Simple return definitions; rebranding note. <https://turbotax.intuit.com/personal-taxes/compare/online/> (Accessed 2025‑10‑01).
+- **Compare Online tiers** — Simple return definitions; rebranding NOTE. <https://turbotax.intuit.com/personal-taxes/compare/online/> (Accessed 2025‑10‑01).
 - **1099‑DIV entry (Online)** — Help article. <https://ttlc.intuit.com/turbotax-support/en-us/help-article/import-export-data-files/enter-1099-div-turbotax-online/L7jiJ76rp_US_en_US> (Accessed 2025‑10‑01).
 - **Pricing snapshots (TTLC)** — Deluxe $79; Premium $99; state add‑ons $39–$59 observed; Online e‑file $0.
-  - Deluxe $79 & refund processing fee note: <https://ttlc.intuit.com/community/taxes/discussion/if-it-makes-me-do-turbotax-deluxe-it-will-take-79-out-of-my-refund-but-it-also-says-plus-an/00/3628200> (Accessed 2025‑10‑01).
+  - Deluxe $79 & refund processing fee NOTE: <https://ttlc.intuit.com/community/taxes/discussion/if-it-makes-me-do-turbotax-deluxe-it-will-take-79-out-of-my-refund-but-it-also-says-plus-an/00/3628200> (Accessed 2025‑10‑01).
   - Premium $99 + $39/state: <https://ttlc.intuit.com/community/taxes/discussion/how-much-extra-cost-is-tt-online-to-complete-schedule-c-so-i-can-deduct-it-why-is-the-pricing-so/00/3496622> (Accessed 2025‑10‑01).
   - Price variance example ($129 premium; state $59 observed): <https://ttlc.intuit.com/community/taxes/discussion/different-costs/00/3586873> (Accessed 2025‑10‑01).
   - Online state **e‑file fee = $0**: <https://ttlc.intuit.com/community/taxes/discussion/64-for-state-filing-fee/00/3651930> (Accessed 2025‑10‑01).

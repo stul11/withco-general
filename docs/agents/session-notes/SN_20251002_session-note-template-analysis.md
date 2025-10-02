@@ -91,7 +91,7 @@ Analysis of Session_NOTE_Template.md references across the `.cursor/` directory 
 
 ### 4. **Validation and Quality**
 
-- Add session note validation checklist
+- Add session NOTE validation checklist
 - Create completeness scoring system
 - Standardize naming conventions
 
@@ -131,7 +131,7 @@ Analysis of Session_NOTE_Template.md references across the `.cursor/` directory 
 
 ### Medium-term Improvements
 
-1. **Create session note validation checklist** for agents
+1. **Create session NOTE validation checklist** for agents
 2. **Standardize naming conventions** across all commands
 3. **Create template variants** for different use cases
 
