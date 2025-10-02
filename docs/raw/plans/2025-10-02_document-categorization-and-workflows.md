@@ -216,7 +216,7 @@ Apply a minimal, consistent header across new docs (including linear business do
 type: session-NOTE | meeting-NOTE | granola | research | raw | plan | TODO
 team: PROD | ANA | DATA | LEG | global
 created: 2025-10-02T09:30:00Z
-updated: 2025-10-02T09:30:00Z  # update on edits; filename remains based on created
+updated: 2025-10-02T09:30:00Z # update on edits; filename remains based on created
 source: docs/agents/session-notes/SN_20251002-0930_slug.md#context
 tags: [session-notes, template]
 ---

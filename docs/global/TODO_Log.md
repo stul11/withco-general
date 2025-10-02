@@ -316,3 +316,7 @@ _The dedicated cleanup backlog from the January 27 effort remains closed. Histor
 - [x] Add normalization/safety rules and auto-detect one vs two paste blocks
 - [x] Author workflow runbook and paste template; update linted docs
 - [ ] Run a dry-run on sample content using `/granola-review <link> --write draft` and validate outputs
+- [ ] (AGENT) [MED] Align /offboard required sections across commands
+  source: docs/agents/session-notes/SN_20251002-0630_session-NOTE-template-analysis.md#immediate-actions
+  tags: session-notes, templates
+

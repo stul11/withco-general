@@ -236,7 +236,7 @@
 - **Options Considered**: Keep existing TSV formulas; re-index formulas; build selector-based single-sheet; generate per-scenario tabs
 - **Rationale**: Selector-based, transposed calculator avoids sheet protection issues and ensures reliable references; corrected 06/07 blocks align with inputs
 - **Impact**: A stable workbook with INDEX and per-scenario tabs; one-sheet calculator artifact for copy/paste; documented formula corrections
-- **Links**: linear/tickets/drafts/research-prompts/tax-upreit-llc-k1-vs-1099-div-20251001/tax-upreit-llc-k1-vs-1099-div-20251001-response/Tax_UPREIT_LLC_K1_vs_1099DIV_Enhanced_With_Scenarios.xlsx; docs/agents/session-notes/SN_202510020338_tax-upreit-llc-k1-vs-1099-div.md
+- **Links**: linear/tickets/drafts/research-prompts/tax-upreit-llc-k1-vs-1099-div-20251001/tax-upreit-llc-k1-vs-1099-div-20251001-response/Tax_UPREIT_LLC_K1_vs_1099DIV_Enhanced_With_Scenarios.xlsx; docs/agents/session-notes/SN_20251002-0338_tax-upreit-llc-k1-vs-1099-div.md
 - **Owner**: slittle
 
 ## Decision Patterns

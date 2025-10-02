@@ -11,6 +11,7 @@ status: draft
 
 Purpose: Execute the Standard migration to normalize session NOTE filenames and references, with safe, auditable steps.
 Rules:
+
 - Filename HHMM uses CREATED timestamp rounded down to 15 minutes (00, 15, 30, 45)
 - Filenames are immutable after creation; only frontmatter `updated:` changes
 
