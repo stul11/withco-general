@@ -39,13 +39,14 @@ tags: [session-note, file-organization, symlinks]
 ## Full Findings
 
 - **Summary of Findings**:
+
   - Created `00-key-docs/` directory at repository root with symlinks to Decision Docket and TODO Log
   - Symlinks provide immediate access while preserving existing file structure
   - Directory naming ensures alphabetical sorting above `docs/` folder in file explorers
   - Zero impact on existing links and references throughout the repository
 
 - **Detailed Findings**:
-  - **File Organization Solution**: 
+  - **File Organization Solution**:
     - **Description**: Created top-level `00-key-docs/` directory with symlinks to canonical files
     - **File(s) Involved**: `00-key-docs/Decision_Docket.md`, `00-key-docs/TODO_Log.md`
     - **Line Numbers/Sections**: New directory structure at repository root
@@ -57,6 +58,7 @@ tags: [session-note, file-organization, symlinks]
 ## Steps Taken
 
 - **Major Actions**:
+
   - Created `00-key-docs/` directory at repository root
   - Added symlinks: `Decision_Docket.md -> ../docs/global/Decision_Docket.md`
   - Added symlinks: `TODO_Log.md -> ../docs/global/TODO_Log.md`
@@ -64,6 +66,7 @@ tags: [session-note, file-organization, symlinks]
   - Verified symlink creation and functionality
 
 - **Key Decisions**:
+
   - Chose symlink approach over physical file moves to avoid link churn
   - Used `00-` prefix to ensure alphabetical sorting above `docs/`
   - Maintained relative symlink paths for portability
@@ -79,11 +82,13 @@ tags: [session-note, file-organization, symlinks]
 ## Outputs
 
 - **Files Created/Modified**:
+
   - Created: `00-key-docs/Decision_Docket.md` (symlink)
   - Created: `00-key-docs/TODO_Log.md` (symlink)
   - Modified: Git repository structure
 
 - **Key Deliverables**:
+
   - Top-level access to critical tracking documents
   - Improved file explorer navigation
   - Zero-impact solution preserving existing workflows
@@ -105,6 +110,7 @@ tags: [session-note, file-organization, symlinks]
 ## Risks & Issues Identified
 
 - **Potential Issues**:
+
   - Symlink portability may vary across different operating systems (especially Windows without WSL)
   - Users might accidentally edit symlinked files instead of canonical versions
   - Future collaborators may be confused by dual access paths
@@ -128,11 +134,13 @@ tags: [session-note, file-organization, symlinks]
 ## Next Actions
 
 - **Immediate Follow-ups**:
+
   - Update Decision Docket with file organization decision
   - Add comprehensive file organization proposals to TODO Log
   - Run link checker and timestamp validator to ensure no issues
 
 - **For Next Session**:
+
   - Monitor symlink functionality across different environments
   - Consider adding `docs/README.md` with "Start here" links for additional discoverability
   - Evaluate if physical file moves are needed based on usage patterns
