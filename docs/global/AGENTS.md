@@ -2,6 +2,6 @@
 
 # Agent Guidelines
 
-## Session Note Required
+## Session NOTE Required
 
-Any session that edits PRDs, agent documentation, or global standards must leave a session note. Capture decisions, outputs, follow-ups, and link to impacted files. Save the note in `docs/agents/session-notes/` and make sure it is committed with the related work.
+Any session that edits PRDs, agent documentation, or global standards must leave a session NOTE. Capture decisions, outputs, follow-ups, and link to impacted files. Save the NOTE in `docs/agents/session-notes/` and make sure it is committed with the related work.
