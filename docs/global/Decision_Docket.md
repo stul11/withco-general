@@ -1,9 +1,19 @@
 # Decision Docket
 
-- **Last Updated**: 2025-10-02T05:52:00Z
+- **Last Updated**: 2025-10-02T06:30:00Z
 - **Owner**: slittle
 
 ## Recent Decisions
+
+### 2025-10-02 (I)
+
+- **Decision**: Session Note Template Consistency Analysis and Enhancement Proposals
+- **Context**: Review of all Session_Note_Template.md references revealed inconsistencies in required sections and purpose clarity across .cursor/ commands
+- **Options Considered**: Fix immediate inconsistencies only; Create comprehensive enhancement proposals; Document findings without changes
+- **Rationale**: Comprehensive analysis needed to prevent future inconsistencies; proposals marked clearly to avoid accidental implementation
+- **Impact**: 7 enhancement proposals added to TODO_Log.md under "PROPOSALS - DO NOT IMPLEMENT" section; critical inconsistency in /offboard command identified (lists 5 sections instead of 11 required)
+- **Links**: docs/global/TODO_Log.md (Session Notes Workflow Enhancement Proposals), .cursor/commands/offboard.md:L30, docs/agents/templates/Session_Note_Template.md
+- **Owner**: slittle
 
 ### 2025-10-02 (H)
 
