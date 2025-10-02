@@ -148,8 +148,8 @@ _Outstanding backlog work is grouped below. Recently-closed backlog items are ca
 - [ ] **[PROPOSAL]** Create session note template variants for different use cases (agent work, meeting notes, research sessions)
 - [ ] **[PROPOSAL]** Add session note completeness scoring system to track quality and consistency over time
 - [ ] **[High | ~10-15 min]** Run `pre-commit run --all-files` for the agent-offboarding staging area and capture any failing hooks before fixes.
-- [ ] **[High | ~15-20 min]** Resolve broken links identified in the agent-offboarding handoff (README offboarding link, SLF-78 try-shortcut references, workflow rule/template links) so link validation passes.
-- [ ] **[High | ~10-15 min]** Re-verify all `.cursor/rules/*` and `docs/agents/workflows/*` links after fixes to ensure navigation from rules to workflows succeeds.
+- [x] **[High | ~15-20 min]** Resolve broken links identified in the agent-offboarding handoff (README offboarding link, SLF-78 try-shortcut references, workflow rule/template links) so link validation passes.
+- [x] **[High | ~10-15 min]** Re-verify all `.cursor/rules/*` and `docs/agents/workflows/*` links after fixes to ensure navigation from rules to workflows succeeds.
 - [ ] **[High | ~10-15 min]** Execute `/offboard --dry-run`, `/end-session --dry-run`, and `/onboard-next-agent --dry-run` to confirm the updated commands operate end-to-end.
 
 #### Backlog History
