@@ -31,22 +31,20 @@ risk_level: High | Medium | Low
 repo_only: true | false
 ---
 
-# [Issue Title]
+## Goal / Purpose
 
-Goal / Purpose
+## Assumptions
 
-Assumptions
+## Open Questions
 
-Open Questions
+## Inputs / Dependencies
 
-Inputs / Dependencies
+## Feedback requirements
 
-Feedback requirements
+## Explicitly out of scope
 
-Explicitly out of scope
+## Deliverable
 
-Deliverable
+## Definition of Done (DoD)
 
-Definition of Done (DoD)
-
-Appendix
+## Appendix

@@ -1,10 +1,12 @@
 # withco-general Repository
 
-This repository serves as a context-rich workspace for drafting and organizing product/work planning content with an AI agent before pushing into the Linear system.
+This repository serves as a context-rich workspace for drafting and organizing product/work planning
+content with an AI agent before pushing into the Linear system.
 
 ## Purpose
 
-The **withco-general** repository enables collaborative work between humans and AI agents to create well-structured plans, tickets, and documentation with proper safety controls and quality assurance.
+The **withco-general** repository enables collaborative work between humans and AI agents to create
+well-structured plans, tickets, and documentation with proper safety controls and quality assurance.
 
 ## Key Features
 
@@ -16,7 +18,7 @@ The **withco-general** repository enables collaborative work between humans and 
 
 ## Repository Structure
 
-```
+```text
 withco-general/
 ├── .cursor/rules/              # AI agent behavior rules and constraints
 ├── docs/
@@ -73,9 +75,13 @@ withco-general/
 
 ### Important Scope Separation
 
-- The file `linear/docs/How_to_use_Linear.md` is a company document (READ-ONLY). Do not modify it in this repo.
-- Your personal preferences and drafting workflows live in this repo under `docs/global/GBL-TKT_Best_Practices.md` (tickets) and `docs/global/GBL-PRD_Best_Practices.md` (PRDs).
-- Agents must never mix the company Linear workflow with personal drafting best practices; use company docs as reference only.
+- The file `linear/docs/How_to_use_Linear.md` is a company document (READ-ONLY). Do not modify it in
+  this repo.
+- Your personal preferences and drafting workflows live in this repo under
+  `docs/global/GBL-TKT_Best_Practices.md` (tickets) and `docs/global/GBL-PRD_Best_Practices.md`
+  (PRDs).
+- Agents must never mix the company Linear workflow with personal drafting best practices; use company
+  docs as reference only.
 
 ## Safety & Compliance
 
