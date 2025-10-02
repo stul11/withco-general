@@ -5,8 +5,11 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Matches ISO 8601 UTC like 2025-10-01T12:34:56Z
-ISO_RE = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$")
+# Matches ISO 8601 timestamps in ET: 2025-10-02T09:30:00-04:00 or -05:00
+ET_RE = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}-(04|05):00$")
+
+# Allow legacy UTC Z timestamps to avoid breaking historical docs
+UTC_RE = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$")
 
 FRONT_MATTER_KEYS = {"created", "updated"}
 
@@ -36,8 +39,10 @@ def check_front_matter(md_path: str) -> list[str]:
                 # strip quotes if present
                 if value.startswith(('"', "'")) and value.endswith(('"', "'")):
                     value = value[1:-1]
-                if not ISO_RE.match(value):
-                    errors.append(f"{md_path}: {key} not ISO 8601 UTC (YYYY-MM-DDTHH:MM:SSZ): {value}")
+                if not (ET_RE.match(value) or UTC_RE.match(value)):
+                    errors.append(
+                        f"{md_path}: {key} must be ET ISO 8601 with offset (-04:00/-05:00); legacy UTC 'Z' accepted: {value}"
+                    )
                 break
     return errors
 

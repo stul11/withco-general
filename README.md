@@ -78,10 +78,20 @@ withco-general/
 2. **Markdown Quality**: The repository uses markdownlint for consistent formatting
 3. **VS Code Integration**: Install the markdownlint extension for real-time feedback
 4. **Manual Fixes**: Use `./scripts/fix-markdown.sh` for comprehensive markdown cleanup
+5. **CodeLens for TODOs**: Backlog items use the Option 3 format with a `TODO:` trigger.
+   - Canonical Markdown entry shape:
+     ```text
+     - TODO: (LABELS) [PRIORITY] Title <!-- id: TODO-YYYYMMDD-### -->
+       source: <relative-path>#<anchor>
+       tags: tag1, tag2
+       notes: optional 1–2 lines
+     ```
+   - Open the generated sidecar `docs/global/TODO.codelens.todo` (and team sidecars under `linear/*/TODO.codelens.todo`) to see inline CodeLens. Do not edit sidecars; update Markdown and let the generator sync.
 
 ### Important Scope Separation
 
-- The file `linear/docs/How_to_use_Linear.md` is a company document (READ-ONLY). Do not modify it in this repo.
+- Company Linear guidance now lives at `docs/company/linear/How_to_use_Linear.md` (READ-ONLY mirror).
+- Ticket template now lives at `docs/templates/linear/ticket-template.md`.
 - Your personal preferences and drafting workflows live in this repo under `docs/global/GBL-TKT_Best_Practices.md` (tickets) and `docs/global/GBL-PRD_Best_Practices.md` (PRDs).
 - Agents must never mix the company Linear workflow with personal drafting best practices; use company docs as reference only.
 

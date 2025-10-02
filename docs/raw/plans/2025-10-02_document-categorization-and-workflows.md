@@ -163,6 +163,12 @@ docs/
   plans/                # this planning area (YYYY-MM-DD_topic.md)
 ```
 
+NOTE (2025-10-02): Option D (Guidance + Templates split) adopted.
+
+- Canonical guidance: `docs/company/linear/How_to_use_Linear.md`
+- Canonical template: `docs/templates/linear/ticket-template.md`
+- `linear/` remains for drafts and archives; legacy files carry MOVED/DEPRECATED notices.
+
 ---
 
 ## 3) TODO and TOPLAN Schema

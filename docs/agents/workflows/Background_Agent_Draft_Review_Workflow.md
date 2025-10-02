@@ -500,7 +500,7 @@ Draft archived to: linear/tickets/archive/SLF-75-cost-model-improvements.md
 ### Core Rules & Templates
 
 - [Ticket Wizard Rule](../../../.cursor/rules/ticket-wizard.mdc) - **MUST FOLLOW** for draft creation
-- [Ticket Template](../../../linear/docs/templates/ticket-template.md) - Structure for all tickets
+- [Ticket Template](../../templates/linear/ticket-template.md) - Structure for all tickets
 - [Ticket Best Practices](../../global/GBL-TKT_Best_Practices.md) - Quality standards
 
 ### Safety & Process

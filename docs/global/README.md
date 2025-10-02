@@ -44,6 +44,11 @@ docs/global/
   - Session history
   - Carryover items between sessions
 
+#### CodeLens Sidecar
+
+- Open `docs/global/TODO.codelens.todo` to enable CodeLens for backlog items in the editor.
+- Do not edit the sidecar; update `TODO_Log.md` and let automation generate the sidecar.
+
 ### Glossary
 
 - **APPROVED-GLOSSARY.md**: Official terminology (currently minimal)
@@ -64,7 +69,13 @@ docs/global/
 
 ### Maintenance
 
-- Update TODO Log at session end
+- Update TODO Log at session end using the CodeLens-friendly Option 3 format:
+  ```text
+  - TODO: (LABELS) [PRIORITY] Title <!-- id: TODO-YYYYMMDD-### -->
+    source: <relative-path>#<anchor>
+    tags: tag1, tag2
+    notes: optional 1–2 lines
+  ```
 - Promote informal glossary terms to approved when stable
 - Keep Decision Docket current with rationale
 - Archive completed work appropriately

@@ -26,7 +26,7 @@ version: 0.1.0
 
 # Context & Relationships
 related_docs:
-  - withco-general/linear/docs/templates/ticket-template.md
+  - withco-general/docs/templates/linear/ticket-template.md
 risk_level: Low
 repo_only: true
 ---

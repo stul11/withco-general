@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Define checks the agent should run for `/ticket-validate` and during `/ticket-promote` to ensure the final ticket matches `linear/docs/templates/ticket-template.md` exactly and uses ISO 8601 UTC timestamps.
+Define checks the agent should run for `/ticket-validate` and during `/ticket-promote` to ensure the final ticket matches `docs/templates/linear/ticket-template.md` exactly and uses ISO 8601 UTC timestamps.
 
 ## Checks
 
@@ -72,6 +72,6 @@ If input is from best‑practices with tiers (Fast/Standard/Gold):
 
 ## References
 
-- `linear/docs/templates/ticket-template.md`
+- `docs/templates/linear/ticket-template.md`
 - `docs/agents/workflows/Ticket_Workflow_README.md`
 - `.cursor/rules/ticket-wizard.mdc`

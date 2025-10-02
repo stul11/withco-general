@@ -28,19 +28,28 @@ prompting, and TODO/TOPLAN flows, with checks suitable for background agents.
 1. Finalize Command Specs (Owner: Human)
 
    - `/toplan-add` flags: `--title` `--priority [LOW|MED|HIGH]` `--labels` `--team` `--source path#anchor` `--tags` `--notes`
-   - `/TODO-add` flags: same as above (targets TODO.md instead of TOPLAN.md)
-   - Decision: allow multiple labels and tags (comma-separated)
+
+- `/TODO-add` flags: same as above (targets TODO.md instead of TOPLAN.md); emits Option 3 trigger lines:
+  ```text
+  - TODO: (LABELS) [PRIORITY] Title <!-- id: TODO-YYYYMMDD-### -->
+    source: <relative-path>#<anchor>
+    tags: <comma-or-list>
+    notes: <optional 1-2 lines>
+  ```
+- Decision: allow multiple labels and tags (comma-separated)
 
 2. Implement Command Docs (Owner: Agent)
 
    - `/.cursor/commands/toplan-add.md`: usage, examples, output format (multi-line schema)
-   - `/.cursor/commands/TODO-add.md`: usage, examples, output format
+
+- `/.cursor/commands/TODO-add.md`: usage, examples, output format (Option 3 `TODO:` trigger)
 
 3. Update Rules (Owner: Agent)
 
    - Ensure session NOTE creators prompt for naming and apply Full/Lite skeletons
-   - Require `source:` when items are created via commands
-   - Reference frontmatter minimal standard
+
+- Require `source:` when items are created via commands; actionable items MUST start with `TODO:` and include a stable ID
+  - Reference frontmatter minimal standard
 
 4. Dry-run Validations (Owner: Agent)
    - Create sample items in `00-key-docs/TOPLAN.md` and `linear/PROD/TODO.md`

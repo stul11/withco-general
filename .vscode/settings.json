@@ -67,5 +67,6 @@
     }
   },
   "markdown.preview.breaks": true,
-  "markdown.preview.linkify": true
+  "markdown.preview.linkify": true,
+  "chatgpt.commentCodeLensEnabled": true
 }

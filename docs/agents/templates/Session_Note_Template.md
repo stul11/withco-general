@@ -116,3 +116,11 @@ tags: [template, session-NOTE, agent]
 - **Status**: pending | approved
 - **Date**: YYYY-MM-DDTHH:MM:SSZ
 - **Notes**: [Any additional comments, clarifications, or context]
+
+---
+
+## Session NOTE Checklist (Quick)
+
+- [ ] Filename matches `SN_YYYYMMDD-HHMM_slug-with-dashes.md`
+- [ ] Frontmatter includes ISO `created` and `updated`
+- [ ] Sections populated: Inputs & Context; Steps Taken; Outputs; Next Actions; Signoff

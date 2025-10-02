@@ -1,10 +1,10 @@
 # Ticket Workflow (Agent ↔ User) — Chat-first with Minimal Commands
 
-**Purpose**: Standardize how tickets move from brainstorming to approved/implemented using simple, low‑argument commands. Keep final tickets minimal and consistent with `linear/docs/templates/ticket-template.md`.
+**Purpose**: Standardize how tickets move from brainstorming to approved/implemented using simple, low‑argument commands. Keep final tickets minimal and consistent with `docs/templates/linear/ticket-template.md`.
 
 ## Defaults
 
-- Final output matches `linear/docs/templates/ticket-template.md` exactly with a single DoD list
+- Final output matches `docs/templates/linear/ticket-template.md` exactly with a single DoD list
 - Default DoD tier: Standard (override during triage if needed)
 - Draft naming: `linear/tickets/drafts/{TEAM}-{slug}-draft.md`
 - Commands: `/ticket-new`, `/ticket-wizard`, `/ticket-validate`, `/ticket-simplify`, `/ticket-promote`, `/ticket-draft`, `/planning-mode`, `/plan-md`
@@ -90,7 +90,7 @@ Zero/one‑arg philosophy: operate on the “current draft” by default; prompt
 
 ## Validation & promotion rules
 
-- Template compliance: headings and order match `linear/docs/templates/ticket-template.md` exactly
+- Template compliance: headings and order match `docs/templates/linear/ticket-template.md` exactly
 - DoD ladder collapse: select one tier (default Standard) → single DoD list
 - ISO timestamps: auto set `created` (once) and update `updated` (each transition) in UTC
 - Normalize `owner`, `tags`, `team`; unknowns → `TBD`
@@ -106,7 +106,7 @@ Zero/one‑arg philosophy: operate on the “current draft” by default; prompt
 - `.cursor/rules/ticket-wizard.mdc`
 - `docs/agents/workflows/Background_Agent_Draft_Review_Workflow.md`
 - `docs/global/GBL-TKT_Best_Practices.md`
-- `linear/docs/templates/ticket-template.md`
+- `docs/templates/linear/ticket-template.md`
 - `.cursor/rules/planning-mode.mdc` and `.cursor/rules/planning-mode-md.mdc`
 - `.cursor/rules/agent-chat-commands.mdc`
 

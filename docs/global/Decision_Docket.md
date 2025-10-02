@@ -5,6 +5,36 @@
 
 ## Recent Decisions
 
+### 2025-10-02 (L)
+
+- **Decision**: Adopt Option D (split guidance vs templates) for Linear docs
+- **Context**: `docs/raw/plans/2025-10-02_document-categorization-and-workflows.md` proposes multiple alternatives; Option D keeps company guidance in `docs/company/linear/` and templates in `docs/templates/linear/`, leaving `linear/` for drafts/archives.
+- **Options Considered**: Consolidate under docs/company/linear; docs/global/handbook/linear; team-only placement; dedicated top-level handbook; Option D (guidance + templates split)
+- **Rationale**: Clear separation of human guidance and machine-usable templates; aligns with taxonomy; avoids writes under `linear/` while preserving draft areas
+- **Impact**: Canonical guidance at `docs/company/linear/How_to_use_Linear.md`; canonical template at `docs/templates/linear/ticket-template.md`; generator and workflows updated; legacy files carry MOVED/DEPRECATED notices
+- **Links**: docs/company/linear/How_to_use_Linear.md, docs/templates/linear/ticket-template.md, scripts/sync_agents_rules.py, docs/agents/session-notes/SN_20251002-1245_misc-document-reorg.md
+- **Owner**: slittle
+
+### 2025-10-02 (K)
+
+- **Decision**: Adopt CodeLens To-Do sidecars with stable IDs and drift checks
+- **Context**: Need fast navigation and visibility of TODO items in editors without changing Markdown readability
+- **Options Considered**: Inline HTML anchors only; Sidecar generation without checks; Sidecar + pre-commit drift enforcement
+- **Rationale**: Sidecar preserves human-first docs while enabling editor affordances; stable IDs ensure deterministic mapping; checks prevent drift
+- **Impact**: New sidecar `docs/global/TODO.codelens.todo`; rule/command docs updated; pre-commit drift check added
+- **Links**: docs/agents/session-notes/SN_20251002-1230_codelens-to-do-integration.md, .cursor/rules/todo-cursor.mdc, .cursor/commands/todo-add.md
+- **Owner**: slittle
+
+### 2025-10-02 (L)
+
+- **Decision**: Add Docs QA CI and enforce sidecar drift in CI mirroring pre-commit
+- **Context**: Phase 04 Adoption & QA requires consistent validation for links, timestamps, and CodeLens sidecar drift
+- **Options Considered**: Pre-commit only; CI only; Both pre-commit and CI
+- **Rationale**: Mirroring checks in CI prevents regressions on PRs and aligns with local enforcement
+- **Impact**: New workflow `.github/workflows/docs-qa.yml`; contributor docs updated; sidecar drift check runs in CI
+- **Links**: .github/workflows/docs-qa.yml, docs/README.md, docs/global/README.md, docs/agents/session-notes/SN_20251002-1300_phase-04-implementation-1.md
+- **Owner**: slittle
+
 ### 2025-01-27 (H)
 
 - **Decision**: Implement Python data analysis cursor rule for comprehensive workflow guidelines

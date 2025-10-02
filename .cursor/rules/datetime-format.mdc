@@ -3,24 +3,25 @@ description: "Enforce ISO 8601 date-time format for created/updated fields in fr
 alwaysApply: false
 ---
 
-# Date-Time Format Rule
+# Date-Time Format Rule (Eastern Time, Compact)
 
-When adding or updating front matter in documentation files (PRDs, ADRs, Research Requests), you **MUST** ensure that any `created` and `updated` fields include both the date and the time.
+When adding or updating front matter in documentation files (PRDs, ADRs, Research Requests), you **MUST** ensure that any `created` and `updated` fields include both the date and the time, and that the timestamp uses Eastern Time (ET) in a compact format rounded down to the nearest 15 minutes.
 
 ## Required Format
 
-The required format is `YYYY-MM-DDTHH:MM:SSZ` (ISO 8601).
+Use `YYYY-MM-DD-HHMM` (24h) with HHMM ∈ {00, 15, 30, 45} minutes, representing ET time (EDT/EST) rounded down to the nearest 15 minutes.
 
-- **ALWAYS** include the time.
-- **ALWAYS** use UTC (indicated by `Z`).
+- **ALWAYS** include the time as HHMM.
+- **ALWAYS** use ET; rounding down to the nearest 15 minutes.
+- Legacy formats with UTC `Z` or ET offsets (`-04:00`/`-05:00`) are permitted only for existing content; new content must use the compact format.
 
 ## Examples
 
-✅ **Correct**:
+✅ **Correct (Compact ET)**:
 
 ```yaml
-created: 2025-09-27T14:30:00Z
-updated: 2025-09-27T15:00:00Z
+created: 2025-10-02-0930
+updated: 2025-10-02-1100
 ```
 
 ❌ **Incorrect**:
@@ -28,4 +29,14 @@ updated: 2025-09-27T15:00:00Z
 ```yaml
 created: 2025-09-27
 updated: 2025-09-27
+```
+
+ℹ️ Legacy examples (allowed for existing docs, not for new content):
+
+```yaml
+created: 2025-09-27T14:30:00Z
+updated: 2025-09-27T15:00:00Z
+
+created: 2025-10-02T09:30:00-04:00
+updated: 2025-10-02T11:00:00-04:00
 ```

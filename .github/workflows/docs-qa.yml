@@ -1,30 +1,30 @@
-name: Markdown Lint
+name: Docs QA
 
 on:
   pull_request:
     paths:
-      - "**.md"
-  push:
-    branches: [master]
-    paths:
-      - "**.md"
+      - "**/*.md"
+      - ".github/workflows/docs-qa.yml"
+      - "scripts/**"
+  workflow_dispatch:
 
 jobs:
-  markdownlint:
+  docs-qa:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: "20"
 
       - name: Install markdownlint-cli
         run: npm install -g markdownlint-cli
 
       - name: Run markdownlint
-        run: markdownlint --config .markdownlint.json --ignore-path .markdownlintignore .
+        run: markdownlint . --config .markdownlint.json
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -36,3 +36,6 @@ jobs:
 
       - name: Check markdown links
         run: python3 scripts/check_markdown_links.py
+
+      - name: Check TODO CodeLens sidecars
+        run: python3 scripts/todos/sync_codelens.py --check

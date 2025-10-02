@@ -283,8 +283,8 @@ Owner: @slittle Due: 2025-02-03 Status: Draft
 ### Links & Resources
 
 - [Boxwood Means Company Website](https://www.boxwoodmeans.com/)
-- [Shortcut Prompt Style Guide](/workspace/linear/tickets/drafts/research-prompts/try-shortcut-prompt-style-guide.md)
-- [Ticket Best Practices](/workspace/docs/global/GBL-TKT_Best_Practices.md)
+- [Shortcut Prompt Style Guide](../drafts/research-prompts/try-shortcut-prompt-style-guide.md)
+- [Ticket Best Practices](../../../docs/global/GBL-TKT_Best_Practices.md)
 
 ### Precedents (why relevant)
 

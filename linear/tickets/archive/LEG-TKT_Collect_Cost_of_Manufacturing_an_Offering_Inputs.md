@@ -36,7 +36,7 @@ version: 0.1.0
 
 # Context & Relationships
 related_docs:
-  - withco-general/linear/docs/templates/ticket-template.md
+  - withco-general/docs/templates/linear/ticket-template.md
   - withco-general/docs/global/GLB-TKT_Best_Practices.md
   - https://linear.app/withco/issue/LEG-63/collect-cost-of-manufacturing-an-offering-inputs
   - https://linear.app/withco/issue/LEG-9/determine-minimum-check-size

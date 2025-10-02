@@ -6,6 +6,21 @@
 
 ## Completed
 
+### Session: phase-04-implementation-1 (2025-10-02)
+
+- [x] Resolve `.pre-commit-config.yaml` conflict; keep `sync-todo-codelens` enabled <!-- id: TODO-20251002-211 -->
+- [x] Add CI workflow to run lint, link, timestamp, and sidecar drift checks <!-- id: TODO-20251002-212 -->
+- [x] Add docs/README and update docs/global/README with CodeLens usage <!-- id: TODO-20251002-213 -->
+- [x] Add Session NOTE checklist to template and cross-link from AGENTS <!-- id: TODO-20251002-214 -->
+
+### Session: codelens-to-do-integration (2025-10-02)
+
+- [x] Update TODO template with stable ID and CodeLens guidance <!-- id: TODO-20251002-001 -->
+- [x] Add `/TODO-add` behavior for ID assignment and sidecar sync <!-- id: TODO-20251002-002 -->
+- [x] Add rule addendum for sidecar requirements <!-- id: TODO-20251002-003 -->
+- [x] Wire pre-commit drift check for sidecars <!-- id: TODO-20251002-004 -->
+- [x] Generate initial `docs/global/TODO.codelens.todo` sidecar <!-- id: TODO-20251002-005 -->
+
 ### Session: python-data-analysis-rule-implementation (2025-01-27)
 
 - [x] Create comprehensive Python data analysis cursor rule
@@ -202,15 +217,47 @@ _Outstanding backlog work is grouped below. Recently-closed backlog items are ca
 
 #### Open Work
 
-- [ ] Create LEG-PRD_Design_Economic_Transaction_Model.md from finalized template
-- [ ] Create LEG-PRD_Design_Cost_of_Manufacturing_an_Offering.md from finalized template
-- [ ] Create LEG-PRD_Determine_Minimum_Check_Size.md from finalized template
-- [ ] Document folder and taxonomy expectations for `docs/agents/templates/` (successor to the removed ADR subdirectory)
-- [ ] Document agent artifacts framework (Role Card, Context Pack, Playbook, ADRs)
-- [ ] Define onboarding and offboarding checklists for agents
-- [ ] Define session NOTE format and decision docket process
-- [ ] Prepare example Agent Role Card and Session NOTE
-- [ ] Publish agreed Best Practices into docs/global/GBL-PRD_Best_Practices.md
+- TODO: (PRD) [MED] Create LEG-PRD_Design_Economic_Transaction_Model.md from finalized template <!-- id: TODO-20251002-201 -->
+  source: docs/global/GBL-PRD_Best_Practices.md#project-structure-requirements
+  tags: prd, LEG
+
+- TODO: (PRD) [MED] Create LEG-PRD_Design_Cost_of_Manufacturing_an_Offering.md from finalized template <!-- id: TODO-20251002-202 -->
+  source: docs/global/GBL-PRD_Best_Practices.md#project-structure-requirements
+  tags: prd, LEG
+
+- TODO: (PRD) [MED] Create LEG-PRD_Determine_Minimum_Check_Size.md from finalized template <!-- id: TODO-20251002-203 -->
+  source: docs/global/GBL-PRD_Best_Practices.md#project-structure-requirements
+  tags: prd, LEG
+
+- TODO: (AGENT) [LOW] Document folder and taxonomy expectations for docs/agents/templates/ <!-- id: TODO-20251002-204 -->
+  source: docs/raw/plans/2025-10-02_document-categorization-and-workflows.md#2-directory-taxonomy-option-a-refined
+  tags: taxonomy, templates
+
+- TODO: (AGENT) [LOW] Document agent artifacts framework (Role Card, Context Pack, Playbook, ADRs) <!-- id: TODO-20251002-205 -->
+  source: docs/agents/templates/Agent_Role_Card_Template.md
+  tags: agents, templates
+
+- TODO: (AGENT) [LOW] Define onboarding and offboarding checklists for agents <!-- id: TODO-20251002-206 -->
+  source: .cursor/commands/offboard.md#behavior-what-the-agent-will-do
+  tags: agents, workflows
+
+- TODO: (AGENT) [LOW] Define session NOTE format and decision docket process <!-- id: TODO-20251002-207 -->
+  source: .cursor/rules/agent-session-notes.mdc#required-actions
+  tags: session-notes, docket
+
+- TODO: (AGENT) [LOW] Prepare example Agent Role Card and Session NOTE <!-- id: TODO-20251002-208 -->
+  source: docs/agents/templates/Agent_Role_Card_Template.md
+  tags: examples, templates
+
+- TODO: (PRD) [LOW] Publish agreed Best Practices into docs/global/GBL-PRD_Best_Practices.md <!-- id: TODO-20251002-209 -->
+  source: docs/global/GBL-PRD_Best_Practices.md
+  tags: prd, best-practices
+
+- TODO: (AGENT) [MED] Migrate Session NOTE template to canonical `docs/templates/session-note.md`; update rule references; deprecate old path <!-- id: TODO-20251002-216 -->
+  source: docs/raw/plans/2025-10-02_document-categorization-and-workflows.md#10-migration-plan-standard-and-gold
+  tags: session-notes, templates, agents
+
+<!-- moved to Completed in session phase-04-implementation-1 -->
 
 #### Naming Conventions Rollout (New)
 

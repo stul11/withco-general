@@ -1,4 +1,4 @@
-> MOVED — Canonical location is now `../../docs/company/linear/How_to_use_Linear.md` (READ-ONLY). For personal workflow preferences, see Ticket Best Practices (`../../docs/global/GBL-TKT_Best_Practices.md`) and PRD Best Practices (`../../docs/global/GBL-PRD_Best_Practices.md`).
+> IMPORTANT — Company document (READ-ONLY): Do not modify this file in the withco-general repo. It reflects company-wide Linear conventions. For personal workflow preferences, see Ticket Best Practices (`../../global/GBL-TKT_Best_Practices.md`) and PRD Best Practices (`../../global/GBL-PRD_Best_Practices.md`).
 
 # 📝 How to use Linear
 
@@ -145,7 +145,7 @@ We don't officially use sub-issues at a company-wide level. You can use sub-issu
 
 ## Ad-hoc work
 
-**\*TODO: \*\*\*\***where does ad-hoc work go?**\* \*** (tbd when we actually get bugs)\*\*\*
+**\*TODO: \*\***where does ad-hoc work go?** \* ** (tbd when we actually get bugs)\*\*
 
 ## TL;DR
 
