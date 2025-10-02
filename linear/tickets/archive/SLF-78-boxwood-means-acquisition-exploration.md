@@ -48,7 +48,7 @@ Owner: @slittle Due: 2025-02-03 Status: Draft
 `+link <label>: <url>`  
 `+precedent <why relevant>: <url>`  
 `+doc <type>: <url>` (e.g., MSA/SOW/memo/model)  
-`+note <short fact>`  
+`+NOTE <short fact>`  
 `+assume <assumption>`  
 `+risk <risk>`  
 `+owner <who>`  

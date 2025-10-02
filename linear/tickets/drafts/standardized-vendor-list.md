@@ -255,7 +255,7 @@ stage_costs:
 
 1. **Review Excel Model** - Map existing ~50 vendor rows to standardized list
 2. **Validate Enums** - Ensure all cost unit scopes are captured
-3. **Document Gaps** - Note missing vendors or services
+3. **Document Gaps** - NOTE missing vendors or services
 4. **Prepare for Review** - Package for Brian/Kevin review tomorrow
 
 ### **Tomorrow (Post-Review)**

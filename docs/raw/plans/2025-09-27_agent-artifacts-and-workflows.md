@@ -32,8 +32,8 @@ Define lightweight yet effective options to implement Agent Artifacts and an age
 ### Option B — Template-first + Cursor rules (recommended to start)
 
 - What: Same templates, plus Cursor rules that remind the assistant to:
-  - Use `todo_write` for tracking (todo-cursor)
-  - Emit a Session Note for each agent session
+  - Use `todo_write` for tracking (TODO-cursor)
+  - Emit a Session NOTE for each agent session
   - Include mandatory sections in ARC/Context Pack/Playbook
 - Pros:
   - Lightweight guardrails; improves consistency without custom infra
@@ -179,7 +179,7 @@ Objective: One line
 
 - Assign Role Card and Context Pack
 - Issue scoped, time-boxed RO tokens
-- Run smoke test task; capture Session Note; human sign-off
+- Run smoke test task; capture Session NOTE; human sign-off
 ```
 
 ### 4.5 Offboarding Checklist
@@ -193,10 +193,10 @@ Objective: One line
 - Update ADRs for new rules/risks
 ```
 
-### 4.6 Session Note (per session)
+### 4.6 Session NOTE (per session)
 
 ```markdown
-# Session Note
+# Session NOTE
 
 - Task ID:
 - Agent:
@@ -220,15 +220,15 @@ Objective: One line
 
 ### 4.8 TODO logs
 
-- Policy: Always use the Cursor TODO tool via `todo-cursor` rule (no ad-hoc text TODOs).
+- Policy: Always use the Cursor TODO tool via `TODO-cursor` rule (no ad-hoc text TODOs).
 
 ## 5) Proposed Cursor rules (lightweight guardrails)
 
 1. `agent-session-notes.mdc`
 
-- Description: Require a Session Note for each agent session that edits PRDs/agents/BOM docs.
+- Description: Require a Session NOTE for each agent session that edits PRDs/agents/BOM docs.
 - Globs: `**/docs/prds/**, **/docs/agents/**, **/docs/global/**`
-- Behavior: Remind to create/attach Session Note and obtain human signoff before merging.
+- Behavior: Remind to create/attach Session NOTE and obtain human signoff before merging.
 
 2. `agent-artifacts-standard.mdc`
 
@@ -239,7 +239,7 @@ Objective: One line
 
 - `planning-mode.mdc`: one focused recommendation in chat
 - `planning-mode-md.mdc`: create generative plan docs in `/docs/raw/plans`
-- `todo-cursor.mdc`: always use `todo_write` tool for TODO updates
+- `TODO-cursor.mdc`: always use `todo_write` tool for TODO updates
 - `datetime-format.mdc`: enforce created/updated time in front matter (PRDs/ADRs/Research)
 
 ## 6) Commands to scaffold artifacts (one-liners; do not execute by default)
@@ -285,14 +285,14 @@ MD
 - Create On/Offboarding checklists:
 
 ```bash
-mkdir -p withco-general/docs/agents/checklists && printf "# Onboarding: <Role>\n- Assign Role Card and Context Pack\n- Issue scoped, time-boxed RO tokens\n- Run smoke test; capture Session Note; sign-off\n" > withco-general/docs/agents/checklists/ON_<Role>.md && printf "# Offboarding: <Role>\n- Revoke tokens, rotate secrets\n- Wipe ephemeral caches\n- Close Session Log; attach outputs\n- Update ADRs\n" > withco-general/docs/agents/checklists/OFF_<Role>.md
+mkdir -p withco-general/docs/agents/checklists && printf "# Onboarding: <Role>\n- Assign Role Card and Context Pack\n- Issue scoped, time-boxed RO tokens\n- Run smoke test; capture Session NOTE; sign-off\n" > withco-general/docs/agents/checklists/ON_<Role>.md && printf "# Offboarding: <Role>\n- Revoke tokens, rotate secrets\n- Wipe ephemeral caches\n- Close Session Log; attach outputs\n- Update ADRs\n" > withco-general/docs/agents/checklists/OFF_<Role>.md
 ```
 
-- Create Session Note:
+- Create Session NOTE:
 
 ```bash
 mkdir -p withco-general/docs/agents/session-notes && cat > withco-general/docs/agents/session-notes/SN_<YYYYMMDD>_<TaskId>.md <<'MD'
-# Session Note
+# Session NOTE
 - Task ID:
 - Agent:
 - Owner:

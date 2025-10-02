@@ -1,6 +1,7 @@
 # Offboarding Checklist Template
 
 ---
+
 id: OFF_[Role]
 title: Offboarding: [Role]
 version: 0.1.0
@@ -24,7 +25,7 @@ tags: [offboarding, checklist, role]
 
 - [ ] Review all Session Notes from this role
 - [ ] Identify completed work and deliverables
-- [ ] Note any incomplete or pending tasks
+- [ ] NOTE any incomplete or pending tasks
 - [ ] Document lessons learned and improvements
 
 ### Work Completion
@@ -76,7 +77,7 @@ tags: [offboarding, checklist, role]
 
 ### Documentation
 
-- [ ] Final Session Note created
+- [ ] Final Session NOTE created
 - [ ] All deliverables archived
 - [ ] Handoff package complete
 - [ ] Successor briefed (if applicable)

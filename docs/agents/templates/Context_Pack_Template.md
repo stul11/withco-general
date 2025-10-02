@@ -1,6 +1,7 @@
 # Context Pack Template
 
 ---
+
 id: CP_[Topic]
 title: Context Pack: [Topic]
 version: 0.1.0

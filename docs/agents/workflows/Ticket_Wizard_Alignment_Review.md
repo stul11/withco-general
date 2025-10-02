@@ -22,7 +22,7 @@ All changes have been made to ensure the Background Agent Draft Review Workflow 
 
 **Status**: ✅ **Implemented**
 
-- Added explicit note in Phase 1: "does NOT push to Linear automatically"
+- Added explicit NOTE in Phase 1: "does NOT push to Linear automatically"
 - Added to "Never Do" section: "Push to Linear automatically - ticket wizard operates in chat only"
 - Workflow clearly separates draft creation from Linear implementation
 

@@ -1,4 +1,4 @@
-You are ChatGPT 5.0 Pro. Act as a meticulous U.S. tax research assistant and Excel-savvy analyst. Your job is to (1) research and (2) deliver a complete, source-backed, _Excel-ready_ package explaining—in extreme detail—how tax form preparation works for two investor situations:
+You are ChatGPT 5.0 Pro. Act as a meticulous U.S. tax research assistant and Excel-savvy analyst. Your job is to (1) research and (2) deliver a complete, source-backed, *Excel-ready* package explaining—in extreme detail—how tax form preparation works for two investor situations:
 
 A) **K‑1 Property LLC** (investor receives a Schedule K‑1 from a real-estate partnership/LLC filing Form 1065), and  
 B) **UPREIT with investors receiving 1099‑DIV** (assume investor holds REIT common shares that issue a 1099‑DIV; other separate investors hold OP units that issue a K‑1).
@@ -7,9 +7,9 @@ B) **UPREIT with investors receiving 1099‑DIV** (assume investor holds REIT co
 
 1. A deep explanation of forms, schedules, and filing workflows for both scenarios, including all triggers that add complexity.
 2. A complete TurboTax support + pricing map for these scenarios (by tier and by form).
-3. A cost model for **software** (TurboTax Online, by tier and by state add-ons), with _incremental_ costs when the investor already files a K‑1 or adds states/properties.
+3. A cost model for **software** (TurboTax Online, by tier and by state add-ons), with *incremental* costs when the investor already files a K‑1 or adds states/properties.
 4. A comprehensive set of TSV (tab-delimited) calculators and matrices that I can paste into Excel at **cell A1** and have the formulas work immediately.
-5. Exhaustive, _official_ links to IRS forms and instructions (and other authoritative sources) for every assertion.
+5. Exhaustive, *official* links to IRS forms and instructions (and other authoritative sources) for every assertion.
 
 ---
 
@@ -17,10 +17,10 @@ B) **UPREIT with investors receiving 1099‑DIV** (assume investor holds REIT co
 
 - Jurisdiction: U.S. federal and state personal income tax for an individual investor (Form 1040 filer).
 - Tax years: prioritize the **most current filing season** available at the time you run this (likely 2024/2025 forms used for returns filed in 2025–2026). If a form or rule changed recently, call it out and date it.
-- Investor profile: individual, not a C‑corp; not a tax professional. If a rule differs for married filing jointly vs single, note it.
+- Investor profile: individual, not a C‑corp; not a tax professional. If a rule differs for married filing jointly vs single, NOTE it.
 - Be precise about when **Schedule B**, **Schedule D**, **Form 8949**, **Form 8995/8995‑A** (199A), **Form 1116** (foreign tax), **Form 4952** (investment interest), **Form 8582** (passive activity loss limitations), **Form 461** (excess business loss), **Form 6251** (AMT), **Form 4797/1231**, **Form 6252** (installment sale), **Schedule E**, **Schedule K‑3**, and any state nonresident returns are triggered.
 - For REIT 1099‑DIV, break down **Boxes 1a/1b, 2a–2d, 3, 5 (199A dividends), 7 (foreign tax)**, how each flows onto returns/schedules, and when **Schedule D/8949** is required.
-- For UPREIT specifics, explain the investor experiences that create both a K‑1 and a 1099‑DIV (e.g., holding OP units _and_ REIT shares, taxable exchanges, sales).
+- For UPREIT specifics, explain the investor experiences that create both a K‑1 and a 1099‑DIV (e.g., holding OP units *and* REIT shares, taxable exchanges, sales).
 - For “profit interests,” **promote/carry** (splits above a pref) and **phantom equity**:
   - Distinguish LP investor vs GP/service provider scenarios.
   - Explain when these change the **forms** required (e.g., §1061 carried interest recharacterization -> Schedule D/Form 8949 reporting; service income potentially -> W‑2/1099‑NEC/1099‑MISC rather than 1099‑DIV).
@@ -28,18 +28,18 @@ B) **UPREIT with investors receiving 1099‑DIV** (assume investor holds REIT co
 - State filings:
   - When does a **nonresident** state return get triggered by a K‑1 from property in another state?
   - What are the common **incremental** time/cost drivers: more K‑1s, more states, same sponsor multiple properties in one state, composite/withholding statements, PTET impacts (only as needed for investor-level filing).
-- **Important**: Provide only **software** costs (TurboTax tiers & add‑ons). Provide _incremental_ costs for “already filing a K‑1” vs “adding another K‑1,” adding Schedule B or D, and adding states.
+- **Important**: Provide only **software** costs (TurboTax tiers & add‑ons). Provide *incremental* costs for “already filing a K‑1” vs “adding another K‑1,” adding Schedule B or D, and adding states.
 
 ---
 
 ## Research & sourcing requirements
 
-- **Browse the web** and cite _official_ IRS form pages and instructions for every form/schedule you reference. Include direct URLs.
+- **Browse the web** and cite *official* IRS form pages and instructions for every form/schedule you reference. Include direct URLs.
 - For **TurboTax**:
-  - Document which _minimal_ TurboTax **Online** tier supports each form/schedule (e.g., K‑1 requires Premier+; Schedule D/8949 needs at least Premier, etc.).
-  - Capture **current list pricing** for each tier, **state** pricing, and **e‑file** fees where applicable. Note any relevant details about state add-ons. Include links to official TurboTax pages. Capture the **date accessed**.
+  - Document which *minimal* TurboTax **Online** tier supports each form/schedule (e.g., K‑1 requires Premier+; Schedule D/8949 needs at least Premier, etc.).
+  - Capture **current list pricing** for each tier, **state** pricing, and **e‑file** fees where applicable. NOTE any relevant details about state add-ons. Include links to official TurboTax pages. Capture the **date accessed**.
 - For **professional preparation costs**:
-  - Use **AICPA**, **NATP**, and other reputable surveys or firm fee schedules for price ranges _per schedule/form_ (e.g., add‑on for Schedule D or per K‑1). If necessary, include several representative sources and show ranges and medians.
+  - Use **AICPA**, **NATP**, and other reputable surveys or firm fee schedules for price ranges *per schedule/form* (e.g., add‑on for Schedule D or per K‑1). If necessary, include several representative sources and show ranges and medians.
 - Every claim or price must have a **source link** and **accessed date**. If something varies widely by provider/state, say so and show the range.
 
 ---
@@ -52,7 +52,7 @@ B) **UPREIT with investors receiving 1099‑DIV** (assume investor holds REIT co
 - Assume I will paste each TSV into Excel at **A1**. Make formulas work immediately.
 - For each calculator TSV, place:
   - An **INPUTS** block starting at **A1** with two columns: `Name<TAB>Value`.
-  - A **CALCULATIONS** block starting at **A20** with a header row, and formulas that use **absolute cell references** to the INPUTS (e.g., `$B$2`). Provide at least one _worked example_ row using sample inputs.
+  - A **CALCULATIONS** block starting at **A20** with a header row, and formulas that use **absolute cell references** to the INPUTS (e.g., `$B$2`). Provide at least one *worked example* row using sample inputs.
 - In Markdown files, include clear headings, short paragraphs, and bullet lists.
 
 ### File list (create exactly these files)
@@ -157,7 +157,7 @@ B) **UPREIT with investors receiving 1099‑DIV** (assume investor holds REIT co
 
 - **No chain-of-thought**. Provide succinct explanations, tables, and formulas.
 - Double‑check arithmetic in any worked examples.
-- If reputable sources disagree, note the difference and cite both.
+- If reputable sources disagree, NOTE the difference and cite both.
 - Always prefer **official IRS** pages for forms/instructions, and **official TurboTax** pages for product capabilities and pricing.
 - Clearly date-stamp any prices and indicate if seasonal promos may vary.
 

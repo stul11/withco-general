@@ -1,6 +1,7 @@
 # Onboarding Checklist Template
 
 ---
+
 id: ON_[Role]
 title: Onboarding: [Role]
 version: 0.1.0
@@ -53,7 +54,7 @@ tags: [onboarding, checklist, role]
 
 ### Documentation
 
-- [ ] Create initial Session Note
+- [ ] Create initial Session NOTE
 - [ ] Document any issues or concerns
 - [ ] Record initial performance metrics
 - [ ] Update status in tracking system

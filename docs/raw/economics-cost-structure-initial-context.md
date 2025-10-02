@@ -5,7 +5,7 @@ My notes are below. I want to start rigorously organizing these throughts into a
 Review the below. I ultimately want to use chatGPT or cursor to help manage my implementation plan , research, and documentation. My company operates out of linear, and I would like to plan there, but through the use of an MCP or ChatGPT connector. I have not tried this before.
 Here are my highest priorities:
 
-- Cost of Manufacturing and Offering _(refer to `/docs/raw/cost-of-manufacturing-offering-context.md` for the authoritative breakdown and live updates)_
+- Cost of Manufacturing and Offering *(refer to `/docs/raw/cost-of-manufacturing-offering-context.md` for the authoritative breakdown and live updates)*
 - Update and clean up all the pricing proposals and contracts into a board-quality financial model.
 - Economics and legal structure decision, based on cost, scalability, and viability of the investment platform to SMBs, my company, and retail investors
 - Determine minimum check size
@@ -42,7 +42,7 @@ Here are my highest priorities:
   There will be indications of interest for Claimed Pre-Launch, General Roadshow, Specific Roadshow, Specific Offering.
   There will be committments for specific offering. Specific offering can be overcommitted (greater than capitalization), or less than (undercommitted). We will want to track indications of interest in this stage, as we should expect some percentage of those to convert into committments. We should have a percentage of these by check size.
   A committed offering will no longer have indications of interest, but will have committments, called committments (funded), called and unfunded committments, and [overcommitments].
-  Before we have actual deals, we are going to need to be able to model across a lot of different scenarios, for different purposes as we build a robust, flexibile model to handle all future combinations and iterations, and as we stress-test our business model and economics, and define the key metrics we want to track (and "productize for the market"). Note we'll want a glossary of all the defined terms we use in these scenarios.
+  Before we have actual deals, we are going to need to be able to model across a lot of different scenarios, for different purposes as we build a robust, flexibile model to handle all future combinations and iterations, and as we stress-test our business model and economics, and define the key metrics we want to track (and "productize for the market"). NOTE we'll want a glossary of all the defined terms we use in these scenarios.
   We will want to be able to not only model at the deal level, but at the platform level across scale. We'll have assumptions for number of Investors and their conversion through a funnel (Lead, Account, Qualified Account, Funded Account, Committed Investor, Funded Investor, Closed Investor). Investors will be able to partcipate in more than one transaction, which will likely dictate the minimum check size the platform is willing and able to offer them, based on one-time costs, vs. recurring / variable costs as they move through the platform. The volume and conversion of investors will be important, as there are substantial costs to support the platform, and our small business and investor users on our technology and through the stages. We will need to create "the cost of manufacturing a deal", which will be a model that tracks our spend across vendors and assuming (interconnected) scale across both the SMB and Investor funnels. These costs will be borne by different stakeholders at different times, and it is important that we are able to track how they are incurred by the stakeholders from a cash perspective, how they are "amortized" over time through additional volume, and ultimately monetization via transactions, fees, cash yields, upside monetization. We will want to tie this to a company model that is very clean and easy to digest. We are extremely focused on each of these costs and how they scale, because we are focused on buying and capitalizing small transactions [1-10M]. When we think about monetization, there should be a minimum and maximum deal size that the platform will support, and a distribution of prices in that range that is defined and may change over time. We will want to map this to a TAM and expansion plan, where we unlock more of the market for commercial real estate types, geographies, and % traction.
   The transactions will be offered under Reg A+ (Tier II). We are contemplating multiple structures currently for each transaction, and need to compare the costs of manufacturing an offering across scale and fixed and variable costs over a timeline.
   We are finalizing our economic model and trying to make a decision shortly as to whether we will use an LLC or REIT model.
@@ -308,7 +308,7 @@ Payer (Company, REIT/LLC, Investor, SMB) and Timing (pre‑close, at close, ongo
 
 Accounting (expensed vs capitalized; amortization period if capitalized in offering costs).
 
-Scalability note (what unlocks better pricing: properties, investors, AUM, MSAs?).
+Scalability NOTE (what unlocks better pricing: properties, investors, AUM, MSAs?).
 
 Replacement candidates & switching costs.
 

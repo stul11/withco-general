@@ -53,7 +53,7 @@
 ### **Linear Issues**
 
 - **LEG-63:** [Collect Cost of Manufacturing an Offering Inputs](https://linear.app/withco/issue/LEG-63/collect-cost-of-manufacturing-an-offering-inputs)
-- **LEG-9:** [Determine Minimum Check Size](https://linear.app/withco/issue/LEG-9/determine-minimum-check-size) - _Upstream dependency_
+- **LEG-9:** [Determine Minimum Check Size](https://linear.app/withco/issue/LEG-9/determine-minimum-check-size) - *Upstream dependency*
 
 ### **Data Sources**
 
@@ -140,7 +140,7 @@
 
 ---
 
-_This file is your single source of truth for LEG-63 work. Keep it updated as you progress._
+*This file is your single source of truth for LEG-63 work. Keep it updated as you progress.*
 
 
 

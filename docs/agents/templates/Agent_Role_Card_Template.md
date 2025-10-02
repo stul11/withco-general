@@ -1,6 +1,7 @@
 # Agent Role Card Template
 
 ---
+
 id: ARC_[Name]
 title: Agent Role Card: [Name]
 version: 0.1.0

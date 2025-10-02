@@ -19,7 +19,7 @@ This workflow converts pasted Granola outputs into structured artifacts while st
 
 ## Outputs
 
-- Session note: `docs/agents/session-notes/SN_ISO_MEETINGSLUG.md`
+- Session NOTE: `docs/agents/session-notes/SN_ISO_MEETINGSLUG.md`
 - Decision Docket append: `docs/global/Decision_Docket.md`
 - TODO Log append: `docs/global/TODO_Log.md`
 - Ticket drafts: `linear/tickets/drafts/DATE_MEETINGSLUG.md`
@@ -28,7 +28,7 @@ This workflow converts pasted Granola outputs into structured artifacts while st
 
 - `--write off`: preview-only in chat
 - `--write draft`: write markdown files to the repo; no Linear writes
-- `--write global-todo`: after explicit approval, also create Global To‑Do issues (allowed)
+- `--write global-TODO`: after explicit approval, also create Global To‑Do issues (allowed)
 
 ## Review Checklist
 
@@ -46,4 +46,4 @@ This workflow converts pasted Granola outputs into structured artifacts while st
   - `docs/global/TODO_Log.md`
   - `linear/tickets/drafts/`
 - Company Linear projects are read-only; Notion updates are suggestions
-- Keep an audit trail in the session note (who triggered, when, write mode)
+- Keep an audit trail in the session NOTE (who triggered, when, write mode)

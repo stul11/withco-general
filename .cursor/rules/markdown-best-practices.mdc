@@ -1,0 +1,55 @@
+---
+description: "Markdown formatting and linting best practices"
+alwaysApply: true
+---
+
+# Markdown Best Practices
+
+## Required Formatting
+
+- **Line Length**: Maximum 120 characters per line
+- **Headers**: Use ATX style (# ## ###) consistently
+- **Lists**: Use consistent indentation (2 spaces)
+- **Links**: Use descriptive link text
+- **Code**: Use proper language tags for syntax highlighting
+- **Ordered Lists**: Use sequential numbering (1, 2, 3...)
+
+## Linting Rules
+
+- Run `markdownlint --fix .` before committing
+- Fix all linting errors before creating PRs
+- Use `.markdownlint.json` configuration
+- Ensure all fenced code blocks have language specified
+- Avoid duplicate headings in the same document
+- Use proper heading hierarchy (H1 → H2 → H3)
+
+## Auto-fix Commands
+
+```bash
+# Fix all markdown issues
+markdownlint --fix .
+
+# Check specific file
+markdownlint path/to/file.md
+
+# Run custom validation
+python3 scripts/check_markdown_links.py
+python3 scripts/validate_iso_timestamps.py docs
+```
+
+## Common Issues to Avoid
+
+- **MD013**: Line length exceeding 120 characters
+- **MD025**: Multiple top-level headings (H1)
+- **MD024**: Duplicate headings
+- **MD040**: Fenced code blocks without language
+- **MD029**: Incorrect ordered list numbering
+- **MD003**: Inconsistent heading styles
+- **MD036**: Using emphasis instead of headings
+
+## Integration
+
+- **Pre-commit**: Automatically runs markdownlint on staged files
+- **VS Code**: Install markdownlint extension for real-time feedback
+- **CI/CD**: Include markdownlint in build pipeline
+- **Custom Scripts**: Use `scripts/fix-markdown.sh` for comprehensive fixing

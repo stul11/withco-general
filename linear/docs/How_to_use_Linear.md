@@ -23,7 +23,7 @@
 
 ## Anatomy of an Initiative
 
-Initiatives hold knowledge at a global, cross-project level. Note that projects will be versioned with a `v1` or similar as we'll likely re-do the same project with a wider scope in the future. The shared knowledge across these versions live at the initiative level via resource documents, initiative updates, etc.
+Initiatives hold knowledge at a global, cross-project level. NOTE that projects will be versioned with a `v1` or similar as we'll likely re-do the same project with a wider scope in the future. The shared knowledge across these versions live at the initiative level via resource documents, initiative updates, etc.
 
 ## Anatomy of a Project
 
@@ -133,15 +133,15 @@ You can attach documents or links to a project via the "Resources" section. Any 
 
 ### Cycles
 
-We operate the company in 2 week sprints that are reflected in our linear workspace. Each linear team technically has distinct cycles but we're set them all up to be synchronized. Actual work (read: **Issues**) come in one of 4 statuses: `Backlog`, `To do`, `In Progress`, and `Done`. Work marked as `To do` or `In Progress` is considered "active" and belongs in the current cycle. During cycle transitions "active" work will be automatically moved to the next cycle. If you identify work that should be done _next_ cycle then directly just change it cycle; note that this will also automatically change the status to `Backlog`. Use the [**🔄 Current Cycle**](https://linear.app/withco/view/current-cycle-bdffa0683ac9?layout=board&ordering=workflowState&orderingDirection=asc&grouping=workflowState&subGrouping=team&showCompletedIssues=all&showSubIssues=false&showTriageIssues=false)\*\* \*\*view to see what the company is working on right now.
+We operate the company in 2 week sprints that are reflected in our linear workspace. Each linear team technically has distinct cycles but we're set them all up to be synchronized. Actual work (read: **Issues**) come in one of 4 statuses: `Backlog`, `To do`, `In Progress`, and `Done`. Work marked as `To do` or `In Progress` is considered "active" and belongs in the current cycle. During cycle transitions "active" work will be automatically moved to the next cycle. If you identify work that should be done *next* cycle then directly just change it cycle; NOTE that this will also automatically change the status to `Backlog`. Use the [**🔄 Current Cycle**](https://linear.app/withco/view/current-cycle-bdffa0683ac9?layout=board&ordering=workflowState&orderingDirection=asc&grouping=workflowState&subGrouping=team&showCompletedIssues=all&showSubIssues=false&showTriageIssues=false)\*\* \*\*view to see what the company is working on right now.
 
 ### Labels
 
-We don't officially uses labels at a company-wide level so feel free to create and use whatever labeling system you want at the project or issue level. Just try to put labels at the _workspace_ level instead of the _team_ level so everybody has access to them.
+We don't officially uses labels at a company-wide level so feel free to create and use whatever labeling system you want at the project or issue level. Just try to put labels at the *workspace* level instead of the *team* level so everybody has access to them.
 
 ### Sub-issues
 
-We don't officially use sub-issues at a company-wide level. You can use sub-issues to break up work even further but note that some people (specifically Fern) explicitly remove sub-issues from their views meaning they will not see them whatsoever. If you read the whole thing DM fern the number of easter eggs you found. Company-wide external stakeholders like exec only need to see progress at the level of the parent issue that is a milestone requirement.
+We don't officially use sub-issues at a company-wide level. You can use sub-issues to break up work even further but NOTE that some people (specifically Fern) explicitly remove sub-issues from their views meaning they will not see them whatsoever. If you read the whole thing DM fern the number of easter eggs you found. Company-wide external stakeholders like exec only need to see progress at the level of the parent issue that is a milestone requirement.
 
 ## Ad-hoc work
 

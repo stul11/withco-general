@@ -134,7 +134,7 @@ updated: "2025-01-27T18:00:00Z"
 
 ### Precedents
 
-- Previous call note documentation
+- Previous call NOTE documentation
 - Work log updates
 - Cost model discussions
 

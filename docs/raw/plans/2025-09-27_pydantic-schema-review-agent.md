@@ -24,13 +24,13 @@ Design options for an agent that reviews a Pydantic schema repo (class-by-class,
 - Cons: No durable output; easy to lose context; weaker reproducibility.
 - When to use: Quick one-off assessments.
 
-## Option B — Session Note + Recommendation Log (recommended start)
+## Option B — Session NOTE + Recommendation Log (recommended start)
 
 - Flow:
   1. Prepare a Context Pack pointing at `schema/**` and requirements.
   2. Run agent; for each file, extract class/enum signatures and docstrings, compute semantic match to requirements.
   3. Emit: `docs/agents/session-notes/SN_<date>_schema-review.md` with a recommendation table and citations like `path.py:Lx-Ly`.
-  4. Update `docs/global/Decision_Docket.md` with a short entry and link to the session note.
+  4. Update `docs/global/Decision_Docket.md` with a short entry and link to the session NOTE.
 - Pros: Lightweight, reproducible, auditable via Session Notes.
 - Cons: Manual copy to PRDs later; requires discipline on notes.
 - Enhancements: Add a small rule to require citations and the table shape.
@@ -70,14 +70,14 @@ Design options for an agent that reviews a Pydantic schema repo (class-by-class,
 - Inputs:
   - Requirements text (<= 20 lines), optional focus paths.
 - Outputs:
-  - Session Note file path, recommendation table, citations for each row.
+  - Session NOTE file path, recommendation table, citations for each row.
   - No code edits, no mass summaries without citations.
 - Review:
   - Human owner sign-off required before logging to Decision Docket or PRD appendix.
 
 ## Cursor rules to back this agent
 
-- `agent-session-notes.mdc`: require Session Note with table and citations before accepting results.
+- `agent-session-notes.mdc`: require Session NOTE with table and citations before accepting results.
 - `agent-artifacts-standard.mdc`: ensure Context Pack references exact files/dirs; ARC defines constraints (read-only).
 
 ## Lightweight commands (scaffolding only; not executed)
@@ -100,7 +100,7 @@ Objective: Identify relevant Pydantic models/enums for <project> requirements
 MD
 ```
 
-- Session Note filename suggestion:
+- Session NOTE filename suggestion:
 
 ```
 docs/agents/session-notes/SN_20250927_pydantic-schema-review.md
@@ -108,10 +108,10 @@ docs/agents/session-notes/SN_20250927_pydantic-schema-review.md
 
 ## Recommendation
 
-Start with Option B (Session Note + Recommendation Log). If quality or scale demands, evolve toward Option C for structured scoring; keep PRD-friendly appendix output as an optional D.
+Start with Option B (Session NOTE + Recommendation Log). If quality or scale demands, evolve toward Option C for structured scoring; keep PRD-friendly appendix output as an optional D.
 
 ## Next Steps
 
 - Approve Option B as the initial operating mode.
 - Approve creating the two rules above if not already present.
-- If approved, I’ll scaffold the Context Pack and a Session Note stub and run a dry-run on a small subset of `schema/`.
+- If approved, I’ll scaffold the Context Pack and a Session NOTE stub and run a dry-run on a small subset of `schema/`.

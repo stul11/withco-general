@@ -25,7 +25,7 @@ Distribution Upon LiquidationOP Waterfall: Distributions upon a liquidating even
 
 2. Return of Accrued but Unpaid Target Returns: In the event that any funds remain available, the amount of the accrued but unpaid target distributions to Common Interest Holders shall be paid to such holders on a pro rata basis.
 
-   _Note to Carmen_: When you discussed yesterday how the Common Interest holders would have last priority, I think this was in the context that there might be fees paid to withco and the SMB tenant upon liquidation. Since we are now following the profit interests model, I understand that this payout to the retail investors of principal/dividends first should be okay, but let me know if I’m misunderstanding anything.
+   *NOTE to Carmen*: When you discussed yesterday how the Common Interest holders would have last priority, I think this was in the context that there might be fees paid to withco and the SMB tenant upon liquidation. Since we are now following the profit interests model, I understand that this payout to the retail investors of principal/dividends first should be okay, but let me know if I’m misunderstanding anything.
 
 3. Upside Allocation: In the event that any funds remain available for distribution, the upside will be split among Withco (20%) and SMB (80%) according to their profit interests.
 

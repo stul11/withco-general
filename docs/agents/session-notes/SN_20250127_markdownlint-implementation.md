@@ -22,6 +22,7 @@ tags: [markdownlint, linting, automation, tooling]
 ## Inputs & Context
 
 - **Key Documents/Files Provided**:
+
   - `/home/slittle/dev/withco-general/.pre-commit-config.yaml` (existing pre-commit setup)
   - `/home/slittle/dev/withco-general/scripts/check_markdown_links.py` (existing custom validation)
   - `/home/slittle/dev/withco-general/scripts/validate_iso_timestamps.py` (existing custom validation)
@@ -29,6 +30,7 @@ tags: [markdownlint, linting, automation, tooling]
   - Repository structure with 95+ markdown files requiring linting
 
 - **Context & Requirements**:
+
   - User reported "ton of problems that are yellow and likely linting issues"
   - Requested comprehensive markdown linting solution with multiple implementation options
   - Need for immediate impact, industry standard tooling, gradual adoption, auto-fix capabilities, and editor integration
@@ -44,6 +46,7 @@ tags: [markdownlint, linting, automation, tooling]
 ## Full Findings
 
 - **Summary of Findings**:
+
   - Repository lacks comprehensive markdown linting beyond custom validation scripts
   - 95+ markdown files with extensive formatting inconsistencies
   - markdownlint-cli provides industry-standard solution with auto-fix capabilities
@@ -51,6 +54,7 @@ tags: [markdownlint, linting, automation, tooling]
   - 854+ linting issues identified, many auto-fixable
 
 - **Detailed Findings**:
+
   - **Description**: Current linting setup limited to custom Python scripts
   - **File(s) Involved**: `.pre-commit-config.yaml`, `scripts/check_markdown_links.py`, `scripts/validate_iso_timestamps.py`
   - **Line Numbers/Sections**: L1-L23 (pre-commit config), L1-L68 (validation scripts)
@@ -74,6 +78,7 @@ tags: [markdownlint, linting, automation, tooling]
 ## Steps Taken
 
 - **Major Actions**:
+
   - Installed markdownlint-cli globally via npm
   - Created `.markdownlint.json` configuration with relaxed initial rules (120 char line length, ATX headers)
   - Updated `.pre-commit-config.yaml` to include markdownlint hook with auto-fix
@@ -84,6 +89,7 @@ tags: [markdownlint, linting, automation, tooling]
   - Tested complete integration with fix script
 
 - **Key Decisions**:
+
   - Chose markdownlint over remark-lint or textlint for simplicity and industry adoption
   - Set line length to 120 characters (relaxed from default 80) for better readability
   - Disabled MD033 (HTML in markdown) and MD041 (first line must be H1) for flexibility
@@ -102,6 +108,7 @@ tags: [markdownlint, linting, automation, tooling]
 ## Outputs
 
 - **Files Created/Modified**:
+
   - `.markdownlint.json` (created - markdownlint configuration)
   - `.pre-commit-config.yaml` (modified - added markdownlint hook)
   - `.cursor/rules/markdown-best-practices.mdc` (created - cursor rules for markdown)
@@ -111,6 +118,7 @@ tags: [markdownlint, linting, automation, tooling]
   - All 95+ markdown files (modified - auto-fixed formatting issues)
 
 - **Key Deliverables**:
+
   - Complete markdownlint integration with auto-fix capabilities
   - Comprehensive fix script combining markdownlint with existing validations
   - VS Code integration for real-time linting feedback
@@ -138,6 +146,7 @@ tags: [markdownlint, linting, automation, tooling]
 ## Risks & Issues Identified
 
 - **Potential Issues**:
+
   - Pre-commit hooks may not be working properly (user reported)
   - 854+ remaining linting issues require manual fixing
   - Team adoption may require VS Code extension installation
@@ -166,12 +175,14 @@ tags: [markdownlint, linting, automation, tooling]
 ## Next Actions
 
 - **Immediate Follow-ups**:
+
   - Install VS Code markdownlint extension (`DavidAnson.vscode-markdownlint`)
   - Test pre-commit hooks with `pre-commit install` (if pre-commit is working)
   - Fix remaining 854+ linting issues using `./scripts/fix-markdown.sh`
   - Review and adjust markdownlint rules if needed
 
 - **For Next Session**:
+
   - Implement Phase 2 of staged plan (enhanced integration)
   - Add CI integration for pull request validation
   - Create custom rules for project-specific needs

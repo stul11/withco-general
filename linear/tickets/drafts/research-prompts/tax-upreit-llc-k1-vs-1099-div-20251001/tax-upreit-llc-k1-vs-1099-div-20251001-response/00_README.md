@@ -42,6 +42,6 @@ All TSVs are designed to be pasted **starting in Excel cell A1**.
 ## Caveats & scope
 
 - Jurisdiction: **U.S. individual (Form 1040)** federal and state returns.
-- Filing seasons prioritized: **2024–2025** (returns filed in **2025–2026**). When rules changed, we note timing.
+- Filing seasons prioritized: **2024–2025** (returns filed in **2025–2026**). When rules changed, we NOTE timing.
 - **Always** rely on the latest IRS instructions for final positions. State rules vary—nonresident filing triggers and composite/withholding procedures differ by state.
 - **TurboTax Online** pricing is **seasonal and dynamic**. We include multiple snapshots with **accessed dates** and official TurboTax URLs. Use the calculators to model **incremental** costs as you add K‑1s, states, or forms.

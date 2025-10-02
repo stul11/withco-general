@@ -520,9 +520,9 @@ Draft archived to: linear/tickets/archive/SLF-75-cost-model-improvements.md
 
 Use these during or after a session:
 
-- `/offboard <task-id>` — Run full offboarding per `.cursor/rules/agent-offboarding.mdc` (create Session Note, update Decision Docket/TODO Log, validate links and timestamps, prep commit).
-- `/end-session <task-id>` — End session with minimal closure; prompts for Session Note if docs were modified per `.cursor/rules/agent-session-notes.mdc`.
-- `/onboard-next-agent <task-id>` — Generate a copy‑paste onboarding brief and save a handoff note so the next agent starts where we left off.
+- `/offboard <task-id>` — Run full offboarding per `.cursor/rules/agent-offboarding.mdc` (create Session NOTE, update Decision Docket/TODO Log, validate links and timestamps, prep commit).
+- `/end-session <task-id>` — End session with minimal closure; prompts for Session NOTE if docs were modified per `.cursor/rules/agent-session-notes.mdc`.
+- `/onboard-next-agent <task-id>` — Generate a copy‑paste onboarding brief and save a handoff NOTE so the next agent starts where we left off.
 
 See `.cursor/rules/agent-chat-commands.mdc` for details.
 

@@ -9,7 +9,7 @@ status: Active
 tags: [template, session-note, agent]
 ---
 
-# Session Note
+# Session NOTE
 
 - **Task ID**: [Brief description of the main task or ticket ID]
 - **Agent**: [Agent type/name]

@@ -1,6 +1,7 @@
 # ADR Template
 
 ---
+
 id: [TEAM]-ADR_[Title]
 title: [Descriptive Title]
 status: Proposed | Accepted | Rejected | Superseded

@@ -3,6 +3,7 @@
 This is an example ADR file referenced by the ADR template.
 
 ---
+
 id: ADR-0005
 title: Example ADR
 version: 1.0.0

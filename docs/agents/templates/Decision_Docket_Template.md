@@ -23,7 +23,7 @@ tags: [template, decision-docket, tracking]
 - **Options Considered**: [What alternatives were evaluated]
 - **Rationale**: [Why this option was chosen]
 - **Impact**: [What this affects]
-- **Links**: [PRD/commit/session note references]
+- **Links**: [PRD/commit/session NOTE references]
 - **Owner**: [Who made the decision]
 
 ### YYYY-MM-DD

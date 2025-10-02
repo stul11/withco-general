@@ -4,7 +4,7 @@ Scope & rules:
 
 - Only read the repo; do not commit code except for:
   - Edits to @TODO_Log.md
-  - Creation/update of a session note in docs/agents/session-notes/
+  - Creation/update of a session NOTE in docs/agents/session-notes/
   - Any other required artifacts or trackers specified in @offboard.md (e.g., Decision Docket updates)
 - Load and follow all instructions in @offboard.md at the end, including validations, artifact creation, and PR preparation.
 - Build a prioritized (easy/obvious first) action list focused on:
@@ -15,7 +15,7 @@ Scope & rules:
   (5) quick cleanups & dead files.
 - Produce all required outputs:
   A) Append a new, ISO-8601 dated section to @TODO_Log.md (bulleted, high→low priority)
-  B) Write a session note with full findings, file paths, and reasoning in docs/agents/session-notes/
+  B) Write a session NOTE with full findings, file paths, and reasoning in docs/agents/session-notes/
   C) Update any other global trackers or artifacts as required by @offboard.md (e.g., Decision Docket)
   D) Ensure all outputs have correct front matter and timestamps per repo standards
 

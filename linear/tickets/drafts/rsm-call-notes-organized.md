@@ -39,7 +39,7 @@ updated: "2025-01-27T18:00:00Z"
 - Asked public REIT clients for referrals
 - Target first year: ~500 forms, scaling significantly
 
-### Complexity Note
+### Complexity NOTE
 
 - Operating partnership creates administrative complexity
 - Adds estimate requirements for OP owners

@@ -165,7 +165,7 @@
 
 ### General Backlog
 
-*Outstanding backlog work is grouped below. Recently-closed backlog items are cataloged in the "Backlog History" reference for traceability.*
+_Outstanding backlog work is grouped below. Recently-closed backlog items are cataloged in the "Backlog History" reference for traceability._
 
 #### Open Work
 
@@ -207,11 +207,11 @@
 - 2025-10-01: Created docs/global/GLOSSARY.md and added ADR / Research Request templates (see `template-pt-1` session summary).
 - 2025-10-01: Captured LEG-PRD cost-input draft and background workflow updates (see `workflow-finalization` session summary).
 
-> *The history entries retain context without re-opening completed tasks.*
+> _The history entries retain context without re-opening completed tasks._
 
 ### Repository Cleanup (Resolved Scope)
 
-*The dedicated cleanup backlog from the January 27 effort remains closed. Historical items are retained here for reference while the active backlog now focuses on new follow-ups.*
+_The dedicated cleanup backlog from the January 27 effort remains closed. Historical items are retained here for reference while the active backlog now focuses on new follow-ups._
 
 - Naming consistency, template consolidation, stranded TODO cleanup, and directory structure fixes were closed in the 2025-01-27 `repo-cleanup-*` sessions.
 - Subsequent workflow documentation updates on 2025-10-01 verified there are no remaining high-priority cleanup tasks to track separately.

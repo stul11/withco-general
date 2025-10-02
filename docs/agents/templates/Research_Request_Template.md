@@ -1,6 +1,7 @@
 # Research Request Template
 
 ---
+
 id: [TEAM]-RES_[Title]
 title: [Descriptive Title]
 status: Draft | In Progress | Completed | Cancelled
