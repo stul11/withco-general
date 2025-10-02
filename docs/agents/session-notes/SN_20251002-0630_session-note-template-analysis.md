@@ -119,7 +119,7 @@ Analysis of Session_NOTE_Template.md references across the `.cursor/` directory 
 
 - `SN_20251002_granola-review-workflow-initial-implementation.md` - Missing several sections
 - `SN_20251001_workflow-finalization.md` - Comprehensive but non-standard structure
-- `SN_20251001_agent-offboarding.md` - Missing several required sections
+- `SN_20251001-0730_agent-offboarding.md` - Missing several required sections
 
 ## Recommendations
 

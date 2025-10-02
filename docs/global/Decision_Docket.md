@@ -208,7 +208,7 @@
 - **Options Considered**: Selective fixes, Remove references, Comprehensive fix with validation
 - **Rationale**: Comprehensive fix ensures documentation integrity and future maintainability; validations prevent regressions
 - **Impact**: All links now resolve; added example ADR to satisfy template references; enabled reliable offboarding workflow
-- **Links**: docs/agents/session-notes/SN_20251001_agent-offboarding.md, scripts/check_markdown_links.py, scripts/validate_iso_timestamps.py
+- **Links**: docs/agents/session-notes/SN_20251001-0730_agent-offboarding.md, scripts/check_markdown_links.py, scripts/validate_iso_timestamps.py
 - **Owner**: slittle
 
 ### 2025-10-01 (F)

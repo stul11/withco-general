@@ -30,14 +30,14 @@ tags: [session-note, audit, cleanup]
   - docs/raw/economics-cost-structure-initial-context.md
   - linear/docs/How_to_use_Linear.md
   - linear/tickets/drafts/excel-cost-analysis-funnel-integration.md
-  - docs/agents/session-notes/SN_20251001_agent-offboarding_handoff.md
+  - docs/agents/session-notes/SN_20251001-0000_agent-offboarding_handoff.md
 - **Context & Requirements**:
   - Perform full repo sweep for uncertainties, duplicated docs, stranded TODOs, and outdated backlog entries per background-clean-up-template.
   - Produce prioritized cleanup actions to append to TODO_Log.
   - Maintain session documentation and prep for offboarding per agent rules.
 - **Relevant Prior Work**:
   - SN_20250127_repo-cleanup-analysis.md (baseline cleanup inventory)
-  - SN_20251001_agent-offboarding_handoff.md (open follow-ups from previous session)
+  - SN_20251001-0000_agent-offboarding_handoff.md (open follow-ups from previous session)
   - Existing TODO_Log backlog sections spanning repository cleanup tasks.
 
 ---
@@ -74,7 +74,7 @@ tags: [session-note, audit, cleanup]
     - **Reasoning**: Without backlog item, these tasks remain invisible to planning.
   - **Outstanding offboarding handoff actions**:
     - **Description**: Handoff NOTE enumerates specific steps (run pre-commit, fix link checker findings, etc.) that remain unchecked.
-    - **File(s) Involved**: docs/agents/session-notes/SN_20251001_agent-offboarding_handoff.md
+    - **File(s) Involved**: docs/agents/session-notes/SN_20251001-0000_agent-offboarding_handoff.md
     - **Line Numbers/Sections**: L23-L28
     - **Reasoning**: These tasks block compliance of offboarding process; they should surface in TODO_Log for prioritization.
   - **Company documentation TODO**:
@@ -130,7 +130,7 @@ tags: [session-note, audit, cleanup]
 - docs/global/glossary/INFORMAL-GLOSSARY.md:L1-L77
 - docs/raw/cost-of-manufacturing-offering-context.md:L175-L188
 - linear/tickets/drafts/excel-cost-analysis-funnel-integration.md:L74-L82
-- docs/agents/session-notes/SN_20251001_agent-offboarding_handoff.md:L23-L28
+- docs/agents/session-notes/SN_20251001-0000_agent-offboarding_handoff.md:L23-L28
 - linear/docs/How_to_use_Linear.md:L146-L148
 - docs/raw/economics-cost-structure-initial-context.md:L1-L85
 - docs/Deal_Structure_Model_Spec.md:L58-L66
@@ -174,4 +174,3 @@ tags: [session-note, audit, cleanup]
 - **Status**: pending
 - **Date**: 2025-10-02T00:00:00Z
 - **Notes**: Review recommended during next cleanup implementation session.
-

@@ -8,7 +8,7 @@
 
 ## Required Reading (in order)
 
-1. docs/agents/session-notes/SN_20251001_agent-offboarding.md
+1. docs/agents/session-notes/SN_20251001-0730_agent-offboarding.md
 2. .cursor/commands/offboard.md
 3. .cursor/commands/onboard-next-agent.md
 4. docs/agents/workflows/Background_Agent_Draft_Review_Workflow.md
@@ -34,7 +34,7 @@ We implemented clear separation between company Linear documentation and persona
 
 ## Related Files
 
-- docs/agents/session-notes/SN_20251001_agent-offboarding.md
+- docs/agents/session-notes/SN_20251001-0730_agent-offboarding.md
 - .cursor/commands/offboard.md
 - .cursor/commands/end-session.md
 - .cursor/commands/onboard-next-agent.md

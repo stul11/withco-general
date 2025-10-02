@@ -30,6 +30,17 @@ End the current chat session with minimal closure while enforcing session note r
    - Require a Session Note per `.cursor/rules/agent-session-notes.mdc`.
    - Offer to create a new note from `docs/agents/templates/Session_Note_Template.md` in `docs/agents/session-notes/` using the provided `<task-id>`.
    - Prefill metadata (Agent, Owner, Date, Inputs, Outputs) and list changed files.
+   - Validate the Session Note includes all required sections:
+     - [ ] **Metadata**: Task ID, Agent, Owner, Date, Duration
+     - [ ] **Inputs & Context**: Key Documents/Files Provided, Context & Requirements, Relevant Prior Work
+     - [ ] **Full Findings**: Summary of Findings, Detailed Findings with Description/File(s)/Line Numbers/Reasoning/Supporting Evidence
+     - [ ] **Steps Taken**: Major Actions, Key Decisions, Tools/Methods Used
+     - [ ] **Outputs**: Files Created/Modified, Key Deliverables, Documented Decisions
+     - [ ] **Citations**: All sources referenced with precise file paths and line numbers
+     - [ ] **Risks & Issues Identified**: Potential Issues, Mitigation Strategies
+     - [ ] **Reasoning & Rationale**: Explanation of reasoning behind major actions/decisions
+     - [ ] **Next Actions**: Immediate Follow-ups, For Next Session, Pending Approvals/Decisions
+     - [ ] **Signoff**: Reviewer, Status, Date, Notes
    - Offer to update `docs/global/Decision_Docket.md` and `docs/global/TODO_Log.md`.
 4. Run validations (optional but recommended):
    - `python3 scripts/check_markdown_links.py`
@@ -41,7 +52,17 @@ End the current chat session with minimal closure while enforcing session note r
 
 1. Detect changed docs to decide whether a Session Note is required:
    - `git status --porcelain docs/agents docs/global docs/prds`
-2. If docs changed, ensure a session note exists and is populated (use `Session_Note_Template.md`). Name it `SN_YYYYMMDDHHMM_<task-id>.md` (24-hour UTC).
+2. If docs changed, ensure a Session Note exists, follows the naming convention (`SN_YYYYMMDD-HHMM_<task-id>.md`, 24-hour UTC rounded down to the nearest 15 minutes), and includes every required section:
+   - [ ] **Metadata**: Task ID, Agent, Owner, Date, Duration
+   - [ ] **Inputs & Context**: Key Documents/Files Provided, Context & Requirements, Relevant Prior Work
+   - [ ] **Full Findings**: Summary of Findings, Detailed Findings with Description/File(s)/Line Numbers/Reasoning/Supporting Evidence
+   - [ ] **Steps Taken**: Major Actions, Key Decisions, Tools/Methods Used
+   - [ ] **Outputs**: Files Created/Modified, Key Deliverables, Documented Decisions
+   - [ ] **Citations**: All sources referenced with precise file paths and line numbers
+   - [ ] **Risks & Issues Identified**: Potential Issues, Mitigation Strategies
+   - [ ] **Reasoning & Rationale**: Explanation of reasoning behind major actions/decisions
+   - [ ] **Next Actions**: Immediate Follow-ups, For Next Session, Pending Approvals/Decisions
+   - [ ] **Signoff**: Reviewer, Status, Date, Notes
 3. Optional validations (recommended):
    - If pre-commit is available: `pre-commit run --all-files`
    - Otherwise:

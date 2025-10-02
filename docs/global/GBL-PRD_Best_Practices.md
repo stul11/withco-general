@@ -249,4 +249,4 @@ repo_only: true
 ## Related Documents
 
 - [How to use Linear](../company/linear/How_to_use_Linear.md)
-- [Agent Artifacts Plan](../../docs/agents/session-notes/SN_20251001-0730_agent-offboarding.md)
+- [Agent Artifacts Plan](../agents/session-notes/SN_20251001-0730_agent-offboarding.md)

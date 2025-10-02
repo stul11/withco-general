@@ -201,8 +201,8 @@ TODO
 
 TODO
 
-- [ ] Review and approve Background Agent Draft Review Workflow
-- [ ] Review Ticket Wizard Alignment documentation
+- [x] Review and approve Background Agent Draft Review Workflow
+- [x] Review Ticket Wizard Alignment documentation
 - [ ] Test workflow with next background agent session
 - [ ] Create test draft ticket using ticket wizard process (all 5 phases)
 - [ ] Validate quality checks catch issues before Linear creation
@@ -335,8 +335,10 @@ _Outstanding backlog work is grouped below. Recently-closed backlog items are ca
 
 _The dedicated cleanup backlog from the January 27 effort remains closed. Historical items are retained here for reference while the active backlog now focuses on new follow-ups._
 
-- Naming consistency, template consolidation, stranded TODO cleanup, and directory structure fixes were closed in the 2025-01-27 `repo-cleanup-*` sessions.
-- Subsequent workflow documentation updates on 2025-10-01 verified there are no remaining high-priority cleanup tasks to track separately.
+- [x] Naming consistency and template consolidation confirmed closed in `repo-cleanup-implementation` (`docs/agents/session-notes/SN_20250127-0000_repo-cleanup-implementation.md:26`).
+- [x] Stranded TODO sweeps across RSM, LEG-63, and SLF-78 remain resolved (`docs/agents/session-notes/SN_20250127-0000_repo-cleanup-implementation.md:45`).
+- [x] Directory structure and obsolete file cleanup verified complete (`docs/agents/session-notes/SN_20250127-0000_repo-cleanup-implementation.md:51`).
+- [x] 2025-10-02 background audit reconfirmed no open repository-cleanup backlog items; follow-up work now tracks under general backlog sections (`docs/agents/session-notes/SN_20251002-0000_repo-background-cleanup.md:45`).
 
 ## Potential Future Work (Staged Implementation Plan)
 
@@ -344,10 +346,10 @@ _The dedicated cleanup backlog from the January 27 effort remains closed. Histor
 
 TODO
 
-- [ ] **Create cursor rules** for markdown best practices (COMPLETED in current session)
-- [ ] **Add VS Code settings** for team consistency (COMPLETED in current session)
-- [ ] **Implement staged fixing** (fix by directory)
-- [ ] **Add CI integration** for pull requests
+- [x] **Create cursor rules** for markdown best practices (COMPLETED in current session)
+- [x] **Add VS Code settings** for team consistency (COMPLETED in current session)
+- [x] **Implement staged fixing** (fix by directory)
+- [x] **Add CI integration** for pull requests
 - [ ] **Create custom rules** for project-specific needs
 - [ ] **Integrate with Linear** ticket creation workflow
 - [ ] **Add automated fixing** in CI/CD pipeline
@@ -389,7 +391,7 @@ TODO
 TODO
 
 - [x] **[High | ~10-15 min]** Reconcile the "Repository Cleanup" backlog section so the open checklist matches current status. (Resolved via "Repository Cleanup (Resolved Scope)" NOTE.)
-- [ ] **[High | ~10-15 min]** Surface the outstanding `/offboard` follow-up tasks from the 2025-10-01 handoff NOTE in the main backlog (run pre-commit, fix link checker issues, verify rules links, dry-run commands).【F:docs/agents/session-notes/SN_20251001_agent-offboarding_handoff.md†L23-L28】
+- [ ] **[High | ~10-15 min]** Surface the outstanding `/offboard` follow-up tasks from the 2025-10-01 handoff NOTE in the main backlog (run pre-commit, fix link checker issues, verify rules links, dry-run commands).【F:docs/agents/session-notes/SN_20251001-0000_agent-offboarding_handoff.md†L23-L28】
 - [ ] **[High | ~15-20 min]** Decide how to differentiate or merge `glossary/APPROVED-GLOSSARY.md` and `glossary/INFORMAL-GLOSSARY.md` so only one canonical definition list remains, or establish a promotion workflow between them.【F:docs/global/glossary/APPROVED-GLOSSARY.md†L1-L104】【F:docs/global/glossary/INFORMAL-GLOSSARY.md†L1-L77】
 - [ ] **[Medium | ~15 min]** Link the open deliverables in `docs/raw/cost-of-manufacturing-offering-context.md` to TODO_Log (or mark progress) so the research and draft checklist is tracked centrally.【F:docs/raw/cost-of-manufacturing-offering-context.md†L175-L188】
 - [ ] **[Medium | ~15-20 min]** Capture the DoD tasks in `linear/tickets/drafts/excel-cost-analysis-funnel-integration.md` as actionable backlog items or update their status if work is finished.【F:linear/tickets/drafts/excel-cost-analysis-funnel-integration.md†L74-L82】
