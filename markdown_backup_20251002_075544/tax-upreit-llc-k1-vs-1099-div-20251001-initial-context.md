@@ -1,0 +1,11 @@
+I am trying to understand in extreme detail exactly how tax form preparation works for a K-1 Property LLC and a K-1 + 1099-DIV UPREIT.
+
+Based on the context below, help me prepare a new research prompt that I can put into ChatGPT 5.0 Pro to get a response. The prompt should be returned in a markdown code block that ensures no escapes. The ultimate response should be returned in a series of tab delimited (calculations / tables) or markdown (text) files. Any calculations or tables should assume that I will copy/paste into cell A1 of excel and want to be able to have the calculations work.
+
+I want to understand the cost to prepare a 1099-DIV (which all REITs do) and when there are additional schedules involved that may change the cost or process of the ultimate end investor who is filing the taxes (whether online, via accountant).
+
+I want to understand if I should expect the preparation costs to change when there is a Schedule B or a Schedule D that the investor has to file. I want to get a link to what each of those forms is, from the IRS. I want to understand for Turbotax what software supports the filing under each of these scenarios as the "base" option. I want to understand the cost associated with each tier of turbotax, and what additional costs or upgrades you need to support the various forms. I want to understand any variables that change how much it costs and if there are additional things you have to file (e.g., investor already files K-1, what's incremental cost, same state?, different state?, same sponsor but multiple properties in a single state? What are all the combinations, what tier do you need to be on in turbotax, and what's the calculation for each scenario on the cost.
+
+For both scenarios I want to understand if getting "profit interests," promote (splits above a preferred dividend), phantom equity, etc. change what form you have to file, and under what circumstances. For example, if I'm and investor getting REIT preferred dividends, is there any circumstance where I would trigger an additional schedule, how does it work, what triggers (e.g., sale, return split over a hurdle etc.). Again, give me the combination of all the inputs scenarios, explain why the scenario exists, the turbotax type i need to be on, and the cost to file.
+
+All sources should include links that substantiate the claim.
