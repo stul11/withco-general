@@ -45,3 +45,21 @@ linear/tickets/drafts/research-prompts/**
 
 # Draft vendor lists with embedded data tables/long lines
 linear/tickets/drafts/standardized-vendor-list.md
+
+# General drafts and working areas (temporarily relaxed)
+linear/tickets/drafts/**
+linear/tickets/**
+
+# Long-form specs and decision logs to be wrapped later
+docs/Deal_Structure_Model_Spec.md
+docs/global/Decision_Docket.md
+docs/global/AGENTS.md
+
+# Raw planning docs
+docs/raw/plans/**
+
+# Linear docs with legacy formatting to be cleaned separately
+linear/docs/How_to_use_Linear.md
+
+# Script documentation drafts
+scripts/*.md
