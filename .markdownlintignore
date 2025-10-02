@@ -74,3 +74,6 @@ docs/global/**
 
 # All raw docs (temporary relax)
 docs/raw/**
+
+# Agents docs (temporary relax)
+docs/agents/**
