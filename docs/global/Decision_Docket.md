@@ -287,6 +287,6 @@
 - **Decision**: Proceed with Standard migration; enforce CREATED-rounded immutable filenames; batch 1 applied
 - **Context**: Phase 03 Standard migration
 - **Rationale**: Consistency and traceability
-- **Impact**: Many SN_ files normalized; references updated
+- **Impact**: Many SN\_ files normalized; references updated
 - **Links**: docs/agents/session-notes/SN_20251002-1130_phase-3-standard-migration.md
 - **Owner**: slittle

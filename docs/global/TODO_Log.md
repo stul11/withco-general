@@ -172,6 +172,8 @@
 
 ### uv Migration (Planning → Implementation)
 
+TODO
+
 - [ ] Create `pyproject.toml` and initialize `uv.lock` with core tools
 - [ ] Replace `pip` references in `scripts/README.md` with `uv` equivalents
 - [ ] Decide policy for `requirements.txt` (generated via `uv export` vs deprecate)
@@ -181,6 +183,8 @@
 ## Pending
 
 ### Next Agent Session (Awaiting User Approval)
+
+TODO
 
 - [ ] Review and approve Background Agent Draft Review Workflow
 - [ ] Review Ticket Wizard Alignment documentation
@@ -211,14 +215,14 @@ _Outstanding backlog work is grouped below. Recently-closed backlog items are ca
 #### Naming Conventions Rollout (New)
 
 - [ ] (AGENT) [MED] Inventory existing NOTE files that don't match `*_YYYYMMDD-HHMM_slug.md` patterns
-  source: docs/agents/session-notes/SN_20251002-0000_filename-preferences-global.md#next-actions
-  tags: naming, session-notes
+      source: docs/agents/session-notes/SN_20251002-0000_filename-preferences-global.md#next-actions
+      tags: naming, session-notes
 - [ ] (AGENT) [MED] Prepare Standard migration plan steps for renames and link updates
-  source: docs/raw/plans/2025-10-02_document-categorization-and-workflows.md#10-migration-plan-standard-and-gold
-  tags: naming, migration
+      source: docs/raw/plans/2025-10-02_document-categorization-and-workflows.md#10-migration-plan-standard-and-gold
+      tags: naming, migration
 - [ ] (AGENT) [MED] Run link checker and timestamp validator after renames to ensure integrity
-  source: .cursor/commands/offboard.md
-  tags: validation, links, timestamps
+      source: .cursor/commands/offboard.md
+      tags: validation, links, timestamps
 
 #### File Organization Enhancement Proposals (PROPOSALS - DO NOT IMPLEMENT)
 
@@ -261,6 +265,8 @@ _The dedicated cleanup backlog from the January 27 effort remains closed. Histor
 
 ### Phase 2: Short-term (Next 2 Weeks) - Enhanced Integration
 
+TODO
+
 - [ ] **Create cursor rules** for markdown best practices (COMPLETED in current session)
 - [ ] **Add VS Code settings** for team consistency (COMPLETED in current session)
 - [ ] **Implement staged fixing** (fix by directory)
@@ -271,6 +277,8 @@ _The dedicated cleanup backlog from the January 27 effort remains closed. Histor
 
 ### Phase 3: Long-term (Next Month) - Advanced Features
 
+TODO
+
 - [ ] **Custom rules** for your specific needs
 - [ ] **Automated fixing** in CI/CD
 - [ ] **Integration with Linear** ticket creation
@@ -280,6 +288,8 @@ _The dedicated cleanup backlog from the January 27 effort remains closed. Histor
 - [ ] **Integration with other tools** (Prettier, remark-lint, textlint)
 
 ### Alternative Implementation Options (Not Chosen)
+
+TODO
 
 - [ ] **remark-lint Integration** - Plugin-based markdown processor with 50+ linting plugins
 - [ ] **textlint Integration** - Pluggable system with 100+ plugins for text issues
@@ -298,6 +308,8 @@ _The dedicated cleanup backlog from the January 27 effort remains closed. Histor
 - Offboarding process is defined and ready for use; `/offboard` follow-ups stay grouped under "Next Agent Session" for execution.
 
 ### 2025-10-02T00:00:00Z - repo-background-cleanup
+
+TODO
 
 - [x] **[High | ~10-15 min]** Reconcile the "Repository Cleanup" backlog section so the open checklist matches current status. (Resolved via "Repository Cleanup (Resolved Scope)" NOTE.)
 - [ ] **[High | ~10-15 min]** Surface the outstanding `/offboard` follow-up tasks from the 2025-10-01 handoff NOTE in the main backlog (run pre-commit, fix link checker issues, verify rules links, dry-run commands).【F:docs/agents/session-notes/SN_20251001_agent-offboarding_handoff.md†L23-L28】
@@ -329,12 +341,16 @@ _The dedicated cleanup backlog from the January 27 effort remains closed. Histor
 
 ### 2025-10-02T04:05:19Z - background-cleanup-priority-refresh
 
+TODO
+
 - [x] **HIGH (10-15 min)**: Reconcile conflicting status entries in this log—`Repository Cleanup` items remain unchecked even though matching tasks are marked completed above. Normalize the open sections and refresh carryover notes for clarity.
 - [ ] **HIGH (15-20 min)**: Promote the open `TBD` fee defaults and hierarchy placeholders in `docs/Deal_Structure_Model_Spec.md` into actionable tasks (or fill them) so the modeling spec is ready for implementation.
 - [ ] **MEDIUM (15-20 min)**: Consolidate glossary sources—`docs/global/GLOSSARY.md` duplicates definitions from both Approved/Informal glossaries. Decide whether to merge or differentiate the files and align front matter statuses.
 - [ ] **LOW (5-10 min)**: Clean stale backlog references (e.g., `docs/prds/global/templates/agents/adr/`) that point to non-existent directories or already-resolved template issues to avoid future confusion.
 
 ### 2025-10-02T05:12:00Z - background-cleanup-priority-refresh-rerun
+
+TODO
 
 - [x] **HIGH (10-15 min)**: Re-run the repository cleanup reconciliation to confirm the backlog reflects only open work and that carryover notes point to the refreshed sections.
 - [ ] **MEDIUM (10-15 min)**: Review `Notes` and cross-reference sections to ensure future agents can quickly locate `/offboard` follow-ups and glossary consolidation tasks.
@@ -345,6 +361,8 @@ _The dedicated cleanup backlog from the January 27 effort remains closed. Histor
 - [x] **LOW (5-10 min)**: Create requirements.txt to pin Python tool versions and ease setup for contributors.
 
 ### 2025-10-02T06:10:00Z - granola-review-workflow-initial-implementation
+
+TODO
 
 - [x] Create docs-first paste-based Granola review workflow and command
 - [x] Add normalization/safety rules and auto-detect one vs two paste blocks
