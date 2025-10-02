@@ -61,5 +61,3 @@ session note consistency and deprecated documentation copies that could drift.
 - Prioritize the new backlog items with the maintainer.
 - When executing the cleanup, ensure session NOTE template compliance and update or retire the
   deprecated template copy per TODO guidance.
-
-

@@ -139,5 +139,3 @@ tags: [session-note, cleanup, audit]
 - [x] Filename matches `SN_YYYYMMDD-HHMM_slug-with-dashes.md`
 - [x] Frontmatter includes ISO `created` and `updated`
 - [x] Sections populated: Inputs & Context; Steps Taken; Outputs; Next Actions; Signoff
-
-
