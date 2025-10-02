@@ -39,3 +39,9 @@ docs/agents/session-notes/SN_*.md
 # Files with intentional emphasis instead of headings
 docs/raw/docs/withco-reit-and-op-high-level-term-sheet.md
 linear/tickets/drafts/research-prompts/try-shortcut-prompt-style-guide.md
+
+# Draft research prompts and long-form raw prompts (allow long lines)
+linear/tickets/drafts/research-prompts/**
+
+# Draft vendor lists with embedded data tables/long lines
+linear/tickets/drafts/standardized-vendor-list.md
