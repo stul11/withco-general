@@ -1,6 +1,6 @@
 # TODO Log
 
-- **Last Updated**: 2025-10-02T04:05:19Z
+- **Last Updated**: 2025-10-02T04:45:00Z
 - **Session**: background-cleanup-priority-refresh
 - **Owner**: slittle
 
@@ -124,6 +124,10 @@
 - [ ] Prepare example Agent Role Card and Session Note
 - [x] Add ADR and Research Request markdown templates
 - [ ] Publish agreed Best Practices into docs/global/GBL-PRD_Best_Practices.md
+- [ ] **[High | ~10-15 min]** Run `pre-commit run --all-files` for the agent-offboarding staging area and capture any failing hooks before fixes.
+- [ ] **[High | ~15-20 min]** Resolve broken links identified in the agent-offboarding handoff (README offboarding link, SLF-78 try-shortcut references, workflow rule/template links) so link validation passes.
+- [ ] **[High | ~10-15 min]** Re-verify all `.cursor/rules/*` and `docs/agents/workflows/*` links after fixes to ensure navigation from rules to workflows succeeds.
+- [ ] **[High | ~10-15 min]** Execute `/offboard --dry-run`, `/end-session --dry-run`, and `/onboard-next-agent --dry-run` to confirm the updated commands operate end-to-end.
 
 ### Repository Cleanup (High Priority)
 
