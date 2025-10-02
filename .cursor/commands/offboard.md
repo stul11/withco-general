@@ -45,7 +45,7 @@ Run the full offboarding checklist and close out the session according to reposi
    - `git status --porcelain docs/agents docs/global docs/prds`
 2. Ensure session note exists and is populated:
    - Create `docs/agents/session-notes/SN_YYYYMMDDHHMM_<task-id>.md` if missing using `docs/agents/templates/Session_Note_Template.md`
-   - Add sections: Objectives, Steps Taken, Outputs (with file paths), Citations (file:lines), Next Actions
+   - Add all required sections: Inputs & Context, Full Findings, Steps Taken, Outputs (with file paths), Citations (file:lines), Risks & Issues Identified, Reasoning & Rationale, Next Actions
 3. Update global trackers:
    - Append decisions to `docs/global/Decision_Docket.md`
    - Update status blocks in `docs/global/TODO_Log.md` (Completed/In Progress/Pending)
