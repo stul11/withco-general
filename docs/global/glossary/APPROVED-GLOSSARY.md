@@ -63,7 +63,7 @@ repo_only: true
 
 **ADR**: Architecture Decision Record – documents important architectural decisions with context, options considered, and rationale.
 
-**Session Note**: Documentation of an agent-assisted session, including objectives, steps taken, outputs, and decisions made.
+**Session NOTE**: Documentation of an agent-assisted session, including objectives, steps taken, outputs, and decisions made.
 
 **Decision Docket**: A rolling log of key decisions with rationale, maintained in `docs/global/Decision_Docket.md`.
 

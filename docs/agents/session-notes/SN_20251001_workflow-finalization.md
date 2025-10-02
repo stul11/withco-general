@@ -1,4 +1,4 @@
-# Session Note: Workflow Finalization and Agent Transition
+# Session NOTE: Workflow Finalization and Agent Transition
 
 **Session ID**: SN_20251001_workflow-finalization  
 **Date**: 2025-10-01T00:00:00Z  
@@ -47,7 +47,7 @@
 **Content**:
 
 - **Pre-Offboarding Checklist**: Documentation, files, work items
-- **Offboarding Actions**: Session note, Decision Docket, TODO Log, Git commit
+- **Offboarding Actions**: Session NOTE, Decision Docket, TODO Log, Git commit
 - **Handoff Package**: Required reading, context summary, next steps
 - **Implementation Validation**: Testing plan, success criteria
 - **Lessons Learned**: What worked, improvements, recommendations
@@ -157,7 +157,7 @@
    - Status: Complete, ready for execution
    - Purpose: Ensure smooth agent transitions
 
-3. **This Session Note**
+3. **This Session NOTE**
    - Location: `docs/agents/session-notes/SN_20251001_workflow-finalization.md`
    - Status: Complete
    - Purpose: Document session work and decisions
@@ -176,7 +176,7 @@
 - [x] Create offboarding checklist
 - [x] Prepare handoff package for next agent
 - [x] Document key decisions made
-- [x] Create session note
+- [x] Create session NOTE
 
 ### Pending User Action
 
@@ -396,7 +396,7 @@ feat: Define background agent draft review workflow - Session: workflow-finaliza
 - [x] Created comprehensive draft review workflow
 - [x] Finalized Global Work Log vs To-Do process definition
 - [x] Documented practical implementation steps
-- [x] Created session note for this session
+- [x] Created session NOTE for this session
 - [x] Aligned workflow with ticket wizard rule
 - [x] Updated Decision Docket with key decisions
 - [x] Updated TODO Log with carryover items
@@ -496,7 +496,7 @@ feat: Define background agent draft review workflow with ticket wizard integrati
 **Before Ending Session**:
 
 - [x] All documentation files created and saved
-- [x] Session note completed with appendix
+- [x] Session NOTE completed with appendix
 - [x] Workflow aligned with ticket wizard rule
 - [x] Decision Docket updated with 5 key decisions
 - [x] TODO Log updated with completed items and next steps
@@ -533,7 +533,7 @@ feat: Define background agent draft review workflow with ticket wizard integrati
 
 - ✅ Background Agent Draft Review Workflow (507 lines, ticket wizard integrated)
 - ✅ Ticket Wizard Alignment Review (325 lines)
-- ✅ Session Note with Offboarding Checklist (this document)
+- ✅ Session NOTE with Offboarding Checklist (this document)
 - ✅ Decision Docket updated (5 key decisions)
 - ✅ TODO Log updated (9 completed, 9 pending for next agent)
 
@@ -547,4 +547,4 @@ feat: Define background agent draft review workflow with ticket wizard integrati
 
 ---
 
-**End of Session Note**
+**End of Session NOTE**

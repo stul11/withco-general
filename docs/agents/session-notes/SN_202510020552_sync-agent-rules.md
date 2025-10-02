@@ -9,7 +9,7 @@ status: Active
 tags: [session-note, pr-review, merge, automation]
 ---
 
-# Session Note
+# Session NOTE
 
 - **Task ID**: sync-agent-rules
 - **Agent**: Claude (Cursor AI Assistant)

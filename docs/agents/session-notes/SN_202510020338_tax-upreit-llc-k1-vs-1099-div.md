@@ -9,7 +9,7 @@ status: Draft
 tags: [session-note, taxes, calculators, excel]
 ---
 
-# Session Note
+# Session NOTE
 
 - **Task ID**: tax-upreit-llc-k1-vs-1099-div
 - **Agent**: background coding assistant (Cursor)

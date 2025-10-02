@@ -1,4 +1,4 @@
-# Session Note
+# Session NOTE
 
 - **Task ID**: granola-review-workflow-initial-implementation
 - **Agent**: Background Agent (Cursor)
@@ -45,7 +45,7 @@
 ## Next Actions
 
 - Dry-run the flow on the provided sample using `/granola-review <link> --write draft`.
-- Optionally enable `--write global-todo` after confirming Global To‑Do issue fields.
+- Optionally enable `--write global-TODO` after confirming Global To‑Do issue fields.
 - Consider de-duplication across TODO entries by title+owner+due hash.
 
 ## Signoff

@@ -1,4 +1,4 @@
-# Session Note
+# Session NOTE
 
 - **Task ID**: repo-cleanup-analysis
 - **Agent**: Background Agent
@@ -31,7 +31,7 @@
 ## Citations
 
 - `docs/global/TODO_Log.md` - Added new cleanup section
-- `docs/agents/session-notes/SN_20250127_repo-cleanup-analysis.md` - This session note
+- `docs/agents/session-notes/SN_20250127_repo-cleanup-analysis.md` - This session NOTE
 - Multiple files analyzed for inconsistencies and stranded TODOs
 
 ## Risks Identified

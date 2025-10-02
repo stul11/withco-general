@@ -1,9 +1,19 @@
 # Decision Docket
 
-- **Last Updated**: 2025-01-27T17:45:00Z
+- **Last Updated**: 2025-01-27T20:30:00Z
 - **Owner**: slittle
 
 ## Recent Decisions
+
+### 2025-01-27 (E)
+
+- **Decision**: Implement markdownlint as primary markdown linting solution
+- **Context**: Repository had extensive markdown formatting issues (854+ linting problems) with only custom validation scripts
+- **Options Considered**: markdownlint, remark-lint, textlint, Mega-Linter, Prettier + markdownlint hybrid
+- **Rationale**: markdownlint provides industry standard solution with auto-fix capabilities, VS Code integration, and gradual adoption through relaxed rules
+- **Impact**: Complete markdownlint integration with auto-fix, pre-commit hooks, VS Code settings, and comprehensive fix script; 854+ issues identified for manual resolution
+- **Links**: docs/agents/session-notes/SN_20250127_markdownlint-implementation.md, .markdownlint.json, scripts/fix-markdown.sh, .vscode/settings.json
+- **Owner**: slittle
 
 ### 2025-01-27 (D)
 
@@ -21,18 +31,18 @@
 - **Context**: Local and remote branches had diverged during PR merge process, requiring reconciliation
 - **Options Considered**: Merge strategy, rebase strategy, fast-forward only
 - **Rationale**: Merge strategy preserves history and follows background agent branch management workflow; safer for divergent branches
-- **Impact**: Successfully resolved merge conflicts while maintaining comprehensive session note validation; repository now synchronized
+- **Impact**: Successfully resolved merge conflicts while maintaining comprehensive session NOTE validation; repository now synchronized
 - **Links**: docs/agents/session-notes/SN_20250127_repo-cleanup-and-merge.md, .cursor/commands/offboard.md
 - **Owner**: slittle
 
 ### 2025-01-27 (B)
 
-- **Decision**: Session Note Template Consistency Analysis and Enhancement Proposals
-- **Context**: Review of all Session_Note_Template.md references revealed inconsistencies in required sections and purpose clarity across .cursor/ commands
+- **Decision**: Session NOTE Template Consistency Analysis and Enhancement Proposals
+- **Context**: Review of all Session_NOTE_Template.md references revealed inconsistencies in required sections and purpose clarity across .cursor/ commands
 - **Options Considered**: Fix immediate inconsistencies only; Create comprehensive enhancement proposals; Document findings without changes
 - **Rationale**: Comprehensive analysis needed to prevent future inconsistencies; proposals marked clearly to avoid accidental implementation
 - **Impact**: 7 enhancement proposals added to TODO_Log.md under "PROPOSALS - DO NOT IMPLEMENT" section; critical inconsistency in /offboard command identified (lists 5 sections instead of 11 required)
-- **Links**: docs/global/TODO_Log.md (Session Notes Workflow Enhancement Proposals), .cursor/commands/offboard.md:L30, docs/agents/templates/Session_Note_Template.md
+- **Links**: docs/global/TODO_Log.md (Session Notes Workflow Enhancement Proposals), .cursor/commands/offboard.md:L30, docs/agents/templates/Session_NOTE_Template.md
 - **Owner**: slittle
 
 ### 2025-10-02 (H)

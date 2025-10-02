@@ -1,10 +1,24 @@
 # TODO Log
 
-- **Last Updated**: 2025-01-27T17:45:00Z
-- **Session**: 00-key-docs-creation
+- **Last Updated**: 2025-01-27T20:30:00Z
+- **Session**: markdownlint-implementation
 - **Owner**: slittle
 
 ## Completed
+
+### Session: markdownlint-implementation (2025-01-27)
+
+- [x] Install markdownlint-cli globally
+- [x] Create .markdownlint.json with relaxed initial rules
+- [x] Add markdownlint to pre-commit hooks
+- [x] Run markdownlint --fix on all existing files
+- [x] Create cursor rules for markdown best practices
+- [x] Create scripts/fix-markdown.sh command
+- [x] Add VS Code settings for markdownlint integration
+- [x] Test the complete markdownlint integration
+- [x] Create comprehensive session note documenting implementation
+- [x] Update Decision Docket with markdownlint decision
+- [x] Update TODO Log with completed items and potential future phases
 
 ### Session: 00-key-docs-creation (2025-01-27)
 
@@ -12,7 +26,7 @@
 - [x] Add symlinks for Decision Docket and TODO Log
 - [x] Commit changes with descriptive message
 - [x] Verify symlink functionality and file explorer improvement
-- [x] Create comprehensive session note documenting file organization decision
+- [x] Create comprehensive session NOTE documenting file organization decision
 
 ### Session: repo-cleanup-and-merge (2025-01-27)
 
@@ -24,7 +38,7 @@
 - [x] Resolve merge conflicts in offboard command
 - [x] Push all changes to origin/master
 - [x] Clean up merged local branches
-- [x] Create comprehensive session note documenting all actions
+- [x] Create comprehensive session NOTE documenting all actions
 
 ### Session: sync-agent-rules (2025-10-02)
 
@@ -52,7 +66,7 @@
 - [x] Add read-only banner and separation notes for company docs
 - [x] Normalize filenames; move non-draft data out of drafts
 - [x] Add link checker, ISO timestamp validator, and pre-commit hooks
-- [x] Create/Update session note and stage changes for review
+- [x] Create/Update session NOTE and stage changes for review
 - [x] Fix broken markdown links across repo; add example ADR; commit changes
 
 ### Session: template-pt-1 (2025-10-01)
@@ -108,7 +122,7 @@
 - [x] Define Global Work Log vs To-Do project process distinction
 - [x] Establish file organization structure for drafts
 - [x] Integrate safety checks into workflow phases
-- [x] Create session note with offboarding checklist
+- [x] Create session NOTE with offboarding checklist
 - [x] Update Decision Docket with key decisions
 - [x] Update TODO Log with carryover items
 
@@ -144,7 +158,7 @@
 
 ### General Backlog
 
-_Outstanding backlog work is grouped below. Recently-closed backlog items are cataloged in the "Backlog History" reference for traceability._
+*Outstanding backlog work is grouped below. Recently-closed backlog items are cataloged in the "Backlog History" reference for traceability.*
 
 #### Open Work
 
@@ -154,8 +168,8 @@ _Outstanding backlog work is grouped below. Recently-closed backlog items are ca
 - [ ] Document folder and taxonomy expectations for `docs/agents/templates/` (successor to the removed ADR subdirectory)
 - [ ] Document agent artifacts framework (Role Card, Context Pack, Playbook, ADRs)
 - [ ] Define onboarding and offboarding checklists for agents
-- [ ] Define session note format and decision docket process
-- [ ] Prepare example Agent Role Card and Session Note
+- [ ] Define session NOTE format and decision docket process
+- [ ] Prepare example Agent Role Card and Session NOTE
 - [ ] Publish agreed Best Practices into docs/global/GBL-PRD_Best_Practices.md
 
 #### File Organization Enhancement Proposals (PROPOSALS - DO NOT IMPLEMENT)
@@ -169,13 +183,13 @@ _Outstanding backlog work is grouped below. Recently-closed backlog items are ca
 
 #### Session Notes Workflow Enhancement Proposals (PROPOSALS - DO NOT IMPLEMENT)
 
-- [x] **[PROPOSAL]** Fix `/offboard` command to list all 11 required session note sections instead of just 5 (currently missing: Full Findings, Risks & Issues Identified, Reasoning & Rationale, Signoff)
+- [x] **[PROPOSAL]** Fix `/offboard` command to list all 11 required session NOTE sections instead of just 5 (currently missing: Full Findings, Risks & Issues Identified, Reasoning & Rationale, Signoff)
 - [ ] **[PROPOSAL]** Clarify `/granola-review` purpose: Should it create session notes or separate meeting notes? Currently conflates agent work sessions with meeting documentation
-- [ ] **[PROPOSAL]** Create session note categorization system: Agent Work Sessions vs Meeting Notes vs Process Documentation vs Research Sessions
-- [x] **[PROPOSAL]** Add session note validation checklist to ensure all required sections are populated before offboarding
-- [ ] **[PROPOSAL]** Standardize session note naming convention: Currently inconsistent between `SN_YYYYMMDD_` and `SN_YYYYMMDDHHMM_` patterns
-- [ ] **[PROPOSAL]** Create session note template variants for different use cases (agent work, meeting notes, research sessions)
-- [ ] **[PROPOSAL]** Add session note completeness scoring system to track quality and consistency over time
+- [ ] **[PROPOSAL]** Create session NOTE categorization system: Agent Work Sessions vs Meeting Notes vs Process Documentation vs Research Sessions
+- [x] **[PROPOSAL]** Add session NOTE validation checklist to ensure all required sections are populated before offboarding
+- [ ] **[PROPOSAL]** Standardize session NOTE naming convention: Currently inconsistent between `SN_YYYYMMDD_` and `SN_YYYYMMDDHHMM_` patterns
+- [ ] **[PROPOSAL]** Create session NOTE template variants for different use cases (agent work, meeting notes, research sessions)
+- [ ] **[PROPOSAL]** Add session NOTE completeness scoring system to track quality and consistency over time
 - [ ] **[High | ~10-15 min]** Run `pre-commit run --all-files` for the agent-offboarding staging area and capture any failing hooks before fixes.
 - [x] **[High | ~15-20 min]** Resolve broken links identified in the agent-offboarding handoff (README offboarding link, SLF-78 try-shortcut references, workflow rule/template links) so link validation passes.
 - [x] **[High | ~10-15 min]** Re-verify all `.cursor/rules/*` and `docs/agents/workflows/*` links after fixes to ensure navigation from rules to workflows succeeds.
@@ -186,14 +200,44 @@ _Outstanding backlog work is grouped below. Recently-closed backlog items are ca
 - 2025-10-01: Created docs/global/GLOSSARY.md and added ADR / Research Request templates (see `template-pt-1` session summary).
 - 2025-10-01: Captured LEG-PRD cost-input draft and background workflow updates (see `workflow-finalization` session summary).
 
-> _The history entries retain context without re-opening completed tasks._
+> *The history entries retain context without re-opening completed tasks.*
 
 ### Repository Cleanup (Resolved Scope)
 
-_The dedicated cleanup backlog from the January 27 effort remains closed. Historical items are retained here for reference while the active backlog now focuses on new follow-ups._
+*The dedicated cleanup backlog from the January 27 effort remains closed. Historical items are retained here for reference while the active backlog now focuses on new follow-ups.*
 
 - Naming consistency, template consolidation, stranded TODO cleanup, and directory structure fixes were closed in the 2025-01-27 `repo-cleanup-*` sessions.
 - Subsequent workflow documentation updates on 2025-10-01 verified there are no remaining high-priority cleanup tasks to track separately.
+
+## Potential Future Work (Staged Implementation Plan)
+
+### Phase 2: Short-term (Next 2 Weeks) - Enhanced Integration
+
+- [ ] **Create cursor rules** for markdown best practices (COMPLETED in current session)
+- [ ] **Add VS Code settings** for team consistency (COMPLETED in current session)
+- [ ] **Implement staged fixing** (fix by directory)
+- [ ] **Add CI integration** for pull requests
+- [ ] **Create custom rules** for project-specific needs
+- [ ] **Integrate with Linear** ticket creation workflow
+- [ ] **Add automated fixing** in CI/CD pipeline
+
+### Phase 3: Long-term (Next Month) - Advanced Features
+
+- [ ] **Custom rules** for your specific needs
+- [ ] **Automated fixing** in CI/CD
+- [ ] **Integration with Linear** ticket creation
+- [ ] **Documentation generation** from linting results
+- [ ] **Team training** on markdown best practices
+- [ ] **Performance optimization** for large repositories
+- [ ] **Integration with other tools** (Prettier, remark-lint, textlint)
+
+### Alternative Implementation Options (Not Chosen)
+
+- [ ] **remark-lint Integration** - Plugin-based markdown processor with 50+ linting plugins
+- [ ] **textlint Integration** - Pluggable system with 100+ plugins for text issues
+- [ ] **Mega-Linter Integration** - Runs 70+ linters simultaneously across all file types
+- [ ] **SonarQube Integration** - Enterprise-grade code quality with 1000+ rules per language
+- [ ] **Prettier + markdownlint Hybrid** - Prettier handles formatting, markdownlint handles content rules
 
 ## Blocked
 
@@ -207,8 +251,8 @@ _The dedicated cleanup backlog from the January 27 effort remains closed. Histor
 
 ### 2025-10-02T00:00:00Z - repo-background-cleanup
 
-- [x] **[High | ~10-15 min]** Reconcile the "Repository Cleanup" backlog section so the open checklist matches current status. (Resolved via "Repository Cleanup (Resolved Scope)" note.)
-- [ ] **[High | ~10-15 min]** Surface the outstanding `/offboard` follow-up tasks from the 2025-10-01 handoff note in the main backlog (run pre-commit, fix link checker issues, verify rules links, dry-run commands).【F:docs/agents/session-notes/SN_20251001_agent-offboarding_handoff.md†L23-L28】
+- [x] **[High | ~10-15 min]** Reconcile the "Repository Cleanup" backlog section so the open checklist matches current status. (Resolved via "Repository Cleanup (Resolved Scope)" NOTE.)
+- [ ] **[High | ~10-15 min]** Surface the outstanding `/offboard` follow-up tasks from the 2025-10-01 handoff NOTE in the main backlog (run pre-commit, fix link checker issues, verify rules links, dry-run commands).【F:docs/agents/session-notes/SN_20251001_agent-offboarding_handoff.md†L23-L28】
 - [ ] **[High | ~15-20 min]** Decide how to differentiate or merge `glossary/APPROVED-GLOSSARY.md` and `glossary/INFORMAL-GLOSSARY.md` so only one canonical definition list remains, or establish a promotion workflow between them.【F:docs/global/glossary/APPROVED-GLOSSARY.md†L1-L104】【F:docs/global/glossary/INFORMAL-GLOSSARY.md†L1-L77】
 - [ ] **[Medium | ~15 min]** Link the open deliverables in `docs/raw/cost-of-manufacturing-offering-context.md` to TODO_Log (or mark progress) so the research and draft checklist is tracked centrally.【F:docs/raw/cost-of-manufacturing-offering-context.md†L175-L188】
 - [ ] **[Medium | ~15-20 min]** Capture the DoD tasks in `linear/tickets/drafts/excel-cost-analysis-funnel-integration.md` as actionable backlog items or update their status if work is finished.【F:linear/tickets/drafts/excel-cost-analysis-funnel-integration.md†L74-L82】

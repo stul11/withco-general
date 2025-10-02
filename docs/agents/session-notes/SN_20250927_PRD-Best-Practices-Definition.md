@@ -1,4 +1,4 @@
-# Session Note
+# Session NOTE
 
 - **Task ID**: PRD-Best-Practices-Definition
 - **Agent**: GPT-5-Pro
@@ -10,7 +10,7 @@
 
 - withco-general/linear/docs/How_to_use_Linear.md
 - .cursor/rules/planning-mode.mdc
-- .cursor/rules/todo-cursor.mdc
+- .cursor/rules/TODO-cursor.mdc
 - .cursor/rules/datetime-format.mdc
 - User requirements for PRD templates and offboarding process
 
@@ -29,7 +29,7 @@
 - withco-general/docs/global/TODO_Log.md (persistent TODO tracking)
 - withco-general/docs/global/Decision_Docket.md (decision history)
 - .cursor/rules/agent-offboarding.mdc (offboarding workflow rule)
-- withco-general/docs/agents/templates/ (Session Note, TODO Log, Decision Docket templates)
+- withco-general/docs/agents/templates/ (Session NOTE, TODO Log, Decision Docket templates)
 - withco-general/docs/raw/plans/2025-09-27_agent-artifacts-and-workflows.md
 - withco-general/docs/raw/plans/2025-09-27_pydantic-schema-review-agent.md
 - Directory structure: /docs/global/, /docs/prds/, /docs/agents/
@@ -38,7 +38,7 @@
 
 - withco-general/linear/docs/How_to_use_Linear.md:1-160
 - .cursor/rules/planning-mode.mdc:1-143
-- .cursor/rules/todo-cursor.mdc:1-34
+- .cursor/rules/TODO-cursor.mdc:1-34
 - .cursor/rules/datetime-format.mdc:1-33
 
 ## Risks Identified

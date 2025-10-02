@@ -9,7 +9,7 @@ status: Active
 tags: [session-note, file-organization, symlinks]
 ---
 
-# Session Note
+# Session NOTE
 
 - **Task ID**: 00-key-docs-creation
 - **Agent**: Claude (Cursor AI Assistant)

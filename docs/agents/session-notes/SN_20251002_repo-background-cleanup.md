@@ -9,7 +9,7 @@ status: Draft
 tags: [session-note, audit, cleanup]
 ---
 
-# Session Note
+# Session NOTE
 
 - **Task ID**: repo-background-cleanup
 - **Agent**: background-analysis
@@ -73,7 +73,7 @@ tags: [session-note, audit, cleanup]
     - **Line Numbers/Sections**: L74-L82
     - **Reasoning**: Without backlog item, these tasks remain invisible to planning.
   - **Outstanding offboarding handoff actions**:
-    - **Description**: Handoff note enumerates specific steps (run pre-commit, fix link checker findings, etc.) that remain unchecked.
+    - **Description**: Handoff NOTE enumerates specific steps (run pre-commit, fix link checker findings, etc.) that remain unchecked.
     - **File(s) Involved**: docs/agents/session-notes/SN_20251001_agent-offboarding_handoff.md
     - **Line Numbers/Sections**: L23-L28
     - **Reasoning**: These tasks block compliance of offboarding process; they should surface in TODO_Log for prioritization.
@@ -114,7 +114,7 @@ tags: [session-note, audit, cleanup]
 ## Outputs
 
 - **Files Created/Modified**:
-  - docs/agents/session-notes/SN_20251002_repo-background-cleanup.md (this session note)
+  - docs/agents/session-notes/SN_20251002_repo-background-cleanup.md (this session NOTE)
   - docs/global/TODO_Log.md (pending new prioritized section)
 - **Key Deliverables**:
   - Consolidated findings captured here and in TODO_Log update.

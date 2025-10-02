@@ -9,7 +9,7 @@ status: Draft
 tags: [session-note, audit, cleanup]
 ---
 
-# Session Note
+# Session NOTE
 
 - **Task ID**: background-cleanup-priority-refresh
 - **Agent**: gpt-5-codex
@@ -85,7 +85,7 @@ tags: [session-note, audit, cleanup]
 ## Outputs
 
 - **Files Created/Modified**:
-  - `docs/agents/session-notes/SN_20251002_background-cleanup-priority-refresh.md` (this session note).
+  - `docs/agents/session-notes/SN_20251002_background-cleanup-priority-refresh.md` (this session NOTE).
   - `docs/global/TODO_Log.md` (appended prioritized follow-up section and refreshed metadata).
 - **Key Deliverables**:
   - New high-to-low priority action list capturing unresolved cleanup tasks.

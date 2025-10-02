@@ -9,7 +9,7 @@ status: Active
 tags: [session-note, repo-cleanup, merge, pr-review]
 ---
 
-# Session Note
+# Session NOTE
 
 - **Task ID**: repo-cleanup-and-merge
 - **Agent**: Claude Sonnet 4
@@ -34,7 +34,7 @@ tags: [session-note, repo-cleanup, merge, pr-review]
 - **Relevant Prior Work**:
   - Previous PR merges (#19, #20, #21) were successful
   - Background agent safety rules in place
-  - Session note template standardization completed
+  - Session NOTE template standardization completed
 
 ---
 
@@ -51,8 +51,8 @@ tags: [session-note, repo-cleanup, merge, pr-review]
 
   - **Description**: Repository status showed clean working tree with 2 modified files
   - **File(s) Involved**: `.cursor/commands/offboard.md`, `docs/agents/session-notes/SN_202510020552_sync-agent-rules.md`
-  - **Line Numbers/Sections**: L60-L69 (offboard.md), L37-L140 (session note)
-  - **Reasoning**: Modified files contained improvements to offboard command validation and session note formatting
+  - **Line Numbers/Sections**: L60-L69 (offboard.md), L37-L140 (session NOTE)
+  - **Reasoning**: Modified files contained improvements to offboard command validation and session NOTE formatting
   - **Supporting Evidence**: Git status showed "Changes not staged for commit" for these files
 
   - **Description**: Untracked files included Python virtual environment and cache directories
@@ -105,12 +105,12 @@ tags: [session-note, repo-cleanup, merge, pr-review]
   - `.gitignore` (created - added Python virtual environment and cache file patterns)
   - `.cursor/commands/offboard.md` (modified - resolved merge conflicts, kept comprehensive validation)
   - `docs/agents/session-notes/SN_202510020552_sync-agent-rules.md` (modified - improved formatting)
-  - `docs/agents/session-notes/SN_20250127_repo-cleanup-and-merge.md` (created - this session note)
+  - `docs/agents/session-notes/SN_20250127_repo-cleanup-and-merge.md` (created - this session NOTE)
 
 - **Key Deliverables**:
 
   - Successfully merged 3 outstanding pull requests (#22, #23, #24)
-  - Resolved merge conflicts maintaining comprehensive session note validation
+  - Resolved merge conflicts maintaining comprehensive session NOTE validation
   - Cleaned up untracked files and improved repository hygiene
   - Repository now in clean state, synchronized with origin/master
 
@@ -123,7 +123,7 @@ tags: [session-note, repo-cleanup, merge, pr-review]
 
 ## Citations
 
-- `docs/agents/templates/Session_Note_Template.md:L1-L108` (session note template)
+- `docs/agents/templates/Session_Note_Template.md:L1-L108` (session NOTE template)
 - `.cursor/commands/offboard.md:L59-L69` (offboard command validation checklist)
 - `docs/global/TODO_Log.md:L201-L232` (TODO log reference)
 - Background agent branch management workflow rules

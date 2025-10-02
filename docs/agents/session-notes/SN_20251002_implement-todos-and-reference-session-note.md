@@ -1,6 +1,6 @@
-# Session Note
+# Session NOTE
 
-- **Task ID**: implement-todos-and-reference-session-note
+- **Task ID**: implement-todos-and-reference-session-NOTE
 - **Agent**: Background Agent
 - **Owner**: slittle
 - **Date**: 2025-10-02T06:30:00Z
@@ -9,7 +9,7 @@
 ## Inputs & Context
 
 - TODO_Log.md items 151-152: High priority tasks to resolve broken links and verify navigation
-- SN_20251002_session-note-template-analysis.md: Analysis of session note template consistency issues
+- SN_20251002_session-NOTE-template-analysis.md: Analysis of session NOTE template consistency issues
 - Agent-offboarding handoff documentation identifying specific broken links
 - Repository link checker and validation scripts
 
@@ -23,7 +23,7 @@
 - `docs/agents/workflows/Background_Agent_Draft_Review_Workflow.md` → Multiple `.cursor/rules/*` files ✅
 - All referenced rule files exist and are accessible ✅
 
-**Session Note Analysis Reference**: The analysis in SN_20251002_session-note-template-analysis.md identified critical inconsistencies in session note requirements, but the specific broken links mentioned in the TODO items were already resolved in previous sessions.
+**Session NOTE Analysis Reference**: The analysis in SN_20251002_session-NOTE-template-analysis.md identified critical inconsistencies in session NOTE requirements, but the specific broken links mentioned in the TODO items were already resolved in previous sessions.
 
 ## Steps Taken
 
@@ -42,7 +42,7 @@
 ## Citations
 
 - `docs/global/TODO_Log.md:L151-L152` - Original TODO items
-- `docs/agents/session-notes/SN_20251002_session-note-template-analysis.md` - Referenced analysis
+- `docs/agents/session-notes/SN_20251002_session-NOTE-template-analysis.md` - Referenced analysis
 - `scripts/check_markdown_links.py` - Link validation script
 - `.cursor/rules/agent-chat-commands.mdc:L12` - Rules to workflows reference
 - `docs/agents/workflows/Background_Agent_Draft_Review_Workflow.md:L502-L527` - Workflow to rules references
@@ -61,12 +61,12 @@ The TODO items referenced broken links that were already resolved in previous ag
 2. **Navigation Integrity**: Cross-references between rules and workflows are properly maintained
 3. **File Accessibility**: All referenced files exist and are accessible
 
-The session note template analysis provided valuable context about consistency issues, but the specific broken links mentioned in the TODO items were not present in the current repository state.
+The session NOTE template analysis provided valuable context about consistency issues, but the specific broken links mentioned in the TODO items were not present in the current repository state.
 
 ## Next Actions
 
 - **Immediate**: None - tasks completed successfully
-- **Follow-up**: Consider implementing the session note enhancement proposals from the analysis
+- **Follow-up**: Consider implementing the session NOTE enhancement proposals from the analysis
 - **Monitoring**: Continue to validate links during future sessions
 
 ## Signoff

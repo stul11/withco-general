@@ -1,4 +1,4 @@
-# Session Note
+# Session NOTE
 
 - **Task ID**: ticket-workflows-v1
 - **Agent**: Background Agent (Cursor)

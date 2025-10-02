@@ -4,7 +4,7 @@
 
 - Commands added: /offboard, /end-session, /onboard-next-agent; safety + read-only company doc separation enforced.
 - Repo cleanup: normalized filenames, moved non-draft data, added link/timestamp validation and pre-commit.
-- Offboarding note created; changes staged; broken links remain to fix next.
+- Offboarding NOTE created; changes staged; broken links remain to fix next.
 
 ## Required Reading (in order)
 
