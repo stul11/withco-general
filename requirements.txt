@@ -1,0 +1,42 @@
+# Python Dependencies
+
+This file lists the Python packages required for repository scripts and tools.
+
+## Core Dependencies
+
+# YAML parsing for rule front matter
+pyyaml>=6.0
+
+# Testing framework
+pytest>=7.0
+
+# Pre-commit hooks and validation
+pre-commit>=3.0
+
+# Additional YAML support (ruamel.yaml for advanced YAML features)
+ruamel.yaml>=0.18.0
+
+# TOML parsing (if needed for future config files)
+toml>=0.10.0
+
+## Development Dependencies
+
+# For development and testing
+pytest>=7.0
+pre-commit>=3.0
+
+## Installation
+
+```bash
+# Install all dependencies
+pip install -r requirements.txt
+
+# Or install specific packages
+pip install pyyaml pytest pre-commit
+```
+
+## Usage
+
+- **sync_agents_rules.py**: Requires `pyyaml` for parsing rule front matter
+- **Testing**: Run `pytest` to execute test suite
+- **Pre-commit**: Run `pre-commit install` to set up git hooks

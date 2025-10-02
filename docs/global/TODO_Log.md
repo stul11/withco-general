@@ -195,3 +195,8 @@ _The dedicated cleanup backlog from the January 27 effort remains closed. Histor
 
 - [x] **HIGH (10-15 min)**: Re-run the repository cleanup reconciliation to confirm the backlog reflects only open work and that carryover notes point to the refreshed sections.
 - [ ] **MEDIUM (10-15 min)**: Review `Notes` and cross-reference sections to ensure future agents can quickly locate `/offboard` follow-ups and glossary consolidation tasks.
+
+### 2025-10-02T05:50:00Z - pr-merge-followups
+
+- [ ] **LOW (5-10 min)**: Add scripts/README.md documenting `scripts/sync_agents_rules.py` usage and required dependencies (`pyyaml`) for new contributors.
+- [ ] **LOW (5-10 min)**: Create requirements.txt to pin Python tool versions and ease setup for contributors.
