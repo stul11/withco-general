@@ -207,3 +207,9 @@
 # TODO [Open] id=TODO-Log-207 Run a dry-run on sample content using `/granola-review <link> --write draft` and validate outputs
 # TODO [Open] id=TODO-Log-208 (AGENT) [MED] Align /offboard required sections across commands
 
+# TODO [Open] id=TODO-Log-401 Convert checkbox backlog sections to Option 3 schema — docs/global/TODO_Log.md (Next Agent Session, Naming Conventions Rollout)
+# TODO [Open] id=TODO-Log-402 Backfill phase-02 session notes with template front matter — docs/agents/session-notes/SN_20251002-1045_phase-02-sample-items.md
+# TODO [Open] id=TODO-Log-403 Relocate standardized vendor reference out of linear/tickets/drafts — linear/tickets/drafts/standardized-vendor-list.md
+# TODO [Open] id=TODO-Log-404 Refresh rename index with actual targets — docs/indexes/renames-2025-10-02.md
+# TODO [Open] id=TODO-Log-405 Regenerate TODO.codelens.todo to match Markdown backlog — docs/global/TODO.codelens.todo
+

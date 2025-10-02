@@ -8,7 +8,7 @@
 
 ### Session: phase-04-implementation-1 (2025-10-02)
 
-- [x] Resolve `.pre-commit-config.yaml` conflict; keep `sync-todo-codelens` enabled <!-- id: TODO-20251002-211 -->
+- [x] Resolve `.pre-commit-config.yaml` conflict; keep `sync-TODO-codelens` enabled <!-- id: TODO-20251002-211 -->
 - [x] Add CI workflow to run lint, link, timestamp, and sidecar drift checks <!-- id: TODO-20251002-212 -->
 - [x] Add docs/README and update docs/global/README with CodeLens usage <!-- id: TODO-20251002-213 -->
 - [x] Add Session NOTE checklist to template and cross-link from AGENTS <!-- id: TODO-20251002-214 -->
@@ -19,7 +19,7 @@
 - [x] Add `/TODO-add` behavior for ID assignment and sidecar sync <!-- id: TODO-20251002-002 -->
 - [x] Add rule addendum for sidecar requirements <!-- id: TODO-20251002-003 -->
 - [x] Wire pre-commit drift check for sidecars <!-- id: TODO-20251002-004 -->
-- [x] Generate initial `docs/global/TODO.codelens.todo` sidecar <!-- id: TODO-20251002-005 -->
+- [x] Generate initial `docs/global/TODO.codelens.TODO` sidecar <!-- id: TODO-20251002-005 -->
 
 ### Session: python-data-analysis-rule-implementation (2025-01-27)
 
@@ -253,7 +253,37 @@ _Outstanding backlog work is grouped below. Recently-closed backlog items are ca
   source: docs/global/GBL-PRD_Best_Practices.md
   tags: prd, best-practices
 
-- TODO: (AGENT) [MED] Migrate Session NOTE template to canonical `docs/templates/session-note.md`; update rule references; deprecate old path <!-- id: TODO-20251002-216 -->
+- TODO: (AGENT) [MED] Consolidate reorganization Phase 01-02 session notes <!-- id: TODO-20251002-210 -->
+  source: docs/agents/session-notes/SN_20251002-1045_reorganization-phase-1-2.md#session-NOTE
+  tags: session-notes, cleanup
+  notes: Merge the duplicate 10:45/10:52 entries and remove the empty 10:50 stub so one canonical NOTE remains.
+
+- TODO: (AGENT) [LOW] Backfill Phase 02 sample items session notes <!-- id: TODO-20251002-211 -->
+  source: docs/agents/session-notes/SN_20251002-1045_phase-02-sample-items.md#phase-02--sample-items
+  tags: session-notes, templates
+  notes: Populate the 10:45 and 10:56 placeholders with front matter + content or migrate them into the rollout plan hierarchy.
+
+- TODO: (AGENT) [LOW] Standardize Phase 02 command docs check NOTE <!-- id: TODO-20251002-212 -->
+  source: docs/agents/session-notes/SN_20251002-1045_phase-02-command-docs-check.md#phase-02--command-docs-check
+  tags: session-notes, templates
+  notes: Apply the session NOTE template (front matter, sections) so the checklist output is captured consistently.
+
+- TODO: (AGENT) [LOW] Reformat Oct 02 markdownlint implementation NOTE <!-- id: TODO-20251002-213 -->
+  source: docs/agents/session-notes/SN_20251002-0745_markdownlint-implementation.md#session-NOTE-markdownlint-implementation-and-fixes
+  tags: session-notes, markdownlint
+  notes: Add required front matter and align with the 2025-01-27 canonical NOTE instead of keeping a free-form narrative.
+
+- TODO: (AGENT) [MED] Convert Phase 03 validation QA output into structured NOTE <!-- id: TODO-20251002-214 -->
+  source: docs/agents/session-notes/SN_20251002-1135_phase-03-validation.md#phase-03--validation
+  tags: session-notes, qa
+  notes: Turn the raw link-check dump into a templated session NOTE or archive it under QA logs to avoid confusing readers.
+
+- TODO: (AGENT) [LOW] Prevent drift in deprecated Linear ticket template copy <!-- id: TODO-20251002-215 -->
+  source: linear/docs/templates/ticket-template.md#issue-title
+  tags: templates, linear
+  notes: Replace the deprecated duplicate with a minimal pointer or sync job so it cannot diverge from docs/templates/linear/ticket-template.md.
+
+- TODO: (AGENT) [MED] Migrate Session NOTE template to canonical `docs/templates/session-NOTE.md`; update rule references; deprecate old path <!-- id: TODO-20251002-216 -->
   source: docs/raw/plans/2025-10-02_document-categorization-and-workflows.md#10-migration-plan-standard-and-gold
   tags: session-notes, templates, agents
 

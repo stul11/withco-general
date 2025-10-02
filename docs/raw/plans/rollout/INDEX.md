@@ -15,3 +15,4 @@ Use this index to navigate detailed, step-by-step sub-plans for each rollout pha
 - Phase 02 — Rules & Commands (spec + implementation): `docs/raw/plans/rollout/phase-02_rules-and-commands.md`
 - Phase 03 — Migration (Standard): `docs/raw/plans/rollout/phase-03_standard-migration.md`
 - Phase 04 — Adoption & QA: `docs/raw/plans/rollout/phase-04_adoption-and-qa.md`
+- Phase 05 — Continuous Improvement & Governance: `docs/raw/plans/rollout/phase-05_continuous-improvement-and-governance.md`
