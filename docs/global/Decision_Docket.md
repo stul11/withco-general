@@ -1,9 +1,19 @@
 # Decision Docket
 
-- **Last Updated**: 2025-01-27T20:30:00Z
+- **Last Updated**: 2025-01-27T21:30:00Z
 - **Owner**: slittle
 
 ## Recent Decisions
+
+### 2025-01-27 (F)
+
+- **Decision**: Create automated `/sync-help` cursor command for git synchronization
+- **Context**: User requested automation of the successful git sync process completed in markdownlint-implementation session
+- **Options Considered**: Manual process only, simple script, comprehensive automated command with safety checks
+- **Rationale**: Comprehensive command provides safety, consistency, and user experience while automating repetitive git operations
+- **Impact**: Created complete `/sync-help` command with documentation, safety checks, conflict resolution, and integration with existing workflow
+- **Links**: .cursor/commands/sync-help.md, .cursor/commands/sync-help.sh, .cursor/commands/sync-help-impl.md, .cursor/commands/README.md
+- **Owner**: slittle
 
 ### 2025-01-27 (E)
 
