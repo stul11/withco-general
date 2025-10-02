@@ -1,3 +1,26 @@
+<!-- markdownlint-disable MD013 -->
+
+## /TODO-add
+
+Append a TODO item to the canonical backlog and ensure CodeLens sidecars stay in sync.
+
+### Synopsis
+
+```
+/TODO-add "Task description" --section Pending --owner slittle --tags a,b,c
+```
+
+### Behavior
+
+- Writes a checklist line to `docs/global/TODO_Log.md` (or `TODO.md` if present) under the specified section.
+- Appends a stable id HTML comment to the line if the caller did not provide one: `<!-- id: todo-YYYYMMDD-### -->`.
+- Invokes the sidecar sync generator to update `docs/global/TODO.codelens.todo`.
+
+### Notes
+
+- The id must be preserved on subsequent edits to keep Markdown and sidecars aligned.
+- Sidecars are generated files; do not edit them by hand.
+
 # /TODO-add
 
 ### Usage

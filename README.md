@@ -78,6 +78,7 @@ withco-general/
 2. **Markdown Quality**: The repository uses markdownlint for consistent formatting
 3. **VS Code Integration**: Install the markdownlint extension for real-time feedback
 4. **Manual Fixes**: Use `./scripts/fix-markdown.sh` for comprehensive markdown cleanup
+5. **CodeLens for TODOs**: Open the generated sidecar at `docs/global/TODO.codelens.todo` (and team sidecars under `linear/*/TODO.codelens.todo`) to see inline CodeLens for backlog items. Do not edit sidecars by hand; update the Markdown backlog and let the generator sync.
 
 ### Important Scope Separation
 
