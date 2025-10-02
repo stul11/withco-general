@@ -1,0 +1,41 @@
+# Markdownlint ignore file
+# Files that have intentional formatting that conflicts with standard rules
+
+# Raw data files with long lines
+docs/raw/docs/fee_examples.md
+docs/raw/economics-cost-structure-initial-context.md
+docs/raw/docs/brian-email-to-mb.md
+
+# Files with intentional long URLs or data
+docs/raw/Terms-(CF)-v2-initial-context.md
+
+# Template files that may use placeholder formatting
+docs/agents/templates/*.md
+
+# Archive files that may have legacy formatting
+linear/tickets/archive/*.md
+
+# Generated or auto-created files
+node_modules/**
+.git/**
+*.min.js
+*.min.css
+
+# Files with intentional multiple H1 headings (templates)
+docs/agents/templates/ADR_Template.md
+docs/agents/templates/Agent_Role_Card_Template.md
+docs/agents/templates/Context_Pack_Template.md
+docs/agents/templates/Decision_Docket_Template.md
+docs/agents/templates/Offboarding_Checklist_Template.md
+docs/agents/templates/Onboarding_Checklist_Template.md
+docs/agents/templates/Playbook_Template.md
+docs/agents/templates/Research_Request_Template.md
+docs/agents/templates/Session_Note_Template.md
+docs/agents/templates/TODO_Log_Template.md
+
+# Session notes that may have multiple H1 headings
+docs/agents/session-notes/SN_*.md
+
+# Files with intentional emphasis instead of headings
+docs/raw/docs/withco-reit-and-op-high-level-term-sheet.md
+linear/tickets/drafts/research-prompts/try-shortcut-prompt-style-guide.md

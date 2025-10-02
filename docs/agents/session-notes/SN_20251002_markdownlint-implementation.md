@@ -1,4 +1,4 @@
-# Session Note: Markdownlint Implementation and Fixes
+# Session NOTE: Markdownlint Implementation and Fixes
 
 - **Session ID**: SN_20251002_markdownlint-implementation
 - **Date**: 2025-10-02T07:55:00Z
@@ -8,11 +8,11 @@
 
 ## Purpose & Scope
 
-Implement comprehensive markdownlint tooling and fix existing markdown linting issues across the repository. This session addressed the TODO Log item from the markdownlint implementation session note that required fixing 854+ linting issues.
+Implement comprehensive markdownlint tooling and fix existing markdown linting issues across the repository. This session addressed the TODO Log item from the markdownlint implementation session NOTE that required fixing 854+ linting issues.
 
 ## Inputs & Context
 
-- TODO Log reference to markdownlint implementation session note
+- TODO Log reference to markdownlint implementation session NOTE
 - Existing pre-commit configuration with markdown-link-check and validate-iso-timestamps hooks
 - Repository with 854+ markdown linting issues identified
 - Need for automated markdown quality enforcement

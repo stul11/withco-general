@@ -1,0 +1,188 @@
+name: Markdown Linting with Auto-Fix
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+jobs:
+  markdownlint:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install markdownlint-cli
+      run: npm install -g markdownlint-cli
+      
+    - name: Run markdownlint (check mode)
+      id: markdownlint-check
+      run: |
+        # Run markdownlint and capture output
+        if markdownlint .; then
+          echo "status=passed" >> $GITHUB_OUTPUT
+          echo "issues=0" >> $GITHUB_OUTPUT
+        else
+          echo "status=failed" >> $GITHUB_OUTPUT
+          # Count issues
+          ISSUES=$(markdownlint . 2>&1 | grep -c "MD[0-9]" || echo "0")
+          echo "issues=$ISSUES" >> $GITHUB_OUTPUT
+        fi
+        
+    - name: Run markdownlint with auto-fix
+      if: steps.markdownlint-check.outputs.status == 'failed'
+      run: |
+        echo "Running markdownlint auto-fix..."
+        markdownlint --fix . || true
+        
+        # Check if any files were changed
+        if ! git diff --quiet; then
+          echo "Auto-fix made changes to the following files:"
+          git diff --name-only
+          
+          # Commit the changes if this is a push event
+          if [ "${{ github.event_name }}" = "push" ]; then
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            git add .
+            git commit -m "fix: auto-fix markdown linting issues
+
+            - Fixed markdown formatting issues automatically
+            - Applied markdownlint rules and standards
+            - Updated files to meet project markdown standards"
+            git push
+          fi
+        fi
+        
+    - name: Run custom validations
+      run: |
+        python3 scripts/check_markdown_links.py
+        python3 scripts/validate_iso_timestamps.py docs
+        
+    - name: Run staged fixing for remaining issues
+      if: steps.markdownlint-check.outputs.status == 'failed'
+      run: |
+        echo "Running staged fixing for remaining issues..."
+        chmod +x scripts/fix-markdown-staged.sh
+        ./scripts/fix-markdown-staged.sh --all || true
+        
+    - name: Comment on PR with results
+      if: github.event_name == 'pull_request'
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const { execSync } = require('child_process');
+          
+          try {
+            // Run markdownlint and capture output
+            const output = execSync('markdownlint .', { encoding: 'utf8' });
+            
+            const comment = `## 📝 Markdown Linting Results
+            
+            ✅ **All markdown linting checks passed!**
+            
+            Your markdown files meet the project standards:
+            - Line length: ≤ 120 characters
+            - Headers: ATX style (# ## ###)
+            - Lists: Consistent indentation
+            - Links: Valid and descriptive
+            - Code: Proper language tags
+            
+            Great work! 🎉`;
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            });
+            
+          } catch (error) {
+            const output = error.stdout || error.stderr || '';
+            const issueCount = (output.match(/MD\d+/g) || []).length;
+            
+            // Check if auto-fix was applied
+            const autoFixApplied = output.includes('Auto-fix made changes');
+            
+            const comment = `## 📝 Markdown Linting Results
+            
+            ${autoFixApplied ? '🔧 **Auto-fix applied!**' : '⚠️ **Issues found**'}
+            
+            Found **${issueCount}** markdown linting issues:
+            
+            \`\`\`
+            ${output.substring(0, 4000)}
+            \`\`\`
+            
+            ### How to fix:
+            1. **Auto-fix**: Run \`markdownlint --fix .\` locally
+            2. **Staged fixing**: Use \`./scripts/fix-markdown-staged.sh --all\`
+            3. **VS Code**: Install markdownlint extension for real-time feedback
+            4. **Manual**: Review and fix issues listed above
+            
+            ### Configuration:
+            - Line length limit: 120 characters
+            - Headers: ATX style (# ## ###)
+            - Lists: Consistent indentation (2 spaces)
+            - Links: Descriptive link text
+            - Code: Proper language tags for syntax highlighting
+            
+            ${autoFixApplied ? '✅ Auto-fix has been applied to resolve most issues.' : '💡 Most issues can be auto-fixed using the commands above.'}`;
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            });
+          }
+          
+    - name: Create issue for persistent problems
+      if: steps.markdownlint-check.outputs.issues > 100
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const issues = ${{ steps.markdownlint-check.outputs.issues }};
+          
+          const issueBody = `## 🚨 High Markdown Linting Issue Count
+          
+          This PR has **${issues}** markdown linting issues, which is above the threshold of 100.
+          
+          ### Recommended Actions:
+          1. Run \`markdownlint --fix .\` to auto-fix most issues
+          2. Use \`./scripts/fix-markdown-staged.sh --all\` for staged fixing
+          3. Consider breaking large changes into smaller PRs
+          4. Review the markdown standards in \`docs/global/Markdown_Standards.md\`
+          
+          ### Files with most issues:
+          \`\`\`
+          ${execSync('markdownlint . | head -20', { encoding: 'utf8' })}
+          \`\`\`
+          
+          This issue was automatically created by the markdown linting workflow.`;
+          
+          github.rest.issues.create({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            title: `High markdown linting issue count in PR #${context.issue.number}`,
+            body: issueBody,
+            labels: ['markdown', 'linting', 'automated']
+          });
+          
+    - name: Update README with linting status
+      if: steps.markdownlint-check.outputs.status == 'passed'
+      run: |
+        echo "✅ Markdown linting: All checks passed" >> linting-status.md
+        echo "📅 Last updated: $(date)" >> linting-status.md
+        echo "🔧 Auto-fix: Available" >> linting-status.md
+        echo "📊 Issues found: 0" >> linting-status.md

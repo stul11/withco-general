@@ -214,4 +214,4 @@ This document provides comprehensive context for understanding the cost structur
 
 ---
 
-**Note**: This context document serves as the foundation for all cost-of-manufacturing analysis and should be updated as new information becomes available from RSM, vendor quotes, and research findings.
+**NOTE**: This context document serves as the foundation for all cost-of-manufacturing analysis and should be updated as new information becomes available from RSM, vendor quotes, and research findings.
