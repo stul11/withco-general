@@ -1,8 +1,8 @@
 ---
 id: GBL-GLS_Approved_Glossary
 title: Approved Glossary
-status: Draft
-stage: Planning
+status: Active
+stage: Operational
 owner: slittle
 people: []
 reviewers: []
@@ -21,18 +21,29 @@ linear_project_link: "TBD"
 
 # Timestamps & Versioning
 created: 2025-09-27T16:30:00Z
-updated: 2025-09-27T16:30:00Z
-version: 0.1.0
+updated: 2025-01-27T19:00:00Z
+version: 1.1.0
 
 # Context & Relationships
-related_docs: []
+related_docs:
+  - docs/global/glossary/INFORMAL-GLOSSARY.md
 risk_level: Low
 repo_only: true
 ---
 
 # Approved Glossary
 
-> Canonical, reviewed terms. Changes require approval and version bump.
+> Canonical, reviewed terms. Changes require approval, version bump, and pull request reviewers from the glossary working group.
+
+## Governance & Workflow
+
+1. **Capture** new terminology in the [Informal Glossary workflow](./INFORMAL-GLOSSARY.md) using the working queue template.
+2. **Review** proposed definitions asynchronously. Stakeholders provide feedback directly in the queue row and add supporting documentation.
+3. **Approve & Promote** once consensus is reached:
+   - Move the definition into the appropriate section below.
+   - Update the term status in the queue to `Approved` with a link to this file.
+   - Increment the version field above and document the change in the pull request description.
+4. **Audit** quarterly to confirm terminology is still accurate and reflects current processes. Flag any outdated terms for revision via the informal workflow before editing here.
 
 ## Agent & Automation Terms
 
@@ -48,9 +59,9 @@ repo_only: true
 
 ## Document Types
 
-**PRD**: Product Requirements Document - defines what to build and why, with two formats: Linear-aligned (team-prefixed) and repo-only (comprehensive).
+**PRD**: Product Requirements Document – defines what to build and why, with two formats: Linear-aligned (team-prefixed) and repo-only (comprehensive).
 
-**ADR**: Architecture Decision Record - documents important architectural decisions with context, options considered, and rationale.
+**ADR**: Architecture Decision Record – documents important architectural decisions with context, options considered, and rationale.
 
 **Session Note**: Documentation of an agent-assisted session, including objectives, steps taken, outputs, and decisions made.
 
@@ -58,7 +69,7 @@ repo_only: true
 
 ## Workflow Terms
 
-**DoD**: Definition of Done - typically structured as 3 tiers (Fast/Standard/Gold) with binary, evidence-backed checks.
+**DoD**: Definition of Done – typically structured as 3 tiers (Fast/Standard/Gold) with binary, evidence-backed checks.
 
 **Global To-Do**: The Linear project (`to-do-and-planning-e2ce95344374`) where background agents can create and manage work items.
 
@@ -78,9 +89,9 @@ repo_only: true
 
 ## Business & Economics Terms
 
-**UPREIT**: Umbrella Partnership Real Estate Investment Trust - structure with REIT common interests for retail investors and OP profit interests for management/operating partners.
+**UPREIT**: Umbrella Partnership Real Estate Investment Trust – structure with REIT common interests for retail investors and OP profit interests for management/operating partners.
 
-**Reg A+**: Regulation A+ (Tier II) - SEC exemption allowing public offerings up to $75M without full registration requirements.
+**Reg A+**: Regulation A+ (Tier II) – SEC exemption allowing public offerings up to $75M without full registration requirements.
 
 **Cost of Manufacturing**: Total cost structure for creating and managing Reg A+ offerings, including legal, technology, compliance, and operational costs.
 
@@ -88,17 +99,9 @@ repo_only: true
 
 **Gross-to-Net Yield**: Investor return calculation showing gross cash yield minus platform fees and cost drag.
 
-## Template & Naming Conventions
-
-**Team Prefixes**: PROD- (Product), AM- (Asset Management), SLF- (Shelf), ANA- (Analytics), DATA- (Data), LEG- (Legal), GBL- (Global)
-
-**File Naming**: `[TEAM]-[TYPE]_[Title].md` format for consistent organization and identification.
-
-**Front Matter**: Standardized YAML metadata including id, title, status, timestamps, and related documents.
-
 ---
 
-**Version**: 1.0.0  
+**Version**: 1.1.0  
 **Last Updated**: 2025-01-27T19:00:00Z  
 **Owner**: slittle  
-**Reviewers**: slittle
+**Reviewers**: Glossary Working Group
