@@ -1,9 +1,19 @@
 # Decision Docket
 
-- **Last Updated**: 2025-01-27T21:30:00Z
+- **Last Updated**: 2025-01-27T22:45:00Z
 - **Owner**: slittle
 
 ## Recent Decisions
+
+### 2025-01-27 (G)
+
+- **Decision**: Complete Phase 2 markdownlint implementation with comprehensive tooling and automation
+- **Context**: User requested implementation of remaining todos from markdownlint-implementation session, including staged fixing, CI integration, custom rules, Linear integration, and automated fixing
+- **Options Considered**: Basic implementation only, comprehensive Phase 2 implementation, Phase 3 advanced features
+- **Rationale**: Complete Phase 2 implementation provides immediate value with staged fixing, CI/CD integration, Linear workflow integration, and comprehensive project-specific standards
+- **Impact**: All Phase 2 todos completed with staged fixing script, dual CI workflows, Linear validator, project standards documentation, and comprehensive automation; ready for team adoption
+- **Links**: docs/agents/session-notes/SN_20250127_markdown-enhancements-phase2.md, scripts/fix-markdown-staged.sh, scripts/linear-markdown-validator.sh, .github/workflows/markdownlint*.yml, docs/global/Markdown_Standards.md
+- **Owner**: slittle
 
 ### 2025-01-27 (F)
 
