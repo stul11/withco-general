@@ -443,7 +443,8 @@ Links to rollout sub-plans:
 
 - Index: `docs/raw/plans/rollout/INDEX.md`
 - Phase 01 — Approvals & Scaffolding: `docs/raw/plans/rollout/phase-01_approvals-and-scaffolding.md`
- - Phase 02 — Rules & Commands: `docs/raw/plans/rollout/phase-02_rules-and-commands.md`
+- Phase 02 — Rules & Commands: `docs/raw/plans/rollout/phase-02_rules-and-commands.md`
+ - Phase 03 — Standard Migration: `docs/raw/plans/rollout/phase-03_standard-migration.md`
 
 ---
 

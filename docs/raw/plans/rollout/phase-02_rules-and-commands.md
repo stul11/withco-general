@@ -14,7 +14,7 @@ Purpose: Define and implement minimal commands and rule updates to enforce namin
 ## Outcomes
 
 - Command specs for `/toplan-add` and `/TODO-add` finalized
-- Note creation flows prompt for names and apply correct prefixes/frontmatter
+- NOTE creation flows prompt for names and apply correct prefixes/frontmatter
 - Minimal rule updates to reinforce required sections and linking
 
 ## Prerequisites
@@ -25,15 +25,18 @@ Purpose: Define and implement minimal commands and rule updates to enforce namin
 ## Step-by-step Tasks
 
 1. Finalize Command Specs (Owner: Human)
+
    - `/toplan-add` flags: `--title` `--priority [LOW|MED|HIGH]` `--labels` `--team` `--source path#anchor` `--tags` `--notes`
    - `/TODO-add` flags: same as above (targets TODO.md instead of TOPLAN.md)
    - Decision: allow multiple labels and tags (comma-separated)
 
 2. Implement Command Docs (Owner: Agent)
+
    - `/.cursor/commands/toplan-add.md`: usage, examples, output format (multi-line schema)
-   - `/.cursor/commands/todo-add.md`: usage, examples, output format
+   - `/.cursor/commands/TODO-add.md`: usage, examples, output format
 
 3. Update Rules (Owner: Agent)
+
    - Ensure session NOTE creators prompt for naming and apply Full/Lite skeletons
    - Require `source:` when items are created via commands
    - Reference frontmatter minimal standard
@@ -45,14 +48,17 @@ Purpose: Define and implement minimal commands and rule updates to enforce namin
 ## Checks (Background Agent Verification)
 
 ### Check A: Command Docs Present
-**Ask**: Verify `toplan-add.md` and `todo-add.md` exist and include flags, examples, and schema.
+
+**Ask**: Verify `toplan-add.md` and `TODO-add.md` exist and include flags, examples, and schema.
 **Output**: `docs/agents/session-notes/SN_YYYYMMDD-HHMM_phase02-command-docs-check.md`
 
 ### Check B: Sample Item Creation
+
 **Ask**: Append one TOPLAN item and one TODO item using the specified schema; include `source:` links.
 **Output**: `SN_YYYYMMDD-HHMM_phase02-sample-items.md` with file paths and snippets.
 
 ### Check C: Rule Reminders
+
 **Ask**: Confirm rule files remind assistants to prompt for naming and required sections.
 **Output**: `SN_YYYYMMDD-HHMM_phase02-rule-reminders.md` with citations.
 
@@ -61,5 +67,3 @@ Purpose: Define and implement minimal commands and rule updates to enforce namin
 - Commands documented with examples
 - Sample items created correctly in global and team lists
 - Rules reflect prompting and linking requirements
-
-
