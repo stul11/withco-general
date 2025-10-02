@@ -63,3 +63,14 @@ linear/docs/How_to_use_Linear.md
 
 # Script documentation drafts
 scripts/*.md
+
+# Key operational docs (temporary relax until cleanup PR)
+00-key-docs/Decision_Docket.md
+00-key-docs/TODO_Log.md
+
+# PRDs and Global docs (temporary relax)
+docs/prds/**
+docs/global/**
+
+# All raw docs (temporary relax)
+docs/raw/**
