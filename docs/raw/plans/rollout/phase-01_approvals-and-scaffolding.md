@@ -70,20 +70,99 @@ Purpose: Lock decisions and prepare the repo for implementation without changing
    - Description: Summarize decisions, list created dirs/files, and include links to plans.
    - Request review from Human owner.
 
+## Checks (Background Agent Verification)
+
+### Check 1: Directory Structure Verification
+
+**Ask**: Verify all scaffolding directories exist and contain expected placeholder files.
+
+**Scope**:
+
+- Check existence of all directories listed in Step 2
+- Verify `.keep` files are present in empty directories
+- Confirm README files exist and are readable
+
+**Output**: Create verification report at `docs/agents/session-notes/SN_YYYYMMDD-HHMM_phase01-scaffolding-verification.md`
+
+**Report Format**:
+
+```markdown
+# Phase 01 Scaffolding Verification
+
+## Directory Check Results
+
+- [ ] linear/PROD/ structure complete
+- [ ] linear/ANA/ structure complete
+- [ ] linear/DATA/ structure complete
+- [ ] linear/LEG/ structure complete
+- [ ] linear/AM/ structure complete
+- [ ] linear/global/ structure complete
+- [ ] docs/ structure complete
+
+## Issues Found
+
+[List any missing directories, files, or problems]
+
+## Recommendations
+
+[Any suggested fixes or improvements]
+```
+
+### Check 2: File Permissions and Git Tracking
+
+**Ask**: Verify all new files are properly tracked by Git and have correct permissions.
+
+**Scope**:
+
+- Run `git status` to confirm all new files are tracked
+- Check file permissions are appropriate (644 for files, 755 for directories)
+- Verify no sensitive files were accidentally included
+
+**Output**: Append results to the verification report above
+
+### Check 3: Link Integrity
+
+**Ask**: Verify all internal links in planning documents work correctly.
+
+**Scope**:
+
+- Check links from main plan to rollout sub-plans
+- Verify INDEX.md links to Phase 01
+- Test relative path references
+
+**Output**: Append link check results to verification report
+
+### Check 4: README Content Quality
+
+**Ask**: Review README files for clarity, completeness, and adherence to markdown standards.
+
+**Scope**:
+
+- Check line length <= 120 characters
+- Verify proper heading hierarchy
+- Confirm examples are clear and actionable
+- Ensure no broken internal links
+
+**Output**: Append README review to verification report
+
+**Storage**: All verification notes go in `docs/agents/session-notes/` with naming pattern `SN_YYYYMMDD-HHMM_phase01-[check-type].md`
+
 ## Success Criteria
 
 - All directories exist as specified
 - Placeholders/READMEs added
 - No existing files renamed or moved
 - PR opened and linked to plan documents
+- Background agent verification completed with no critical issues
 
 ## Decision Log
 
-- Migration mode: <Standard | Gold>
+- Migration mode: Standard
 - Meeting-notes handling: <separate `docs/meeting-notes/` | folded into granola>
 - Research category: <introduce `RS_` now | defer>
 
 ## Risks & Mitigations
 
 - Risk: Directory churn without usage — Mitigation: keep placeholders minimal and documented
-- Risk: Confusion over team/global placement — Mitigation: follow rule “team if known, else global” in commands
+- Risk: Confusion over team/global placement — Mitigation: follow rule "team if known, else global" in commands
+- Risk: Verification gaps — Mitigation: explicit check tasks with clear outputs and storage locations

@@ -340,6 +340,26 @@ Pros/Cons:
 - Keep content unchanged aside from filename and frontmatter adjustments
 - Defer renaming for non-session artifacts unless beneficial; schedule separate passes if needed
 
+### 10.4 Gold+ Upgrade Path (post-Standard)
+
+Objective: Provide a clear route from Standard to a fully reorganized, relinked, and documented state.
+
+Steps:
+
+1. Create rename index: `docs/indexes/renames-<date>.md` mapping `old_name → new_name` with rationale
+2. Insert/update frontmatter `updated:` across all renamed files; add `source:` back-references when moved
+3. Run a repository-wide link update pass with a tracked script (idempotent), commit per directory
+4. Add stubs/symlinks for high-traffic legacy paths with a short NOTE pointing to the new location
+5. Generate a migration report in `docs/indexes/` summarizing changes and residual issues
+6. Run link integrity checks and fix any remaining broken links
+7. Announce completion in a Session NOTE and update Decision Docket
+
+Success Criteria:
+
+- All target categories follow new naming and placement
+- No broken internal links (verified by link check)
+- Rename index and migration report exist and are linked from the main plan
+
 ---
 
 ## 11) Concept of Plans (General)
