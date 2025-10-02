@@ -1,16 +1,24 @@
 # TODO Log
 
-- **Last Updated**: 2025-01-27T20:30:00Z
+- **Last Updated**: 2025-01-27T17:30:00Z
 - **Session**: markdownlint-implementation
 - **Owner**: slittle
 
 ## Completed
+
+### Session: python-data-analysis-rule-implementation (2025-01-27)
+
+- [x] Create comprehensive Python data analysis cursor rule
+- [x] Structure content following established workspace conventions
+- [x] Include guidelines for pandas, matplotlib, seaborn, numpy, and Jupyter Notebooks
+- [x] Add practical code examples and best practices
+- [x] Create Session NOTE documenting implementation
+
 ### Session: uv-guidelines (2025-10-02)
 
 - [x] Add `.cursor/rules/uv-guidelines.mdc` enforcing uv-only dependency management
 - [x] Draft repo-wide uv compliance review plan: `docs/raw/plans/2025-10-02_uv-guidelines-compliance-review.md`
 - [x] Create Session NOTE documenting decisions, findings, and next steps
-
 
 ### Session: markdownlint-phase2-3-implementation (2025-01-27)
 
@@ -200,6 +208,18 @@ _Outstanding backlog work is grouped below. Recently-closed backlog items are ca
 - [ ] Prepare example Agent Role Card and Session NOTE
 - [ ] Publish agreed Best Practices into docs/global/GBL-PRD_Best_Practices.md
 
+#### Naming Conventions Rollout (New)
+
+- [ ] (AGENT) [MED] Inventory existing NOTE files that don't match `*_YYYYMMDD-HHMM_slug.md` patterns
+  source: docs/agents/session-notes/SN_20251002-0000_filename-preferences-global.md#next-actions
+  tags: naming, session-notes
+- [ ] (AGENT) [MED] Prepare Standard migration plan steps for renames and link updates
+  source: docs/raw/plans/2025-10-02_document-categorization-and-workflows.md#10-migration-plan-standard-and-gold
+  tags: naming, migration
+- [ ] (AGENT) [MED] Run link checker and timestamp validator after renames to ensure integrity
+  source: .cursor/commands/offboard.md
+  tags: validation, links, timestamps
+
 #### File Organization Enhancement Proposals (PROPOSALS - DO NOT IMPLEMENT)
 
 - [ ] **[PROPOSAL]** Add `docs/README.md` with "Start here" navigation links to Decision Docket and TODO Log for GitHub/IDE discoverability
@@ -331,6 +351,5 @@ _The dedicated cleanup backlog from the January 27 effort remains closed. Histor
 - [x] Author workflow runbook and paste template; update linted docs
 - [ ] Run a dry-run on sample content using `/granola-review <link> --write draft` and validate outputs
 - [ ] (AGENT) [MED] Align /offboard required sections across commands
-  source: docs/agents/session-notes/SN_20251002-0630_session-NOTE-template-analysis.md#immediate-actions
-  tags: session-notes, templates
-
+      source: docs/agents/session-notes/SN_20251002-0630_session-NOTE-template-analysis.md#immediate-actions
+      tags: session-notes, templates

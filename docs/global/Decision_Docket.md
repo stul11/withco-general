@@ -1,9 +1,36 @@
 # Decision Docket
 
-- **Last Updated**: 2025-01-27T21:30:00Z
+- **Last Updated**: 2025-01-27T17:30:00Z
 - **Owner**: slittle
 
 ## Recent Decisions
+
+### 2025-01-27 (H)
+
+- **Decision**: Implement Python data analysis cursor rule for comprehensive workflow guidelines
+- **Context**: User requested addition of Python data analysis guidelines to cursor workspace to support pandas, matplotlib, seaborn, numpy, and Jupyter Notebook development
+- **Options Considered**: Manual documentation, Basic rule, Comprehensive rule with examples
+- **Rationale**: Comprehensive rule provides complete workflow guidance with practical examples and best practices; follows established workspace conventions
+- **Impact**: New rule `.cursor/rules/python-data-analysis.mdc` provides comprehensive guidelines for data analysis, visualization, error handling, performance optimization, and Jupyter Notebook best practices
+- **Links**: .cursor/rules/python-data-analysis.mdc, docs/agents/session-notes/SN_20250127-1730_python-data-analysis-rule-implementation.md
+- **Owner**: slittle
+
+### 2025-10-02 (J)
+
+- **Decision**: Enforce global NOTE filename conventions for SN/MN/GR/RN
+- **Context**: Plan §1.1 defines standardized naming across Session, Meeting, Granola, and Raw notes to
+  improve discoverability and consistency; enforcement needed across the repository
+- **Options Considered**: Keep conventions as guidance only; Enforce SN\_ only; Enforce SN/MN/GR/RN via rule
+- **Rationale**: A single global rule prevents drift and ensures future automation (migration, link checks)
+- **Impact**: New rule `.cursor/rules/naming-global.mdc` applies to all `**/*.md`, with directory guidance and
+  ISO timestamp and 15‑minute rounding alignment
+- **Links**: .cursor/rules/naming-global.mdc,
+  docs/raw/plans/2025-10-02_document-categorization-and-workflows.md,
+  docs/raw/plans/rollout/phase-02_rules-and-commands.md,
+  docs/raw/plans/rollout/phase-01_approvals-and-scaffolding.md,
+  docs/agents/session-notes/SN_20251002-0000_filename-preferences-global.md
+- **Owner**: slittle
+
 ### 2025-10-02 (I)
 
 - **Decision**: Adopt `uv` as the exclusive Python dependency manager
@@ -13,7 +40,6 @@
 - **Impact**: New rule `.cursor/rules/uv-guidelines.mdc`; plan drafted for repository-wide compliance; future PR to add `pyproject.toml` + `uv.lock` and update docs/CI
 - **Links**: .cursor/rules/uv-guidelines.mdc, docs/raw/plans/2025-10-02_uv-guidelines-compliance-review.md, docs/agents/session-notes/SN_20251002-1200_uv-guidelines.md
 - **Owner**: slittle
-
 
 ### 2025-01-27 (G)
 
@@ -255,3 +281,12 @@
 - Align with existing Linear workflow and team structure
 - Use templates and rules to ensure consistency without overhead
 - Document decisions in Decision Docket for future reference
+
+### 2025-10-02 (J)
+
+- **Decision**: Proceed with Standard migration; enforce CREATED-rounded immutable filenames; batch 1 applied
+- **Context**: Phase 03 Standard migration
+- **Rationale**: Consistency and traceability
+- **Impact**: Many SN_ files normalized; references updated
+- **Links**: docs/agents/session-notes/SN_20251002-1130_phase-3-standard-migration.md
+- **Owner**: slittle

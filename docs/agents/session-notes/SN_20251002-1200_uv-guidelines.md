@@ -129,5 +129,3 @@ tags: [uv, dependencies, python]
 - **Status**: pending
 - **Date**: 2025-10-02T12:00:00Z
 - **Notes**: Please approve the policy and plan; implementation PRs to follow
-
-

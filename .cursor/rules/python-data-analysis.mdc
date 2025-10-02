@@ -1,0 +1,281 @@
+# Python Data Analysis and Jupyter Notebook Guidelines
+
+## Overview
+
+This rule provides comprehensive guidelines for Python data analysis, visualization, and Jupyter Notebook development, focusing on best practices for pandas, matplotlib, seaborn, and numpy.
+
+## Key Principles
+
+- Write concise, technical responses with accurate Python examples
+- Prioritize readability and reproducibility in data analysis workflows
+- Use functional programming where appropriate; avoid unnecessary classes
+- Prefer vectorized operations over explicit loops for better performance
+- Use descriptive variable names that reflect the data they contain
+- Follow PEP 8 style guidelines for Python code
+
+## Data Analysis and Manipulation
+
+### Pandas Best Practices
+
+- Use pandas for data manipulation and analysis
+- Prefer method chaining for data transformations when possible
+- Use `loc` and `iloc` for explicit data selection
+- Utilize `groupby` operations for efficient data aggregation
+
+### Example Patterns
+
+```python
+# Method chaining for data transformations
+df_processed = (df
+    .dropna(subset=['important_column'])
+    .query('value > 0')
+    .assign(new_column=lambda x: x['old_column'] * 2)
+    .groupby('category')
+    .agg({'value': ['mean', 'std'], 'count': 'sum'})
+)
+
+# Explicit data selection
+subset = df.loc[df['category'] == 'A', ['col1', 'col2']]
+```
+
+## Visualization Guidelines
+
+### Library Selection
+
+- Use matplotlib for low-level plotting control and customization
+- Use seaborn for statistical visualizations and aesthetically pleasing defaults
+- Create informative and visually appealing plots with proper labels, titles, and legends
+- Use appropriate color schemes and consider color-blindness accessibility
+
+### Visualization Best Practices
+
+```python
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Set style for consistency
+plt.style.use('seaborn-v0_8')
+sns.set_palette("husl")
+
+# Create informative plots
+fig, ax = plt.subplots(figsize=(10, 6))
+sns.scatterplot(data=df, x='x_var', y='y_var', hue='category', ax=ax)
+ax.set_title('Descriptive Title')
+ax.set_xlabel('X Axis Label')
+ax.set_ylabel('Y Axis Label')
+plt.tight_layout()
+plt.show()
+```
+
+## Jupyter Notebook Best Practices
+
+### Structure and Organization
+
+- Structure notebooks with clear sections using markdown cells
+- Use meaningful cell execution order to ensure reproducibility
+- Include explanatory text in markdown cells to document analysis steps
+- Keep code cells focused and modular for easier understanding and debugging
+- Use magic commands like `%matplotlib inline` for inline plotting
+
+### Notebook Template
+
+```python
+# Cell 1: Imports and setup
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+%matplotlib inline
+
+# Cell 2: Data loading
+df = pd.read_csv('data.csv')
+
+# Cell 3: Data exploration
+df.info()
+df.describe()
+
+# Cell 4: Data quality checks
+print(f"Missing values: {df.isnull().sum()}")
+print(f"Duplicate rows: {df.duplicated().sum()}")
+```
+
+## Error Handling and Data Validation
+
+### Data Quality Checks
+
+- Implement data quality checks at the beginning of analysis
+- Handle missing data appropriately (imputation, removal, or flagging)
+- Use try-except blocks for error-prone operations, especially when reading external data
+- Validate data types and ranges to ensure data integrity
+
+### Validation Patterns
+
+```python
+def validate_data(df):
+    """Comprehensive data validation function."""
+    issues = []
+
+    # Check for missing values
+    missing = df.isnull().sum()
+    if missing.any():
+        issues.append(f"Missing values found: {missing[missing > 0].to_dict()}")
+
+    # Check data types
+    expected_types = {'numeric_col': 'float64', 'categorical_col': 'object'}
+    for col, expected_type in expected_types.items():
+        if col in df.columns and df[col].dtype != expected_type:
+            issues.append(f"Column {col} has wrong type: {df[col].dtype}")
+
+    return issues
+
+# Usage
+validation_issues = validate_data(df)
+if validation_issues:
+    print("Data validation issues found:")
+    for issue in validation_issues:
+        print(f"- {issue}")
+```
+
+## Performance Optimization
+
+### Vectorized Operations
+
+- Use vectorized operations in pandas and numpy for improved performance
+- Utilize efficient data structures (e.g., categorical data types for low-cardinality string columns)
+- Consider using dask for larger-than-memory datasets
+- Profile code to identify and optimize bottlenecks
+
+### Performance Examples
+
+```python
+# Efficient categorical data
+df['category'] = df['category'].astype('category')
+
+# Vectorized operations instead of loops
+df['new_col'] = df['col1'] * df['col2'] + df['col3']
+
+# Efficient groupby operations
+result = df.groupby('category').agg({
+    'value': ['mean', 'std', 'count'],
+    'other_col': 'sum'
+}).round(2)
+```
+
+## Dependencies
+
+### Required Libraries
+
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- jupyter
+- scikit-learn (for machine learning tasks)
+
+### Optional Libraries
+
+- dask (for larger-than-memory datasets)
+- plotly (for interactive visualizations)
+- altair (for statistical visualizations)
+
+## Key Conventions
+
+### Analysis Workflow
+
+1. Begin analysis with data exploration and summary statistics
+2. Create reusable plotting functions for consistent visualizations
+3. Document data sources, assumptions, and methodologies clearly
+4. Use version control (e.g., git) for tracking changes in notebooks and scripts
+
+### Code Organization
+
+```python
+# Reusable plotting function
+def create_scatter_plot(df, x_col, y_col, hue_col=None, title=None):
+    """Create a standardized scatter plot."""
+    fig, ax = plt.subplots(figsize=(10, 6))
+
+    if hue_col:
+        sns.scatterplot(data=df, x=x_col, y=y_col, hue=hue_col, ax=ax)
+    else:
+        sns.scatterplot(data=df, x=x_col, y=y_col, ax=ax)
+
+    ax.set_title(title or f'{x_col} vs {y_col}')
+    ax.set_xlabel(x_col.replace('_', ' ').title())
+    ax.set_ylabel(y_col.replace('_', ' ').title())
+
+    plt.tight_layout()
+    return fig, ax
+```
+
+## Documentation and Version Control
+
+### Documentation Standards
+
+- Document data sources, assumptions, and methodologies clearly
+- Include docstrings for custom functions
+- Use markdown cells to explain analysis steps and findings
+- Maintain a clear narrative flow in notebooks
+
+### Version Control Best Practices
+
+- Use meaningful commit messages for notebook changes
+- Consider using nbstripout to remove output before committing
+- Keep notebooks focused on single analyses
+- Use separate notebooks for different analysis phases
+
+## Error Prevention
+
+### Common Pitfalls to Avoid
+
+- Avoid chaining too many operations without intermediate checks
+- Don't modify DataFrames in place without explicit intention
+- Always validate data before analysis
+- Use appropriate data types to avoid memory issues
+
+### Defensive Programming
+
+```python
+# Safe data loading with error handling
+def load_data(file_path):
+    """Load data with comprehensive error handling."""
+    try:
+        if file_path.endswith('.csv'):
+            df = pd.read_csv(file_path)
+        elif file_path.endswith('.xlsx'):
+            df = pd.read_excel(file_path)
+        else:
+            raise ValueError(f"Unsupported file format: {file_path}")
+
+        print(f"Successfully loaded {len(df)} rows and {len(df.columns)} columns")
+        return df
+
+    except FileNotFoundError:
+        print(f"File not found: {file_path}")
+        return None
+    except Exception as e:
+        print(f"Error loading data: {e}")
+        return None
+```
+
+## Integration with Project Standards
+
+### File Organization
+
+- Place analysis notebooks in `analysis/` or `notebooks/` directories
+- Use descriptive filenames with dates: `2025-01-27_data_exploration.ipynb`
+- Keep raw data separate from processed data
+- Maintain clear directory structure for reproducibility
+
+### Code Quality
+
+- Follow PEP 8 style guidelines
+- Use type hints where appropriate
+- Write unit tests for custom analysis functions
+- Use linting tools (flake8, black) for code quality
+
+## Conclusion
+
+These guidelines ensure consistent, reproducible, and efficient data analysis workflows using Python and Jupyter Notebooks. Always refer to the official documentation of pandas, matplotlib, and Jupyter for best practices and up-to-date APIs.
+
+**Remember**: Prioritize clarity, reproducibility, and performance in all data analysis work.

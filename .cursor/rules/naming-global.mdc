@@ -1,0 +1,56 @@
+---
+alwaysApply: true
+description: "Enforce global naming conventions for NOTE files (SN_/MN_/GR_/RN_) across the repository"
+globs: ["**/*.md"]
+---
+
+# Global NOTE File Naming
+
+## Overview
+
+To ensure consistent, searchable documentation, Session NOTEs must follow a single global filename convention,
+regardless of where they are created or edited in the repository.
+
+## Required Filename Patterns
+
+- **Prefixes & patterns**:
+  - Session NOTE: `SN_YYYYMMDD-HHMM_slug-with-dashes.md`
+  - Meeting NOTE: `MN_YYYYMMDD-HHMM_slug-with-dashes.md`
+  - Granola: `GR_YYYYMMDD-HHMM_slug-with-dashes.md`
+  - Raw capture: `RN_YYYYMMDD-HHMM_slug-with-dashes.md`
+- **Time basis**: 24-hour UTC; HHMM is the CREATED timestamp rounded down to the nearest 15 minutes (00, 15, 30, 45)
+- **Slug**: kebab-case (lowercase letters, digits, and `-` only)
+- **Immutability**: Filenames are immutable after creation; do not rename on subsequent edits
+- **Recommended locations**:
+  - `docs/agents/session-notes/` for `SN_`
+  - `docs/meeting-notes/` (optional) for `MN_` or include within granola context
+  - `docs/granola/` for `GR_`
+  - `docs/raw/` (or `linear/{TEAM}/raw/` when team is known) for `RN_`
+
+## Enforcement
+
+Before creating or renaming NOTE files of these types:
+
+- Confirm the filename matches the required pattern for the category
+- Compute HHMM from the CREATED timestamp, rounded down to the nearest 15 minutes
+- Keep `created` and `updated` fields in frontmatter per the Date/Time Format rule
+
+If an existing or newly created file does not match, pause and rename it to the correct format, then update any links.
+
+## Related Rules & Documents
+
+- [Date/Time Format](./datetime-format.mdc) — enforce ISO 8601 for `created`/`updated`
+- [Agent Session Notes](./agent-session-notes.mdc) — when Session NOTEs are required and their content standards
+- Main plan: `docs/raw/plans/2025-10-02_document-categorization-and-workflows.md`
+- Rollout: `docs/raw/plans/rollout/phase-02_rules-and-commands.md`
+- Rollout: `docs/raw/plans/rollout/phase-01_approvals-and-scaffolding.md`
+
+## Examples
+
+```text
+docs/agents/session-notes/SN_20251002-0930_session-NOTE-template-analysis.md
+docs/agents/session-notes/SN_20251002-1100_migration-standard-plan.md
+docs/meeting-notes/MN_20251002-1100_customer-interview-acme.md
+docs/granola/GR_20251002-1015_pricing-page-rewrite-research.md
+docs/raw/RN_20251002-0845_prompt-ideas-for-markdownlint.md
+```

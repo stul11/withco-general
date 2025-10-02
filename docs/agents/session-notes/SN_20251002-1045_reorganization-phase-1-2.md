@@ -1,8 +1,8 @@
 ---
 type: session-NOTE
 team: global
-created: REPLACE_CREATED
-updated: REPLACE_CREATED
+created: 2025-10-02T10:45:00Z
+updated: 2025-10-02T10:45:00Z
 tags: [offboard, phase-01, phase-02]
 status: pending
 ---
@@ -12,7 +12,7 @@ status: pending
 - **Task ID**: reorganization-phase-1-2
 - **Agent**: Background Agent
 - **Owner**: slittle
-- **Date**: REPLACE_CREATED
+- **Date**: 2025-10-02T10:45:00Z
 - **Duration**: N/A
 
 ---
@@ -92,5 +92,5 @@ status: pending
 
 - **Reviewer**: slittle
 - **Status**: pending
-- **Date**: REPLACE_CREATED
+- **Date**: 2025-10-02T10:45:00Z
 - **Notes**: N/A
