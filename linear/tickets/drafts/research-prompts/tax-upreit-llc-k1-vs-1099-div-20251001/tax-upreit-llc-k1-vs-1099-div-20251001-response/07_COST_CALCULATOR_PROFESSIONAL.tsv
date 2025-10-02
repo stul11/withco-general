@@ -1,0 +1,49 @@
+Name	Value
+Pro_Base_1040	306
+Pro_Per_SchedB	60
+Pro_Per_SchedD	118
+Pro_Per_K1	100
+Pro_Per_State_NR	200
+Pro_Form1116	150
+Pro_Form8582	200
+Pro_Form461	200
+Pro_Form6251	150
+Pro_Form4797	300
+Pro_Form6252	200
+Num_K1	1
+Num_States	2
+Has_1099DIV	TRUE
+DIV_Over_1500	TRUE
+DIV_Box2a_CapGains	FALSE
+Has_Sales_1099B	FALSE
+Foreign_Tax_Box7	FALSE
+Has_K3_Foreign	TRUE
+Has_1231_or_4797	FALSE
+Has_Installment_Sale	FALSE
+Excess_Business_Loss	FALSE
+Needs_AMT	False
+Needs_PAL_8582	FALSE
+
+CALCULATIONS	Amount
+Base_1040	=$B$2
+Add_ScheduleB	=IF(AND($B$13,TRUE),$B$3,0)
+Add_ScheduleD	=IF(OR($B$14,$B$15),$B$4,0)
+Add_Per_K1	=$B$5*$B$6
+Add_Nonresident_States	=$B$7*$B$8
+Add_Form1116	=IF(OR($B$16,$B$17),$B$9,0)
+Add_Form8582	=IF($B$23,$B$10,0)
+Add_Form461	=IF($B$22,$B$11,0)
+Add_Form6251	=IF($B$21,$B$12,0)
+Add_Form4797	=IF($B$19,$B$13,0)
+Add_Form6252	=IF($B$20,$B$14,0)
+Estimated_Pro_Cost	=SUM($B$20:$B$30)
+
+Worked_Example_1: Single K‑1, one state, no sale, no foreign	
+Inputs: Num_K1=1; Num_States=1; Has_1099DIV=FALSE; Has_K3_Foreign=FALSE	
+Estimated_Pro_Cost (calc)	=$B$2 + ($B$6*1) + ($B$8*1)	; =306+100+200 = 606
+
+Worked_Example_2: Two K‑1s, K‑3 present, two nonresident states, Box 2a cap‑gain distributions	
+Inputs: Num_K1=2; Num_States=2; Has_1099DIV=TRUE; DIV_Box2a_CapGains=TRUE; Has_K3_Foreign=TRUE	
+Estimated_Pro_Cost (calc)	=$B$2 + ($B$6*2) + ($B$8*2) + $B$4 + $B$9	; =306 + 200 + 400 + 118 + 150 = 1,174
+
+Sources (fees)	Use: Investopedia (avg fees $220/$323; Schedule D add‑on ~$118), TaxSlayer Pro summary (itemized $409; non‑itemized $306), firm pages for ranges. https://www.investopedia.com/articles/taxes/021717/what-will-i-pay-tax-preparation-fees.asp ; https://www.taxslayerpro.com/blog/post/how-much-are-tax-preparers-charging ; https://dimovtax.com/average-cost-of-tax-preparation-by-cpa/ ; https://www.carsonthorncpa.com/news/average-cost-of-tax-preparation

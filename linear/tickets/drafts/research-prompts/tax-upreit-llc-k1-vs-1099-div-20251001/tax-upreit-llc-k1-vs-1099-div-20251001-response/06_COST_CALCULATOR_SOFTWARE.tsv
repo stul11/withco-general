@@ -1,0 +1,36 @@
+Name	Value
+TT_Online_Free	0
+TT_Online_Deluxe	79
+TT_Online_Premium	99
+TT_State_AddOn	39
+TT_State_Efile_Fee	0
+Num_K1	1
+Num_States	2
+Has_1099DIV	TRUE
+DIV_Over_1500	TRUE
+DIV_Box5_199A	FALSE
+DIV_Box2a_CapGains	FALSE
+Foreign_Tax_Box7	FALSE
+Has_Sales_1099B	FALSE
+Has_K3_Foreign	FALSE
+
+CALCULATIONS	Result
+TierScore_NeedsPremium	=MAX(IF($B$6>0,2,0),IF(OR($B$13,$B$10),1,0),IF(OR($B$12,$B$11,$B$9),2,0))	; 2 if any K‑1 or 1099‑B/cap gains/K‑3; 1 if only Sch B/REIT 199A/foreign tax
+Minimum_Tier	=IF($B$20=2,"Premium",IF($B$20=1,"Deluxe","Free"))
+Base_Product_Price	=IF($B$21="Premium",$B$3,IF($B$21="Deluxe",$B$2,$B$1))
+State_Cost_Total	=$B$4*$B$7 + $B$5*$B$7*0	; Online has $0 e‑file fee per sources
+Total_Software_Cost	=$B$22+$B$23
+
+Worked_Example_1: Simple 1099‑DIV under threshold (no Sch B), 1 state	
+Inputs: Num_K1=0; Has_1099DIV=TRUE; DIV_Over_1500=FALSE; DIV_Box5_199A=FALSE; DIV_Box2a_CapGains=FALSE; Has_Sales_1099B=FALSE; Has_K3_Foreign=FALSE; Num_States=1	
+TierScore_NeedsPremium (calc)	=MAX(IF(0>0,2,0),IF(OR(FALSE,FALSE),1,0),IF(OR(FALSE,FALSE,FALSE),2,0))	; 0
+Minimum_Tier (calc)	=IF(0=2,"Premium",IF(0=1,"Deluxe","Free"))	; Free
+Total_Software_Cost (calc)	=0 + (1*$B$4)	; =39
+
+Worked_Example_2: Two K‑1s, K‑3 present, 2 states	
+Inputs: Num_K1=2; Has_K3_Foreign=TRUE; Num_States=2	
+TierScore_NeedsPremium (calc)	=MAX(IF(2>0,2,0),IF(OR(FALSE,TRUE),1,0),IF(OR(FALSE,FALSE,TRUE),2,0))	; 2
+Minimum_Tier (calc)	=IF(2=2,"Premium",IF(2=1,"Deluxe","Free"))	; Premium
+Total_Software_Cost (calc)	=$B$3 + (2*$B$4)	; =99 + 78 = 177
+
+Notes	Use cited TT pages: K‑1 requires Premium; investments/Sch D in Premium; Online state e‑file is $0 (state module price varies by season). Sources: https://ttlc.intuit.com/community/investments-and-rental-properties/discussion/what-version-of-turbotax-online-do-i-need-to-enter-a-k-1/00/2745 ; https://turbotax.intuit.com/personal-taxes/online/premium/ ; https://ttlc.intuit.com/community/taxes/discussion/64-for-state-filing-fee/00/3651930

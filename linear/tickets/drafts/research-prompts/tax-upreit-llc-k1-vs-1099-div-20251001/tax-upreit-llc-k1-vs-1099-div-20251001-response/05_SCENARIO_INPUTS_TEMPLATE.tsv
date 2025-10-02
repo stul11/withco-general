@@ -1,0 +1,35 @@
+Name	Value
+TT_Online_Deluxe	79
+TT_Online_Premier_or_Premium	99
+TT_State_AddOn	39
+TT_State_Efile_Fee	0
+Pro_Base_1040	306
+Pro_Per_SchedB	60
+Pro_Per_SchedD_Low	100
+Pro_Per_SchedD_High	150
+Pro_Per_K1	100
+Pro_Per_State_NR	200
+Pro_Form1116	150
+Pro_Form8582	200
+Pro_Form461	200
+Pro_Form6251	150
+Pro_Form4797	300
+Pro_Form6252	200
+Num_K1	1
+Num_States	1
+Already_Files_K1	TRUE
+Has_1099DIV	TRUE
+DIV_Box5_199A	FALSE
+DIV_Box2a_CapGains	FALSE
+DIV_Box3_ROC	FALSE
+Foreign_Tax_Box7	FALSE
+Has_Sales_1099B	FALSE
+Has_K3_Foreign	FALSE
+Profit_Interest_or_Promote	NONE
+Phantom_Equity_Comp	FALSE
+DIV_Over_1500	FALSE
+
+CALCULATIONS	
+(Use as a visual template only; see calculators 06 and 07 for active formulas)	
+This template centralizes inputs. Paste into A1 of a separate sheet as a reference store.	
+Populate 06 and 07 INPUTS with the same values to compute software vs. professional costs.	
