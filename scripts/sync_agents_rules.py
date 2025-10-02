@@ -13,6 +13,8 @@ from __future__ import annotations
 import argparse
 import ast
 import glob
+import importlib
+import importlib.util
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, Iterable, List, Mapping, MutableMapping, Sequence
@@ -109,6 +111,60 @@ RULES_DIR = Path(__file__).resolve().parents[1] / ".cursor" / "rules"
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
 
+def _parse_scalar(value: str) -> object:
+    if not value:
+        return None
+    lowered = value.lower()
+    if lowered in {"true", "false"}:
+        return lowered == "true"
+    if value.startswith("[") and value.endswith("]"):
+        try:
+            return list(ast.literal_eval(value))
+        except (ValueError, SyntaxError):
+            return []
+    if value.startswith(("'", '"')) and value.endswith(("'", '"')):
+        try:
+            return ast.literal_eval(value)
+        except (ValueError, SyntaxError):
+            return value
+    return value
+
+
+def _parse_front_matter_manually(front_matter: str) -> Mapping[str, object]:
+    data: Dict[str, object] = {}
+    current_key: str | None = None
+    for raw_line in front_matter.splitlines():
+        stripped = raw_line.strip()
+        if not stripped or stripped.startswith("#"):
+            continue
+        if stripped.startswith("-"):
+            if current_key is None:
+                continue
+            existing = data.get(current_key)
+            if not isinstance(existing, list):
+                continue
+            item_value = stripped[1:].strip()
+            existing.append(_parse_scalar(item_value))
+            continue
+        if ":" not in raw_line:
+            current_key = None
+            continue
+        key_part, value_part = raw_line.split(":", 1)
+        key = key_part.strip()
+        if not key:
+            current_key = None
+            continue
+        value = value_part.strip()
+        if not value:
+            data[key] = []
+            current_key = key
+            continue
+        parsed = _parse_scalar(value)
+        data[key] = parsed
+        current_key = key if isinstance(parsed, list) else None
+    return data
+
+
 def parse_front_matter(path: Path) -> Mapping[str, object]:
     text = path.read_text(encoding="utf-8")
     if not text.startswith("---\n"):
@@ -119,37 +175,16 @@ def parse_front_matter(path: Path) -> Mapping[str, object]:
     except ValueError:
         return {}
 
-    data: Dict[str, object] = {}
-    for raw_line in front_matter.splitlines():
-        line = raw_line.strip()
-        if not line or line.startswith("#"):
-            continue
-        if ":" not in line:
-            continue
-        key, value = line.split(":", 1)
-        key = key.strip()
-        value = value.strip()
-        if not value:
-            data[key] = None
-            continue
-        lowered = value.lower()
-        if lowered in {"true", "false"}:
-            data[key] = lowered == "true"
-            continue
-        if value.startswith("[") and value.endswith("]"):
-            try:
-                data[key] = list(ast.literal_eval(value))
-            except (ValueError, SyntaxError):
-                data[key] = []
-            continue
-        if value.startswith(("'", '"')) and value.endswith(("'", '"')):
-            try:
-                data[key] = ast.literal_eval(value)
-            except (ValueError, SyntaxError):
-                data[key] = value
-            continue
-        data[key] = value
-    return data
+    spec = importlib.util.find_spec("yaml")
+    if spec is not None:
+        yaml = importlib.import_module("yaml")
+        try:
+            loaded = yaml.safe_load(front_matter) or {}
+        except yaml.YAMLError:
+            loaded = {}
+        if isinstance(loaded, Mapping):
+            return dict(loaded)
+    return _parse_front_matter_manually(front_matter)
 
 
 def resolve_glob(pattern: str) -> Iterable[Path]:
