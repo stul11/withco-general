@@ -21,7 +21,7 @@ Analysis of Session_NOTE_Template.md references across the `.cursor/` directory 
 **Missing Sections** (6 out of 11):
 
 - Full Findings
-- Risks & Issues Identified  
+- Risks & Issues Identified
 - Reasoning & Rationale
 - Signoff
 
@@ -43,7 +43,7 @@ Analysis of Session_NOTE_Template.md references across the `.cursor/` directory 
 ### Required Sections (from Session_NOTE_Template.md)
 
 1. **Task ID** - Brief description of main task
-2. **Agent** - Agent type/name  
+2. **Agent** - Agent type/name
 3. **Owner** - Human owner
 4. **Date** - ISO 8601 timestamp
 5. **Duration** - Session length if tracked
