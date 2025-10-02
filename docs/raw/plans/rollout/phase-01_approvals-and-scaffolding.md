@@ -9,7 +9,8 @@ status: draft
 
 # Phase 01 — Approvals & Scaffolding
 
-Purpose: Lock decisions and prepare the repo for implementation without changing existing content semantics. Designed for handoff to new agents; steps are explicit and verifiable.
+Purpose: Lock decisions and prepare the repo for implementation without changing existing
+content semantics. Designed for handoff to new agents; steps are explicit and verifiable.
 
 ## Outcomes
 
@@ -74,7 +75,9 @@ Purpose: Lock decisions and prepare the repo for implementation without changing
 
 ### Check 1: Directory Structure Verification
 
-**Ask**: Verify all scaffolding directories exist and contain expected placeholder files.
+**Ask**:
+
+- [ ] Verify all scaffolding directories exist and contain expected placeholder files.
 
 **Scope**:
 
@@ -110,7 +113,9 @@ Purpose: Lock decisions and prepare the repo for implementation without changing
 
 ### Check 2: File Permissions and Git Tracking
 
-**Ask**: Verify all new files are properly tracked by Git and have correct permissions.
+**Ask**:
+
+- [ ] Verify all new files are properly tracked by Git and have correct permissions.
 
 **Scope**:
 
@@ -122,7 +127,9 @@ Purpose: Lock decisions and prepare the repo for implementation without changing
 
 ### Check 3: Link Integrity
 
-**Ask**: Verify all internal links in planning documents work correctly.
+**Ask**:
+
+- [ ] Verify all internal links in planning documents work correctly.
 
 **Scope**:
 
@@ -134,7 +141,9 @@ Purpose: Lock decisions and prepare the repo for implementation without changing
 
 ### Check 4: README Content Quality
 
-**Ask**: Review README files for clarity, completeness, and adherence to markdown standards.
+**Ask**:
+
+- [ ] Review README files for clarity, completeness, and adherence to markdown standards.
 
 **Scope**:
 

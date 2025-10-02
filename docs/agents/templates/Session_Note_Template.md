@@ -99,11 +99,14 @@ tags: [template, session-NOTE, agent]
 ## Next Actions
 
 - **Immediate Follow-ups**:
-  - [List concrete next steps, with responsible party if known]
+  - [ ] [Describe concrete next step and responsible party]
+  - [ ] [Describe concrete next step and responsible party]
 - **For Next Session**:
-  - [Items to revisit or continue in future sessions]
+  - [ ] [Item to revisit or continue]
+  - [ ] [Item to revisit or continue]
 - **Pending Approvals/Decisions**:
-  - [List any items awaiting review, approval, or further input]
+  - [ ] [Item awaiting review, approval, or further input]
+  - [ ] [Item awaiting review, approval, or further input]
 
 ---
 
