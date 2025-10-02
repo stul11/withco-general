@@ -10,6 +10,8 @@
 
 ## Overview
 
+**Canonical scope**: This document is the authoritative source for cost-of-manufacturing context, decisions, and vendor inventories. For the original intake narrative and broader economics planning brief, reference `/docs/raw/economics-cost-structure-initial-context.md`; summarize only major changes back there to keep the two files in sync.
+
 This document provides comprehensive context for understanding the cost structure and economics of manufacturing Reg A+ offerings for small balance commercial real estate investments. This context supports the ongoing work on LEG-63 "Collect Cost of Manufacturing an Offering Inputs" and related economic modeling.
 
 ## Business Model Context

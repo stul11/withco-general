@@ -5,7 +5,7 @@ My notes are below. I want to start rigorously organizing these throughts into a
 Review the below. I ultimately want to use chatGPT or cursor to help manage my implementation plan , research, and documentation. My company operates out of linear, and I would like to plan there, but through the use of an MCP or ChatGPT connector. I have not tried this before.
 Here are my highest priorities:
 
-- Cost of Manufacturing and Offering
+- Cost of Manufacturing and Offering _(refer to `/docs/raw/cost-of-manufacturing-offering-context.md` for the authoritative breakdown and live updates)_
 - Update and clean up all the pricing proposals and contracts into a board-quality financial model.
 - Economics and legal structure decision, based on cost, scalability, and viability of the investment platform to SMBs, my company, and retail investors
 - Determine minimum check size
@@ -85,6 +85,7 @@ Here are my highest priorities:
   </context-input>
 
 <response>
+**Canonical cost-of-manufacturing reference**: Detailed, living documentation for cost-of-manufacturing analysis now lives in `/docs/raw/cost-of-manufacturing-offering-context.md`. Maintain vendor costs, structural comparisons, and decision logs there and summarize only key updates in this intake narrative.
 0) How we’ll collaborate (options you can approve “as‑is” or mix & match)
 Option A — “Lean model first” (fastest path to a board‑quality model)
 
