@@ -27,10 +27,21 @@ Run the full offboarding checklist and close out the session according to reposi
 1. Confirm intent to offboard.
 2. Create or update a Session Note in `docs/agents/session-notes/` using `docs/agents/templates/Session_Note_Template.md`.
    - File name: `SN_YYYYMMDDHHMM_<task-id>.md` (24-hour UTC)
-   - Prefill metadata and enumerate inputs, steps, outputs, citations, next actions.
+   - Validate all 11 required sections are populated:
+     - [ ] **Metadata**: Task ID, Agent, Owner, Date, Duration
+     - [ ] **Inputs & Context**: Key Documents/Files Provided, Context & Requirements, Relevant Prior Work
+     - [ ] **Full Findings**: Summary of Findings, Detailed Findings with Description/File(s)/Line Numbers/Reasoning/Supporting Evidence
+     - [ ] **Steps Taken**: Major Actions, Key Decisions, Tools/Methods Used
+     - [ ] **Outputs**: Files Created/Modified, Key Deliverables, Documented Decisions
+     - [ ] **Citations**: All sources referenced with precise file paths and line numbers
+     - [ ] **Risks & Issues Identified**: Potential Issues, Mitigation Strategies
+     - [ ] **Reasoning & Rationale**: Explanation of reasoning behind major actions/decisions
+     - [ ] **Next Actions**: Immediate Follow-ups, For Next Session, Pending Approvals/Decisions
+     - [ ] **Signoff**: Reviewer, Status, Date, Notes
 3. Update `docs/global/Decision_Docket.md` with any decisions made.
 4. Update `docs/global/TODO_Log.md` with completed, in-progress, and pending items (carryover clearly marked).
 5. Validations:
+   - **Session Note Completeness**: Verify all 11 required sections are populated (halt if incomplete)
    - `python3 scripts/check_markdown_links.py`
    - `python3 scripts/validate_iso_timestamps.py docs`
 6. Prepare git changes:
@@ -45,11 +56,22 @@ Run the full offboarding checklist and close out the session according to reposi
    - `git status --porcelain docs/agents docs/global docs/prds`
 2. Ensure session note exists and is populated:
    - Create `docs/agents/session-notes/SN_YYYYMMDDHHMM_<task-id>.md` if missing using `docs/agents/templates/Session_Note_Template.md`
-   - Add sections: Objectives, Steps Taken, Outputs (with file paths), Citations (file:lines), Next Actions
+   - Validate all 11 required sections are populated:
+     - [ ] **Metadata**: Task ID, Agent, Owner, Date, Duration (lines 13-17)
+     - [ ] **Inputs & Context**: Key Documents/Files Provided, Context & Requirements, Relevant Prior Work (lines 21-29)
+     - [ ] **Full Findings**: Summary of Findings, Detailed Findings with Description/File(s)/Line Numbers/Reasoning/Supporting Evidence (lines 32-43)
+     - [ ] **Steps Taken**: Major Actions, Key Decisions, Tools/Methods Used (lines 46-54)
+     - [ ] **Outputs**: Files Created/Modified, Key Deliverables, Documented Decisions (lines 57-65)
+     - [ ] **Citations**: All sources referenced with precise file paths and line numbers (lines 68-72)
+     - [ ] **Risks & Issues Identified**: Potential Issues, Mitigation Strategies (lines 75-81)
+     - [ ] **Reasoning & Rationale**: Explanation of reasoning behind major actions/decisions (lines 84-87)
+     - [ ] **Next Actions**: Immediate Follow-ups, For Next Session, Pending Approvals/Decisions (lines 90-98)
+     - [ ] **Signoff**: Reviewer, Status, Date, Notes (lines 101-107)
 3. Update global trackers:
    - Append decisions to `docs/global/Decision_Docket.md`
    - Update status blocks in `docs/global/TODO_Log.md` (Completed/In Progress/Pending)
 4. Validations:
+   - **Session Note Completeness**: Verify all 11 required sections are populated (halt if incomplete)
    - If pre-commit is available: `pre-commit run --all-files`
    - Otherwise:
      - `python3 scripts/check_markdown_links.py`
@@ -67,8 +89,9 @@ Run the full offboarding checklist and close out the session according to reposi
 
 ### Failure handling
 
-- If link or timestamp validation fails, report errors and pause before commit.
-- If session note cannot be created (naming conflict), write to a temp path and ask for guidance.
+- If session note validation fails (missing required sections), report missing sections and halt until completed
+- If link or timestamp validation fails, report errors and pause before commit
+- If session note cannot be created (naming conflict), write to a temp path and ask for guidance
 
 ## Outputs
 
