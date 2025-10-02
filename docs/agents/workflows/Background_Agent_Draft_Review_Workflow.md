@@ -2,6 +2,7 @@
 
 **Created**: 2025-10-01T00:00:00Z  
 **Status**: Final  
+**Approved**: 2025-10-01 by slittle — see `docs/agents/session-notes/SN_20251001-0000_workflow-finalization.md:508`  
 **Purpose**: Define practical workflow for background agent draft ticket creation, review, and Linear implementation
 
 ---
@@ -22,7 +23,7 @@ This workflow establishes a clear process for background agents to create draft 
 
 1. **Agent runs Ticket Wizard conversation** with user (5 phases):
 
-   - **Phase 0 - Boot**: Locate `TKT_Best_Practices.md`
+   - **Phase 0 - Boot**: Locate `GBL-TKT_Best_Practices.md`
    - **Phase 1 - Triage**: Working title, deliverable format, DoD tier (Fast/Standard/Gold)
    - **Phase 2 - Context**: Links, docs, precedents, prior work
    - **Phase 3 - DoD + Plan**: 3-tier DoD with binary checks, 20-60 min task plan
@@ -312,7 +313,7 @@ All Linear operations logged with:
 
 - ✅ **Follow ticket wizard rule** (`.cursor/rules/ticket-wizard.mdc`) - all 5 phases
 - ✅ **Run guided conversation**: Triage → Context → DoD → Risks → Output
-- ✅ **Produce "Beautiful Ticket"** matching `TKT_Best_Practices.md` structure
+- ✅ **Produce "Beautiful Ticket"** matching `GBL-TKT_Best_Practices.md` structure
 - ✅ **Create Reviewer Pack**: TL;DR (3 bullets) + review checklist
 - ✅ **Include all required sections**: Goal, Assumptions, Inputs, Deliverable, DoD (3 tiers), Feedback, OOS, Questions, Plan, Appendix
 - ✅ **Validate completeness** against ticket wizard quality checks
@@ -480,15 +481,16 @@ Draft archived to: linear/tickets/archive/SLF-75-cost-model-improvements.md
 
 ### Feedback Loop
 
-1. **Collect feedback** after each ticket creation
-2. **Identify improvements** to process or templates
-3. **Update documentation** with lessons learned
-4. **Share best practices** with future agents
-5. **Refine workflow** based on usage patterns
+1. **Log metrics** in `Background_Agent_Workflow_Effectiveness.md`
+2. **Collect feedback** after each ticket creation
+3. **Identify improvements** to process or templates
+4. **Update documentation** with lessons learned
+5. **Share best practices** with future agents
+6. **Refine workflow** based on usage patterns
 
 ### Process Refinement
 
-- Weekly review of workflow effectiveness
+- Weekly review of workflow effectiveness (use the metrics snapshot table)
 - Monthly update of documentation
 - Quarterly assessment of safety compliance
 - Ongoing optimization of agent prompts
@@ -513,6 +515,7 @@ Draft archived to: linear/tickets/archive/SLF-75-cost-model-improvements.md
 
 - [Global Work Log Process](../../global/Global_Work_Log_vs_To_Do_Process.md) - Content placement rules
 - [How to use Linear](../../../linear/docs/How_to_use_Linear.md) - Company documentation (READ-ONLY). Do not modify; use personal best practices instead.
+- [Background Agent Workflow Effectiveness Tracker](./Background_Agent_Workflow_Effectiveness.md) - Metrics and feedback log
 
 ---
 
@@ -526,6 +529,15 @@ Use these during or after a session:
 
 See `.cursor/rules/agent-chat-commands.mdc` for details.
 
+---
+
+## Approval Log
+
+- **2025-10-01** — slittle approved the workflow during `docs/agents/session-notes/SN_20251001-0000_workflow-finalization.md:508`, confirming the process is ready for use without revisions.
+
+---
+
 ## Version History
 
+- **v1.1** (2025-10-01): Recorded approval evidence from slittle and confirmed workflow readiness
 - **v1.0** (2025-10-01): Initial workflow definition

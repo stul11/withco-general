@@ -68,9 +68,10 @@ withco-general/
 ## Getting Started
 
 1. **Review Safety Rules**: Understand the boundaries and constraints
-2. **Familiarize with Templates**: Use appropriate templates for your work
-3. **Follow Workflows**: Use the established processes for consistency
-4. **Maintain Documentation**: Update tracking documents and session notes
+2. **Set Up Your Environment**: Follow the [Developer Quickstart (uv)](docs/global/Developer_Quickstart.md) to install dependencies with `uv`
+3. **Familiarize with Templates**: Use appropriate templates for your work
+4. **Follow Workflows**: Use the established processes for consistency
+5. **Maintain Documentation**: Update tracking documents and session notes
 
 ### Development Setup
 

@@ -58,7 +58,7 @@ All changes have been made to ensure the Background Agent Draft Review Workflow 
 
 ### 5. Required Output (Line 50-51)
 
-> "Return a 'Beautiful Ticket' block that exactly matches `TKT_Best_Practices.md` structure, fully populated. Also produce a Reviewer Pack: TL;DR (3 bullets), what to check, and direct links."
+> "Return a 'Beautiful Ticket' block that exactly matches `GBL-TKT_Best_Practices.md` structure, fully populated. Also produce a Reviewer Pack: TL;DR (3 bullets), what to check, and direct links."
 
 **Status**: ✅ **Implemented**
 
@@ -95,7 +95,8 @@ All changes have been made to ensure the Background Agent Draft Review Workflow 
 **Status**: ✅ **Implemented**
 
 - Complete "Ticket Wizard Quality Checks" section added
-- All 11 quality checks from ticket wizard rule included
+- Rule-mandated checks (binary DoD, open question paths, normalized headings) called out explicitly
+- Additional guardrails captured for day-to-day execution
 - Binary DoD checks with evidence requirement specified
 - Open questions with suggested paths requirement included
 

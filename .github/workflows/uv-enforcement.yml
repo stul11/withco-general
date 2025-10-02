@@ -1,0 +1,16 @@
+name: uv compliance
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  uv-only:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+      - name: Enforce uv usage
+        run: python scripts/check_uv_usage.py

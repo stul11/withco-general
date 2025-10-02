@@ -9,6 +9,22 @@ This directory is covered by the generated `AGENTS.md` guardrails. The
 so that updates to the Cursor workspace automatically propagate to the
 repository.
 
+## Folder expectations
+
+- Contains the canonical templates used by agents to author recurring artifacts (playbooks, context packs, decision logs, checklists, etc.).
+- Templates live at the top level as Markdown files; no nested folders are expected after the retired `ADR/` subtree. Add `example-*` files only when a template needs a worked example.
+- Name reusable templates with the `_Template` suffix (for example, `Playbook_Template.md`) so they are easy to discover via search.
+- Include the standard metadata header (`id`, `title`, `version`, `created`, `updated`, `owner`, `status`, `tags`) before the horizontal rule. That block keeps agent automation in sync and enables downstream tooling.
+- Keep generated guardrails (`AGENTS.md`) and hand-authored documentation (`README.md`) under version control; do not edit generated files manually.
+
+## Taxonomy
+
+- **Core agent docs**: `Agent_Role_Card_Template.md`, `Context_Pack_Template.md`, `Playbook_Template.md`, and `Session_Note_Template.md` capture the primary operating artifacts for agents.
+- **Process trackers**: `Decision_Docket_Template.md`, `TODO_Log_Template.md`, and `Research_Request_Template.md` provide structured logs for in-flight work and should be used when recording decisions or research tasks.
+- **Lifecycle checklists**: `Onboarding_Checklist_Template.md` and `Offboarding_Checklist_Template.md` govern human-to-agent handovers.
+- **Specialized utilities**: Files such as `Granola_Paste_Template.md` and `background-clean-up-template.md` support niche workflows; keep similar helpers nearby so automation can surface them together.
+- **Historical references**: `ADR_Template.md` and `example-adr.md` replace the removed `ADR/` directory—store any future ADR material here as templates or examples rather than in a nested folder.
+
 ## Syncing rule templates
 
 Run the sync script whenever you make changes to the `.cursor/rules`

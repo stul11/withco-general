@@ -108,6 +108,16 @@ mapping; checks prevent drift
 - **Links**: .cursor/rules/uv-guidelines.mdc, docs/raw/plans/2025-10-02_uv-guidelines-compliance-review.md, docs/agents/session-notes/SN_20251002-1200_uv-guidelines.md
 - **Owner**: slittle
 
+### 2025-10-02 (J)
+
+- **Decision**: Deprecate the tracked `requirements.txt` in favor of an on-demand `uv export`
+- **Context**: `requirements.txt` encouraged `pip` usage and diverged from the `uv`-only workflow adopted on 2025-10-02; lack of `pyproject.toml` meant the file was manually maintained and prone to drift
+- **Options Considered**: Keep a checked-in `requirements.txt` generated via `uv export`; remove the file and document `uv` alternatives; maintain both `uv` and `pip` instructions
+- **Rationale**: Removing the committed file avoids double maintenance and reinforces the `uv` standard while still allowing contributors to generate a temporary export when needed
+- **Impact**: Delete repository `requirements.txt`; add documentation instructing contributors to run `uv export --format requirements-txt > requirements.txt` if a `pip`-compatible file is required
+- **Links**: docs/global/TODO.codelens.todo, docs/global/TODO_Log.md, docs/agents/session-notes/SN_20251002-2100_safety-alignment-review.md
+- **Owner**: slittle
+
 ### 2025-01-27 (G)
 
 - **Decision**: Implement markdownlint Phase 2-3 with staged fixing and CI/CD integration

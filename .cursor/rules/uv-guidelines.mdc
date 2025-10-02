@@ -25,6 +25,17 @@ uv remove <package>
 uv sync
 ```
 
+## Compatibility exports
+
+- Do not commit a `requirements.txt` to version control.
+- Generate a temporary file only when legacy tooling requires it:
+
+```bash
+uv export --format requirements-txt > requirements.txt
+pip install -r requirements.txt
+rm requirements.txt
+```
+
 ## Scripts
 
 ```bash

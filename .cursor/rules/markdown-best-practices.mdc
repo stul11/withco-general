@@ -5,51 +5,58 @@ alwaysApply: true
 
 # Markdown Best Practices
 
-## Required Formatting
+## Core Expectations
 
-- **Line Length**: Maximum 120 characters per line
-- **Headers**: Use ATX style (# ## ###) consistently
-- **Lists**: Use consistent indentation (2 spaces)
-- **Links**: Use descriptive link text
-- **Code**: Use proper language tags for syntax highlighting
-- **Ordered Lists**: Use sequential numbering (1, 2, 3...)
+- Keep lines ≤ 120 characters unless a URL or code snippet must remain unwrapped.
+- Use ATX headings (`#`, `##`, `###`) with one H1 per document.
+- Maintain sequential ordered list numbering; indent nested list items by two spaces.
+- Use descriptive link text instead of bare URLs; prefer relative paths for internal links.
+- Provide language identifiers for fenced code blocks (` ```bash `, ` ```json `, etc.); use `text` if none applies.
+- Prefer tables only when they add clarity; otherwise, use lists for scanability.
+- Capitalize headings in sentence case unless an external spec requires otherwise.
 
-## Linting Rules
+## File Editing Workflow
 
-- Run `markdownlint --fix .` before committing
-- Fix all linting errors before creating PRs
-- Use `.markdownlint.json` configuration
-- Ensure all fenced code blocks have language specified
-- Avoid duplicate headings in the same document
-- Use proper heading hierarchy (H1 → H2 → H3)
+1. Preserve existing front matter, metadata comments, and reference anchors.
+2. Align wording with project terminology (see `docs/global/glossary/APPROVED-GLOSSARY.md`).
+3. Introduce callouts with the standard pattern:
 
-## Auto-fix Commands
+   ```markdown
+   > **Note**
+   > Explanation text.
+   ```
+
+4. Update backlinks when moving or renaming files; validate relative links afterwards.
+5. Run `markdownlint --fix path/to/file.md` (or `. ``) after significant changes.
+6. Resolve every markdownlint warning prior to handing work off or opening a PR.
+
+## Generated Markdown Responses
+
+- Match the repository voice: concise, direct, collaborative.
+- Keep bullet lists short (≤ 6 items) and avoid nested bullets unless structure demands it.
+- Wrap commands/files/env vars in backticks; reserve bold for emphasis or section headers.
+- Include verification steps or follow-up actions when edits require validation.
+- Surface assumptions explicitly when context is missing; do not speculate.
+
+## Common Lint Failures to Watch
+
+- `MD013`: Break long paragraphs or lists to respect the 120-character limit.
+- `MD025`: Ensure a single H1 heading per document.
+- `MD024`: Keep heading labels unique.
+- `MD029`: Fix numbering after reordering or inserting list items.
+- `MD040`: Add language tags to every fenced code block.
+- `MD046`: Prefer fenced code blocks over indented code blocks.
+
+## Helpful Commands
 
 ```bash
-# Fix all markdown issues
+# Format entire repository (slower)
 markdownlint --fix .
 
-# Check specific file
-markdownlint path/to/file.md
+# Format specific files
+markdownlint --fix docs/path/to/file.md
 
-# Run custom validation
+# Repository link and timestamp validation
 python3 scripts/check_markdown_links.py
 python3 scripts/validate_iso_timestamps.py docs
 ```
-
-## Common Issues to Avoid
-
-- **MD013**: Line length exceeding 120 characters
-- **MD025**: Multiple top-level headings (H1)
-- **MD024**: Duplicate headings
-- **MD040**: Fenced code blocks without language
-- **MD029**: Incorrect ordered list numbering
-- **MD003**: Inconsistent heading styles
-- **MD036**: Using emphasis instead of headings
-
-## Integration
-
-- **Pre-commit**: Automatically runs markdownlint on staged files
-- **VS Code**: Install markdownlint extension for real-time feedback
-- **CI/CD**: Include markdownlint in build pipeline
-- **Custom Scripts**: Use `scripts/fix-markdown.sh` for comprehensive fixing

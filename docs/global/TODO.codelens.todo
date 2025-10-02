@@ -113,27 +113,18 @@
 # TODO [Done] id=TODO-Log-113 Create generative plan doc for Pydantic Schema Review Agent in docs/raw/plans
 # TODO [Done] id=TODO-Log-114 Define lightweight offboarding process with rules and checklist
 # TODO [Done] id=TODO-Log-115 Update templates to follow datetime-format rule
-# TODO [Open] id=TODO-Log-116 Propose Cursor rules and helpful commands to enhance workflows
 # TODO [Open] id=TODO-Log-117 Create `pyproject.toml` and initialize `uv.lock` with core tools
-# TODO [Open] id=TODO-Log-118 Replace `pip` references in `scripts/README.md` with `uv` equivalents
-# TODO [Open] id=TODO-Log-119 Decide policy for `requirements.txt` (generated via `uv export` vs deprecate)
-# TODO [Open] id=TODO-Log-120 Add CI checks to block `pip`/`poetry` usage and encourage `uv`
-# TODO [Open] id=TODO-Log-121 Document developer quickstart with `uv` commands
-# TODO [Done] id=TODO-Log-122 Review and approve Background Agent Draft Review Workflow
-# TODO [Done] id=TODO-Log-123 Review Ticket Wizard Alignment documentation
+# TODO [Done] id=TODO-Log-119 Deprecated checked-in `requirements.txt`; document uv-only workflow with on-demand exports
+# Completed id=TODO-Log-122 Review and approve Background Agent Draft Review Workflow — approval captured in `docs/agents/workflows/Background_Agent_Draft_Review_Workflow.md#approval-log`
 # TODO [Open] id=TODO-Log-124 Test workflow with next background agent session
 # TODO [Open] id=TODO-Log-125 Create test draft ticket using ticket wizard process (all 5 phases)
 # TODO [Open] id=TODO-Log-126 Validate quality checks catch issues before Linear creation
 # TODO [Open] id=TODO-Log-127 Apply process to existing draft tickets in linear/tickets/drafts/
 # TODO [Open] id=TODO-Log-128 Migrate content between SLF-73 and To-Do project per defined process
 # TODO [Open] id=TODO-Log-129 Create automation opportunities for workflow
-# TODO [Open] id=TODO-Log-130 Monitor workflow effectiveness and gather feedback
 # TODO [Open] id=TODO-Log-131 Create LEG-PRD_Design_Economic_Transaction_Model.md from finalized template
 # TODO [Open] id=TODO-Log-132 Create LEG-PRD_Design_Cost_of_Manufacturing_an_Offering.md from finalized template
 # TODO [Open] id=TODO-Log-133 Create LEG-PRD_Determine_Minimum_Check_Size.md from finalized template
-# TODO [Open] id=TODO-Log-134 Document folder and taxonomy expectations for `docs/agents/templates/` (successor to the removed ADR subdirectory)
-# TODO [Open] id=TODO-Log-135 Document agent artifacts framework (Role Card, Context Pack, Playbook, ADRs)
-# TODO [Open] id=TODO-Log-136 Define onboarding and offboarding checklists for agents
 # TODO [Open] id=TODO-Log-137 Define session NOTE format and decision docket process
 # TODO [Open] id=TODO-Log-138 Prepare example Agent Role Card and Session NOTE
 # TODO [Open] id=TODO-Log-139 Publish agreed Best Practices into docs/global/GBL-PRD_Best_Practices.md
@@ -157,7 +148,6 @@
 # TODO [Done] id=TODO-Log-157 **[High | ~15-20 min]** Resolve broken links identified in the agent-offboarding handoff (README offboarding link, SLF-78 try-shortcut references, workflow rule/template links) so link validation passes.
 # TODO [Done] id=TODO-Log-158 **[High | ~10-15 min]** Re-verify all `.cursor/rules/*` and `docs/agents/workflows/*` links after fixes to ensure navigation from rules to workflows succeeds.
 # TODO [Open] id=TODO-Log-159 **[High | ~10-15 min]** Execute `/offboard --dry-run`, `/end-session --dry-run`, and `/onboard-next-agent --dry-run` to confirm the updated commands operate end-to-end.
-# TODO [Done] id=TODO-Log-160 **Create cursor rules** for markdown best practices (COMPLETED in current session)
 # TODO [Done] id=TODO-Log-161 **Add VS Code settings** for team consistency (COMPLETED in current session)
 # TODO [Done] id=TODO-Log-162 **Implement staged fixing** (fix by directory)
 # TODO [Done] id=TODO-Log-163 **Add CI integration** for pull requests
@@ -203,8 +193,6 @@
 # TODO [Done] id=TODO-Log-205 Add normalization/safety rules and auto-detect one vs two paste blocks
 # TODO [Done] id=TODO-Log-206 Author workflow runbook and paste template; update linted docs
 # TODO [Open] id=TODO-Log-207 Run a dry-run on sample content using `/granola-review <link> --write draft` and validate outputs
-# TODO [Open] id=TODO-Log-208 (AGENT) [MED] Align /offboard required sections across commands
-
 # TODO [Open] id=TODO-Log-401 Convert checkbox backlog sections to Option 3 schema — docs/global/TODO_Log.md (Next Agent Session, Naming Conventions Rollout)
 # TODO [Open] id=TODO-Log-402 Backfill phase-02 session notes with template front matter — docs/agents/session-notes/SN_20251002-1045_phase-02-sample-items.md
 # TODO [Open] id=TODO-Log-403 Relocate standardized vendor reference out of linear/tickets/drafts — linear/tickets/drafts/standardized-vendor-list.md

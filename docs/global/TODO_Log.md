@@ -1,10 +1,14 @@
 # TODO Log
 
-- **Last Updated**: 2025-10-02T21:10:00Z
+- **Last Updated**: 2025-10-02T21:37:16Z
 - **Session**: todo-log-normalization
 - **Owner**: slittle
 
 ## Completed
+
+### Session: agent-artifacts-framework (2025-10-02)
+
+- [x] Document agent artifacts framework (Role Card, Context Pack, Playbook, ADRs) <!-- id: TODO-20251002-205 -->
 
 ### Session: linear-documentation-v0 (2025-10-02)
 
@@ -20,6 +24,10 @@
 - [x] Add CI workflow to run lint, link, timestamp, and sidecar drift checks <!-- id: TODO-20251002-212 -->
 - [x] Add docs/README and update docs/global/README with CodeLens usage <!-- id: TODO-20251002-213 -->
 - [x] Add Session NOTE checklist to template and cross-link from AGENTS <!-- id: TODO-20251002-214 -->
+
+### Session: cursor-workflow-enhancements (2025-10-02)
+
+- [x] Propose Cursor rules and helper commands to enhance workflows <!-- id: TODO-20251002-217 -->
 
 ### Session: codelens-to-do-integration (2025-10-02)
 
@@ -176,6 +184,7 @@
 - [x] Create session NOTE with offboarding checklist
 - [x] Update Decision Docket with key decisions
 - [x] Update TODO Log with carryover items
+- [x] Review and approve Background Agent Draft Review Workflow (see `docs/agents/session-notes/SN_20251001-0000_workflow-finalization.md:508`)
 
 ### Session: PRD-Best-Practices-Definition (2025-09-27)
 
@@ -190,11 +199,6 @@
 - [x] Update templates to follow datetime-format rule
 
 ## In Progress
-
-- TODO: (WORKFLOW) [MED] Propose Cursor rules and helpful commands to enhance workflows <!-- id: TODO-20251002-217 -->
-  source: docs/global/TODO_Log.md#in-progress
-  tags: cursor, workflows
-  notes: ICE-lite (Impact 3, Confidence 0.6, Effort 2) -> 0.9. Improves discoverability of automation helpers for agents.
 
 ### ANA Documentation Follow-Ups
 
@@ -212,7 +216,7 @@
   source: docs/agents/session-notes/SN_20251002-1200_uv-guidelines.md#full-findings
   tags: uv, documentation, tooling
   notes: ICE-lite (Impact 2, Confidence 0.6, Effort 2) -> 0.6. Eliminates conflicting guidance for dependency management.
-- TODO: (POLICY) [HIGH] Decide policy for `requirements.txt` (generated via `uv export` vs deprecate) <!-- id: TODO-20251002-220 -->
+- [x] (POLICY) [HIGH] Deprecated checked-in `requirements.txt`; document uv-only workflow with on-demand exports <!-- id: TODO-20251002-220 -->
   source: docs/agents/session-notes/SN_20251002-1200_uv-guidelines.md#next-actions
   tags: uv, governance, dependencies
   notes: ICE-lite (Impact 2, Confidence 0.5, Effort 1) -> 1.0. Clarifies whether legacy requirements stay generated or are retired.
@@ -220,10 +224,10 @@
   source: docs/agents/session-notes/SN_20251002-1200_uv-guidelines.md#next-actions
   tags: uv, ci, enforcement
   notes: ICE-lite (Impact 3, Confidence 0.6, Effort 3) -> 0.6. Prevents regressions toward unsupported package managers.
-- TODO: (DOCS) [HIGH] Document developer quickstart with `uv` commands <!-- id: TODO-20251002-222 -->
+- [x] (DOCS) [HIGH] Document developer quickstart with `uv` commands <!-- id: TODO-20251002-222 -->
   source: docs/agents/session-notes/SN_20251002-1200_uv-guidelines.md#next-actions
   tags: uv, onboarding, documentation
-  notes: ICE-lite (Impact 2, Confidence 0.7, Effort 1) -> 1.4. Speeds onboarding with uv-first setup guidance.
+  notes: Completed via `docs/global/Developer_Quickstart.md` and README quickstart link.
 
 ## Pending
 
@@ -307,10 +311,6 @@ reference for traceability._
   source: docs/raw/plans/2025-10-02_document-categorization-and-workflows.md#2-directory-taxonomy-option-a-refined
   tags: taxonomy, templates
   notes: ICE-lite (Impact 2, Confidence 0.6, Effort 2) -> 0.6. Clarifies structure ahead of template migrations.
-- TODO: (AGENT) [LOW] Document agent artifacts framework (Role Card, Context Pack, Playbook, ADRs) <!-- id: TODO-20251002-205 -->
-  source: docs/agents/templates/Agent_Role_Card_Template.md
-  tags: agents, templates
-  notes: ICE-lite (Impact 2, Confidence 0.5, Effort 3) -> 0.33. Captures guidance for artifact families after taxonomy set.
 - TODO: (AGENT) [HIGH] Define onboarding and offboarding checklists for agents <!-- id: TODO-20251002-206 -->
   source: .cursor/commands/offboard.md#behavior-what-the-agent-will-do
   tags: agents, workflows

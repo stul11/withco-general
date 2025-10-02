@@ -82,6 +82,7 @@ docs/global/
 
 ## Related Documentation
 
+- [Developer Quickstart (uv)](Developer_Quickstart.md)
 - [Agent Templates](../agents/templates/)
 - [Background Agent Workflow](../agents/workflows/)
 - [Cursor Rules](../../.cursor/rules/)

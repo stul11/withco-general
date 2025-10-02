@@ -4,6 +4,14 @@ This directory contains custom Cursor commands for the withco-general repository
 
 ## Available Commands
 
+### `/prep-session`
+
+Session bootstrap that surfaces current git status, priority TODO items, and recent Session NOTES so you can plan the next actions quickly.
+
+### `/status-sweep`
+
+Pre-review quality gate that runs `pre-commit`, Markdown validators, and TODO sync checks, then reports whether the tree is ready to stage.
+
 ### `/sync-help`
 
 Automated git synchronization command that handles the complete process of reviewing changes, managing merges, and syncing with remote repositories.

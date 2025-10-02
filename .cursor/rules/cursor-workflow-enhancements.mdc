@@ -1,0 +1,52 @@
+---
+description: "Cursor workflow enhancements and helper command entry points"
+alwaysApply: false
+---
+
+# Cursor Workflow Enhancements
+
+## Purpose
+
+Provide lightweight defaults for agents to spin up productive sessions quickly, reduce context thrash,
+and keep repository automations running smoothly inside Cursor. Apply this rule whenever you need
+to orient yourself, collect context, or hand off work between agents.
+
+## Core Workflow Expectations
+
+- **Start clean**: Run `/prep-session` (see command doc) at the beginning of substantive work to gather
+  open TODOs, recent notes, and outstanding diffs before editing.
+- **Prefer scripted checks**: Use `/status-sweep` to consolidate quality gates instead of running
+  ad-hoc commands (`pre-commit`, link/timestamp validators, git status) piecemeal.
+- **Capture decisions**: From Cursor, jump directly to decision and TODO logs (`docs/global/Decision_Docket.md`,
+  `docs/global/TODO_Log.md`) using the workspace search palette before final summaries.
+- **Lean on ripgrep**: Default to `rg` for repository searches; avoid slower `grep`/`find` unless absolutely
+  necessary or unavailable.
+- **Keep commits intentional**: Stage changes only after `/status-sweep` reports clean results and
+  outstanding TODO updates are applied.
+
+## Quick Command Reference
+
+| Command        | When to run                                 | Key Outputs |
+|----------------|---------------------------------------------|-------------|
+| `/prep-session`| Session kickoff, context refresh, handoffs   | TODO digest, recent NOTE links, git status summary |
+| `/status-sweep`| Pre-commit, pre-handoff, before reviews     | Validation report, staged file hints, suggested fixes |
+
+## Safety & Boundaries
+
+- Commands MUST respect read-only zones documented in repository rules (e.g., company Linear docs).
+- Never auto-commit or push; suggest commit messages only.
+- Halt and surface actionable errors (missing TODO updates, failing validators) instead of attempting
+  silent fixes.
+
+## Implementation Notes
+
+- Both helper commands should accept `--dry-run` to preview actions without edits.
+- Prefer shelling out to existing scripts (`pre-commit`, `python3 scripts/check_markdown_links.py`,
+  `python3 scripts/validate_iso_timestamps.py`) so we avoid duplicating logic.
+- Emit machine-readable blocks (JSON fenced with ```json) when possible to ease summarization inside Cursor.
+
+## Related Resources
+
+- `.cursor/rules/todo-cursor.mdc` for TODO synchronization requirements
+- `.cursor/rules/agent-session-notes.mdc` for NOTE expectations
+- `.cursor/commands/offboard.md` and `.cursor/commands/onboard-next-agent.md` for complementary lifecycle steps

@@ -28,11 +28,13 @@ python scripts/sync_agents_rules.py --check
 ### Installation
 
 ```bash
-# Using pip
-pip install pyyaml
+# Using uv (preferred)
+uv pip install pyyaml
 
-# Or using the project requirements.txt
+# Need a temporary requirements.txt for legacy tooling?
+uv export --format requirements-txt > requirements.txt
 pip install -r requirements.txt
+rm requirements.txt
 ```
 
 ### How it works
@@ -57,7 +59,7 @@ This script is integrated into the pre-commit hooks to ensure AGENTS.md files st
 
 ### Troubleshooting
 
-- **Missing pyyaml**: Install with `pip install pyyaml`
+- **Missing pyyaml**: Install with `uv pip install pyyaml`
 - **Permission errors**: Ensure you have write access to target directories
 - **Glob pattern issues**: Check that glob patterns in rule front matter are valid
 - **Manual directories**: Some rules include hardcoded directory mappings in addition to glob patterns

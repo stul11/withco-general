@@ -29,7 +29,8 @@ Run the full offboarding checklist and close out the session according to reposi
    - File name: `SN_YYYYMMDD-HHMM_<task-id>.md` (24-hour UTC)
    - HHMM uses CREATED timestamp rounded down to nearest 15 minutes (00, 15, 30, 45)
    - Do NOT rename on updates; update frontmatter `updated:` only
-   - Validate all 11 required sections are populated:
+   - Validate every required section is populated:
+     <!-- SESSION_NOTE_REQUIRED_SECTIONS:start -->
      - [ ] **Metadata**: Task ID, Agent, Owner, Date, Duration
      - [ ] **Inputs & Context**: Key Documents/Files Provided, Context & Requirements, Relevant Prior Work
      - [ ] **Full Findings**: Summary of Findings, Detailed Findings with Description/File(s)/Line Numbers/Reasoning/Supporting Evidence
@@ -40,10 +41,11 @@ Run the full offboarding checklist and close out the session according to reposi
      - [ ] **Reasoning & Rationale**: Explanation of reasoning behind major actions/decisions
      - [ ] **Next Actions**: Immediate Follow-ups, For Next Session, Pending Approvals/Decisions
      - [ ] **Signoff**: Reviewer, Status, Date, Notes
+     <!-- SESSION_NOTE_REQUIRED_SECTIONS:end -->
 3. Update `docs/global/Decision_Docket.md` with any decisions made.
 4. Update `docs/global/TODO_Log.md` with completed, in-progress, and pending items (carryover clearly marked).
 5. Validations:
-   - **Session NOTE Completeness**: Verify all 11 required sections are populated (halt if incomplete)
+   - **Session NOTE Completeness**: Verify every required section listed above is populated (halt if incomplete)
    - `python3 scripts/check_markdown_links.py`
    - `python3 scripts/validate_iso_timestamps.py docs`
 6. Prepare git changes:
@@ -60,22 +62,12 @@ Run the full offboarding checklist and close out the session according to reposi
    - Create `docs/agents/session-notes/SN_YYYYMMDD-HHMM_<task-id>.md` if missing using `docs/agents/templates/Session_Note_Template.md`
    - Use CREATED timestamp rounded to 15 minutes; never rename existing files on update
    - Helper: `python3 scripts/hhmm_round.py 2025-10-02T10:52:00Z` → `1050`
-   - Validate all 11 required sections are populated:
-     - [ ] **Metadata**: Task ID, Agent, Owner, Date, Duration (lines 13-17)
-     - [ ] **Inputs & Context**: Key Documents/Files Provided, Context & Requirements, Relevant Prior Work (lines 21-29)
-     - [ ] **Full Findings**: Summary of Findings, Detailed Findings with Description/File(s)/Line Numbers/Reasoning/Supporting Evidence (lines 32-43)
-     - [ ] **Steps Taken**: Major Actions, Key Decisions, Tools/Methods Used (lines 46-54)
-     - [ ] **Outputs**: Files Created/Modified, Key Deliverables, Documented Decisions (lines 57-65)
-     - [ ] **Citations**: All sources referenced with precise file paths and line numbers (lines 68-72)
-     - [ ] **Risks & Issues Identified**: Potential Issues, Mitigation Strategies (lines 75-81)
-     - [ ] **Reasoning & Rationale**: Explanation of reasoning behind major actions/decisions (lines 84-87)
-     - [ ] **Next Actions**: Immediate Follow-ups, For Next Session, Pending Approvals/Decisions (lines 90-98)
-     - [ ] **Signoff**: Reviewer, Status, Date, Notes (lines 101-107)
+   - Validate each required section from the checklist above (`Metadata` through `Signoff`) is populated before proceeding.
 3. Update global trackers:
    - Append decisions to `docs/global/Decision_Docket.md`
    - Update status blocks in `docs/global/TODO_Log.md` (Completed/In Progress/Pending)
 4. Validations:
-   - **Session NOTE Completeness**: Verify all 11 required sections are populated (halt if incomplete)
+   - **Session NOTE Completeness**: Verify every required section listed above is populated (halt if incomplete)
    - If pre-commit is available: `pre-commit run --all-files`
    - Otherwise:
      - `python3 scripts/check_markdown_links.py`
