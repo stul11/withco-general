@@ -25,8 +25,10 @@ Run the full offboarding checklist and close out the session according to reposi
 ## Behavior (what the agent will do)
 
 1. Confirm intent to offboard.
-2. Create or update a Session Note in `docs/agents/session-notes/` using `docs/agents/templates/Session_Note_Template.md`.
-   - File name: `SN_YYYYMMDDHHMM_<task-id>.md` (24-hour UTC)
+2. Create or update a Session NOTE in `docs/agents/session-notes/` using `docs/agents/templates/Session_Note_Template.md`.
+   - File name: `SN_YYYYMMDD-HHMM_<task-id>.md` (24-hour UTC)
+   - HHMM uses CREATED timestamp rounded down to nearest 15 minutes (00, 15, 30, 45)
+   - Do NOT rename on updates; update frontmatter `updated:` only
    - Validate all 11 required sections are populated:
      - [ ] **Metadata**: Task ID, Agent, Owner, Date, Duration
      - [ ] **Inputs & Context**: Key Documents/Files Provided, Context & Requirements, Relevant Prior Work
@@ -54,8 +56,9 @@ Run the full offboarding checklist and close out the session according to reposi
 
 1. Detect changed docs (for note inputs/outputs):
    - `git status --porcelain docs/agents docs/global docs/prds`
-2. Ensure session note exists and is populated:
-   - Create `docs/agents/session-notes/SN_YYYYMMDDHHMM_<task-id>.md` if missing using `docs/agents/templates/Session_Note_Template.md`
+2. Ensure session NOTE exists and is populated:
+   - Create `docs/agents/session-notes/SN_YYYYMMDD-HHMM_<task-id>.md` if missing using `docs/agents/templates/Session_Note_Template.md`
+   - Use CREATED timestamp rounded to 15 minutes; never rename existing files on update
    - Validate all 11 required sections are populated:
      - [ ] **Metadata**: Task ID, Agent, Owner, Date, Duration (lines 13-17)
      - [ ] **Inputs & Context**: Key Documents/Files Provided, Context & Requirements, Relevant Prior Work (lines 21-29)

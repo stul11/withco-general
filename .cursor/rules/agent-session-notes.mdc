@@ -8,7 +8,7 @@ globs: ["**/docs/prds/**", "**/docs/agents/**", "**/docs/global/**"]
 
 ## Overview
 
-When an agent session edits files in PRDs, agents, or global documentation directories, a Session Note MUST be created to document the work performed, decisions made, and outcomes achieved.
+When an agent session edits files in PRDs, agents, or global documentation directories, a Session NOTE MUST be created to document the work performed, decisions made, and outcomes achieved.
 
 ## Trigger Conditions
 
@@ -20,15 +20,15 @@ This rule applies when any files are modified in:
 
 ## Required Actions
 
-### Session Note Creation
+### Session NOTE Creation
 
-- [ ] Create Session Note using template from `docs/agents/templates/Session_Note_Template.md`
-- [ ] Follow naming convention: `SN_YYYYMMDD-HHMM_slug-with-dashes.md` (24-hour UTC); confirm slug manually
+- [ ] Create Session NOTE using template from `docs/agents/templates/Session_Note_Template.md`
+- [ ] Follow naming convention: `SN_YYYYMMDD-HHMM_slug-with-dashes.md` (24-hour UTC) - HHMM is the CREATED timestamp rounded down to the nearest 15 minutes (00, 15, 30, 45) - Filename is IMMUTABLE after creation; do not rename on updates - Confirm slug manually at creation time
 - [ ] Document all objectives, steps taken, outputs, and decisions
 - [ ] Include citations to relevant files and line ranges
 - [ ] Identify risks and next actions
- - [ ] Include minimal frontmatter (`type: session-NOTE`, `created`, `updated`, optional `team`, `tags`)
- - [ ] Choose Full vs Lite skeleton at creation time and ensure all required sections are present
+      [ ] Include minimal frontmatter (`type: session-NOTE`, `created`, `updated`, optional `team`, `tags`)
+      [ ] Choose Full vs Lite skeleton at creation time and ensure all required sections are present
 
 ### Human Signoff
 
@@ -36,9 +36,9 @@ This rule applies when any files are modified in:
 - [ ] Update Decision Docket with key decisions made
 - [ ] Update TODO Log with completed and carryover items
 - [ ] Commit all changes with descriptive commit message
- - [ ] When creating TODO/TOPLAN via commands, include `source:` back-link to the originating NOTE section
+      [ ] When creating TODO/TOPLAN via commands, include `source:` back-link to the originating NOTE section
 
-## Session Note Requirements
+## Session NOTE Requirements
 
 ### Required Sections
 
@@ -68,7 +68,7 @@ This rule applies when any files are modified in:
 
 Before ending an agent session:
 
-- [ ] Session Note created and complete
+- [ ] Session NOTE created and complete
 - [ ] All required sections populated
 - [ ] Human review obtained
 - [ ] Decision Docket updated
@@ -77,26 +77,26 @@ Before ending an agent session:
 
 ### Failure Response
 
-If Session Note requirements not met:
+If Session NOTE requirements not met:
 
 1. **Halt session completion** until requirements satisfied
-2. **Remind agent** of Session Note requirements
+2. **Remind agent** of Session NOTE requirements
 3. **Provide guidance** on missing elements
 4. **Require completion** before proceeding
 
 ## Related Documentation
 
-- [Session Note Template](../docs/agents/templates/Session_Note_Template.md)
+- [Session NOTE Template](../docs/agents/templates/Session_Note_Template.md)
 - [Agent Offboarding Rule](./agent-offboarding.mdc)
 - [Decision Docket](../docs/global/Decision_Docket.md)
 - [TODO Log](../docs/global/TODO_Log.md)
 
 ## Examples
 
-### Valid Session Note
+### Valid Session NOTE
 
 ```markdown
-# Session Note
+# Session NOTE
 
 - **Task ID**: PRD-Best-Practices-Definition
 - **Agent**: GPT-5-Pro

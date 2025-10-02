@@ -34,7 +34,7 @@ Establish a clear, consistent document taxonomy, naming scheme, and lightweight 
 
 ### 1.1 Filenames
 
-- Session notes (agents): `SN_YYYYMMDD-HHMM_slug-with-dashes.md`
+- Session notes (agents): `SN_YYYYMMDD-HHMM_slug-with-dashes.md` (HHMM = CREATED rounded down to 15 min; immutable)
 - Meeting notes: `MN_YYYYMMDD-HHMM_slug-with-dashes.md`
 - Granola notes: `GR_YYYYMMDD-HHMM_slug-with-dashes.md`
 - Raw capture: `RN_YYYYMMDD-HHMM_slug-with-dashes.md`
@@ -216,7 +216,7 @@ Apply a minimal, consistent header across new docs (including linear business do
 type: session-NOTE | meeting-NOTE | granola | research | raw | plan | TODO
 team: PROD | ANA | DATA | LEG | global
 created: 2025-10-02T09:30:00Z
-updated: 2025-10-02T09:30:00Z
+updated: 2025-10-02T09:30:00Z  # update on edits; filename remains based on created
 source: docs/agents/session-notes/SN_20251002-0930_slug.md#context
 tags: [session-notes, template]
 ---
@@ -444,7 +444,7 @@ Links to rollout sub-plans:
 - Index: `docs/raw/plans/rollout/INDEX.md`
 - Phase 01 — Approvals & Scaffolding: `docs/raw/plans/rollout/phase-01_approvals-and-scaffolding.md`
 - Phase 02 — Rules & Commands: `docs/raw/plans/rollout/phase-02_rules-and-commands.md`
- - Phase 03 — Standard Migration: `docs/raw/plans/rollout/phase-03_standard-migration.md`
+- Phase 03 — Standard Migration: `docs/raw/plans/rollout/phase-03_standard-migration.md`
 
 ---
 
