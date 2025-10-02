@@ -51,7 +51,7 @@ violation_patterns:
     response: "halt_and_request_approval"
 
   template_modification:
-    pattern: "write to linear/docs/templates/"
+    pattern: "write to docs/company/linear/How_to_use_Linear.md"
     severity: "CRITICAL"
     response: "immediate_stop_and_alert"
 ```
@@ -178,7 +178,7 @@ monitoring:
   violation_detection:
     - "Unauthorized Linear writes"
     - "Scope violations"
-    - "Template modifications"
+    - "Company Linear documentation modifications"
     - "Safety rule bypasses"
 
   performance_metrics:
@@ -194,7 +194,7 @@ monitoring:
 alerts:
   critical:
     - "Unauthorized Linear write detected"
-    - "Company Linear template modified"
+    - "Company Linear documentation modified"
     - "Safety rules bypassed"
     - "Rollback required"
 
@@ -283,7 +283,7 @@ safety_tests:
 
   negative_tests:
     - "Write to company Linear projects"
-    - "Modify company Linear templates"
+    - "Modify company Linear documentation"
     - "Create issues in company projects"
     - "Update company project milestones"
 

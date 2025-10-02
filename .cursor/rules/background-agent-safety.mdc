@@ -39,7 +39,7 @@ alwaysApply: true
 **PROHIBITED File Operations:**
 
 - ❌ **NO WRITES** to company Linear project files
-- ❌ **NO MODIFICATION** of company Linear templates
+- ❌ **NO MODIFICATION** of `docs/company/linear/How_to_use_Linear.md` (company document - READ-ONLY)
 - ❌ **NO CREATION** of files in company Linear directories
 
 ### 3. Operational Boundaries
@@ -148,9 +148,13 @@ codebase_search:
 read_file:
   target_file: "linear/docs/templates/ticket-template.md"
 
-# UNSAFE: Modify company Linear templates
+# SAFE: Read company Linear documentation
+read_file:
+  target_file: "docs/company/linear/How_to_use_Linear.md"
+
+# UNSAFE: Modify company Linear documentation
 write:
-  file_path: "linear/docs/templates/ticket-template.md" # ❌ PROHIBITED
+  file_path: "docs/company/linear/How_to_use_Linear.md" # ❌ PROHIBITED
 ```
 
 ## EMERGENCY PROCEDURES
