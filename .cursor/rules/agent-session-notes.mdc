@@ -23,10 +23,12 @@ This rule applies when any files are modified in:
 ### Session Note Creation
 
 - [ ] Create Session Note using template from `docs/agents/templates/Session_Note_Template.md`
-- [ ] Follow naming convention: `SN_YYYYMMDDHHMM_<TaskId>.md` (24-hour UTC)
+- [ ] Follow naming convention: `SN_YYYYMMDD-HHMM_slug-with-dashes.md` (24-hour UTC); confirm slug manually
 - [ ] Document all objectives, steps taken, outputs, and decisions
 - [ ] Include citations to relevant files and line ranges
 - [ ] Identify risks and next actions
+ - [ ] Include minimal frontmatter (`type: session-NOTE`, `created`, `updated`, optional `team`, `tags`)
+ - [ ] Choose Full vs Lite skeleton at creation time and ensure all required sections are present
 
 ### Human Signoff
 
@@ -34,6 +36,7 @@ This rule applies when any files are modified in:
 - [ ] Update Decision Docket with key decisions made
 - [ ] Update TODO Log with completed and carryover items
 - [ ] Commit all changes with descriptive commit message
+ - [ ] When creating TODO/TOPLAN via commands, include `source:` back-link to the originating NOTE section
 
 ## Session Note Requirements
 
