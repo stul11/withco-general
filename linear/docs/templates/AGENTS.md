@@ -4,4 +4,7 @@
 
 ## Ticket Wizard Workflow
 
-When creating or updating Linear tickets, follow the Ticket Wizard conversation flow. Confirm the request, gather context, and tighten the summary before handing it off. Use the ticket template at `linear/docs/templates/ticket-template.md` and store drafts under `linear/tickets/drafts/` unless instructed otherwise. Never push to Linear automatically—share the prepared output with the user for review.
+When creating or updating Linear tickets, follow the Ticket Wizard conversation flow. Confirm the request,
+gather context, and tighten the summary before handing it off. Use the ticket template at
+`linear/docs/templates/ticket-template.md` and store drafts under `linear/tickets/drafts/` unless instructed
+otherwise. Never push to Linear automatically—share the prepared output with the user for review.
