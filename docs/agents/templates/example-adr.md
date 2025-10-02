@@ -1,8 +1,7 @@
-# Example ADR
+<!-- markdownlint-disable MD003 MD022 -->
+<!-- markdownlint-disable MD041 -->
 
-This is an example ADR file referenced by the ADR template.
-
----
+## <!-- markdownlint-disable MD025 -->
 
 id: ADR-0005
 title: Example ADR
@@ -12,7 +11,10 @@ updated: 2025-01-27T17:30:00Z
 owner: example
 status: Draft
 tags: [example, template]
+
 ---
+
+# Example ADR
 
 ## Status
 

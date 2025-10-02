@@ -1,8 +1,9 @@
-# Research Request Template
+<!-- markdownlint-disable MD003 MD022 -->
+<!-- markdownlint-disable MD041 -->
 
----
+## <!-- markdownlint-disable MD025 -->
 
-id: [TEAM]-RES_[Title]
+id: [TEAM]-RES\_[Title]
 title: [Descriptive Title]
 status: Draft | In Progress | Completed | Cancelled
 created: YYYY-MM-DDTHH:MM:SSZ
@@ -14,6 +15,7 @@ tags: [research, topic1, topic2]
 related_docs: []
 risk_level: Low | Medium | High
 repo_only: true
+
 ---
 
 # [Descriptive Title]

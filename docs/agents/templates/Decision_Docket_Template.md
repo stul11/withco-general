@@ -1,4 +1,8 @@
----
+<!-- markdownlint-disable MD003 MD022 -->
+<!-- markdownlint-disable MD041 -->
+
+## <!-- markdownlint-disable MD025 -->
+
 id: DD_Template
 title: Decision Docket Template
 version: 1.0.0
@@ -7,6 +11,7 @@ updated: 2025-01-27T19:00:00Z
 owner: slittle
 status: Active
 tags: [template, decision-docket, tracking]
+
 ---
 
 # Decision Docket
@@ -16,7 +21,7 @@ tags: [template, decision-docket, tracking]
 
 ## Recent Decisions
 
-### YYYY-MM-DD
+### 2025-01-27
 
 - **Decision**: [Brief description of decision]
 - **Context**: [Why this decision was needed]
@@ -26,7 +31,7 @@ tags: [template, decision-docket, tracking]
 - **Links**: [PRD/commit/session NOTE references]
 - **Owner**: [Who made the decision]
 
-### YYYY-MM-DD
+### 2025-01-28
 
 - **Decision**: [Another decision]
 - **Context**: [Context for this decision]

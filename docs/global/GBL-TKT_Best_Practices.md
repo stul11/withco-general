@@ -31,7 +31,7 @@ risk_level: Low
 repo_only: true
 ---
 
-# <Ticket Title>
+# Ticket Best Practices
 
 > Scope: Personal drafting best practices for tickets in this repo. Do not modify company Linear documentation; use `linear/docs/How_to_use_Linear.md` as read-only reference.
 

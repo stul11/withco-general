@@ -1,8 +1,9 @@
-# ADR Template
+<!-- markdownlint-disable MD003 MD022 -->
+<!-- markdownlint-disable MD041 -->
 
----
+## <!-- markdownlint-disable MD025 -->
 
-id: [TEAM]-ADR_[Title]
+id: [TEAM]-ADR\_[Title]
 title: [Descriptive Title]
 status: Proposed | Accepted | Rejected | Superseded
 created: YYYY-MM-DDTHH:MM:SSZ
@@ -13,6 +14,7 @@ tags: [tag1, tag2]
 related_docs: []
 risk_level: Low | Medium | High
 repo_only: true
+
 ---
 
 # [Descriptive Title]
@@ -23,7 +25,8 @@ repo_only: true
 
 ## Context
 
-What is the issue that we're seeing that is motivating this decision or change? What is the impact of not addressing this issue?
+What is the issue that we're seeing that is motivating this decision or change? What is the
+impact of not addressing this issue?
 
 ## Decision Drivers
 
@@ -39,7 +42,8 @@ What is the issue that we're seeing that is motivating this decision or change? 
 
 ## Decision Outcome
 
-Chosen option: "[option 1], because [justification. e.g., only option, which meets k.o. criterion decision driver | which resolves force force | … | comes out best (see below)]."
+Chosen option: "[option 1], because [justification. e.g., only option, which meets k.o.
+criterion decision driver | which resolves force force | … | comes out best (see below)]."
 
 ### Positive Consequences
 

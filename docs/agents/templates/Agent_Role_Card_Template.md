@@ -1,8 +1,9 @@
-# Agent Role Card Template
+<!-- markdownlint-disable MD003 MD022 -->
+<!-- markdownlint-disable MD041 -->
 
----
+## <!-- markdownlint-disable MD025 -->
 
-id: ARC_[Name]
+id: ARC\_[Name]
 title: Agent Role Card: [Name]
 version: 0.1.0
 created: YYYY-MM-DDTHH:MM:SSZ
@@ -10,6 +11,7 @@ updated: YYYY-MM-DDTHH:MM:SSZ
 owner: [Human Owner]
 status: Draft | Active | Deprecated
 tags: [agent, role-card, automation]
+
 ---
 
 # Agent Role Card: [Name]

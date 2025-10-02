@@ -1,0 +1,4 @@
+node_modules/
+.venv/
+markdown_backup_*/
+linear/tickets/archive/**

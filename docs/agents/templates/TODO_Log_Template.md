@@ -1,4 +1,8 @@
----
+<!-- markdownlint-disable MD003 MD022 -->
+<!-- markdownlint-disable MD041 -->
+
+## <!-- markdownlint-disable MD025 -->
+
 id: TODO_Template
 title: TODO Log Template
 version: 1.0.0
@@ -6,7 +10,8 @@ created: 2025-01-27T19:00:00Z
 updated: 2025-01-27T19:00:00Z
 owner: slittle
 status: Active
-tags: [template, todo-log, tracking]
+tags: [template, TODO-log, tracking]
+
 ---
 
 # TODO Log

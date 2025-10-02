@@ -1,8 +1,9 @@
-# Context Pack Template
+<!-- markdownlint-disable MD003 MD022 -->
+<!-- markdownlint-disable MD041 -->
 
----
+## <!-- markdownlint-disable MD025 -->
 
-id: CP_[Topic]
+id: CP\_[Topic]
 title: Context Pack: [Topic]
 version: 0.1.0
 created: YYYY-MM-DDTHH:MM:SSZ
@@ -10,6 +11,7 @@ updated: YYYY-MM-DDTHH:MM:SSZ
 owner: [Owner]
 status: Draft | Active | Deprecated
 tags: [context-pack, topic]
+
 ---
 
 # Context Pack: [Topic]
@@ -27,14 +29,14 @@ tags: [context-pack, topic]
 
 ### Core Documents
 
-- [path/to/doc.md@<sha>] - [Brief description of why needed]
-- [path/to/doc.md@<sha>] - [Brief description of why needed]
-- [path/to/doc.md@<sha>] - [Brief description of why needed]
+- [path/to/doc.md@sha] - [Brief description of why needed]
+- [path/to/doc.md@sha] - [Brief description of why needed]
+- [path/to/doc.md@sha] - [Brief description of why needed]
 
 ### Supporting Documents
 
-- [path/to/doc.md@<sha>] - [Brief description of why needed]
-- [path/to/doc.md@<sha>] - [Brief description of why needed]
+- [path/to/doc.md@sha] - [Brief description of why needed]
+- [path/to/doc.md@sha] - [Brief description of why needed]
 
 ### Templates & References
 

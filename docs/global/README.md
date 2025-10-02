@@ -4,7 +4,7 @@ This directory contains global standards, best practices, and shared documentati
 
 ## Directory Structure
 
-```
+```text
 docs/global/
 ├── GBL-PRD_Best_Practices.md    # PRD standards and templates
 ├── GBL-TKT_Best_Practices.md    # Ticket standards and templates
@@ -20,6 +20,7 @@ docs/global/
 ### Best Practices
 
 - **GBL-PRD_Best_Practices.md**: Comprehensive guide for Product Requirements Documents
+
   - Two template formats: Linear-aligned vs repo-only
   - Standardized front matter schema
   - Team-based naming conventions (PROD-PRD*, AM-PRD*, etc.)
@@ -32,6 +33,7 @@ docs/global/
 ### Tracking Documents
 
 - **Decision_Docket.md**: Rolling log of key decisions with:
+
   - Context and rationale
   - Options considered
   - Impact assessment

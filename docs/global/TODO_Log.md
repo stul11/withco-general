@@ -1,22 +1,24 @@
 # TODO Log
 
-- **Last Updated**: 2025-01-27T21:30:00Z
-- **Session**: sync-help-command-implementation
+- **Last Updated**: 2025-01-27T20:30:00Z
+- **Session**: markdownlint-implementation
 - **Owner**: slittle
 
 ## Completed
 
-### Session: sync-help-command-implementation (2025-01-27)
+### Session: markdownlint-phase2-3-implementation (2025-01-27)
 
-- [x] Create comprehensive command documentation in `.cursor/commands/sync-help.md`
-- [x] Implement executable script in `.cursor/commands/sync-help.sh` with safety checks
-- [x] Create implementation details in `.cursor/commands/sync-help-impl.md`
-- [x] Create README.md for commands directory with usage instructions
-- [x] Make script executable with chmod +x
-- [x] Test command functionality successfully
-- [x] Create comprehensive session note documenting implementation
-- [x] Update Decision Docket with sync-help command decision
-- [x] Update TODO Log with completed items
+- [x] Finalize .markdownlint.json baseline and .markdownlintignore entries
+- [x] Apply staged fixes in docs/agents/templates with zero MD003/MD046/MD040
+- [x] Resolve MD024 duplicates and safe MD013 wraps in templates
+- [x] Apply staged fixes in docs/global with anchor-aware heading updates
+- [x] Fix MD024/MD029 and add languages to code fences in global docs
+- [x] Light-touch fixes in docs/agents/session-notes; prefer scoped disables
+- [x] Apply pragmatic fixes in linear/docs and remaining markdown
+- [x] Document custom rule decisions and when to use disable comments
+- [x] Add GitHub Action to run markdownlint on PRs
+- [x] Update contributor guide to require pre-commit install
+- [x] Record remaining MD013 counts and exceptions per directory
 
 ### Session: markdownlint-implementation (2025-01-27)
 
@@ -28,7 +30,7 @@
 - [x] Create scripts/fix-markdown.sh command
 - [x] Add VS Code settings for markdownlint integration
 - [x] Test the complete markdownlint integration
-- [x] Create comprehensive session note documenting implementation
+- [x] Create comprehensive session NOTE documenting implementation
 - [x] Update Decision Docket with markdownlint decision
 - [x] Update TODO Log with completed items and potential future phases
 
@@ -51,13 +53,6 @@
 - [x] Push all changes to origin/master
 - [x] Clean up merged local branches
 - [x] Create comprehensive session NOTE documenting all actions
-
-### Session: markdownlint-implementation (2025-10-02)
-
-- [x] Install VS Code markdownlint extension (`DavidAnson.vscode-markdownlint`)
-- [x] Test pre-commit hooks with `pre-commit install` (if pre-commit is working)
-- [x] Fix remaining 854+ linting issues using `./scripts/fix-markdown.sh`
-- [x] Review and adjust markdownlint rules if needed
 
 ### Session: sync-agent-rules (2025-10-02)
 

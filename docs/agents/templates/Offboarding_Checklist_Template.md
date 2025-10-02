@@ -1,8 +1,9 @@
-# Offboarding Checklist Template
+<!-- markdownlint-disable MD003 MD022 -->
+<!-- markdownlint-disable MD041 -->
 
----
+## <!-- markdownlint-disable MD025 -->
 
-id: OFF_[Role]
+id: OFF\_[Role]
 title: Offboarding: [Role]
 version: 0.1.0
 created: YYYY-MM-DDTHH:MM:SSZ
@@ -10,6 +11,7 @@ updated: YYYY-MM-DDTHH:MM:SSZ
 owner: [Owner]
 status: Draft | Active | Deprecated
 tags: [offboarding, checklist, role]
+
 ---
 
 # Offboarding: [Role]

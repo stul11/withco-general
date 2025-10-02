@@ -31,7 +31,7 @@ risk_level: Low
 repo_only: true
 ---
 
-# Approved Glossary
+## Approved Glossary
 
 > Canonical, reviewed terms. Changes require approval, version bump, and pull request reviewers from the glossary working group.
 

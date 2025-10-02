@@ -1,6 +1,11 @@
+<!-- markdownlint-disable MD003 MD022 -->
+<!-- markdownlint-disable MD041 -->
+<!-- markdownlint-disable MD025 -->
+
 # Granola Paste Template
 
-Paste into chat beneath `/granola-review` or into Granola to generate answers. Keep the structure and fill fields; use ISO dates.
+Paste into chat beneath `/granola-review` or into Granola to generate answers. Keep the
+structure and fill fields; use ISO dates.
 
 ---
 

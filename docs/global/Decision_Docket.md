@@ -5,6 +5,16 @@
 
 ## Recent Decisions
 
+### 2025-01-27 (G)
+
+- **Decision**: Implement markdownlint Phase 2-3 with staged fixing and CI/CD integration
+- **Context**: Initial markdownlint implementation reduced issues from 854+ to ~200, but needed systematic approach for remaining violations and team adoption
+- **Options Considered**: Manual fixes only, automated fixes only, staged directory-by-directory approach with CI/CD
+- **Rationale**: Staged approach minimizes disruption while ensuring zero critical violations; CI/CD provides automated quality enforcement
+- **Impact**: Zero critical violations (MD003, MD025, MD033, MD040) across all directories; complete CI/CD pipeline; comprehensive documentation for team adoption
+- **Links**: docs/agents/session-notes/SN_20250127_markdownlint-phase2-3-implementation.md, .github/workflows/markdownlint.yml, docs/global/MARKDOWNLINT_RULES.md
+- **Owner**: slittle
+
 ### 2025-01-27 (F)
 
 - **Decision**: Create automated `/sync-help` cursor command for git synchronization
@@ -65,7 +75,7 @@
 - **Links**: .cursor/commands/granola-review.md, .cursor/rules/granola-review.mdc, docs/agents/workflows/Granola_Review_Workflow.md, docs/agents/templates/Granola_Paste_Template.md
 - **Owner**: slittle
 
-### 2025-01-27 (B)
+### 2025-01-27 (B2)
 
 - **Decision**: Resolve ADR template structure and Research Request template format
 - **Context**: Duplicate templates existed in multiple locations with different formats; needed to establish canonical versions

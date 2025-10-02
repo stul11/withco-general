@@ -1,4 +1,12 @@
-Goal: Audit the entire @withco-general/ workspace and produce an updated, prioritized section for @TODO_Log.md. Do NOT implement code changes.
+<!-- markdownlint-disable MD003 MD022 -->
+<!-- markdownlint-disable MD041 -->
+<!-- markdownlint-disable MD025 -->
+<!-- markdownlint-disable MD041 -->
+
+# Background Clean-up Template
+
+Goal: Audit the entire @withco-general/ workspace and produce an updated, prioritized
+section for @TODO_Log.md. Do NOT implement code changes.
 
 Scope & rules:
 

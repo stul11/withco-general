@@ -53,6 +53,7 @@ withco-general/
 - [PRD Best Practices](docs/global/GBL-PRD_Best_Practices.md)
 - [Ticket Best Practices](docs/global/GBL-TKT_Best_Practices.md)
 - [Agent Templates](docs/agents/templates/)
+- [Markdownlint Rules](docs/global/MARKDOWNLINT_RULES.md)
 
 ### Workflows
 
@@ -70,6 +71,13 @@ withco-general/
 2. **Familiarize with Templates**: Use appropriate templates for your work
 3. **Follow Workflows**: Use the established processes for consistency
 4. **Maintain Documentation**: Update tracking documents and session notes
+
+### Development Setup
+
+1. **Install Pre-commit Hooks**: Run `pre-commit install` to enable automated linting
+2. **Markdown Quality**: The repository uses markdownlint for consistent formatting
+3. **VS Code Integration**: Install the markdownlint extension for real-time feedback
+4. **Manual Fixes**: Use `./scripts/fix-markdown.sh` for comprehensive markdown cleanup
 
 ### Important Scope Separation
 

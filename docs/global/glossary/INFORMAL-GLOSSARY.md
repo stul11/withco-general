@@ -31,7 +31,7 @@ risk_level: Low
 repo_only: true
 ---
 
-# Informal Glossary Workflow
+## Informal Glossary Workflow
 
 > Working space for capturing candidate terminology before it is promoted into the [Approved Glossary](./APPROVED-GLOSSARY.md).
 
@@ -50,9 +50,9 @@ The informal glossary holds **draft** definitions, feedback, and supporting refe
 
 ## Working Terms Queue
 
-| Term | Draft Definition | Status | Feedback / Next Action | Owner | Linkage |
-| --- | --- | --- | --- | --- | --- |
-| *(add new rows below this line as proposals arrive)* |  |  |  |  |  |
+| Term                                                 | Draft Definition | Status | Feedback / Next Action | Owner | Linkage |
+| ---------------------------------------------------- | ---------------- | ------ | ---------------------- | ----- | ------- |
+| _(add new rows below this line as proposals arrive)_ |                  |        |                        |       |         |
 
 ## Tips for Contributors
 

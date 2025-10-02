@@ -1,8 +1,9 @@
-# Playbook Template
+<!-- markdownlint-disable MD003 MD022 -->
+<!-- markdownlint-disable MD041 -->
 
----
+## <!-- markdownlint-disable MD025 -->
 
-id: PB_[Process]
+id: PB\_[Process]
 title: Playbook: [Process]
 version: 0.1.0
 created: YYYY-MM-DDTHH:MM:SSZ
@@ -10,6 +11,7 @@ updated: YYYY-MM-DDTHH:MM:SSZ
 owner: [Owner]
 status: Draft | Active | Deprecated
 tags: [playbook, process, automation]
+
 ---
 
 # Playbook: [Process]
@@ -46,6 +48,7 @@ tags: [playbook, process, automation]
 ### Phase 1: Preparation
 
 1. **[Step 1]**: [Detailed description]
+
    - **Input**: [What's needed]
    - **Action**: [What to do]
    - **Output**: [What's produced]
@@ -59,18 +62,20 @@ tags: [playbook, process, automation]
 
 ### Phase 2: Execution
 
-3. **STOP_FOR_APPROVAL**: [Reviewer confirms Phase 1 completion]
+1. **STOP_FOR_APPROVAL**: [Reviewer confirms Phase 1 completion]
+
    - **Reviewer**: [Who approves]
    - **Criteria**: [What they check]
    - **Timeout**: [How long to wait]
 
-4. **[Step 3]**: [Detailed description]
+2. **[Step 3]**: [Detailed description]
+
    - **Input**: [What's needed]
    - **Action**: [What to do]
    - **Output**: [What's produced]
    - **Validation**: [How to verify success]
 
-5. **[Step 4]**: [Detailed description]
+3. **[Step 4]**: [Detailed description]
    - **Input**: [What's needed]
    - **Action**: [What to do]
    - **Output**: [What's produced]
@@ -78,12 +83,13 @@ tags: [playbook, process, automation]
 
 ### Phase 3: Completion
 
-6. **STOP_FOR_APPROVAL**: [Reviewer confirms Phase 2 completion]
+1. **STOP_FOR_APPROVAL**: [Reviewer confirms Phase 2 completion]
+
    - **Reviewer**: [Who approves]
    - **Criteria**: [What they check]
    - **Timeout**: [How long to wait]
 
-7. **[Step 5]**: [Detailed description]
+2. **[Step 5]**: [Detailed description]
    - **Input**: [What's needed]
    - **Action**: [What to do]
    - **Output**: [What's produced]

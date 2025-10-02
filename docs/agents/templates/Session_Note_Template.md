@@ -1,12 +1,17 @@
----
+<!-- markdownlint-disable MD003 MD022 -->
+<!-- markdownlint-disable MD041 -->
+
+## <!-- markdownlint-disable MD025 -->
+
 id: SN_Template
-title: Session Note Template
+title: Session NOTE Template
 version: 1.0.0
 created: 2025-01-27T19:00:00Z
 updated: 2025-01-27T19:00:00Z
 owner: slittle
 status: Active
-tags: [template, session-note, agent]
+tags: [template, session-NOTE, agent]
+
 ---
 
 # Session NOTE
@@ -58,7 +63,8 @@ tags: [template, session-note, agent]
 ## Outputs
 
 - **Files Created/Modified**:
-  - [List each file, with full path, and a brief description of the change, e.g., `docs/agents/session-notes/SN_20251001_cleanup.md` (added findings summary)]
+  - [List each file, with full path, and a brief description of the change, e.g.,
+    `docs/agents/session-notes/SN_20251001_cleanup.md` (added findings summary)]
 - **Key Deliverables**:
   - [Describe any outputs produced, e.g., "Updated TODO_Log.md with new prioritized section"]
 - **Documented Decisions**:
@@ -84,7 +90,9 @@ tags: [template, session-note, agent]
 
 ## Reasoning & Rationale
 
-- [For each major action or decision, explain the reasoning behind it, referencing findings, requirements, or best practices. Be explicit about tradeoffs, uncertainties, or open questions.]
+- [For each major action or decision, explain the reasoning behind it, referencing
+  findings, requirements, or best practices. Be explicit about tradeoffs,
+  uncertainties, or open questions.]
 
 ---
 
