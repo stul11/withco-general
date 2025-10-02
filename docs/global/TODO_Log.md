@@ -152,6 +152,17 @@
 - Agent artifacts framework is planned but needs implementation
 - Offboarding process is defined and ready for use
 
+### 2025-10-02T00:00:00Z - repo-background-cleanup
+
+- **[High | ~10-15 min]** Reconcile the "Repository Cleanup" backlog section to remove or mark the items already completed in earlier sessions so the open checklist matches current status.【F:docs/global/TODO_Log.md†L120-L143】
+- **[High | ~10-15 min]** Surface the outstanding `/offboard` follow-up tasks from the 2025-10-01 handoff note in the main backlog (run pre-commit, fix link checker issues, verify rules links, dry-run commands).【F:docs/agents/session-notes/SN_20251001_agent-offboarding_handoff.md†L23-L28】
+- **[High | ~15-20 min]** Decide how to differentiate or merge `glossary/APPROVED-GLOSSARY.md` and `glossary/INFORMAL-GLOSSARY.md` so only one canonical definition list remains, or establish a promotion workflow between them.【F:docs/global/glossary/APPROVED-GLOSSARY.md†L1-L104】【F:docs/global/glossary/INFORMAL-GLOSSARY.md†L1-L77】
+- **[Medium | ~15 min]** Link the open deliverables in `docs/raw/cost-of-manufacturing-offering-context.md` to TODO_Log (or mark progress) so the research and draft checklist is tracked centrally.【F:docs/raw/cost-of-manufacturing-offering-context.md†L175-L188】
+- **[Medium | ~15-20 min]** Capture the DoD tasks in `linear/tickets/drafts/excel-cost-analysis-funnel-integration.md` as actionable backlog items or update their status if work is finished.【F:linear/tickets/drafts/excel-cost-analysis-funnel-integration.md†L74-L82】
+- **[Medium | ~10 min]** Add follow-up to resolve the "where does ad-hoc work go?" TODO in `linear/docs/How_to_use_Linear.md`, since the source file is read-only in this repo.【F:linear/docs/How_to_use_Linear.md†L146-L148】
+- **[Low | ~20-30 min]** Consolidate overlapping cost context between `docs/raw/economics-cost-structure-initial-context.md` and `docs/raw/cost-of-manufacturing-offering-context.md` (clarify canonical source, merge or cross-link appropriately).【F:docs/raw/economics-cost-structure-initial-context.md†L1-L85】【F:docs/raw/cost-of-manufacturing-offering-context.md†L155-L188】
+- **[Low | ~20-30 min]** Replace TBD placeholders in `docs/Deal_Structure_Model_Spec.md` fee table with current assumptions or document ownership for supplying the values.【F:docs/Deal_Structure_Model_Spec.md†L58-L66】
+
 ### Session: background-cleanup-audit-implementation (2025-01-27)
 
 - [x] **HIGH PRIORITY - Naming Inconsistency Resolution** (5-10 min): Fix remaining GLB-TKT vs GBL-TKT references in linear/docs/How_to_use_Linear.md and linear/docs/templates/ticket-template.md
