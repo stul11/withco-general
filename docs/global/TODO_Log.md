@@ -1,7 +1,7 @@
 # TODO Log
 
-- **Last Updated**: 2025-10-02T05:52:00Z
-- **Session**: background-cleanup-priority-refresh-rerun
+- **Last Updated**: 2025-10-02T06:10:00Z
+- **Session**: granola-review-workflow-initial-implementation
 - **Owner**: slittle
 
 ## Completed
@@ -212,3 +212,10 @@ _The dedicated cleanup backlog from the January 27 effort remains closed. Histor
 
 - [x] **LOW (5-10 min)**: Add scripts/README.md documenting `scripts/sync_agents_rules.py` usage and required dependencies (`pyyaml`) for new contributors.
 - [x] **LOW (5-10 min)**: Create requirements.txt to pin Python tool versions and ease setup for contributors.
+
+### 2025-10-02T06:10:00Z - granola-review-workflow-initial-implementation
+
+- [x] Create docs-first paste-based Granola review workflow and command
+- [x] Add normalization/safety rules and auto-detect one vs two paste blocks
+- [x] Author workflow runbook and paste template; update linted docs
+- [ ] Run a dry-run on sample content using `/granola-review <link> --write draft` and validate outputs

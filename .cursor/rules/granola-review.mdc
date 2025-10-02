@@ -1,0 +1,41 @@
+<!-- Granola paste-based ingestion rules: normalization, safety, and outputs -->
+
+# Granola Review Rules
+
+## Scope
+
+- Operates entirely on pasted content from Granola; no API usage.
+- Accepts two blocks: Actions_Template and Auto-generated summary.
+- Produces markdown artifacts and preview messages only.
+
+## Safety
+
+- Follow Background Agent Safety Rules.
+- Writes allowed only to:
+  - docs/agents/session-notes/
+  - docs/global/Decision_Docket.md
+  - docs/global/TODO_Log.md
+  - linear/tickets/drafts/
+- Company Linear projects: read-only; Notion changes are suggestions only.
+
+## Normalization
+
+- Dates: ISO 8601 (YYYY-MM-DD for due dates; created/updated timestamps with Z).
+- Priorities: P0, P1, P2, P3; flag others for manual correction.
+- Owners: keep names as provided; map to emails only if explicitly supplied.
+- Source: retain transcript URL and minimal quote; include timestamps when available.
+- Meeting slug: `<YYYY-MM-DD>-<kebab-title>` used for filenames and tags.
+
+## Outputs
+
+1. Session Note: `docs/agents/session-notes/SN_ISO_MEETINGSLUG.md`
+2. Decision Docket: append structured entries under Recent Decisions
+3. TODO Log: append checklist items with owner, due, priority, tags
+4. Ticket Drafts: create markdown files in `linear/tickets/drafts/`
+
+## Review Checklist
+
+- Verify due dates and timestamps are ISO 8601
+- Ensure decisions include rationale and alternatives
+- Tickets include clear acceptance criteria
+- Risks list severity, likelihood, and next steps

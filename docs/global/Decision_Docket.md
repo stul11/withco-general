@@ -5,6 +5,16 @@
 
 ## Recent Decisions
 
+### 2025-10-02 (H)
+
+- **Decision**: Create docs-first Granola review workflow and command
+- **Context**: Need a repeatable, paste-based ingestion path for Granola transcripts without relying on an API
+- **Options Considered**: Build Python CLI; Use agent-only docs and commands; Hybrid
+- **Rationale**: Docs-first approach is faster to adopt, aligns with safety boundaries, and avoids runtime dependencies
+- **Impact**: New command `.cursor/commands/granola-review.md`, rules `.cursor/rules/granola-review.mdc`, workflow and paste template added; supports auto-detection of one or two pasted blocks and optional Global To‑Do writes after approval
+- **Links**: .cursor/commands/granola-review.md, .cursor/rules/granola-review.mdc, docs/agents/workflows/Granola_Review_Workflow.md, docs/agents/templates/Granola_Paste_Template.md
+- **Owner**: slittle
+
 ### 2025-01-27 (B)
 
 - **Decision**: Resolve ADR template structure and Research Request template format
