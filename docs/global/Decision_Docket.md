@@ -1,6 +1,6 @@
 # Decision Docket
 
-- **Last Updated**: 2025-10-01T00:00:00Z
+- **Last Updated**: 2025-10-02T05:52:00Z
 - **Owner**: slittle
 
 ## Recent Decisions
@@ -148,6 +148,16 @@
 ## Open Decisions
 
 - [ ] Which Cursor rules to implement for agent workflows
+
+### 2025-10-02 (B)
+
+- **Decision**: Merge PRs #19 and #20 for AGENTS sync automation with sequential merge strategy
+- **Context**: Two PRs implementing AGENTS.md synchronization from Cursor rules needed review and merge; PR #20 improved core parsing functionality that PR #19 depended on
+- **Options Considered**: Merge simultaneously, Merge sequentially, Merge PR #19 first
+- **Rationale**: Sequential merge ensures dependency order; PR #20's YAML parsing improvements were foundational for PR #19's automation features
+- **Impact**: AGENTS sync automation now active with pre-commit integration; improved YAML front matter parsing with regression tests; comprehensive documentation added
+- **Links**: scripts/sync_agents_rules.py, tests/test_sync_agents_rules.py, scripts/README.md, requirements.txt
+- **Owner**: slittle
 
 ### 2025-10-02 (A)
 
