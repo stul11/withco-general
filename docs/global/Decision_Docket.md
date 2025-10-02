@@ -1,11 +1,31 @@
 # Decision Docket
 
-- **Last Updated**: 2025-10-02T06:30:00Z
+- **Last Updated**: 2025-01-27T17:45:00Z
 - **Owner**: slittle
 
 ## Recent Decisions
 
-### 2025-10-02 (I)
+### 2025-01-27 (D)
+
+- **Decision**: Create 00-key-docs directory with symlinks for improved file explorer navigation
+- **Context**: Decision Docket and TODO Log were difficult to find in file explorer due to being buried in docs/global/ subdirectory
+- **Options Considered**: README pin, symlinks, physical file moves, docs site, directory restructuring
+- **Rationale**: Symlinks provide immediate access without breaking existing references; 00- prefix ensures alphabetical sorting above docs/
+- **Impact**: Improved file explorer navigation while maintaining zero impact on existing workflows and links
+- **Links**: docs/agents/session-notes/SN_20250127_00-key-docs-creation.md, 00-key-docs/Decision_Docket.md, 00-key-docs/TODO_Log.md
+- **Owner**: slittle
+
+### 2025-01-27 (C)
+
+- **Decision**: Use merge strategy for divergent branches in repository cleanup
+- **Context**: Local and remote branches had diverged during PR merge process, requiring reconciliation
+- **Options Considered**: Merge strategy, rebase strategy, fast-forward only
+- **Rationale**: Merge strategy preserves history and follows background agent branch management workflow; safer for divergent branches
+- **Impact**: Successfully resolved merge conflicts while maintaining comprehensive session note validation; repository now synchronized
+- **Links**: docs/agents/session-notes/SN_20250127_repo-cleanup-and-merge.md, .cursor/commands/offboard.md
+- **Owner**: slittle
+
+### 2025-01-27 (B)
 
 - **Decision**: Session Note Template Consistency Analysis and Enhancement Proposals
 - **Context**: Review of all Session_Note_Template.md references revealed inconsistencies in required sections and purpose clarity across .cursor/ commands

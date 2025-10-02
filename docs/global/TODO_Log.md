@@ -1,10 +1,30 @@
 # TODO Log
 
-- **Last Updated**: 2025-10-02T06:10:00Z
-- **Session**: granola-review-workflow-initial-implementation
+- **Last Updated**: 2025-01-27T17:45:00Z
+- **Session**: 00-key-docs-creation
 - **Owner**: slittle
 
 ## Completed
+
+### Session: 00-key-docs-creation (2025-01-27)
+
+- [x] Create 00-key-docs directory at repository root
+- [x] Add symlinks for Decision Docket and TODO Log
+- [x] Commit changes with descriptive message
+- [x] Verify symlink functionality and file explorer improvement
+- [x] Create comprehensive session note documenting file organization decision
+
+### Session: repo-cleanup-and-merge (2025-01-27)
+
+- [x] Review all commits and untracked files for commit readiness
+- [x] Clean up Python virtual environment and cache files
+- [x] Add .gitignore entries for Python cache files
+- [x] Commit current changes with descriptive message
+- [x] Merge all outstanding pull requests (#22, #23, #24)
+- [x] Resolve merge conflicts in offboard command
+- [x] Push all changes to origin/master
+- [x] Clean up merged local branches
+- [x] Create comprehensive session note documenting all actions
 
 ### Session: sync-agent-rules (2025-10-02)
 
@@ -137,6 +157,15 @@ _Outstanding backlog work is grouped below. Recently-closed backlog items are ca
 - [ ] Define session note format and decision docket process
 - [ ] Prepare example Agent Role Card and Session Note
 - [ ] Publish agreed Best Practices into docs/global/GBL-PRD_Best_Practices.md
+
+#### File Organization Enhancement Proposals (PROPOSALS - DO NOT IMPLEMENT)
+
+- [ ] **[PROPOSAL]** Add `docs/README.md` with "Start here" navigation links to Decision Docket and TODO Log for GitHub/IDE discoverability
+- [ ] **[PROPOSAL]** Convert symlinks to physical file moves: Move Decision Docket and TODO Log to `docs/` root and update all references repo-wide
+- [ ] **[PROPOSAL]** Implement MkDocs/Docusaurus docs site with controlled navigation putting Decision Docket and TODO Log first in left-hand nav
+- [ ] **[PROPOSAL]** Create `docs/00-global/` directory structure to surface global documents above agents/ in alphabetical listing
+- [ ] **[PROPOSAL]** Add automated symlink validation in CI/CD to ensure symlinks remain functional across different environments
+- [ ] **[PROPOSAL]** Create file organization ADR documenting canonical locations and access patterns for critical documents
 
 #### Session Notes Workflow Enhancement Proposals (PROPOSALS - DO NOT IMPLEMENT)
 
