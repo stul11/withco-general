@@ -11,3 +11,8 @@ repos:
         entry: python3 scripts/validate_iso_timestamps.py docs
         language: system
         types: [markdown]
+      - id: sync-agents-rules
+        name: sync-agents-rules
+        entry: python3 scripts/sync_agents_rules.py --check
+        language: system
+        pass_filenames: false
