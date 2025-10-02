@@ -51,11 +51,13 @@ For each hit, classify as: code, docs, CI, or legacy artifact. Create a remediat
 ### Migration Strategy Options
 
 - Option A (Recommended): Project-level uv
+
   - Introduce `pyproject.toml` and `uv.lock` in repo root
   - Manage shared tools via `uv add` (e.g., `pyyaml` for scripts)
   - Update scripts/docs/CI to use `uv run` and `uv sync`
 
 - Option B (Transitional): Script-scoped uv only
+
   - Keep `requirements.txt` temporarily (read-only) for reference
   - Add per-script metadata blocks and use `uv add --script`
   - Later promote to project-level `pyproject.toml`
@@ -77,26 +79,31 @@ For each hit, classify as: code, docs, CI, or legacy artifact. Create a remediat
 
 ### Remediation Steps (Phased)
 
-1) Analysis
+1. Analysis
+
    - Run searches above; produce a hit list with categories and priorities
 
-2) Core Setup
+2. Core Setup
+
    - Create `pyproject.toml` with minimal metadata and required tools
    - Run `uv add` to record first-party tool deps; commit `uv.lock`
 
-3) Code & Script Updates
+3. Code & Script Updates
+
    - Replace `pip`/`poetry` shells with `uv` in Python and shell scripts
    - Add script metadata blocks where appropriate; otherwise use `uv run`
 
-4) Docs & CI Updates
+4. Docs & CI Updates
+
    - Update all `.md` and workflow `.yml` references to `uv`
    - Add a CI job to verify exclusive `uv` usage (regex scan)
 
-5) Transitional Policy
+5. Transitional Policy
+
    - If `requirements.txt` remains, mark as generated and point to `uv export`
    - Document migration in `docs/global/` and link from Decision Docket
 
-6) Validation
+6. Validation
    - Re-run scans; zero remaining `pip`/`poetry` usages outside historical notes
    - Execute link and timestamp validators; fix any issues
 
@@ -132,5 +139,3 @@ For each hit, classify as: code, docs, CI, or legacy artifact. Create a remediat
 ### Backout Plan
 
 - If issues arise, revert to pre-uv state via git; maintain `requirements.txt` reference for emergency install
-
-

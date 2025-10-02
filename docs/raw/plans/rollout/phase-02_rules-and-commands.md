@@ -53,21 +53,21 @@ prompting, and TODO/TOPLAN flows, with checks suitable for background agents.
 **Ask**:
 
 - [ ] Verify `toplan-add.md` and `TODO-add.md` exist and include flags, examples, and schema.
-**Output**: `docs/agents/session-notes/SN_YYYYMMDD-HHMM_phase02-command-docs-check.md`
+      **Output**: `docs/agents/session-notes/SN_YYYYMMDD-HHMM_phase02-command-docs-check.md`
 
 ### Check B: Sample Item Creation
 
 **Ask**:
 
 - [ ] Append one TOPLAN item and one TODO item using the specified schema; include `source:` links.
-**Output**: `SN_YYYYMMDD-HHMM_phase02-sample-items.md` with file paths and snippets.
+      **Output**: `SN_YYYYMMDD-HHMM_phase02-sample-items.md` with file paths and snippets.
 
 ### Check C: Rule Reminders
 
 **Ask**:
 
 - [ ] Confirm rule files remind assistants to prompt for naming and required sections.
-**Output**: `SN_YYYYMMDD-HHMM_phase02-rule-reminders.md` with citations.
+      **Output**: `SN_YYYYMMDD-HHMM_phase02-rule-reminders.md` with citations.
 
 ## Success Criteria
 
