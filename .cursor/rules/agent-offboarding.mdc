@@ -9,6 +9,8 @@ When offboarding an agent session, you MUST follow this checklist:
 
 ## Pre-Offboarding Checklist
 
+- TODO
+
 - [ ] All file changes committed to Git with descriptive commit message
 - [ ] Session Note created in `docs/agents/session-notes/`
 - [ ] Decision Docket updated with key decisions made
@@ -16,6 +18,8 @@ When offboarding an agent session, you MUST follow this checklist:
 - [ ] Any pending work items documented for next session
 
 ## Offboarding Actions
+
+- TODO
 
 - [ ] Revoke any temporary access tokens (if applicable)
 - [ ] Clear any ephemeral caches or temporary files
@@ -42,6 +46,8 @@ When offboarding an agent session, you MUST follow this checklist:
 ## Onboarding for Next Session
 
 ### Required Reading
+
+- TODO
 
 - [ ] `docs/global/GBL-PRD_Best_Practices.md`
 - [ ] `docs/global/TODO_Log.md`

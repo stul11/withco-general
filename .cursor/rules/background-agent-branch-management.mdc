@@ -256,12 +256,16 @@ git rev-list --objects --all | git cat-file --batch-check='%(objecttype) %(objec
 
 ### Pre-Development Checklist
 
+- TODO
+
 - [ ] Pull latest changes from master
 - [ ] Create feature branch if working on significant changes
 - [ ] Stash any uncommitted work
 - [ ] Verify clean working directory
 
 ### Post-Development Checklist
+
+- TODO
 
 - [ ] Commit all changes with descriptive messages
 - [ ] Test changes thoroughly
