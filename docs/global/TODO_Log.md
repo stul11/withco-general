@@ -6,6 +6,14 @@
 
 ## Completed
 
+### Session: linear-documentation-v0 (2025-10-02)
+
+- [x] Create ANA/DATA project documentation example template with placeholders (brackets) <!-- id: TODO-20251002-301 -->
+- [x] Create grouped-by-meaning project glossary template and usage guidance <!-- id: TODO-20251002-302 -->
+- [x] Update ANA/DATA plan to reference example by filename and add glossary to folders <!-- id: TODO-20251002-303 -->
+- [x] Capture Linear analytics capabilities to repo as 2024 snapshot <!-- id: TODO-20251002-304 -->
+- [x] Aggregate Notion analytics items into grouped index for ANA triage <!-- id: TODO-20251002-305 -->
+
 ### Session: phase-04-implementation-1 (2025-10-02)
 
 - [x] Resolve `.pre-commit-config.yaml` conflict; keep `sync-TODO-codelens` enabled <!-- id: TODO-20251002-211 -->
@@ -185,6 +193,12 @@
 
 - [ ] Propose Cursor rules and helpful commands to enhance workflows
 
+### ANA Documentation Follow-Ups
+
+- [ ] Triage Tier 1 items in `linear/ANA/raw/notion-all-ANA.md` (KEEP/REFINE/ARCHIVE) <!-- id: TODO-20251002-306 -->
+- [ ] Apply example/glossary templates to an active ANA project README <!-- id: TODO-20251002-307 -->
+- [ ] Fill TBU items in `linear/ANA/raw/2024-analytics-capabilities.md` and add review cadence <!-- id: TODO-20251002-308 -->
+
 ### uv Migration (Planning → Implementation)
 
 TODO
@@ -199,21 +213,65 @@ TODO
 
 ### Next Agent Session (Awaiting User Approval)
 
-TODO
+- TODO: (AGENT) [HIGH] Test Background Agent Draft Review Workflow end-to-end with a live session <!-- id: TODO-20251002-401 -->
+  source: docs/agents/workflows/Background_Agent_Draft_Review_Workflow.md#workflow-phases
+  tags: workflow, ticketing
+  notes: Run Phase 0–5 conversation flow and capture reviewer feedback before authorization.
 
-- [x] Review and approve Background Agent Draft Review Workflow
-- [x] Review Ticket Wizard Alignment documentation
-- [ ] Test workflow with next background agent session
-- [ ] Create test draft ticket using ticket wizard process (all 5 phases)
-- [ ] Validate quality checks catch issues before Linear creation
-- [ ] Apply process to existing draft tickets in linear/tickets/drafts/
-- [ ] Migrate content between SLF-73 and To-Do project per defined process
-- [ ] Create automation opportunities for workflow
-- [ ] Monitor workflow effectiveness and gather feedback
+- TODO: (AGENT) [HIGH] Create sample ticket using full ticket wizard conversation (all five phases) <!-- id: TODO-20251002-402 -->
+  source: .cursor/rules/ticket-wizard.mdc#conversation-flow
+  tags: ticket-wizard, training
+  notes: Produce draft in `linear/tickets/drafts/` and log learnings for command docs.
+
+- TODO: (AGENT) [MED] Validate ticket quality checks catch template regressions before Linear creation <!-- id: TODO-20251002-403 -->
+  source: docs/agents/workflows/Ticket_Validator_Spec.md#quality-checks
+  tags: validation, workflow
+  notes: Dry-run `/ticket-validate` against updated drafts and document gaps.
+
+- TODO: (AGENT) [MED] Apply Background Agent workflow to existing drafts in `linear/tickets/drafts/` <!-- id: TODO-20251002-404 -->
+  source: docs/agents/workflows/Background_Agent_Draft_Review_Workflow.md#phase-1-draft-creation-background-agent
+  tags: cleanup, ticketing
+  notes: Normalize legacy drafts to template before next review cycle.
+
+- TODO: (AGENT) [MED] Migrate overlapping content between SLF-73 and To-Do project per new process <!-- id: TODO-20251002-405 -->
+  source: docs/agents/workflows/Background_Agent_Draft_Review_Workflow.md#phase-2-user-review-human
+  tags: slf-73, backlog
+  notes: Ensure single canonical location for RSM notes.
+
+- TODO: (AGENT) [LOW] Identify automation opportunities for draft review workflow <!-- id: TODO-20251002-406 -->
+  source: docs/agents/workflows/Background_Agent_Draft_Review_Workflow.md#phase-4-linear-implementation-background-agent
+  tags: automation, workflow
+  notes: Capture safe tasks for future scripts (e.g., promote/validate bundling).
+
+- TODO: (AGENT) [LOW] Monitor workflow effectiveness and gather user feedback <!-- id: TODO-20251002-407 -->
+  source: docs/agents/workflows/Background_Agent_Draft_Review_Workflow.md#overview
+  tags: feedback, workflow
+  notes: Track reviewer satisfaction and backlog throughput after rollout.
+
+- TODO: (AGENT) [MED] Confirm `/ticket-validate` passes on normalized drafts saved this session <!-- id: TODO-20251002-408 -->
+  source: linear/tickets/drafts/excel-cost-analysis-funnel-integration.md#reviewer-checklist
+  tags: ticket-audit, validation
+  notes: Run validator and log any remaining schema mismatches.
+
+- TODO: (AGENT) [MED] Update SLF-73 Global Work Log with summarized RSM notes once reviewed <!-- id: TODO-20251002-409 -->
+  source: linear/tickets/drafts/rsm-call-notes-documentation.md#plan-small-steps
+  tags: rsm, documentation
+  notes: Cross-link action items and transcript references after human review.
+
+- TODO: (AGENT) [MED] Review standardized vendor list with finance/legal for missing providers <!-- id: TODO-20251002-410 -->
+  source: linear/tickets/drafts/standardized-vendor-list.md#open-questions
+  tags: vendor-list, leg-63
+  notes: Confirm primary vs backup designations and escalate pricing gaps.
+
+- TODO: (AGENT) [LOW] Offer to run `scripts/todos/sync_codelens.py` after backlog edits <!-- id: TODO-20251002-411 -->
+  source: scripts/todos/sync_codelens.py
+  tags: tooling, backlog
+  notes: Coordinate with owner before executing to keep Markdown and sidecar in sync.
 
 ### General Backlog
 
-_Outstanding backlog work is grouped below. Recently-closed backlog items are cataloged in the "Backlog History" reference for traceability._
+_Outstanding backlog work is grouped below. Recently closed backlog items are cataloged in the "Backlog History"
+reference for traceability._
 
 #### Open Work
 
@@ -287,6 +345,21 @@ _Outstanding backlog work is grouped below. Recently-closed backlog items are ca
   source: docs/raw/plans/2025-10-02_document-categorization-and-workflows.md#10-migration-plan-standard-and-gold
   tags: session-notes, templates, agents
 
+- TODO: (AGENT) [MED] Replace pip install guidance with uv commands in `scripts/README.md` <!-- id: TODO-20251002-217 -->
+  source: .cursor/rules/uv-guidelines.mdc#uv-as-the-only-package-manager
+  tags: safety, dependencies, documentation
+  notes: Align contributor docs with uv-only policy and drop Python 3.6 references if unsupported.
+
+- TODO: (AGENT) [MED] Clarify `requirements.txt` as uv-generated and remove direct pip instructions <!-- id: TODO-20251002-218 -->
+  source: .cursor/rules/uv-guidelines.mdc#uv-as-the-only-package-manager
+  tags: safety, dependencies
+  notes: Indicate generation path from `uv lock` so agents do not treat it as manual install guidance.
+
+- TODO: (AGENT) [LOW] Audit repository docs for remaining `pip install` instructions <!-- id: TODO-20251002-219 -->
+  source: docs/agents/session-notes/SN_20251002-2100_safety-alignment-review.md#findings--risks
+  tags: audit, dependencies, documentation
+  notes: Catalog stragglers and prepare follow-up diffs once uv messaging is canonical.
+
 <!-- moved to Completed in session phase-04-implementation-1 -->
 
 #### Naming Conventions Rollout (New)
@@ -333,7 +406,8 @@ _Outstanding backlog work is grouped below. Recently-closed backlog items are ca
 
 ### Repository Cleanup (Resolved Scope)
 
-_The dedicated cleanup backlog from the January 27 effort remains closed. Historical items are retained here for reference while the active backlog now focuses on new follow-ups._
+_The dedicated cleanup backlog from the January 27 effort remains closed. Historical items are retained here for
+reference while the active backlog now focuses on new follow-ups._
 
 - [x] Naming consistency and template consolidation confirmed closed in `repo-cleanup-implementation` (`docs/agents/session-notes/SN_20250127-0000_repo-cleanup-implementation.md:26`).
 - [x] Stranded TODO sweeps across RSM, LEG-63, and SLF-78 remain resolved (`docs/agents/session-notes/SN_20250127-0000_repo-cleanup-implementation.md:45`).
@@ -450,3 +524,12 @@ TODO
 - [ ] (AGENT) [MED] Align /offboard required sections across commands
       source: docs/agents/session-notes/SN_20251002-0630_session-NOTE-template-analysis.md#immediate-actions
       tags: session-notes, templates
+
+### 2025-10-02T21:00:00Z - scripts-docs-improvements
+
+TODO
+
+- [ ] **MEDIUM (20-30 min)**: Implement the proposed CLI improvements for `scripts/todos/sync_codelens.py` and `scripts/granola_review.py`, including new exit codes and missing-file messaging.
+- [ ] **LOW (10-15 min)**: Expand `scripts/README.md` with a non-technical "How to" section and error-handling callouts.
+- [ ] **LOW (10 min)**: Evaluate adding `pre-commit` plus markdownlint and CodeLens sync hooks to the contributor setup guide.
+- [ ] **LOW (5 min)**: After implementation, run `python scripts/todos/sync_codelens.py --dry-run` to confirm no drift and update session documentation.

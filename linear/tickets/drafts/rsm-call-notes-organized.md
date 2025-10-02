@@ -1,120 +1,153 @@
 ---
-linear_issue_link: "[📞 RSM CALL NOTES - SEPTEMBER 30, 2025](https://linear.app/withco/document/rsm-call-notes-september-30-2025-28c0affbb2c1)"
-status: "Documented in To-Do & Planning project"
-created: "2025-01-27T18:00:00Z"
-updated: "2025-01-27T18:00:00Z"
+id: SLF-rsm-call-notes-organized
+title: RSM Call Notes – Organized by Topic
+status: Draft
+stage: Planning
+owner: slittle
+people: [rsm_team]
+reviewers: [bfetterolf, ksong]
+approver: ksong
+priority: Medium
+tags: [rsm, research, documentation]
+# Linear Hierarchy
+team: Shelf
+super_initiative: "Strategic Finance Partnerships"
+initiative: "RSM Partnership Enablement"
+project: "Cost of Manufacturing Workstream"
+milestone: "RSM September 30 Call Follow-Ups"
+requirement: "Organize transcript into actionable sections"
+linear_issue_link: "https://linear.app/withco/document/rsm-call-notes-september-30-2025-28c0affbb2c1"
+# Timestamps & Versioning
+created: 2025-01-27T18:00:00Z
+updated: 2025-01-27T18:00:00Z
+version: 0.1.0
+# Context & Relationships
+related_docs:
+  - https://notes.granola.ai/d/90eb97be-343b-453e-9809-a76920b51ff2
+  - linear/tickets/drafts/rsm-action-items-summary.md
+  - linear/tickets/drafts/rsm-call-notes-documentation.md
+risk_level: Medium
+repo_only: false
 ---
 
-# RSM Call Notes - Organized by Topic
+# RSM Call Notes – Organized by Topic
 
-**Meeting Date**: Tuesday, September 30, 2025  
-**Attendees**: Brian Fetterolf, Kevin Song, Pedowitz, Corey, Kuang, Jamie, Landau, Jerry, Musto, Joe, Riccio, Matt, Graff Jr., Richard  
-**Source**: [RSM Call Notes](https://notes.granola.ai/d/90eb97be-343b-453e-9809-a76920b51ff2)
+## Goal / Purpose
 
-## 1. REIT Structure & Tax Services
+- Decision enabled: Provide a structured reference of the September 30 RSM call to accelerate downstream ticketing and modeling.
+- Why now: Transcript is long-form; sorting by topic shortens onboarding time for finance and legal reviewers.
+- Success metric: Each topic area has clear insights, next steps, and cost implications linked to owners.
 
-### Key Decisions
+## Assumptions
 
-- **REIT structure preferred over single LLC** due to retail investor K-1 filing costs
-- Online tax platforms don't support K-1s out of box
-- Target minimum check sizes: $10K, $1K, $100 per investor
+- Transcript content is authoritative.
+- Listed attendees account for all decision makers.
+- Pricing figures quoted remain valid until superseded by vendor quotes.
+- Future tickets will reference these sections rather than duplicating raw transcript text.
 
-### Pricing Information
+## Inputs / Dependencies
 
-- **RSM tax compliance pricing**: $9K all-in for REIT + operating partnership testing/compliance
-- Covers both REIT and OP tax work
-- Potential to reduce to $2K per entity with automation after scale (20+ deals)
-- March 15th deadline challenging at scale - would shift to summer processing with estimates
+- Granola transcript (linked above).
+- Existing LEG-63, LEG-9 modeling requirements.
+- RSM pricing baseline.
+- Dependencies: None blocking, but vendor introductions pending.
 
-## 2. 1099-DIV Preparation Challenge
+## Deliverable
 
-### Current Situation
+- Topic-organized summary covering structure, tax services, 1099-DIV process, property accounting, next steps, and integration points.
+- Consumers: Shelf finance team, BF, KS, RSM liaisons.
 
-- **RSM cannot provide 1099-DIV services** - lack software/scalability for thousands of forms
-- Current market rates: $7-10 per 1099 plus $75 base fee
+## Definition of Done (DoD)
 
-### Next Steps
+### Fast (same day)
 
-- RSM will provide introductions to specialty providers they've researched
-- Asked public REIT clients for referrals
-- Target first year: ~500 forms, scaling significantly
+- [ ] Topics segmented with headings and bullet insights.
+- [ ] Key decisions and pricing captured per section.
+- [ ] Action owners tagged for each follow-up.
 
-### Complexity NOTE
+### Standard (2–3 days)
 
-- Operating partnership creates administrative complexity
-- Adds estimate requirements for OP owners
-- No tax benefit but needed for business alignment with tenants
+- [ ] Cross-links inserted to related tickets and TODO items.
+- [ ] Integration notes added for cost modeling tasks.
+- [ ] Reviewer checklist completed and feedback incorporated.
 
-## 3. Property Accounting Scope
+### Gold (1–2 weeks)
 
-### Current Setup
+- [ ] Append supporting exhibits (pricing tables, org charts).
+- [ ] Sync schedule established with RSM for outstanding items.
+- [ ] Summary distributed to leadership with acknowledgement logged.
 
-- Current QuickBooks setup needs cleanup - too many unused accounts
+## Feedback & Reviews
 
-### Service Provider
+- Reviewers: BF (financial accuracy), KS (strategic fit).
+- SLA: Provide review-ready summary before cost model update cycle.
 
-- **Jerry Landau** to provide $350/month per property accounting services
-- Expects 10-15 accounts total (simple triple net lease structure)
-- Will visit office or schedule detailed screen share session
-- QuickBooks acceptable platform vs more expensive alternatives
+## Explicitly Out of Scope
 
-### Delivery Model
+- Negotiating pricing changes.
+- Publishing notes outside internal repositories.
+- Creating new policy documents.
 
-- Trial balance delivery model: OP holds all expenses, REIT stays clean
+## Open Questions
 
-## 4. Next Steps & Action Items
+1. Do we need a separate appendix for provider contacts once introductions land?
+2. Should we track RSM automation milestones in this doc or a separate ticket?
+3. What evidence is required to verify the $2K automation target?
 
-### Rich (RSM)
+## Plan (small steps)
 
-- [x] Get actual 1099-DIV provider quotes and introductions from public REIT relationships
+- [ ] Extract transcript themes and populate sections (1 hr).
+- [ ] Add decision + pricing callouts with owners (30 min).
+- [ ] Cross-link to action summary + documentation tickets (15 min).
+- [ ] Review with BF/KS for confirmation (30 min).
 
-### Jerry (Property Accounting)
+## Reviewer Checklist
 
-- [x] Schedule property accounting setup session next week
+- [ ] Front matter matches template and includes ISO timestamps.
+- [ ] Sections align with ticket best practices (Goal → Plan).
+- [ ] Every topic lists owner, pricing, and integration notes.
+- [ ] Links to transcript and related tickets verified.
 
-### RSM Team
+## Appendix
 
-- [x] Joe Musto to discuss audit requirements and potential cost-effective audit firm referrals
-  - Need annual audited financials for Reg A+ (non-PCAOB firm acceptable)
-  - Exploring single overarching audit vs individual property audits
-  - Current RSM minimum $50-75K not viable for single property
+### Meeting Metadata
 
-## 5. Key Insights for Cost Modeling
+- **Meeting Date**: 2025-09-30 (Tuesday).
+- **Attendees**: Brian Fetterolf, Kevin Song, Pedowitz, Corey, Kuang, Jamie, Landau, Jerry, Musto, Joe, Riccio, Matt, Graff Jr., Richard.
 
-### Structure Decision Impact
+### Topic Summaries
 
-- REIT structure preferred = higher upfront costs but better investor experience
-- K-1 filing costs are significant barrier for retail investors
-- Online tax platform limitations affect minimum check size strategy
+#### 1. REIT Structure & Tax Services
 
-### Cost Implications
+- REIT structure preferred over single LLC due to investor experience (K-1 avoidance).
+- RSM tax compliance pricing: $9K all-in for REIT + operating partnership; potential to reduce to $2K/entity after automation (20+ deals).
+- March 15 filing deadline challenging; summer processing with estimates considered.
 
-- **Tax compliance**: $9K all-in (REIT + OP)
-- **1099-DIV preparation**: $7-10 per form + $75 base fee
-- **Property accounting**: $350/month per property
-- **Audit requirements**: $50-75K minimum (need cost-effective alternatives)
+#### 2. 1099-DIV Preparation Challenge
 
-### Scaling Considerations
+- RSM cannot provide 1099-DIV service at scale; current rates $7–$10 per form + $75 base.
+- RSM to provide introductions to specialty providers from REIT network.
+- Operating partnership introduces administrative complexity and estimate requirements.
 
-- Automation potential after 20+ deals
-- March 15th deadline challenges at scale
-- Summer processing with estimates as alternative
-- Single overarching audit vs individual property audits
+#### 3. Property Accounting Scope
 
-## 6. Integration with Other Work Items
+- QuickBooks cleanup required (excess accounts); 10–15 account target for triple net lease.
+- Jerry Landau to deliver services at $350/month per property; trial balance approach keeps REIT clean.
 
-### Related to Scale Pricing Formulas
+#### 4. Next Steps & Action Items
 
-- RSM pricing shows scale benefits ($9K → $2K with automation)
-- Need to incorporate these cost curves into formulas
+- Rich (RSM): Gather 1099-DIV provider quotes and intros.
+- Jerry Landau: Schedule accounting setup session.
+- Joe Musto (RSM): Explore audit options and referrals (current $50–$75K minimum too high).
 
-### Related to Accruing Pref Modeling
+#### 5. Key Insights for Cost Modeling
 
-- REIT structure impacts preferred return calculations
-- OP complexity affects administrative costs
+- Integrate RSM pricing into cost model.
+- Reflect REIT structure in accruing pref modeling.
+- Research investor processing fees and pass-through strategy.
 
-### Related to Investor Processing Fees Research
+### Links & Resources
 
-- 1099-DIV preparation costs are significant
-- Need to research how other platforms handle these costs
-- Consider gross → net impact on investor returns
+- [RSM Call Notes Transcript](https://notes.granola.ai/d/90eb97be-343b-453e-9809-a76920b51ff2)
+- [Structured Notes in Linear](https://linear.app/withco/document/rsm-call-notes-september-30-2025-28c0affbb2c1)
+- [Action Items Summary Draft](linear/tickets/drafts/rsm-action-items-summary.md)

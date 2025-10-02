@@ -1,5 +1,5 @@
 ---
-id: SLF-76-boxwood-means-acquisition-exploration
+id: SLF-78-boxwood-means-acquisition-exploration
 title: Boxwood Means Acquisition Model Exploration & Research Primer
 status: Draft
 stage: Planning
@@ -161,6 +161,13 @@ Owner: @slittle Due: 2025-02-03 Status: Draft
 - [ ] **Documentation (20 min)**: Package deliverables and create handover notes
 - [ ] **Checkpoint**: Create "Draft complete" checkpoint for review
 - [ ] **Review Integration**: Incorporate feedback and finalize deliverables
+
+## Reviewer Checklist
+
+- [ ] Front matter matches ticket template (team, timestamps, related docs).
+- [ ] Required sections (Goal, Assumptions, Inputs, Deliverable, DoD, Feedback, Scope, Questions, Plan) are filled.
+- [ ] Sub-ticket breakdown aligns with DoD tiers and dependencies.
+- [ ] Appendix links reference current templates and research sources.
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-id: SLF-TKT_RSM_Call_Notes_Documentation
+id: SLF-rsm-call-notes-documentation
 title: Document RSM Call Notes in Global Work Log
 status: Draft
 stage: Planning
@@ -9,162 +9,130 @@ reviewers: [slittle]
 approver: slittle
 priority: High
 tags: [documentation, rsm, call-notes, cost-modeling]
-
 # Linear Hierarchy
 team: Shelf
-super_initiative: "TBD"
-initiative: "TBD"
-project: "TBD"
-milestone: "TBD"
-requirement: "TBD"
+super_initiative: "Strategic Finance Partnerships"
+initiative: "RSM Partnership Enablement"
+project: "Cost of Manufacturing Workstream"
+milestone: "RSM September 30 Call Follow-Ups"
+requirement: "Publish transcript summary and action tracker"
 linear_issue_link: "https://linear.app/withco/issue/SLF-73"
-
 # Timestamps & Versioning
 created: 2025-01-27T17:45:00Z
-updated: 2025-01-27T17:45:00Z
+updated: 2025-01-27T18:00:00Z
 version: 0.1.0
-
 # Context & Relationships
 related_docs:
   - https://notes.granola.ai/d/90eb97be-343b-453e-9809-a76920b51ff2
-  - https://linear.app/withco/issue/SLF-73
+  - linear/tickets/drafts/rsm-action-items-summary.md
 risk_level: Medium
 repo_only: false
----
-
----
-
-linear_issue_link: "[📞 RSM CALL NOTES - SEPTEMBER 30, 2025](https://linear.app/withco/document/rsm-call-notes-september-30-2025-28c0affbb2c1)"
-status: "Documented in To-Do & Planning project"
-created: "2025-01-27T18:00:00Z"
-updated: "2025-01-27T18:00:00Z"
-
 ---
 
 # Document RSM Call Notes in Global Work Log
 
 ## Goal / Purpose
 
-- **Decision enabled**: Capture RSM call insights and action items for cost modeling work
-- **Why now**: Call notes contain critical information for ongoing cost model work
-- **Success metric**: All RSM insights documented and linked to related work items
+- Decision enabled: Ensure RSM insights are preserved in the Global Work Log (SLF-73) to unblock cost modeling deliverables.
+- Why now: Transcript contains pricing and ownership decisions needed for LEG-63 Excel updates and follow-up tickets.
+- Success metric: SLF-73 updated with organized notes, action items, and links; reviewers confirm no gaps.
 
 ## Assumptions
 
-- **A1**: RSM call notes are accurate and complete
-- **A2**: SLF-73 is the appropriate place for Global Work Log
-- **A3**: Notes contain actionable insights for cost modeling
-- **A4**: Team needs access to these insights for ongoing work
+- Transcript accurately reflects meeting outcomes.
+- Global Work Log (SLF-73) is the canonical repository for this documentation.
+- Stakeholders will review updates the same day they are posted.
+- Action items can reference existing tickets without new issue creation.
 
 ## Inputs / Dependencies
 
-- **Input → Source/Owner/Date**:
-  - RSM call notes → Granola notes / Today
-  - SLF-73 Global Work Log → Linear / Available
-  - Cost model context → You / Available
-- **Upstream dependency**: None
-- **Blockers**: None
+- RSM call transcript (Granola export).
+- SLF-73 Global Work Log access.
+- Existing LEG-63/LEG-9 documentation for cross-references.
+- Dependencies: None; no blockers.
 
 ## Deliverable
 
-- **Artifacts**:
-  - RSM call notes organized by topic
-  - Action items summary
-  - Links to related work items
-  - Updated Global Work Log
-- **Consumers**: You, team members working on cost modeling
+- Structured summary in SLF-73 containing:
+  - Organized notes by topic (structure, pricing, operations).
+  - Action items with owners + due dates.
+  - Links back to transcript and related tickets.
+- Consumers: Shelf finance team, RSM liaisons.
 
 ## Definition of Done (DoD)
 
-**Fast (same-day)**:
+### Fast (same day)
 
-- [x] Organize RSM call notes by topic
-- [x] Create documentation structure for SLF-73
-- [x] Add notes to Global Work Log
-- [x] Create action items summary
+- [ ] Notes reorganized by topic and added to SLF-73.
+- [ ] Action items summarized with owner, priority, due date.
+- [ ] Links inserted to transcript and relevant tickets.
 
-**Standard (2-3 days)**:
+### Standard (2–3 days)
 
-- [x] Link notes to related work items
-- [x] Create follow-up task list
-- [x] Update project status based on notes
-- [x] Organize by priority and timeline
+- [ ] Follow-up task list posted to TODO Log (Option 3 format).
+- [ ] Project status in SLF-73 updated based on outcomes.
+- [ ] Review checklist circulated to KS/BF for sign-off.
+- [ ] Duplicate content with To-Do project resolved.
 
-**Gold (1-2 weeks)**:
+### Gold (1–2 weeks)
 
-- [x] Create comprehensive action plan
-- [x] Link to all related work items
-- [x] Update project timelines
-- [x] Create stakeholder communication plan
+- [ ] Comprehensive action plan aligned with LEG-63 backlog.
+- [ ] Stakeholder communication prepared summarizing RSM partnership scope.
+- [ ] Automation opportunities cataloged for documentation updates.
+- [ ] Next cadence (weekly sync or similar) scheduled with agenda linked.
 
 ## Feedback & Reviews
 
-- **Reviewer → scope/sign-off**: slittle / Today
-- **Reviewer → content/accuracy**: slittle / Today
-- **SLA/dates**: Complete today
+- Reviewer (scope & accuracy): slittle – same-day verification.
+- Secondary reviewer: KS – confirm business priorities (if available).
+- SLA: Post summary + ping reviewers before end of day.
 
 ## Explicitly Out of Scope
 
-- **OOS1**: Modifying company Linear projects
-- **OOS2**: Changing existing safety rules without approval
-- **OOS3**: Creating new Linear projects
+- Creating new Linear projects.
+- Modifying company safety or workflow policies.
+- Publishing notes outside the approved repositories.
 
 ## Open Questions
 
-1. **Action items**: Which RSM action items are highest priority?
-2. **Timeline**: What's the timeline for implementing RSM recommendations?
-3. **Stakeholders**: Who else needs access to these notes?
+1. Which sections of SLF-73 require new tags or formatting to host the notes?
+2. Do we need a separate appendix for pricing calculators vs narrative summaries?
+3. Should RSM contacts be added to stakeholder list in SLF-73?
 
 ## Plan (small steps)
 
-- [x] **Review RSM call notes** (5 min)
-- [x] **Organize notes by topic** (10 min)
-- [x] **Create action items summary** (10 min)
-- [x] **Add to SLF-73** (10 min)
-- [x] **Link to related work** (5 min)
+- [ ] Review transcript and tag sections by theme (15 min).
+- [ ] Draft SLF-73 update with headings + action tables (20 min).
+- [ ] Cross-link to related tickets and TODO Log entries (10 min).
+- [ ] Request reviewer confirmation and capture feedback (15 min).
 
----
+## Reviewer Checklist
+
+- [ ] Front matter complete with ISO timestamps and related docs.
+- [ ] Required sections populated per ticket template.
+- [ ] DoD tiers aligned to Background Agent Draft Review workflow.
+- [ ] References and appendix items point to live sources.
 
 ## Appendix
 
 ### Links & Resources
 
-- [RSM Call Notes](https://notes.granola.ai/d/90eb97be-343b-453e-9809-a76920b51ff2)
+- [RSM Call Notes Transcript](https://notes.granola.ai/d/90eb97be-343b-453e-9809-a76920b51ff2)
 - [SLF-73 Global Work Log](https://linear.app/withco/issue/SLF-73)
-
-### Precedents
-
-- Previous call NOTE documentation
-- Work log updates
-- Cost model discussions
 
 ### Prior Work
 
-- RSM meeting
-- Cost model structure
-- REIT vs LLC analysis
-
-### Data & Queries
-
-- RSM call notes content
-- Action items from meeting
-- Cost model requirements
-
-### People to Ping / Stakeholders
-
-- slittle (reviewer)
-- RSM team (content source)
-- Cost modeling team (consumers)
+- LEG-63 cost model backlog.
+- LEG-9 minimum check analysis.
+- Shortcut prompt style guides for ticket outputs.
 
 ### Decision Log
 
-- **Decision**: Use SLF-73 for Global Work Log **Why now**: Centralized work tracking **Options considered**: SLF-73 vs To-Do project **Revisit**: After overlap process defined
+- **Decision**: Use SLF-73 Global Work Log for consolidated notes. **Why now**: Centralizes finance workstream context. **Options considered**: SLF-73 vs To-Do project vs ad-hoc doc. **Revisit**: After workflow automation pilot.
 
 ### Context Digest
 
-- RSM call notes contain critical cost modeling insights
-- REIT structure preferred over single LLC
-- Tax compliance pricing: $9K all-in for REIT + OP
-- 1099-DIV preparation challenge identified
-- Property accounting scope defined
-- Next steps identified for RSM team
+- REIT structure selected over single LLC due to investor experience.
+- Tax compliance baseline pricing: $9K (REIT + OP) with potential $2K automation target.
+- 1099-DIV provider gap identified; RSM to provide introductions.
+- Property accounting support lined up with Jerry Landau at $350/month/property.

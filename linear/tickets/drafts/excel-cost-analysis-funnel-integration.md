@@ -9,6 +9,7 @@ reviewers: [KS, BF]
 approver: KS
 priority: High
 tags: [excel, cost-analysis, funnel, finance-model, urgent]
+# Linear Hierarchy
 team: Product
 super_initiative: "TBD"
 initiative: "TBD"
@@ -16,74 +17,112 @@ project: "TBD"
 milestone: "TBD"
 requirement: "TBD"
 linear_issue_link: "TBD"
+# Timestamps & Versioning
 created: 2025-01-27T17:30:00Z
 updated: 2025-01-27T17:30:00Z
 version: 0.1.0
+# Context & Relationships
 related_docs:
   - cost_of_manufacturing_offering_v3
+  - docs/global/GBL-TKT_Best_Practices.md
 risk_level: High
 repo_only: true
 ---
 
 # Excel Cost Analysis Update - Funnel Stage Integration
 
-Goal / Purpose
+## Goal / Purpose
 
-Update cost of manufacturing analysis with funnel stage integration and "who pays" tracking. Major urgency on cost of manufacturing an offering. Success metric: All red highlighted cells resolved, funnel stage costs properly calculated.
+- Decision enabled: Update the cost of manufacturing analysis with funnel stage integration and "who pays" tracking so the urgent pricing review can close.
+- Why now: Cost-of-manufacturing work is blocked on resolving red highlighted cells and mapping expenses to funnel stages.
+- Success metric: All red highlighted cells cleared and funnel-stage toggles produce consistent totals across views.
 
-Assumptions
+## Assumptions
 
-- Existing cost data structure is fundamentally correct
-- Funnel stage volumes from image 2 are current and accurate
-- Red highlighted cells contain uncertain numbers, not errors
+- Existing cost data structure is fundamentally correct.
+- Funnel stage volumes from reference image 2 are current and accurate.
+- Red highlighted cells indicate unknown values instead of formula errors.
+- Toggle requirements (Annual/Per_Unit, When Incurred/Cumulative) match stakeholder expectations.
 
-Open Questions
+## Inputs / Dependencies
 
-1. What specific values should populate the "who pays" column for each cost type?
-2. Are there specific validation rules for the uncertain numbers in red highlighted cells?
-3. Should the funnel stage mapping be automatic or manual for each cost item?
-4. What are the exact toggle control requirements for Annual/Per_Unit views?
-5. What are the exact toggle control requirements for When Incurred/Cumulative views?
+- cost_of_manufacturing_offering_v3 (Funnel sheet).
+- Funnel stage volume image (INV + SMB counts).
+- Vendor cost table with one-time, annual, and per-event entries.
+- LEG-63 research context for cost definitions.
+- No upstream dependencies or blockers identified.
 
-Inputs / Dependencies
+## Deliverable
 
-- cost_of_manufacturing_offering_v3 (Funnel sheet)
-- Funnel stage volumes (image 2)
-- Cost table data (provided)
-- No upstream dependencies
-- No blockers
+- Updated Excel workbook with:
+  - Funnel stage mapping applied to every per-event cost.
+  - "Who pays" column populated for each cost line.
+  - Toggle controls for Annual/Per_Unit and When Incurred/Cumulative views.
+  - Summary sheet with executive narrative for KS and BF.
+- Primary consumers: KS, BF.
 
-Feedback requirements
+## Definition of Done (DoD)
 
-- KS: Cost accuracy and business logic review
-- BF: Funnel stage mapping and "who pays" logic review
-- SLA: Today EOD
+### Fast (same day)
 
-Explicitly out of scope
+- [ ] Red highlighted cells catalogued with owner + data request.
+- [ ] Baseline funnel stage mapping applied to three representative vendor rows.
+- [ ] Manual calculation spot-check completed for those rows.
 
-- Complete vendor database overhaul
-- New cost categories beyond existing structure
-- Integration with other systems beyond Excel
+### Standard (2–3 days)
 
-Deliverable
+- [ ] All per-event costs mapped to funnel stages with validation notes.
+- [ ] "Who pays" column populated and reviewed with KS.
+- [ ] Toggle controls implemented for Annual/Per_Unit and When Incurred/Cumulative views.
+- [ ] Summary sheet drafted with Executive Summary + Changes & Assumptions log.
+- [ ] Validation checks (duplicates, totals, error scan) implemented on Funnel sheet.
 
-Updated Excel spreadsheet with funnel stage integration, "who pays" tracking, and toggle controls for different cost views. Consumers: KS, BF.
+### Gold (1–2 weeks)
 
-Definition of Done (DoD)
+- [ ] Cost curves integrated with LEG-9 minimum check analysis.
+- [ ] Vendor/service mapping aligned to standardized vendor list.
+- [ ] Visualization dashboard built (stage breakdown + payer pie chart).
+- [ ] External review completed with finance + legal for compliance sign-off.
+- [ ] Documentation packaged for Shortcut automation (prompt + AI rules snippet).
 
-- [ ] Red highlighted cells identified and root cause documented
-- [ ] Basic funnel stage mapping implemented for per-event costs
-- [ ] Manual calculation verification for 3 sample rows
-- [ ] "Who pays" column added with initial values
-- [ ] All per-event costs properly mapped to funnel stages
-- [ ] Toggle controls implemented for Annual/Per_Unit views
-- [ ] Toggle controls implemented for When Incurred/Cumulative views
-- [ ] "Who pays" column populated for all cost items
-- [ ] KS and BF review completed with sign-off
+## Feedback & Reviews
 
-Appendix
+- KS → cost accuracy and business logic (same-day review).
+- BF → funnel mapping + payer logic (same-day review).
+- Schedule: Pair review today before 18:00 ET.
 
-## Shortcut Prompt for Automated Excel Work
+## Explicitly Out of Scope
+
+- Broad vendor database overhaul.
+- Adding brand-new cost categories.
+- Integrations outside the Excel model (e.g., Airtable, Notion).
+
+## Open Questions
+
+1. What final values should populate the "who pays" column for each vendor category?
+2. Should toggle calculations be deterministic formulas or scenario macros?
+3. Are validation rules required for outstanding red highlighted cells?
+4. How should manual overrides be surfaced for reviewer awareness?
+5. Do we need automatic mapping between SMB vs Investor funnels?
+
+## Plan (small steps)
+
+- [ ] Review existing Funnel sheet and flag gaps (1 hr).
+- [ ] Map three vendor rows end-to-end (who pays, stage mapping, toggles) for pattern lock (1 hr).
+- [ ] Extend mapping + toggles across remaining rows (2 hrs).
+- [ ] Build validation and summary sheet (1 hr).
+- [ ] Prepare reviewer handoff package with notes + screenshots (30 min).
+
+## Reviewer Checklist
+
+- [ ] Front matter fields align with ticket template and timestamps are ISO 8601.
+- [ ] Goal, assumptions, inputs, DoD tiers, feedback, scope, questions, and plan are present.
+- [ ] Deliverable description matches attached prompts/schema updates.
+- [ ] Appendix artifacts (prompt, schema, references) reference current versions.
+
+## Appendix
+
+### Shortcut Prompt for Automated Excel Work
 
 ```markdown
 **[BEGIN PROMPT TO PASTE INTO SHORTCUT CHAT]**
@@ -150,15 +189,71 @@ Appendix
 **[END PROMPT TO PASTE INTO SHORTCUT CHAT]**
 ```
 
-## Attachments Checklist
+### Cost Unit Scope Enums (Reference)
 
-- cost_of_manufacturing_offering_v3 Excel file
-- Funnel stage volumes data (from image 2)
-- Cost table data (provided in ticket)
+*Content retained from standardized vendor schema to support toggle logic.*
 
-## AI Rules Snippet (optional, to paste under Shortcut > Settings > "AI Rules & Instructions")
+```yaml
+cost_card:
+  id: string # Unique identifier
+  vendor: string # Vendor name
+  service: string # Specific service description
+  cost_unit_scope: enum # Primary cost unit scope
+  secondary_scope: enum # Optional secondary scope
+  unit_price: number # Price per unit
+  minimum_commitment: number # Minimum quantity/amount
+  step_tiers: array # Tiered pricing structure
+  payer: enum # Who pays (Company, REIT, Investor, SMB)
+  timing: enum # When paid (pre-close, at-close, ongoing)
+  accounting: enum # Expensed vs capitalized
+  amortization_period: number # If capitalized, amortization period
+  scalability_note: string # What unlocks better pricing
+  replacement_candidates: array # Alternative vendors
+  switching_costs: number # Cost to switch vendors
+  stage_activation: array # Which offering stages this applies to
+  upreit_specific: boolean # UPREIT-specific cost
+  llc_specific: boolean # LLC-specific cost
+  reg_a_required: boolean # Required for Reg A+ compliance
+```
 
-- Formatting: Currency = USD with 0 decimals, negative = red; headings = bold; dates = YYYY-MM
-- Modeling: Per-event costs = Cost/Unit × Funnel Event Volume; one-time costs not multiplied; funnel stages follow PLATFORM → ONBOARDING → ROADSHOW → OFFERING → SUCCESSFUL OFFERING → CLOSED OFFERING → POST CLOSE → DISPOSITION
-- Data handling: Trim/clean text, standardize categorical values to lowercase, dedupe on cost item keys
-- Company specifics: "Who pays" categories: SMB, Offering, Investor, Platform; toggle controls for Annual/Per_Unit and When Incurred/Cumulative views
+### Stage Activation Mapping
+
+```yaml
+stage_costs:
+  IOI:
+    - Platform setup (North Capital)
+    - Legal structuring (CRE Counsel)
+    - Initial compliance (EDGAR Service)
+  COMMITTED_OFFERING:
+    - Investor verification (Oscilar)
+    - Transfer agent setup (Transfer Agent)
+    - Reg A+ filing (EDGAR Service)
+  SPECIFIC_OFFERING:
+    - Property appraisal (Appraisal Vendors)
+    - Due diligence (Cherre, Enigma)
+    - Property management setup (Property Management)
+  CLOSED_OFFERING:
+    - Ongoing property management (Property Management)
+    - Annual audit (Auditor)
+    - Investor reporting (Transfer Agent)
+```
+
+### Attachments Checklist
+
+- cost_of_manufacturing_offering_v3 Excel file.
+- Funnel stage volume reference (image 2).
+- Vendor cost table (current draft).
+
+### AI Rules Snippet (Shortcut)
+
+- Formatting: Currency = USD with 0 decimals, negative = red; headings = bold; dates = YYYY-MM.
+- Modeling: Per-event costs = Cost/Unit × Funnel Event Volume; one-time costs not multiplied; funnel stages follow PLATFORM → ONBOARDING → ROADSHOW → OFFERING → SUCCESSFUL OFFERING → CLOSED OFFERING → POST CLOSE → DISPOSITION.
+- Data handling: Trim/clean text, standardize categorical values to lowercase, dedupe on cost item keys.
+- Company specifics: "Who pays" categories = SMB, Offering, Investor, Platform; toggles for Annual/Per_Unit and When Incurred/Cumulative views required.
+
+### References
+
+- [LEG-63: Collect Cost of Manufacturing an Offering Inputs](https://linear.app/withco/issue/LEG-63/collect-cost-of-manufacturing-an-offering-inputs)
+- [LEG-9: Determine Minimum Check Size](https://linear.app/withco/issue/LEG-9/determine-minimum-check-size)
+- [Existing Excel Model](https://docs.google.com/spreadsheets/d/195wUpk6d5dZS61sf5MbemVhean0FWf5YK3o6v8nctlE/edit?usp=drive_link)
+- `withco-general/docs/raw/economics-cost-structure-initial-context.md`

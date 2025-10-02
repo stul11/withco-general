@@ -5,55 +5,92 @@
 
 ## Recent Decisions
 
+### 2025-10-02 (LD0)
+
+- **Decision**: Standardize ANA/DATA documentation with example + glossary templates and analytics index
+- **Context**: Need consistent project documentation and terminology; unify analytics references and planning artifacts for ANA/DATA
+- **Options Considered**: Keep templates embedded in plans; multiple per-team variants; centralized example + glossary; separate analytics index
+- **Rationale**: Single example and glossary templates reduce duplication and drive consistency; separate analytics capabilities snapshot and Notion index accelerate triage
+- **Impact**: Example doc `project-documentation-example.md` and `project-glossary-example.md` under `linear/global/raw/templates/`; ANA capabilities captured as `linear/ANA/raw/2024-analytics-capabilities.md`; Notion analytics index created as `linear/ANA/raw/notion-all-ANA.md`; ANA/DATA plan references example by filename
+- **Links**: linear/global/raw/templates/project-documentation-example.md, linear/global/raw/templates/project-glossary-example.md, linear/ANA/raw/2024-analytics-capabilities.md, linear/ANA/raw/notion-all-ANA.md, linear/global/raw/2025-01-27_data-ana-project-documentation-plan.md
+- **Owner**: slittle
+
+### 2025-10-02 (M)
+
+- **Decision**: Normalize legacy ticket drafts and enforce reviewer-ready structure for analytics backlog.
+- **Context**: Ticket drafts under `linear/tickets/drafts/` drifted from the canonical template (missing front matter, single-tier DoD, absent reviewer packs) and TODO Log entries still used checkbox format.
+- **Options Considered**: Leave drafts as-is until next rewrite; patch individual gaps ad-hoc; full normalization with reviewer checklists + Option 3 backlog updates.
+- **Rationale**: Aligning with the Background Agent Draft Review Workflow avoids regressions, unblocks validator automation, and keeps TODO tooling (CodeLens) in sync.
+- **Impact**: Updated drafts for Excel cost analysis, RSM documentation/summary, vendor list, and SLF-78 research; added reviewer checklists; TODO Log now tracks follow-ups in Option 3 schema.
+- **Links**: linear/tickets/drafts/excel-cost-analysis-funnel-integration.md, linear/tickets/drafts/rsm-call-notes-documentation.md, linear/tickets/drafts/standardized-vendor-list.md, docs/global/TODO_Log.md, docs/agents/session-notes/SN_20251002-1800_ticket-draft-standardization.md
+- **Owner**: slittle
+
 ### 2025-10-02 (L)
 
 - **Decision**: Adopt Option D (split guidance vs templates) for Linear docs
-- **Context**: `docs/raw/plans/2025-10-02_document-categorization-and-workflows.md` proposes multiple alternatives; Option D keeps company guidance in `docs/company/linear/` and templates in `docs/templates/linear/`, leaving `linear/` for drafts/archives.
-- **Options Considered**: Consolidate under docs/company/linear; docs/global/handbook/linear; team-only placement; dedicated top-level handbook; Option D (guidance + templates split)
-- **Rationale**: Clear separation of human guidance and machine-usable templates; aligns with taxonomy; avoids writes under `linear/` while preserving draft areas
-- **Impact**: Canonical guidance at `docs/company/linear/How_to_use_Linear.md`; canonical template at `docs/templates/linear/ticket-template.md`; generator and workflows updated; legacy files carry MOVED/DEPRECATED notices
-- **Links**: docs/company/linear/How_to_use_Linear.md, docs/templates/linear/ticket-template.md, scripts/sync_agents_rules.py, docs/agents/session-notes/SN_20251002-1245_misc-document-reorg.md
+- **Context**: `docs/raw/plans/2025-10-02_document-categorization-and-workflows.md` proposes multiple alternatives.
+  Option D keeps company guidance in `docs/company/linear/` and templates in `docs/templates/linear/`, leaving
+  `linear/` for drafts/archives.
+- **Options Considered**: Consolidate under docs/company/linear; docs/global/handbook/linear; team-only placement;
+  dedicated top-level handbook; Option D (guidance + templates split)
+- **Rationale**: Clear separation of human guidance and machine-usable templates; aligns with taxonomy; avoids writes
+  under `linear/` while preserving draft areas
+- **Impact**: Canonical guidance at `docs/company/linear/How_to_use_Linear.md`; canonical template at
+  `docs/templates/linear/ticket-template.md`; generator and workflows updated; legacy files carry MOVED/DEPRECATED
+  notices
+- **Links**: docs/company/linear/How_to_use_Linear.md, docs/templates/linear/ticket-template.md,
+  scripts/sync_agents_rules.py, docs/agents/session-notes/SN_20251002-1245_misc-document-reorg.md
 - **Owner**: slittle
 
 ### 2025-10-02 (K)
 
 - **Decision**: Adopt CodeLens To-Do sidecars with stable IDs and drift checks
 - **Context**: Need fast navigation and visibility of TODO items in editors without changing Markdown readability
-- **Options Considered**: Inline HTML anchors only; Sidecar generation without checks; Sidecar + pre-commit drift enforcement
-- **Rationale**: Sidecar preserves human-first docs while enabling editor affordances; stable IDs ensure deterministic mapping; checks prevent drift
+- **Options Considered**: Inline HTML anchors only; Sidecar generation without checks; Sidecar + pre-commit drift
+  enforcement
+- **Rationale**: Sidecar preserves human-first docs while enabling editor affordances; stable IDs ensure deterministic
+mapping; checks prevent drift
+<!-- markdownlint-disable MD044 -->
 - **Impact**: New sidecar `docs/global/TODO.codelens.todo`; rule/command docs updated; pre-commit drift check added
-- **Links**: docs/agents/session-notes/SN_20251002-1230_codelens-to-do-integration.md, .cursor/rules/todo-cursor.mdc, .cursor/commands/todo-add.md
+- **Links**: docs/agents/session-notes/SN_20251002-1230_codelens-to-do-integration.md, .cursor/rules/todo-cursor.mdc,
+.cursor/commands/todo-add.md
+<!-- markdownlint-enable MD044 -->
 - **Owner**: slittle
 
-### 2025-10-02 (L)
+### 2025-10-02 (L2)
 
 - **Decision**: Add Docs QA CI and enforce sidecar drift in CI mirroring pre-commit
 - **Context**: Phase 04 Adoption & QA requires consistent validation for links, timestamps, and CodeLens sidecar drift
 - **Options Considered**: Pre-commit only; CI only; Both pre-commit and CI
 - **Rationale**: Mirroring checks in CI prevents regressions on PRs and aligns with local enforcement
 - **Impact**: New workflow `.github/workflows/docs-qa.yml`; contributor docs updated; sidecar drift check runs in CI
-- **Links**: .github/workflows/docs-qa.yml, docs/README.md, docs/global/README.md, docs/agents/session-notes/SN_20251002-1300_phase-04-implementation-1.md
+- **Links**: .github/workflows/docs-qa.yml, docs/README.md, docs/global/README.md,
+  docs/agents/session-notes/SN_20251002-1300_phase-04-implementation-1.md
 - **Owner**: slittle
 
 ### 2025-01-27 (H)
 
 - **Decision**: Implement Python data analysis cursor rule for comprehensive workflow guidelines
-- **Context**: User requested addition of Python data analysis guidelines to cursor workspace to support pandas, matplotlib, seaborn, numpy, and Jupyter Notebook development
+- **Context**: User requested addition of Python data analysis guidelines to cursor workspace to support pandas, matplotlib,
+  seaborn, numpy, and Jupyter Notebook development
 - **Options Considered**: Manual documentation, Basic rule, Comprehensive rule with examples
-- **Rationale**: Comprehensive rule provides complete workflow guidance with practical examples and best practices; follows established workspace conventions
-- **Impact**: New rule `.cursor/rules/python-data-analysis.mdc` provides comprehensive guidelines for data analysis, visualization, error handling, performance optimization, and Jupyter Notebook best practices
-- **Links**: .cursor/rules/python-data-analysis.mdc, docs/agents/session-notes/SN_20250127-1730_python-data-analysis-rule-implementation.md
+- **Rationale**: Comprehensive rule provides complete workflow guidance with practical examples and best practices; follows
+  established workspace conventions
+- **Impact**: New rule `.cursor/rules/python-data-analysis.mdc` provides comprehensive guidelines for data analysis,
+  visualization, error handling, performance optimization, and Jupyter Notebook best practices
+- **Links**: .cursor/rules/python-data-analysis.mdc,
+  docs/agents/session-notes/SN_20250127-1730_python-data-analysis-rule-implementation.md
 - **Owner**: slittle
 
 ### 2025-10-02 (J)
 
 - **Decision**: Enforce global NOTE filename conventions for SN/MN/GR/RN
-- **Context**: Plan §1.1 defines standardized naming across Session, Meeting, Granola, and Raw notes to
-  improve discoverability and consistency; enforcement needed across the repository
+- **Context**: Plan §1.1 defines standardized naming across Session, Meeting, Granola, and Raw notes to improve
+  discoverability and consistency; enforcement needed across the repository
 - **Options Considered**: Keep conventions as guidance only; Enforce SN\_ only; Enforce SN/MN/GR/RN via rule
 - **Rationale**: A single global rule prevents drift and ensures future automation (migration, link checks)
-- **Impact**: New rule `.cursor/rules/naming-global.mdc` applies to all `**/*.md`, with directory guidance and
-  ISO timestamp and 15‑minute rounding alignment
+- **Impact**: New rule `.cursor/rules/naming-global.mdc` applies to all `**/*.md`, with directory guidance and ISO
+  timestamp and 15-minute rounding alignment
 - **Links**: .cursor/rules/naming-global.mdc,
   docs/raw/plans/2025-10-02_document-categorization-and-workflows.md,
   docs/raw/plans/rollout/phase-02_rules-and-commands.md,

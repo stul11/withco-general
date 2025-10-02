@@ -68,5 +68,11 @@
   },
   "markdown.preview.breaks": true,
   "markdown.preview.linkify": true,
-  "chatgpt.commentCodeLensEnabled": true
+  "chatgpt.commentCodeLensEnabled": true,
+  "editor.suggest.showWords": false,
+  "editor.suggest.showSnippets": false,
+  "editor.snippetSuggestions": "none",
+  "editor.inlineSuggest.syntaxHighlightingEnabled": true,
+  "editor.inlineSuggest.enabled": false,
+  "editor.acceptSuggestionOnEnter": "off"
 }
