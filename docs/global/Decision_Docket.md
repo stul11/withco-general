@@ -4,6 +4,16 @@
 - **Owner**: slittle
 
 ## Recent Decisions
+### 2025-10-02 (I)
+
+- **Decision**: Adopt `uv` as the exclusive Python dependency manager
+- **Context**: Repository contains `requirements.txt` and contributor docs referencing `pip` installs; need reproducible, unified dependency workflow
+- **Options Considered**: Continue with `pip`/requirements.txt, adopt `poetry`, adopt `uv` (project-level), use script-scoped `uv` only
+- **Rationale**: `uv` provides fast, reproducible dependency management with script-level metadata support and project-level locking; simplifies onboarding and CI
+- **Impact**: New rule `.cursor/rules/uv-guidelines.mdc`; plan drafted for repository-wide compliance; future PR to add `pyproject.toml` + `uv.lock` and update docs/CI
+- **Links**: .cursor/rules/uv-guidelines.mdc, docs/raw/plans/2025-10-02_uv-guidelines-compliance-review.md, docs/agents/session-notes/SN_20251002-1200_uv-guidelines.md
+- **Owner**: slittle
+
 
 ### 2025-01-27 (G)
 

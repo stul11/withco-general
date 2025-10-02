@@ -275,7 +275,9 @@ All creation flows prompt you to confirm/edit: `prefix`, `YYYYMMDD-HHMM`, and `s
 
 1. Capture: `/capture-raw` creates `RN_YYYYMMDD-HHMM_slug.md` under team `raw/` when known; else under `docs/raw/`.
 2. Organize: `/organize-raw` scaffolds target (SN/MN/GR/RS) and back-links to raw; moves or references content as appropriate.
-3. Propagate TODOs/TOPLAN: creators prompt to add related items with labels/priorities and a `source:` link to the originating section.
+3. Propagate TODOs/TOPLAN:
+   - [ ] Prompt creators to add related items with labels/priorities
+   - [ ] Include a `source:` link to the originating section
 
 ---
 

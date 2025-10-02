@@ -5,6 +5,12 @@
 - **Owner**: slittle
 
 ## Completed
+### Session: uv-guidelines (2025-10-02)
+
+- [x] Add `.cursor/rules/uv-guidelines.mdc` enforcing uv-only dependency management
+- [x] Draft repo-wide uv compliance review plan: `docs/raw/plans/2025-10-02_uv-guidelines-compliance-review.md`
+- [x] Create Session NOTE documenting decisions, findings, and next steps
+
 
 ### Session: markdownlint-phase2-3-implementation (2025-01-27)
 
@@ -155,6 +161,14 @@
 ## In Progress
 
 - [ ] Propose Cursor rules and helpful commands to enhance workflows
+
+### uv Migration (Planning → Implementation)
+
+- [ ] Create `pyproject.toml` and initialize `uv.lock` with core tools
+- [ ] Replace `pip` references in `scripts/README.md` with `uv` equivalents
+- [ ] Decide policy for `requirements.txt` (generated via `uv export` vs deprecate)
+- [ ] Add CI checks to block `pip`/`poetry` usage and encourage `uv`
+- [ ] Document developer quickstart with `uv` commands
 
 ## Pending
 

@@ -50,13 +50,13 @@ tags: [playbook, process, automation]
 1. **[Step 1]**: [Detailed description]
 
    - **Input**: [What's needed]
-   - **Action**: [What to do]
+   - **Action**: [ ] [Describe the action to take]
    - **Output**: [What's produced]
    - **Validation**: [How to verify success]
 
 2. **[Step 2]**: [Detailed description]
    - **Input**: [What's needed]
-   - **Action**: [What to do]
+   - **Action**: [ ] [Describe the action to take]
    - **Output**: [What's produced]
    - **Validation**: [How to verify success]
 
@@ -71,13 +71,13 @@ tags: [playbook, process, automation]
 2. **[Step 3]**: [Detailed description]
 
    - **Input**: [What's needed]
-   - **Action**: [What to do]
+   - **Action**: [ ] [Describe the action to take]
    - **Output**: [What's produced]
    - **Validation**: [How to verify success]
 
 3. **[Step 4]**: [Detailed description]
    - **Input**: [What's needed]
-   - **Action**: [What to do]
+   - **Action**: [ ] [Describe the action to take]
    - **Output**: [What's produced]
    - **Validation**: [How to verify success]
 
@@ -111,8 +111,8 @@ tags: [playbook, process, automation]
 
 ### Cleanup
 
-- [Cleanup task 1: what to clean up]
-- [Cleanup task 2: what to clean up]
+- [ ] [Cleanup task 1: what to clean up]
+- [ ] [Cleanup task 2: what to clean up]
 
 ## Error Handling
 
